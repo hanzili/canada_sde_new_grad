@@ -126,6 +126,11 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/tracker/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -333,6 +338,12 @@
     <lastmod>2025-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-data-analyst-global-applications-solutions-llc-595916887/</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-software-engineer-pheedloop-595861285/</loc>
@@ -1231,6 +1242,12 @@
   <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/embedded-software-engineer-vancouver-humanoid-580677561/</loc>
     <lastmod>2025-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/intern-data-scientist-summer-2026-capital-one-595934152/</loc>
+    <lastmod>2026-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

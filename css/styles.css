@@ -1150,6 +1150,268 @@ a:hover {
     line-height: 1.7;
 }
 
+/* === Job Tracker === */
+.tracker-container {
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 1px dashed var(--color-border);
+}
+
+.tracker-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-bg);
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+
+.tracker-btn:hover {
+    background: var(--color-bg-alt);
+    border-color: var(--color-primary);
+}
+
+.tracker-btn-save {
+    background: var(--color-bg-alt);
+    color: var(--color-text);
+}
+
+.tracker-btn-save:hover {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.tracker-btn-sm {
+    padding: 2px 6px;
+    font-size: 0.75rem;
+}
+
+.tracker-btn-remove {
+    background: transparent;
+    border-color: transparent;
+}
+
+.tracker-btn-remove:hover {
+    background: #fef2f2;
+    border-color: var(--color-hot);
+}
+
+.tracker-active {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.tracker-status {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+}
+
+.tracker-actions {
+    display: flex;
+    gap: 2px;
+}
+
+/* === My Applications Page === */
+.tracker-page {
+    background: var(--color-bg);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+}
+
+.tracker-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.tracker-header h1 {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.tracker-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-md);
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    min-width: 80px;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+}
+
+.tracker-actions-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.tracker-filter {
+    display: flex;
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-bg);
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.btn-export {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.btn-export:hover {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.tracker-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.tracker-job-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.tracker-job-card.expired {
+    opacity: 0.7;
+    border-style: dashed;
+}
+
+.tracker-job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.tracker-job-info {
+    flex: 1;
+}
+
+.tracker-job-title {
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.tracker-job-company {
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.tracker-job-meta {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+.tracker-job-notes {
+    width: 100%;
+}
+
+.tracker-job-notes textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.85rem;
+    resize: vertical;
+    min-height: 60px;
+}
+
+.tracker-job-notes textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.tracker-job-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tracker-empty {
+    text-align: center;
+    padding: var(--spacing-2xl);
+    color: var(--color-text-muted);
+}
+
+.tracker-empty h2 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.expired-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    background: #fef3c7;
+    color: #92400e;
+    font-size: 0.7rem;
+    border-radius: var(--radius-sm);
+}
+
 /* === Print Styles === */
 @media print {
     .site-header,
@@ -1158,7 +1420,8 @@ a:hover {
     .btn-apply,
     .related-jobs,
     .category-nav,
-    .emoji-legend {
+    .emoji-legend,
+    .tracker-container {
         display: none;
     }
 
