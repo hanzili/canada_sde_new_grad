@@ -345,6 +345,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-equipment-application-engineer-mission-critical-xnrgy-climate-systems-609923338/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-software-developer-modelling-simulation-adga-group-609615701/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-software-developer-iss-team-100-onsite-halifax-lockheed-martin-609089488/</loc>
     <lastmod>2026-01-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -455,6 +467,60 @@
   <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-full-stack-engineer-cz-absa-group-606986991/</loc>
     <lastmod>2026-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-system-engineer-general-dynamics-mission-systemscanada-606953254/</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-full-stack-engineer-absa-group-606703812/</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-data-engineer-junior-dba-ghy-international-606630667/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-data-engineer-jr-dba-ghy-international-606555195/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/software-developer-front-end-junior-10013-2112-foilcon-606468100/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-automation-ai-analyst-mthree-606410434/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-software-engineer-wirehead-606376709/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/software-developer-front-end-junior-angular-restful-bevertec-606359823/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-software-engineer-optimy-ai-605965377/</loc>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -809,8 +875,8 @@
   <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-it-helpdesk-technician-spectrum-health-care-shc-596083301/</loc>
     <lastmod>2026-01-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-data-analyst-faculty-of-social-work-university-of-calgary-596084120/</loc>
@@ -1737,6 +1803,108 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/gis-data-analytics-intern-cogo-performance-610178678/</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/data-engineer-intern-ace-1-media-610037223/</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/machine-learning-intern-fall-2026-toronto-pinterest-610031664/</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/co-op-student-field-application-engineer-intern-summer-2026-quectel-609962065/</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/data-science-intern-global-data-analytics-circle-k-609967591/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/software-engineer-intern-summer-2026-walton-systems-609921182/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/backend-development-engineer-co-op-8-months-april-2026-ciena-609900195/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/quality-assurance-intern-etudiante-assurance-qualite-jean-coutu-609837203/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/quality-assurance-developer-i-co-op-canada-cisco-609805513/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/help-desk-analyst-level-1-co-op-student-crescent-school-609785891/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/software-developer-intern-summer-2026-botpress-609694964/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/software-developer-intern-summer-2026-botpress-technologies-inc-609688117/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/intern-full-stack-developer-autodesk-609619552/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/intern-full-stack-developer-autodesk-609619545/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/ete-26-stage-en-fiabilite-entretien-mobile-fr-agnico-eagle-mines-limited-609543042/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/firmware-developer-co-op-motorola-solutions-609534565/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/software-developer-intern-electronic-arts-ea-609528141/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/ai-solutions-engineer-co-op-internship-sopra-steria-609350140/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -2063,6 +2231,138 @@
   <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/automation-ai-ml-for-open-ran-coop-ericsson-606986978/</loc>
     <lastmod>2026-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/stage-developpeur-frontend-distech-controls-606949662/</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/intern-bachelors-embedded-engineer-honeywell-606859348/</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/data-analyst-intern-bnp-paribas-606859344/</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/summer-intern-2026-asset-management-operations-portfolio-mackenzie-investments-606831901/</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/2026-summer-ai-ml-intern-general-motors-606625045/</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/application-developer-co-op-cibc-606579167/</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/software-developer-summer-2026-co-op-internship-4-months-bmo-606579151/</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/velocity-devops-engineer-capital-markets-internship-co-op-scotiabank-606601153/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/software-developer-summer-2026-co-op-internship-4-months-bmo-financial-group-606601151/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/2026-summer-ai-ml-intern-general-motors-gm-606599483/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/co-op-maintenance-analytics-developer-nutrien-606558685/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/software-engineer-intern-co-op-td-securities-606555202/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/fpga-development-intern-co-op-summer-2026-ciena-606516873/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/internal-ai-developer-spring-2026-co-op-d2l-606513759/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/software-engineer-intern-co-op-td-606467181/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/student-operations-data-analyst-intern-summer-2026-mda-space-606443984/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/business-analyst-treasury-business-initiatives-and-cibc-606443908/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/software-application-developer-co-op-cibc-606443893/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/student-operations-data-analyst-intern-summer-2026-mda-606439082/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/software-engineer-intern-borlasoft-solutions-inc-606196236/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/help-desk-technician-intern-ramsoft-606173107/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/c-software-engineer-co-op-canada-fc-8-months-summer-2026-ea-sports-605865096/</loc>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -4151,8 +4451,8 @@
   <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/machine-learning-phd-internship-video2motion-seed-8-months-seed-electronic-arts-596234137/</loc>
     <lastmod>2026-01-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/presales-engineering-intern-interne-ingenieur-pre-vente-motorola-solutions-596230944/</loc>
