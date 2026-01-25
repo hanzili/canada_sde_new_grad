@@ -345,6 +345,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-software-developer-iss-in-service-support-lockheed-martin-610434768/</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-data-scientist-permanent-babcock-international-group-610298116/</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-data-scientist-permanent-babcock-canada-inc-610294470/</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/junior-equipment-application-engineer-mission-critical-xnrgy-climate-systems-609923338/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -1801,6 +1819,24 @@
     <lastmod>2025-11-25</lastmod>
     <changefreq>never</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/data-analyst-intern-precision-drilling-610719779/</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/human-resources-analytics-intern-precision-drilling-610719554/</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/it-service-desk-intern-precision-drilling-610719098/</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/gis-data-analytics-intern-cogo-performance-610178678/</loc>
@@ -4427,8 +4463,8 @@
   <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/it-helpdesk-intern-0footprint-tech-services-inc-596561760/</loc>
     <lastmod>2026-01-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/data-scientist-intern-genpark-596513932/</loc>
@@ -4445,8 +4481,8 @@
   <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/2026-co-op-software-developer-virtualization-and-sil-general-motors-596459491/</loc>
     <lastmod>2026-01-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://hanzili.github.io/canada_sde_new_grad/jobs/machine-learning-phd-internship-video2motion-seed-8-months-seed-electronic-arts-596234137/</loc>
