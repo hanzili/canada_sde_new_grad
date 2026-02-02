@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hanzili.github.io/canada_sde_new_grad/sitemap.xml
+Sitemap: https://jobs.hanzilla.co/sitemap.xml
