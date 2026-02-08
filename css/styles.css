@@ -1,16 +1,18 @@
 /* === CSS Variables === */
 :root {
-    --color-primary: #dc2626;
-    --color-primary-dark: #b91c1c;
+    --color-primary: #d97706;
+    --color-primary-dark: #b45309;
+    --color-accent: #eab308;
+    --color-accent-light: #fef9c3;
     --color-hot: #ef4444;
     --color-snooze: #6b7280;
     --color-remote: #2563eb;
     --color-intern: #7c3aed;
-    --color-text: #1f2937;
-    --color-text-muted: #6b7280;
+    --color-text: #18181b;
+    --color-text-muted: #71717a;
     --color-bg: #ffffff;
-    --color-bg-alt: #f9fafb;
-    --color-border: #e5e7eb;
+    --color-bg-alt: #fafaf9;
+    --color-border: #e7e5e4;
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
@@ -19,11 +21,12 @@
     --spacing-2xl: 3rem;
     --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --max-width: 1200px;
-    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-lg: 12px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
 }
 
 /* === Base Reset === */
@@ -42,7 +45,7 @@ html {
 body {
     font-family: var(--font-sans);
     color: var(--color-text);
-    background: var(--color-bg-alt);
+    background: var(--color-bg);
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
@@ -58,14 +61,16 @@ a:hover {
     text-decoration: underline;
 }
 
-/* === Header & Navigation === */
+/* === Header & Navigation (Glassmorphism) === */
 .site-header {
-    background: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.03);
 }
 
 .nav-container {
@@ -93,11 +98,12 @@ a:hover {
 .nav-links {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs);
     list-style: none;
     align-items: center;
 }
 
+/* Ghost-button nav style */
 .nav-links a {
     color: var(--color-text);
     padding: var(--spacing-xs) var(--spacing-sm);
@@ -107,7 +113,7 @@ a:hover {
 }
 
 .nav-links a:hover {
-    background: var(--color-bg-alt);
+    background: rgba(0,0,0,0.04);
     text-decoration: none;
 }
 
@@ -121,10 +127,11 @@ a:hover {
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--radius-sm);
     font-size: 0.9rem;
+    transition: background-color 0.2s;
 }
 
 .dropdown-trigger:hover {
-    background: var(--color-bg-alt);
+    background: rgba(0,0,0,0.04);
 }
 
 .dropdown-menu {
@@ -132,12 +139,14 @@ a:hover {
     position: absolute;
     top: 100%;
     right: 0;
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: var(--radius-lg);
     padding: var(--spacing-sm);
     min-width: 250px;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
     list-style: none;
     z-index: 200;
 }
@@ -159,7 +168,7 @@ a:hover {
 }
 
 .dropdown-menu a:hover {
-    background: var(--color-bg-alt);
+    background: rgba(0,0,0,0.04);
 }
 
 /* === Main Content === */
@@ -198,10 +207,10 @@ a:hover {
     flex-wrap: wrap;
     gap: var(--spacing-md);
     padding: var(--spacing-md);
-    background: var(--color-bg);
+    background: var(--color-bg-alt);
     border-radius: var(--radius-md);
     margin-bottom: var(--spacing-xl);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .legend-item {
@@ -234,23 +243,27 @@ a:hover {
 .category-chip {
     display: inline-block;
     padding: var(--spacing-xs) var(--spacing-md);
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: 999px;
+    background: var(--color-bg-alt);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 9999px;
     font-size: 0.875rem;
     color: var(--color-text);
     transition: all 0.2s;
 }
 
 .category-chip:hover {
-    background: var(--color-primary);
-    color: white;
-    border-color: var(--color-primary);
+    background: var(--color-accent);
+    color: #422006;
+    border-color: var(--color-accent);
     text-decoration: none;
 }
 
 .category-chip .count {
     color: var(--color-text-muted);
+}
+
+.category-chip:hover .count {
+    color: #422006;
 }
 
 /* === Category Section === */
@@ -291,13 +304,13 @@ a:hover {
 
 .job-card {
     background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: var(--radius-lg);
     transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .job-card:hover {
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
     transform: translateY(-2px);
 }
 
@@ -374,8 +387,8 @@ a:hover {
 /* === Badges & Tags === */
 .badge, .tag {
     display: inline-block;
-    padding: 2px 8px;
-    border-radius: var(--radius-sm);
+    padding: 2px 10px;
+    border-radius: 9999px;
     font-size: 0.75rem;
     font-weight: 500;
 }
@@ -396,8 +409,8 @@ a:hover {
 }
 
 .badge-category {
-    background: var(--color-bg-alt);
-    color: var(--color-text-muted);
+    background: var(--color-accent-light);
+    color: #92400e;
 }
 
 .badge-intern {
@@ -413,7 +426,7 @@ a:hover {
 /* === Job Detail Page === */
 .job-detail {
     background: var(--color-bg);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     padding: var(--spacing-xl);
     box-shadow: var(--shadow-sm);
 }
@@ -435,7 +448,7 @@ a:hover {
 .job-header {
     margin-bottom: var(--spacing-xl);
     padding-bottom: var(--spacing-lg);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .job-badges-header {
@@ -541,7 +554,7 @@ a:hover {
 .description-content pre {
     overflow-x: auto;
     background: var(--color-bg-alt);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(0,0,0,0.05);
     border-radius: var(--radius-md);
     padding: var(--spacing-md);
     margin: var(--spacing-md) 0;
@@ -582,19 +595,19 @@ a:hover {
     font-weight: 600;
 }
 
-/* === Apply Button === */
+/* === Apply Button (Yellow accent) === */
 .apply-section {
     text-align: center;
     padding: var(--spacing-xl);
     background: var(--color-bg-alt);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     margin-bottom: var(--spacing-xl);
 }
 
 .btn-apply {
     display: inline-block;
-    background: var(--color-primary);
-    color: white;
+    background: var(--color-accent);
+    color: #422006;
     padding: var(--spacing-md) var(--spacing-2xl);
     border-radius: var(--radius-md);
     font-weight: 600;
@@ -604,7 +617,8 @@ a:hover {
 }
 
 .btn-apply:hover {
-    background: var(--color-primary-dark);
+    background: var(--color-primary);
+    color: white;
     transform: scale(1.02);
     text-decoration: none;
 }
@@ -619,7 +633,7 @@ a:hover {
 .related-jobs {
     margin-top: var(--spacing-2xl);
     padding-top: var(--spacing-xl);
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 .related-jobs h2 {
@@ -644,11 +658,11 @@ a:hover {
 }
 
 .filter-info {
-    background: var(--color-bg);
+    background: var(--color-bg-alt);
     padding: var(--spacing-md);
     border-radius: var(--radius-md);
     margin-bottom: var(--spacing-xl);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .filter-info p {
@@ -666,8 +680,8 @@ a:hover {
 
 /* === Footer === */
 .site-footer {
-    background: var(--color-bg);
-    border-top: 1px solid var(--color-border);
+    background: var(--color-bg-alt);
+    border-top: 1px solid rgba(0,0,0,0.05);
     padding: var(--spacing-xl);
     margin-top: auto;
 }
@@ -737,14 +751,14 @@ a:hover {
 /* === Location Pages === */
 .location-page {
     background: var(--color-bg);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     padding: var(--spacing-lg);
 }
 
 .location-header {
     margin-bottom: var(--spacing-xl);
     padding-bottom: var(--spacing-lg);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .location-header h1 {
@@ -788,8 +802,8 @@ a:hover {
     gap: var(--spacing-xs);
     padding: var(--spacing-sm) var(--spacing-md);
     background: var(--color-bg-alt);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 9999px;
     color: var(--color-text);
     font-size: 0.9rem;
     text-decoration: none;
@@ -797,16 +811,16 @@ a:hover {
 }
 
 .location-chip:hover {
-    background: var(--color-primary);
-    color: white;
-    border-color: var(--color-primary);
+    background: var(--color-accent);
+    color: #422006;
+    border-color: var(--color-accent);
     text-decoration: none;
 }
 
 .location-chip.active {
-    background: var(--color-primary);
-    color: white;
-    border-color: var(--color-primary);
+    background: var(--color-accent);
+    color: #422006;
+    border-color: var(--color-accent);
 }
 
 .location-chip .count {
@@ -818,7 +832,7 @@ a:hover {
 .blog-index,
 .blog-post {
     background: var(--color-bg);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     padding: var(--spacing-lg);
 }
 
@@ -844,15 +858,15 @@ a:hover {
 }
 
 .blog-card {
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: var(--radius-lg);
     overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .blog-card:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
 
 .blog-card-link {
@@ -868,9 +882,9 @@ a:hover {
 .blog-category {
     display: inline-block;
     padding: var(--spacing-xs) var(--spacing-sm);
-    background: var(--color-primary);
-    color: white;
-    border-radius: var(--radius-sm);
+    background: var(--color-accent);
+    color: #422006;
+    border-radius: 9999px;
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -898,7 +912,7 @@ a:hover {
 }
 
 .read-time::before {
-    content: "•";
+    content: "\2022";
     margin-right: var(--spacing-md);
 }
 
@@ -916,7 +930,7 @@ a:hover {
 .post-header {
     margin-bottom: var(--spacing-xl);
     padding-bottom: var(--spacing-lg);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .post-header h1 {
@@ -941,7 +955,7 @@ a:hover {
 .post-content pre {
     overflow-x: auto;
     background: var(--color-bg-alt);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(0,0,0,0.05);
     border-radius: var(--radius-md);
     padding: var(--spacing-md);
     margin: var(--spacing-md) 0;
@@ -984,7 +998,7 @@ a:hover {
 }
 
 .post-content blockquote {
-    border-left: 4px solid var(--color-primary);
+    border-left: 4px solid var(--color-accent);
     padding-left: var(--spacing-md);
     margin: var(--spacing-md) 0;
     color: var(--color-text-muted);
@@ -1024,7 +1038,7 @@ a:hover {
 .post-footer {
     margin-top: var(--spacing-xl);
     padding-top: var(--spacing-lg);
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 .post-tags {
@@ -1037,7 +1051,7 @@ a:hover {
 .post-tags .tag {
     padding: var(--spacing-xs) var(--spacing-sm);
     background: var(--color-bg-alt);
-    border-radius: var(--radius-sm);
+    border-radius: 9999px;
     font-size: 0.85rem;
     color: var(--color-text-muted);
 }
@@ -1045,7 +1059,7 @@ a:hover {
 .post-cta {
     background: var(--color-bg-alt);
     padding: var(--spacing-xl);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     text-align: center;
 }
 
@@ -1061,8 +1075,8 @@ a:hover {
 .btn-primary {
     display: inline-block;
     padding: var(--spacing-sm) var(--spacing-lg);
-    background: var(--color-primary);
-    color: white;
+    background: var(--color-accent);
+    color: #422006;
     border-radius: var(--radius-md);
     text-decoration: none;
     font-weight: 600;
@@ -1070,7 +1084,8 @@ a:hover {
 }
 
 .btn-primary:hover {
-    background: var(--color-primary-dark);
+    background: var(--color-primary);
+    color: white;
     text-decoration: none;
 }
 
@@ -1091,7 +1106,7 @@ a:hover {
 
 .related-card {
     padding: var(--spacing-md);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(0,0,0,0.06);
     border-radius: var(--radius-md);
     text-decoration: none;
     color: inherit;
@@ -1099,7 +1114,7 @@ a:hover {
 }
 
 .related-card:hover {
-    border-color: var(--color-primary);
+    border-color: var(--color-accent);
     text-decoration: none;
 }
 
@@ -1115,11 +1130,11 @@ a:hover {
 
 /* === Intro Content === */
 .intro-content {
-    background: var(--color-bg);
+    background: var(--color-bg-alt);
     padding: var(--spacing-lg);
     border-radius: var(--radius-md);
     margin-bottom: var(--spacing-lg);
-    border-left: 4px solid var(--color-primary);
+    border-left: 4px solid var(--color-accent);
     color: var(--color-text-muted);
     font-size: 0.95rem;
     line-height: 1.7;
@@ -1151,8 +1166,8 @@ a:hover {
     display: inline-block;
     padding: var(--spacing-xs) var(--spacing-md);
     background: var(--color-bg-alt);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-sm);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 9999px;
     font-size: 0.85rem;
     color: var(--color-text);
     font-weight: 500;
@@ -1160,11 +1175,11 @@ a:hover {
 
 /* === Related Blogs Section === */
 .related-blogs-section {
-    background: var(--color-bg);
+    background: var(--color-bg-alt);
     padding: var(--spacing-lg);
     border-radius: var(--radius-md);
     margin-bottom: var(--spacing-lg);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .related-blogs-section h2 {
@@ -1197,11 +1212,11 @@ a:hover {
 
 /* === Location Stats Section === */
 .location-stats-section {
-    background: var(--color-bg);
+    background: var(--color-bg-alt);
     padding: var(--spacing-lg);
     border-radius: var(--radius-md);
     margin-bottom: var(--spacing-lg);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
@@ -1227,7 +1242,7 @@ a:hover {
 .faq-section {
     margin-top: var(--spacing-2xl);
     padding-top: var(--spacing-xl);
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 .faq-section h2 {
@@ -1243,8 +1258,8 @@ a:hover {
 }
 
 .faq-item {
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
+    background: var(--color-bg-alt);
+    border: 1px solid rgba(0,0,0,0.05);
     border-radius: var(--radius-md);
     overflow: hidden;
 }
@@ -1262,12 +1277,12 @@ a:hover {
 .faq-question::after {
     content: '+';
     font-size: 1.25rem;
-    color: var(--color-primary);
+    color: var(--color-accent);
     transition: transform 0.2s;
 }
 
 .faq-item[open] .faq-question::after {
-    content: '−';
+    content: '\2212';
 }
 
 .faq-question::-webkit-details-marker {
@@ -1284,7 +1299,7 @@ a:hover {
 .tracker-container {
     margin-top: var(--spacing-sm);
     padding-top: var(--spacing-sm);
-    border-top: 1px dashed var(--color-border);
+    border-top: 1px dashed rgba(0,0,0,0.08);
 }
 
 .tracker-btn {
@@ -1292,7 +1307,7 @@ a:hover {
     align-items: center;
     gap: var(--spacing-xs);
     padding: var(--spacing-xs) var(--spacing-sm);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(0,0,0,0.06);
     border-radius: var(--radius-sm);
     background: var(--color-bg);
     cursor: pointer;
@@ -1302,7 +1317,7 @@ a:hover {
 
 .tracker-btn:hover {
     background: var(--color-bg-alt);
-    border-color: var(--color-primary);
+    border-color: var(--color-accent);
 }
 
 .tracker-btn-save {
@@ -1311,9 +1326,9 @@ a:hover {
 }
 
 .tracker-btn-save:hover {
-    background: var(--color-primary);
-    color: white;
-    border-color: var(--color-primary);
+    background: var(--color-accent);
+    color: #422006;
+    border-color: var(--color-accent);
 }
 
 .tracker-btn-sm {
@@ -1343,7 +1358,7 @@ a:hover {
     align-items: center;
     gap: var(--spacing-xs);
     padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--radius-sm);
+    border-radius: 9999px;
     font-size: 0.75rem;
     font-weight: 600;
     color: white;
@@ -1357,7 +1372,7 @@ a:hover {
 /* === My Applications Page === */
 .tracker-page {
     background: var(--color-bg);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     padding: var(--spacing-lg);
 }
 
@@ -1415,8 +1430,8 @@ a:hover {
 
 .filter-btn {
     padding: var(--spacing-xs) var(--spacing-sm);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-sm);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 9999px;
     background: var(--color-bg);
     cursor: pointer;
     font-size: 0.85rem;
@@ -1425,15 +1440,15 @@ a:hover {
 
 .filter-btn:hover,
 .filter-btn.active {
-    background: var(--color-primary);
-    color: white;
-    border-color: var(--color-primary);
+    background: var(--color-accent);
+    color: #422006;
+    border-color: var(--color-accent);
 }
 
 .btn-export {
     padding: var(--spacing-sm) var(--spacing-md);
     background: var(--color-bg-alt);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(0,0,0,0.06);
     border-radius: var(--radius-md);
     cursor: pointer;
     font-size: 0.85rem;
@@ -1441,9 +1456,9 @@ a:hover {
 }
 
 .btn-export:hover {
-    background: var(--color-primary);
-    color: white;
-    border-color: var(--color-primary);
+    background: var(--color-accent);
+    color: #422006;
+    border-color: var(--color-accent);
 }
 
 .tracker-list {
@@ -1455,7 +1470,7 @@ a:hover {
 
 .tracker-job-card {
     background: var(--color-bg);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(0,0,0,0.06);
     border-radius: var(--radius-md);
     padding: var(--spacing-md);
     display: flex;
@@ -1502,7 +1517,7 @@ a:hover {
 .tracker-job-notes textarea {
     width: 100%;
     padding: var(--spacing-sm);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(0,0,0,0.06);
     border-radius: var(--radius-sm);
     font-family: inherit;
     font-size: 0.85rem;
@@ -1512,7 +1527,7 @@ a:hover {
 
 .tracker-job-notes textarea:focus {
     outline: none;
-    border-color: var(--color-primary);
+    border-color: var(--color-accent);
 }
 
 .tracker-job-actions {
@@ -1539,7 +1554,7 @@ a:hover {
     background: #fef3c7;
     color: #92400e;
     font-size: 0.7rem;
-    border-radius: var(--radius-sm);
+    border-radius: 9999px;
 }
 
 /* === Print Styles === */
