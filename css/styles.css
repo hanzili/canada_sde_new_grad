@@ -173,6 +173,16 @@ h1, h2, h3, h4 {
     z-index: 200;
 }
 
+/* Invisible bridge across the 4px gap so hover stays connected */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 0;
+    right: 0;
+    height: 8px;
+}
+
 .nav-dropdown:hover .dropdown-menu,
 .dropdown-menu:hover {
     display: block;
