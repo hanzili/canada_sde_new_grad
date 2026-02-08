@@ -841,8 +841,8 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/junior-software-engineer-optimy-ai-605965377/</loc>
     <lastmod>2026-01-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/junior-data-engineer-databricks-the-citco-group-limited-605670017/</loc>
@@ -3415,14 +3415,14 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/c-software-engineer-co-op-canada-fc-8-months-summer-2026-ea-sports-605865096/</loc>
     <lastmod>2026-01-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/software-engineer-intern-buildr-605686237/</loc>
     <lastmod>2026-01-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/phd-data-scientist-intern-stripe-605469442/</loc>
