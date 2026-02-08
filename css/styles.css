@@ -205,6 +205,22 @@ h1, h2, h3, h4 {
     text-decoration: none;
 }
 
+.dropdown-header {
+    padding: 6px 12px 2px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted, #888);
+    pointer-events: none;
+}
+
+.dropdown-header:not(:first-child) {
+    margin-top: 4px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    padding-top: 8px;
+}
+
 /* === Main Content === */
 .main-content {
     max-width: var(--max-width);
