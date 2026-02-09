@@ -81,18 +81,18 @@
                 <li class="nav-dropdown">
                     <span class="dropdown-trigger">Categories ▾</span>
                     <ul class="dropdown-menu">
+                        <li class="dropdown-header">Tech</li>
+                        
+                        
+                        <li><a href="/categories/software-engineering/">Software Engineering (83)</a></li>
                         
                         
                         
-                        <li><a href="/categories/software-engineering/">Software Engineering (87)</a></li>
+                        <li><a href="/categories/data-ml/">Data / ML (45)</a></li>
                         
                         
                         
-                        <li><a href="/categories/data-ml/">Data / ML (50)</a></li>
-                        
-                        
-                        
-                        <li><a href="/categories/devops-sre-platform/">DevOps / SRE / Platform (6)</a></li>
+                        <li><a href="/categories/devops-sre-platform/">DevOps / SRE / Platform (4)</a></li>
                         
                         
                         
@@ -116,7 +116,7 @@
                         
                         
                         
-                        <li><a href="/categories/it-support-systems/">IT / Support / Systems (8)</a></li>
+                        <li><a href="/categories/it-support-systems/">IT / Support / Systems (7)</a></li>
                         
                         
                         
@@ -127,6 +127,15 @@
                         <li><a href="/categories/other-roles/">Other Roles (2)</a></li>
                         
                         
+                        <li class="dropdown-header">Finance</li>
+                        
+                        
+                        <li><a href="/finance/categories/investment-banking-capital-markets/">Investment Banking / Capital Markets (1)</a></li>
+                        
+                        
+                        
+                        <li><a href="/finance/categories/accounting-financial-analysis/">Accounting / Financial Analysis (45)</a></li>
+                        
                         
                     </ul>
                 </li>
@@ -135,7 +144,7 @@
                     <span class="dropdown-trigger">📍 Locations ▾</span>
                     <ul class="dropdown-menu">
                         
-                        <li><a href="/locations/toronto/">Toronto (59)</a></li>
+                        <li><a href="/locations/toronto/">Toronto (54)</a></li>
                         
                         <li><a href="/locations/vancouver/">Vancouver (14)</a></li>
                         
@@ -145,13 +154,11 @@
                         
                         <li><a href="/locations/calgary/">Calgary (12)</a></li>
                         
-                        <li><a href="/locations/waterloo/">Waterloo (3)</a></li>
+                        <li><a href="/locations/waterloo/">Waterloo (2)</a></li>
                         
                         <li><a href="/locations/edmonton/">Edmonton (2)</a></li>
                         
                         <li><a href="/locations/halifax/">Halifax (7)</a></li>
-                        
-                        <li><a href="/locations/winnipeg/">Winnipeg (1)</a></li>
                         
                         <li><a href="/locations/quebec-city/">Quebec City (1)</a></li>
                         
@@ -585,19 +592,19 @@ What's slowing down your pipeline?
         <h2>Related Articles</h2>
         <div class="related-grid">
             
-            <a href="/blog/ai-tailor-resume-job-application/" class="related-card">
-                <h3>How to Use AI to Tailor Your Resume for Each Job Application (Step-by-Step Guide)</h3>
-                <p>Sending the same resume to every job? That&#39;s why you&#39;re not getting callbacks. Here&#39;s how to use AI ...</p>
+            <a href="/blog/investment-banking-salary-canada-2026/" class="related-card">
+                <h3>Investment Banking Salary in Canada 2026: Complete Guide by Level and Bank</h3>
+                <p>Comprehensive breakdown of investment banking salaries in Canada for 2026. From analyst to managing ...</p>
             </a>
             
-            <a href="/blog/compare-multiple-offers/" class="related-card">
-                <h3>How to Compare Multiple Tech Job Offers in Canada: The Complete Framework (2026)</h3>
-                <p>Offer A has higher base but less equity. Offer B has better WLB but lower pay. Offer C is a startup ...</p>
+            <a href="/blog/finance-internship-guide-canada-2026/" class="related-card">
+                <h3>Finance Internship Guide Canada 2026: Salaries, Timelines, and How to Get Hired</h3>
+                <p>Complete guide to finance internships in Canada for 2026 — IB summer analyst programs, Big Four acco...</p>
             </a>
             
-            <a href="/blog/signing-bonus-tech-canada/" class="related-card">
-                <h3>Signing Bonuses in Canadian Tech: What to Expect and How to Negotiate (2026)</h3>
-                <p>Do Canadian tech companies offer signing bonuses? How much? Are there clawbacks? Here&#39;s everything y...</p>
+            <a href="/blog/big-five-banks-new-grad-programs-canada-2026/" class="related-card">
+                <h3>Big Five Banks New Grad Programs in Canada 2026: Complete Application Guide</h3>
+                <p>Every new graduate program at Canada&#39;s Big Five banks for 2026 — program structures, application tim...</p>
             </a>
             
         </div>
@@ -734,6 +741,21 @@ What's slowing down your pipeline?
 
 
 
+    <script>
+    function copyApplyLink(btn, e) {
+        e.stopPropagation();
+        e.preventDefault();
+        var url = btn.getAttribute('data-url');
+        navigator.clipboard.writeText(url).then(function() {
+            btn.classList.add('copied');
+            btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
+            setTimeout(function() {
+                btn.classList.remove('copied');
+                btn.innerHTML = '<span class="copy-icon">🔗</span> Copy Link';
+            }, 2000);
+        });
+    }
+    </script>
     <script src="/js/tracker.js"></script>
 </body>
 </html>

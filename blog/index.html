@@ -81,18 +81,18 @@
                 <li class="nav-dropdown">
                     <span class="dropdown-trigger">Categories ▾</span>
                     <ul class="dropdown-menu">
+                        <li class="dropdown-header">Tech</li>
+                        
+                        
+                        <li><a href="/categories/software-engineering/">Software Engineering (83)</a></li>
                         
                         
                         
-                        <li><a href="/categories/software-engineering/">Software Engineering (87)</a></li>
+                        <li><a href="/categories/data-ml/">Data / ML (45)</a></li>
                         
                         
                         
-                        <li><a href="/categories/data-ml/">Data / ML (50)</a></li>
-                        
-                        
-                        
-                        <li><a href="/categories/devops-sre-platform/">DevOps / SRE / Platform (6)</a></li>
+                        <li><a href="/categories/devops-sre-platform/">DevOps / SRE / Platform (4)</a></li>
                         
                         
                         
@@ -116,7 +116,7 @@
                         
                         
                         
-                        <li><a href="/categories/it-support-systems/">IT / Support / Systems (8)</a></li>
+                        <li><a href="/categories/it-support-systems/">IT / Support / Systems (7)</a></li>
                         
                         
                         
@@ -127,6 +127,15 @@
                         <li><a href="/categories/other-roles/">Other Roles (2)</a></li>
                         
                         
+                        <li class="dropdown-header">Finance</li>
+                        
+                        
+                        <li><a href="/finance/categories/investment-banking-capital-markets/">Investment Banking / Capital Markets (1)</a></li>
+                        
+                        
+                        
+                        <li><a href="/finance/categories/accounting-financial-analysis/">Accounting / Financial Analysis (45)</a></li>
+                        
                         
                     </ul>
                 </li>
@@ -135,7 +144,7 @@
                     <span class="dropdown-trigger">📍 Locations ▾</span>
                     <ul class="dropdown-menu">
                         
-                        <li><a href="/locations/toronto/">Toronto (59)</a></li>
+                        <li><a href="/locations/toronto/">Toronto (54)</a></li>
                         
                         <li><a href="/locations/vancouver/">Vancouver (14)</a></li>
                         
@@ -145,13 +154,11 @@
                         
                         <li><a href="/locations/calgary/">Calgary (12)</a></li>
                         
-                        <li><a href="/locations/waterloo/">Waterloo (3)</a></li>
+                        <li><a href="/locations/waterloo/">Waterloo (2)</a></li>
                         
                         <li><a href="/locations/edmonton/">Edmonton (2)</a></li>
                         
                         <li><a href="/locations/halifax/">Halifax (7)</a></li>
-                        
-                        <li><a href="/locations/winnipeg/">Winnipeg (1)</a></li>
                         
                         <li><a href="/locations/quebec-city/">Quebec City (1)</a></li>
                         
@@ -194,6 +201,48 @@
 
     
     <div class="blog-grid">
+        
+        <article class="blog-card">
+            <a href="/blog/investment-banking-salary-canada-2026/" class="blog-card-link">
+                <div class="blog-card-content">
+                    <span class="blog-category">Salary Guide</span>
+                    <h2>Investment Banking Salary in Canada 2026: Complete Guide by Level and Bank</h2>
+                    <p class="blog-excerpt">Comprehensive breakdown of investment banking salaries in Canada for 2026. From analyst to managing director, Big Five to boutiques, with real compensation data from Bay Street.</p>
+                    <div class="blog-meta">
+                        <time datetime="2026-02-08">February 08, 2026</time>
+                        <span class="read-time">12 min read</span>
+                    </div>
+                </div>
+            </a>
+        </article>
+        
+        <article class="blog-card">
+            <a href="/blog/finance-internship-guide-canada-2026/" class="blog-card-link">
+                <div class="blog-card-content">
+                    <span class="blog-category">Career Guide</span>
+                    <h2>Finance Internship Guide Canada 2026: Salaries, Timelines, and How to Get Hired</h2>
+                    <p class="blog-excerpt">Complete guide to finance internships in Canada for 2026 — IB summer analyst programs, Big Four accounting, asset management, fintech, and insurance. Real salary data, application timelines, and hiring tips.</p>
+                    <div class="blog-meta">
+                        <time datetime="2026-02-08">February 08, 2026</time>
+                        <span class="read-time">13 min read</span>
+                    </div>
+                </div>
+            </a>
+        </article>
+        
+        <article class="blog-card">
+            <a href="/blog/big-five-banks-new-grad-programs-canada-2026/" class="blog-card-link">
+                <div class="blog-card-content">
+                    <span class="blog-category">Career Guide</span>
+                    <h2>Big Five Banks New Grad Programs in Canada 2026: Complete Application Guide</h2>
+                    <p class="blog-excerpt">Every new graduate program at Canada&#39;s Big Five banks for 2026 — program structures, application timelines, salary data, and how to get in. RBC, TD, BMO, Scotiabank, CIBC, and National Bank.</p>
+                    <div class="blog-meta">
+                        <time datetime="2026-02-08">February 08, 2026</time>
+                        <span class="read-time">14 min read</span>
+                    </div>
+                </div>
+            </a>
+        </article>
         
         <article class="blog-card">
             <a href="/blog/ai-tailor-resume-job-application/" class="blog-card-link">
@@ -718,6 +767,21 @@
 
 
 
+    <script>
+    function copyApplyLink(btn, e) {
+        e.stopPropagation();
+        e.preventDefault();
+        var url = btn.getAttribute('data-url');
+        navigator.clipboard.writeText(url).then(function() {
+            btn.classList.add('copied');
+            btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
+            setTimeout(function() {
+                btn.classList.remove('copied');
+                btn.innerHTML = '<span class="copy-icon">🔗</span> Copy Link';
+            }, 2000);
+        });
+    }
+    </script>
     <script src="/js/tracker.js"></script>
 </body>
 </html>

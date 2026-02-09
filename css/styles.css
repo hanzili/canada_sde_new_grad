@@ -205,6 +205,22 @@ h1, h2, h3, h4 {
     text-decoration: none;
 }
 
+.dropdown-header {
+    padding: 6px 12px 2px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted, #888);
+    pointer-events: none;
+}
+
+.dropdown-header:not(:first-child) {
+    margin-top: 4px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    padding-top: 8px;
+}
+
 /* === Main Content === */
 .main-content {
     max-width: var(--max-width);
@@ -376,6 +392,8 @@ h1, h2, h3, h4 {
 }
 
 .job-card {
+    display: flex;
+    flex-direction: column;
     background: var(--color-bg);
     border: 1px solid rgba(0,0,0,0.06);
     border-radius: var(--radius-lg);
@@ -397,6 +415,7 @@ h1, h2, h3, h4 {
 
 .job-link {
     display: block;
+    flex: 1;
     padding: var(--spacing-lg);
     color: inherit;
     text-decoration: none;
@@ -459,6 +478,42 @@ h1, h2, h3, h4 {
     font-size: 0.75rem;
     color: var(--color-text-muted);
     margin-top: var(--spacing-sm);
+}
+
+/* === Job Card Actions === */
+.job-card-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.copy-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.8rem;
+    font-family: var(--font-sans);
+    color: var(--color-text-muted);
+    background: var(--color-bg);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.copy-link-btn:hover {
+    color: var(--color-text);
+    border-color: rgba(0,0,0,0.15);
+    background: var(--color-bg-alt);
+}
+
+.copy-link-btn.copied {
+    color: #16a34a;
+    border-color: #16a34a33;
+    background: #16a34a0d;
 }
 
 /* === Badges & Tags === */
@@ -1430,15 +1485,14 @@ h1, h2, h3, h4 {
 
 /* === Job Tracker === */
 .tracker-container {
-    margin-top: var(--spacing-sm);
-    padding: var(--spacing-sm) var(--spacing-lg) 0;
-    border-top: 1px dashed rgba(0,0,0,0.06);
+    display: inline-flex;
+    align-items: center;
 }
 
 .tracker-btn {
     display: inline-flex;
     align-items: center;
-    gap: var(--spacing-xs);
+    gap: 4px;
     padding: var(--spacing-xs) var(--spacing-sm);
     border: 1px solid rgba(0,0,0,0.08);
     border-radius: var(--radius-sm);
@@ -1446,20 +1500,22 @@ h1, h2, h3, h4 {
     cursor: pointer;
     font-size: 0.8rem;
     font-family: var(--font-sans);
+    color: var(--color-text-muted);
     transition: all 0.2s;
 }
 
 .tracker-btn:hover {
+    color: var(--color-text);
     background: var(--color-bg-alt);
     border-color: rgba(0,0,0,0.15);
 }
 
 .tracker-btn-save {
-    background: var(--color-bg-alt);
-    color: var(--color-text);
+    color: var(--color-text-muted);
 }
 
 .tracker-btn-save:hover {
+    color: var(--color-text);
     background: var(--color-accent-light);
     border-color: var(--color-accent);
 }
