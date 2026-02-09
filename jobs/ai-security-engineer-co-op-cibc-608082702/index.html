@@ -366,6 +366,13 @@ Confluence Administration, JIRA Tool, Microsoft Excel, Microsoft Power Business 
         
         <p class="job-date">Posted Jan 27, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="https://fa-evmr-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/job/29678/?src=SNS-102&amp;utm_medium=jobshare" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 612219765, "title": "Security Software Developer Co-Op/Intern", "company": "Nokia", "location": "Kanata, Ontario", "applyUrl": "https://fa-evmr-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/job/29678/?src=SNS-102&amp;utm_medium=jobshare", "pageUrl": "/jobs/security-software-developer-co-op-intern-nokia-612219765/", "postedDate": "2026-01-27", "category": "security"}'></div>
 </li>
             
@@ -447,6 +454,21 @@ Confluence Administration, JIRA Tool, Microsoft Excel, Microsoft Power Business 
 
 
 
+    <script>
+    function copyApplyLink(btn, e) {
+        e.stopPropagation();
+        e.preventDefault();
+        var url = btn.getAttribute('data-url');
+        navigator.clipboard.writeText(url).then(function() {
+            btn.classList.add('copied');
+            btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
+            setTimeout(function() {
+                btn.classList.remove('copied');
+                btn.innerHTML = '<span class="copy-icon">🔗</span> Copy Link';
+            }, 2000);
+        });
+    }
+    </script>
     <script src="/js/tracker.js"></script>
 </body>
 </html>

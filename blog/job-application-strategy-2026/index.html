@@ -834,6 +834,21 @@ Quality conversation &gt; Quality application &gt; Quantity
 
 
 
+    <script>
+    function copyApplyLink(btn, e) {
+        e.stopPropagation();
+        e.preventDefault();
+        var url = btn.getAttribute('data-url');
+        navigator.clipboard.writeText(url).then(function() {
+            btn.classList.add('copied');
+            btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
+            setTimeout(function() {
+                btn.classList.remove('copied');
+                btn.innerHTML = '<span class="copy-icon">🔗</span> Copy Link';
+            }, 2000);
+        });
+    }
+    </script>
     <script src="/js/tracker.js"></script>
 </body>
 </html>

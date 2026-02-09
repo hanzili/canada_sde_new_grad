@@ -359,6 +359,13 @@ We’re proud to have an extensive portfolio of games and experiences, locations
         
         <p class="job-date">Posted Jan 29, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="https://emploisfp-psjobs.cfp-psc.gc.ca/psrs-srfp/applicant/page1800?poster=2389763" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 613935994, "title": "Junior Defence Scientist / Defence Scientist – Workforce Analytics", "company": "Southwestern Ontario Field Unit, Parks Canada", "location": "Ottawa, Ontario", "applyUrl": "https://emploisfp-psjobs.cfp-psc.gc.ca/psrs-srfp/applicant/page1800?poster=2389763", "pageUrl": "/jobs/junior-defence-scientist-defence-scientist-workforce-southwestern-ontario-field-unit-parks-canada-613935994/", "postedDate": "2026-01-29", "category": "data_ml"}'></div>
 </li>
             
@@ -385,6 +392,13 @@ We’re proud to have an extensive portfolio of games and experiences, locations
         
         <p class="job-date">Posted Jan 28, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="https://sunnybrook.ca/join-our-team/current-opportunities/?ComingSourceID=410&amp;JobId=13710&amp;p=~%2FCands%2FJob.aspx" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 613173024, "title": "Data Analyst, Junior ETL Developer - Project REACH - Temporary Full-Time 2026-16188", "company": "Sunnybrook Health Sciences Centre", "location": "Toronto, ON", "applyUrl": "https://sunnybrook.ca/join-our-team/current-opportunities/?ComingSourceID=410&amp;JobId=13710&amp;p=~%2FCands%2FJob.aspx", "pageUrl": "/jobs/data-analyst-junior-etl-developer-project-reach-temporary-sunnybrook-health-sciences-centre-613173024/", "postedDate": "2026-01-28", "category": "data_ml"}'></div>
 </li>
             
@@ -411,6 +425,13 @@ We’re proud to have an extensive portfolio of games and experiences, locations
         
         <p class="job-date">Posted Jan 28, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="https://sunnybrook.ca/join-our-team/current-opportunities/?ComingSourceID=10&amp;JobId=13710&amp;p=~%2FCands%2FJob.aspx" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 613063642, "title": "Data Analyst, Junior ETL Developer - Project REACH - Temporary Full-Time 2026-16188 (2026-16188)", "company": "Sunnybrook", "location": "Toronto, Ontario", "applyUrl": "https://sunnybrook.ca/join-our-team/current-opportunities/?ComingSourceID=10&amp;JobId=13710&amp;p=~%2FCands%2FJob.aspx", "pageUrl": "/jobs/data-analyst-junior-etl-developer-project-reach-temporary-sunnybrook-613063642/", "postedDate": "2026-01-28", "category": "data_ml"}'></div>
 </li>
             
@@ -437,6 +458,13 @@ We’re proud to have an extensive portfolio of games and experiences, locations
         
         <p class="job-date">Posted Jan 27, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-ai-software-developer-at-symplistic-ai-4366221945" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 611679379, "title": "Junior AI Software Developer", "company": "symplistic.ai", "location": "Woodbridge, Ontario", "applyUrl": "https://ca.linkedin.com/jobs/view/junior-ai-software-developer-at-symplistic-ai-4366221945", "pageUrl": "/jobs/junior-ai-software-developer-symplistic-ai-611679379/", "postedDate": "2026-01-27", "category": "data_ml"}'></div>
 </li>
             
@@ -463,6 +491,13 @@ We’re proud to have an extensive portfolio of games and experiences, locations
         
         <p class="job-date">Posted Jan 24, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="https://jobs.babcockinternational.com/job/Ottawa-Junior-Data-Scientist-(Permanent)-ON-K1P-5E7/1275983201/" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 610298116, "title": "Junior Data Scientist (Permanent)", "company": "Babcock International Group", "location": "Ottawa, Ontario", "applyUrl": "https://jobs.babcockinternational.com/job/Ottawa-Junior-Data-Scientist-(Permanent)-ON-K1P-5E7/1275983201/", "pageUrl": "/jobs/junior-data-scientist-permanent-babcock-international-group-610298116/", "postedDate": "2026-01-24", "category": "data_ml"}'></div>
 </li>
             
@@ -553,6 +588,21 @@ We’re proud to have an extensive portfolio of games and experiences, locations
 
 
 
+    <script>
+    function copyApplyLink(btn, e) {
+        e.stopPropagation();
+        e.preventDefault();
+        var url = btn.getAttribute('data-url');
+        navigator.clipboard.writeText(url).then(function() {
+            btn.classList.add('copied');
+            btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
+            setTimeout(function() {
+                btn.classList.remove('copied');
+                btn.innerHTML = '<span class="copy-icon">🔗</span> Copy Link';
+            }, 2000);
+        });
+    }
+    </script>
     <script src="/js/tracker.js"></script>
 </body>
 </html>

@@ -354,6 +354,13 @@ Are you known for your ability to adapt and learn? Do you like to surpass yourse
         
         <p class="job-date">Posted Jan 29, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="https://fa-exhh-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/requisitions/preview/61963" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 613796742, "title": "Junior QA Engineer", "company": "Staples Canada", "location": "Richmond Hill, ON", "applyUrl": "https://fa-exhh-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/requisitions/preview/61963", "pageUrl": "/jobs/junior-qa-engineer-staples-canada-613796742/", "postedDate": "2026-01-29", "category": "qa_test"}'></div>
 </li>
             
@@ -380,6 +387,13 @@ Are you known for your ability to adapt and learn? Do you like to surpass yourse
         
         <p class="job-date">Posted Jan 27, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="https://quantiphi.wd1.myworkdayjobs.com/en-US/Careers_at_Quantiphi/job/CA-NB-Fredericton/Junior--Test-Automation-Engineer_JR8595" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 612457161, "title": "Junior Test Automation Engineer", "company": "Quantiphi", "location": "Fredericton, NB", "applyUrl": "https://quantiphi.wd1.myworkdayjobs.com/en-US/Careers_at_Quantiphi/job/CA-NB-Fredericton/Junior--Test-Automation-Engineer_JR8595", "pageUrl": "/jobs/junior-test-automation-engineer-quantiphi-612457161/", "postedDate": "2026-01-27", "category": "qa_test"}'></div>
 </li>
             
@@ -406,6 +420,13 @@ Are you known for your ability to adapt and learn? Do you like to surpass yourse
         
         <p class="job-date">Posted Jan 21, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-software-engineer-qa-analyst-internal-systems-5ba03351f249189a" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 607945366, "title": "Junior Software Engineer / QA Analyst (Internal Systems)", "company": "Direct Meds Canada", "location": "Winnipeg, MB R3E 3H1", "applyUrl": "http://ca.indeed.com/job/junior-software-engineer-qa-analyst-internal-systems-5ba03351f249189a", "pageUrl": "/jobs/junior-software-engineer-qa-analyst-internal-systems-direct-meds-canada-607945366/", "postedDate": "2026-01-21", "category": "qa_test"}'></div>
 </li>
             
@@ -432,6 +453,13 @@ Are you known for your ability to adapt and learn? Do you like to surpass yourse
         
         <p class="job-date">Posted Jan 30, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="https://jobs.schaeffler.com/job-invite/40256/?locale=en_US" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 614001342, "title": "Co-Op/Intern - Quality Assurance (Automotive; May 2026) - 16 months", "company": "Schaeffler", "location": "Stratford, Ontario", "applyUrl": "https://jobs.schaeffler.com/job-invite/40256/?locale=en_US", "pageUrl": "/jobs/co-op-intern-quality-assurance-automotive-may-2026-16-months-schaeffler-614001342/", "postedDate": "2026-01-30", "category": "qa_test"}'></div>
 </li>
             
@@ -458,6 +486,13 @@ Are you known for your ability to adapt and learn? Do you like to surpass yourse
         
         <p class="job-date">Posted Jan 28, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="https://jobs.dell.com/job/-/-/375/91093320176?source=rd_linkedin_job_posting" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 612553265, "title": "5G AI Automation Intern", "company": "Dell Technologies", "location": "Ottawa, Ontario", "applyUrl": "https://jobs.dell.com/job/-/-/375/91093320176?source=rd_linkedin_job_posting", "pageUrl": "/jobs/5g-ai-automation-intern-dell-technologies-612553265/", "postedDate": "2026-01-28", "category": "qa_test"}'></div>
 </li>
             
@@ -539,6 +574,21 @@ Are you known for your ability to adapt and learn? Do you like to surpass yourse
 
 
 
+    <script>
+    function copyApplyLink(btn, e) {
+        e.stopPropagation();
+        e.preventDefault();
+        var url = btn.getAttribute('data-url');
+        navigator.clipboard.writeText(url).then(function() {
+            btn.classList.add('copied');
+            btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
+            setTimeout(function() {
+                btn.classList.remove('copied');
+                btn.innerHTML = '<span class="copy-icon">🔗</span> Copy Link';
+            }, 2000);
+        });
+    }
+    </script>
     <script src="/js/tracker.js"></script>
 </body>
 </html>

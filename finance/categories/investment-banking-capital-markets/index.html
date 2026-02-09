@@ -250,6 +250,13 @@
         
         <p class="job-date">Posted Feb 03, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="https://jobs.rbc.com/ca/en/job/RBCAA0088R0000158182EXTERNALENCA/2026-Capital-Markets-Business-Client-Services-Junior-Trade-Support-Analyst-16-Months-Co-op?utm_campaign=rbc_linkedin&amp;utm_medium=phenom-feeds&amp;utm_source=LinkedIn" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 616706145, "title": "2026 Capital Markets, Business &amp; Client Services, Junior Trade Support Analyst (16 Months, Co-op)", "company": "RBC", "location": "Toronto, Ontario", "applyUrl": "https://jobs.rbc.com/ca/en/job/RBCAA0088R0000158182EXTERNALENCA/2026-Capital-Markets-Business-Client-Services-Junior-Trade-Support-Analyst-16-Months-Co-op?utm_campaign=rbc_linkedin&amp;utm_medium=phenom-feeds&amp;utm_source=LinkedIn", "pageUrl": "/jobs/2026-capital-markets-business-client-services-junior-trade-rbc-616706145/", "postedDate": "2026-02-03", "category": "finance_ib"}'></div>
 </li>
         
@@ -398,6 +405,21 @@
 
 
 
+    <script>
+    function copyApplyLink(btn, e) {
+        e.stopPropagation();
+        e.preventDefault();
+        var url = btn.getAttribute('data-url');
+        navigator.clipboard.writeText(url).then(function() {
+            btn.classList.add('copied');
+            btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
+            setTimeout(function() {
+                btn.classList.remove('copied');
+                btn.innerHTML = '<span class="copy-icon">🔗</span> Copy Link';
+            }, 2000);
+        });
+    }
+    </script>
     <script src="/js/tracker.js"></script>
 </body>
 </html>

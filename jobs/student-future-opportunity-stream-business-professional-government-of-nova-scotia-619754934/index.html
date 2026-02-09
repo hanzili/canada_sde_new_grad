@@ -401,6 +401,13 @@ We are committed to providing an inclusive and accessible recruitment process. C
         
         <p class="job-date">Posted Feb 06, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-bookkeeper-82d27c69691d1b27" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 619721227, "title": "Junior Bookkeeper", "company": "Canwest Concrete Cutting", "location": "Calgary, AB T3J 5J9", "applyUrl": "http://ca.indeed.com/job/junior-bookkeeper-82d27c69691d1b27", "pageUrl": "/jobs/junior-bookkeeper-canwest-concrete-cutting-619721227/", "postedDate": "2026-02-06", "category": "finance_acct"}'></div>
 </li>
             
@@ -427,6 +434,13 @@ We are committed to providing an inclusive and accessible recruitment process. C
         
         <p class="job-date">Posted Feb 06, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="https://www.bakertilly.ca/opportunities/cpa-student" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 619703364, "title": "CPA Student", "company": "Baker Tilly Canada", "location": "Banff, Alberta", "applyUrl": "https://www.bakertilly.ca/opportunities/cpa-student", "pageUrl": "/jobs/cpa-student-baker-tilly-canada-619703364/", "postedDate": "2026-02-06", "category": "finance_acct"}'></div>
 </li>
             
@@ -453,6 +467,13 @@ We are committed to providing an inclusive and accessible recruitment process. C
         
         <p class="job-date">Posted Feb 06, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="https://blumetric.bamboohr.com/careers/156?source=LinkedIn" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 619677210, "title": "Junior Accountant", "company": "BluMetric", "location": "Ottawa, Ontario", "applyUrl": "https://blumetric.bamboohr.com/careers/156?source=LinkedIn", "pageUrl": "/jobs/junior-accountant-blumetric-619677210/", "postedDate": "2026-02-06", "category": "finance_acct"}'></div>
 </li>
             
@@ -479,6 +500,13 @@ We are committed to providing an inclusive and accessible recruitment process. C
         
         <p class="job-date">Posted Feb 06, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="https://jobs.atsautomation.com/job/Cambridge-Junior-Financial-Analyst-ON-N3H-4R7/1291524901/?feedId=363501&amp;utm_campaign=ATS_LinkedIn&amp;utm_source=LinkedInJobPostings" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 619652007, "title": "Junior Financial Analyst", "company": "ATS Industrial Automation", "location": "Cambridge, Ontario", "applyUrl": "https://jobs.atsautomation.com/job/Cambridge-Junior-Financial-Analyst-ON-N3H-4R7/1291524901/?feedId=363501&amp;utm_campaign=ATS_LinkedIn&amp;utm_source=LinkedInJobPostings", "pageUrl": "/jobs/junior-financial-analyst-ats-industrial-automation-619652007/", "postedDate": "2026-02-06", "category": "finance_acct"}'></div>
 </li>
             
@@ -505,6 +533,13 @@ We are committed to providing an inclusive and accessible recruitment process. C
         
         <p class="job-date">Posted Feb 06, 2026</p>
     </a>
+    
+    <div class="job-actions">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-accountant-at-accencis-group-4369819381" onclick="copyApplyLink(this, event)" title="Copy apply link">
+            <span class="copy-icon">🔗</span> Copy Link
+        </button>
+    </div>
+    
     <div class="tracker-container" data-tracker-job='{"id": 619608963, "title": "Junior Accountant", "company": "Accencis Group", "location": "Markham, Ontario", "applyUrl": "https://ca.linkedin.com/jobs/view/junior-accountant-at-accencis-group-4369819381", "pageUrl": "/jobs/junior-accountant-accencis-group-619608963/", "postedDate": "2026-02-06", "category": "finance_acct"}'></div>
 </li>
             
@@ -600,6 +635,21 @@ We are committed to providing an inclusive and accessible recruitment process. C
 
 
 
+    <script>
+    function copyApplyLink(btn, e) {
+        e.stopPropagation();
+        e.preventDefault();
+        var url = btn.getAttribute('data-url');
+        navigator.clipboard.writeText(url).then(function() {
+            btn.classList.add('copied');
+            btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
+            setTimeout(function() {
+                btn.classList.remove('copied');
+                btn.innerHTML = '<span class="copy-icon">🔗</span> Copy Link';
+            }, 2000);
+        });
+    }
+    </script>
     <script src="/js/tracker.js"></script>
 </body>
 </html>
