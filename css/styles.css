@@ -477,19 +477,24 @@ h1, h2, h3, h4 {
     margin-top: var(--spacing-sm);
 }
 
-/* === Job Actions === */
-.job-actions {
-    padding: 0 var(--spacing-lg) var(--spacing-sm);
+/* === Job Card Actions === */
+.job-card-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 .copy-link-btn {
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    padding: 4px 10px;
-    font-size: 0.75rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.8rem;
+    font-family: var(--font-sans);
     color: var(--color-text-muted);
-    background: var(--color-bg-alt, #f5f5f5);
+    background: var(--color-bg);
     border: 1px solid rgba(0,0,0,0.08);
     border-radius: var(--radius-sm);
     cursor: pointer;
@@ -499,7 +504,7 @@ h1, h2, h3, h4 {
 .copy-link-btn:hover {
     color: var(--color-text);
     border-color: rgba(0,0,0,0.15);
-    background: rgba(0,0,0,0.04);
+    background: var(--color-bg-alt);
 }
 
 .copy-link-btn.copied {
@@ -1477,15 +1482,14 @@ h1, h2, h3, h4 {
 
 /* === Job Tracker === */
 .tracker-container {
-    margin-top: var(--spacing-sm);
-    padding: var(--spacing-sm) var(--spacing-lg) 0;
-    border-top: 1px dashed rgba(0,0,0,0.06);
+    display: inline-flex;
+    align-items: center;
 }
 
 .tracker-btn {
     display: inline-flex;
     align-items: center;
-    gap: var(--spacing-xs);
+    gap: 4px;
     padding: var(--spacing-xs) var(--spacing-sm);
     border: 1px solid rgba(0,0,0,0.08);
     border-radius: var(--radius-sm);
@@ -1493,20 +1497,22 @@ h1, h2, h3, h4 {
     cursor: pointer;
     font-size: 0.8rem;
     font-family: var(--font-sans);
+    color: var(--color-text-muted);
     transition: all 0.2s;
 }
 
 .tracker-btn:hover {
+    color: var(--color-text);
     background: var(--color-bg-alt);
     border-color: rgba(0,0,0,0.15);
 }
 
 .tracker-btn-save {
-    background: var(--color-bg-alt);
-    color: var(--color-text);
+    color: var(--color-text-muted);
 }
 
 .tracker-btn-save:hover {
+    color: var(--color-text);
     background: var(--color-accent-light);
     border-color: var(--color-accent);
 }
