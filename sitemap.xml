@@ -56,6 +56,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://jobs.hanzilla.co/categories/solutions-customer-engineering/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jobs.hanzilla.co/categories/other-roles/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -381,6 +386,12 @@
     <lastmod>2025-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/disney-dreamlight-valley-testeur-euse-qa-integre-junior-gameloft-621224595/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/junior-data-analyst-kinesso-620997983/</loc>
@@ -2169,6 +2180,48 @@
     <lastmod>2025-11-25</lastmod>
     <changefreq>never</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/engineering-or-computer-science-intern-co-op-ai-data-clifton-621236249/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/intern-c-full-stack-developer-riva-international-inc-621234907/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/quality-assurance-co-op-student-loblaw-companies-limited-621160690/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/intern-dto-enterprise-analytics-8-months-seaspan-ulc-621159898/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/ai-project-implementation-intern-mikata-health-621067414/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/software-developer-common-cloud-services-co-op-ribbon-communications-621039190/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/waveserver-software-developer-co-op-spring-summer-2026-ciena-621029368/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/co-op-intern-ai-software-developer-ciena-621025877/</loc>
