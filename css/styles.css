@@ -392,6 +392,8 @@ h1, h2, h3, h4 {
 }
 
 .job-card {
+    display: flex;
+    flex-direction: column;
     background: var(--color-bg);
     border: 1px solid rgba(0,0,0,0.06);
     border-radius: var(--radius-lg);
@@ -413,6 +415,7 @@ h1, h2, h3, h4 {
 
 .job-link {
     display: block;
+    flex: 1;
     padding: var(--spacing-lg);
     color: inherit;
     text-decoration: none;
