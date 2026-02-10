@@ -56,11 +56,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jobs.hanzilla.co/categories/solutions-customer-engineering/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://jobs.hanzilla.co/categories/other-roles/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -394,6 +389,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://jobs.hanzilla.co/jobs/junior-accounts-receivable-clerk-the-aurum-group-621209525/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jobs.hanzilla.co/jobs/junior-data-analyst-kinesso-620997983/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -540,6 +541,18 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/junior-accountant-great-little-box-co-617735150/</loc>
     <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/junior-accountant-parkland-corporation-617396670/</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/junior-production-controller-proall-international-manufacturing-inc-a-terex-brand-617025470/</loc>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -828,8 +841,8 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/uas-flight-test-engineer-pilot-junior-university-of-victoria-607203481/</loc>
     <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/rq10013-front-end-angular-junior-a-t-consulting-recruiting-inc-607199018/</loc>
@@ -840,8 +853,8 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/junior-web-developer-websdepot-technology-partners-inc-607071930/</loc>
     <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/junior-full-stack-engineer-cz-absa-group-606986991/</loc>
@@ -2194,6 +2207,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://jobs.hanzilla.co/jobs/intern-revenue-accounting-4-months-seaspan-ulc-621162163/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jobs.hanzilla.co/jobs/quality-assurance-co-op-student-loblaw-companies-limited-621160690/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -2243,6 +2262,12 @@
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/systems-software-engineer-co-op-canada-fc-8-months-summer-ea-sports-620598994/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/fp-a-intern-equinix-620583208/</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -2344,6 +2369,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://jobs.hanzilla.co/jobs/stage-ete-2026-comptabilite-2026-ete-internship-accounting-bell-flight-617687911/</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/intern-market-risk-analyst-summer-2026-bnp-paribas-617595237/</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jobs.hanzilla.co/jobs/summer-intern-2026-corporate-finance-ig-wealth-management-617484396/</loc>
     <lastmod>2026-02-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -2380,6 +2417,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://jobs.hanzilla.co/jobs/corporate-credit-analyst-intern-may-august-2026-bnp-paribas-614895396/</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jobs.hanzilla.co/jobs/junior-financial-analyst-hamilton-wentworth-catholic-district-school-board-614827507/</loc>
     <lastmod>2026-01-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -2387,6 +2430,12 @@
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/accounting-co-op-student-financial-reporting-kinectrics-614800617/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/corporate-credit-analyst-intern-may-august-2026-bnp-paribas-614718846/</loc>
     <lastmod>2026-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -3342,20 +3391,20 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/summer-intern-software-engineer-general-motors-gm-607462786/</loc>
     <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/test-engineer-co-op-arlo-technologies-607286434/</loc>
     <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/test-engineer-co-op-arlo-technologies-inc-607173386/</loc>
     <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/firmware-intern-blackline-safety-607157252/</loc>
@@ -3366,26 +3415,26 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/qa-automation-engineer-intern-8-months-summer-2026-dayforce-607150191/</loc>
     <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/application-developer-meln-app-607150103/</loc>
     <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/summer-intern-software-engineer-general-motors-607150032/</loc>
     <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/ai-full-stack-developer-intern-cfsc-opec-607149982/</loc>
     <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/intern-developer-ai-ml-kinaxis-607117523/</loc>
@@ -3408,20 +3457,20 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/co-op-quality-assurance-analyst-summer-2026-may-august-info-tech-research-group-607011982/</loc>
     <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/automation-ai-ml-for-open-ran-coop-ericsson-606986978/</loc>
     <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/stage-developpeur-frontend-distech-controls-606949662/</loc>
     <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/intern-bachelors-embedded-engineer-honeywell-606859348/</loc>
@@ -3432,8 +3481,8 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/data-analyst-intern-bnp-paribas-606859344/</loc>
     <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/summer-intern-2026-asset-management-operations-portfolio-mackenzie-investments-606831901/</loc>
@@ -3444,8 +3493,8 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/2026-summer-ai-ml-intern-general-motors-606625045/</loc>
     <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/application-developer-co-op-cibc-606579167/</loc>
@@ -3456,8 +3505,8 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/software-developer-summer-2026-co-op-internship-4-months-bmo-606579151/</loc>
     <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/jobs/velocity-devops-engineer-capital-markets-internship-co-op-scotiabank-606601153/</loc>
