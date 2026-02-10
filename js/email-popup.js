@@ -1,6 +1,6 @@
 (function() {
     // Replace with your Google Apps Script web app URL after deployment
-    var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz0NhyiWioBwswJ3PERLdy43uOr8Czm36azGMT4bFXGATX8XSr8LgM2wYfgAN-cqLINhQ/exec';
+    var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyUAl5EepxfX39GOK6bsD_6XOGdDCcD7LMips2J84dSP8RKc_TP8WZAS1tRDRhzQ9xtOA/exec';
 
     var DISMISS_KEY = 'email_popup_dismissed_at';
     var SUBMIT_KEY = 'email_popup_submitted';
