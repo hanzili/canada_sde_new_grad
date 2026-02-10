@@ -619,5 +619,58 @@ Current</p>
     }
     </script>
     <script src="/js/tracker.js"></script>
+    <!-- Email Collection Popup -->
+<div class="email-popup-overlay" id="emailPopup" style="display:none">
+    <div class="email-popup-modal">
+        <button class="email-popup-close" id="emailPopupClose" aria-label="Close">&times;</button>
+
+        <!-- Form State -->
+        <div id="emailPopupForm">
+            <h2 class="email-popup-title">Get Job Alerts</h2>
+            <p class="email-popup-subtitle">We'll email you when new positions match your interests.</p>
+
+            <form id="emailForm" autocomplete="on">
+                <div class="email-popup-field">
+                    <input type="email" id="emailInput" name="email" placeholder="your@email.com" required autocomplete="email">
+                </div>
+
+                <p class="email-popup-label">What roles interest you?</p>
+                <div class="email-popup-chips" id="roleChips">
+                    <label class="email-popup-chip"><input type="checkbox" name="role" value="Software Engineering"><span>Software Engineering</span></label>
+                    <label class="email-popup-chip"><input type="checkbox" name="role" value="Data / ML"><span>Data / ML</span></label>
+                    <label class="email-popup-chip"><input type="checkbox" name="role" value="DevOps / SRE"><span>DevOps / SRE</span></label>
+                    <label class="email-popup-chip"><input type="checkbox" name="role" value="Security"><span>Security</span></label>
+                    <label class="email-popup-chip"><input type="checkbox" name="role" value="Mobile"><span>Mobile</span></label>
+                    <label class="email-popup-chip"><input type="checkbox" name="role" value="QA / Testing"><span>QA / Testing</span></label>
+                    <label class="email-popup-chip"><input type="checkbox" name="role" value="Hardware / Firmware"><span>Hardware / Firmware</span></label>
+                    <label class="email-popup-chip"><input type="checkbox" name="role" value="Product / TPM"><span>Product / TPM</span></label>
+                    <label class="email-popup-chip"><input type="checkbox" name="role" value="IT / Support"><span>IT / Support</span></label>
+                    <label class="email-popup-chip"><input type="checkbox" name="role" value="Investment Banking"><span>Investment Banking</span></label>
+                    <label class="email-popup-chip"><input type="checkbox" name="role" value="Accounting / Finance"><span>Accounting / Finance</span></label>
+                </div>
+
+                <p class="email-popup-label">Seniority</p>
+                <div class="email-popup-chips">
+                    <label class="email-popup-chip"><input type="checkbox" name="seniority" value="New Grad"><span>New Grad</span></label>
+                    <label class="email-popup-chip"><input type="checkbox" name="seniority" value="Internship"><span>Internship</span></label>
+                </div>
+
+                <div class="email-popup-field">
+                    <textarea id="emailMissing" name="missing" rows="2" placeholder="Looking for something else? Let us know..."></textarea>
+                </div>
+
+                <button type="submit" class="email-popup-submit" id="emailSubmitBtn">Subscribe</button>
+            </form>
+        </div>
+
+        <!-- Success State -->
+        <div id="emailPopupSuccess" style="display:none">
+            <div class="email-popup-success-icon">&#10003;</div>
+            <h2 class="email-popup-title">You're all set!</h2>
+            <p class="email-popup-subtitle">We'll notify you when matching jobs are posted.</p>
+        </div>
+    </div>
+</div>
+    <script src="/js/email-popup.js"></script>
 </body>
 </html>
