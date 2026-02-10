@@ -1,5 +1,4 @@
 (function() {
-    // Replace with your Google Apps Script web app URL after deployment
     var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyUAl5EepxfX39GOK6bsD_6XOGdDCcD7LMips2J84dSP8RKc_TP8WZAS1tRDRhzQ9xtOA/exec';
 
     var DISMISS_KEY = 'email_popup_dismissed_at';
@@ -70,10 +69,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-        if (!shouldShow()) return;
-
-        setTimeout(show, 30000);
-
+        // Always attach event listeners so the form works regardless of how popup is shown
         document.getElementById('emailPopupClose').addEventListener('click', dismiss);
 
         document.getElementById('emailPopup').addEventListener('click', function(e) {
@@ -87,5 +83,10 @@
         });
 
         document.getElementById('emailForm').addEventListener('submit', onSubmit);
+
+        // Only auto-show on eligible visits
+        if (shouldShow()) {
+            setTimeout(show, 30000);
+        }
     });
 })();
