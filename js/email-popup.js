@@ -84,9 +84,12 @@
 
         document.getElementById('emailForm').addEventListener('submit', onSubmit);
 
-        // Only auto-show on eligible visits
+        // Only auto-show on eligible visits; re-check before showing
+        // in case user dismissed on another page during the 30s delay
         if (shouldShow()) {
-            setTimeout(show, 30000);
+            setTimeout(function() {
+                if (shouldShow()) show();
+            }, 30000);
         }
     });
 })();
