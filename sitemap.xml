@@ -81,7 +81,22 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jobs.hanzilla.co/finance/categories/accounting-financial-analysis/</loc>
+    <loc>https://jobs.hanzilla.co/finance/categories/accounting-fp-a/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/finance/categories/audit-tax/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/finance/categories/risk-compliance/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/finance/categories/banking-insurance/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
