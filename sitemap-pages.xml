@@ -46,11 +46,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jobs.hanzilla.co/categories/product-tpm/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://jobs.hanzilla.co/categories/it-support-systems/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
