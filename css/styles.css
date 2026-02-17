@@ -168,6 +168,8 @@ h1, h2, h3, h4 {
     border-radius: var(--radius-md);
     padding: 6px;
     min-width: 240px;
+    max-height: 70vh;
+    overflow-y: auto;
     box-shadow: 0 12px 40px rgba(0,0,0,0.1), 0 2px 8px rgba(0,0,0,0.04);
     list-style: none;
     z-index: 200;
