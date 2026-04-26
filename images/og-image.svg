@@ -1,6 +1,57 @@
-<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" fill="#d97706"/>
-  <text x="600" y="280" text-anchor="middle" font-family="system-ui, sans-serif" font-size="72" font-weight="bold" fill="white">🍁 Canada Tech Jobs</text>
-  <text x="600" y="380" text-anchor="middle" font-family="system-ui, sans-serif" font-size="36" fill="white" opacity="0.9">New Grad &amp; Internship Positions</text>
-  <text x="600" y="440" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" fill="white" opacity="0.7">Updated Daily • 400+ Positions</text>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7ED"/>
+      <stop offset="0.52" stop-color="#FFFBEB"/>
+      <stop offset="1" stop-color="#EFF6FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="150" y1="132" x2="1050" y2="530" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F59E0B"/>
+      <stop offset="0.55" stop-color="#D97706"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <filter id="shadow" x="86" y="70" width="1028" height="510" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#92400E" flood-opacity="0.14"/>
+    </filter>
+    <filter id="soft" x="0" y="0" width="1200" height="630" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1010" cy="112" r="180" fill="#DBEAFE" opacity="0.9" filter="url(#soft)"/>
+  <circle cx="132" cy="526" r="210" fill="#FED7AA" opacity="0.85" filter="url(#soft)"/>
+  <path d="M0 548 C192 506 312 578 500 530 C736 469 875 548 1200 489 V630 H0 Z" fill="#FFFFFF" opacity="0.62"/>
+
+  <g filter="url(#shadow)">
+    <rect x="112" y="92" width="976" height="446" rx="42" fill="white" opacity="0.92"/>
+    <rect x="113.5" y="93.5" width="973" height="443" rx="40.5" stroke="#F3E8D1" stroke-width="3"/>
+  </g>
+
+  <rect x="152" y="132" width="204" height="44" rx="22" fill="#FEF3C7"/>
+  <circle cx="176" cy="154" r="10" fill="#EF4444"/>
+  <text x="196" y="162" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="19" font-weight="700" fill="#92400E">Hanzilla Jobs</text>
+
+  <text x="152" y="265" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700" letter-spacing="-2.2" fill="#18181B">Canadian</text>
+  <text x="152" y="350" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700" letter-spacing="-2.2" fill="#18181B">University Jobs</text>
+
+  <rect x="152" y="386" width="636" height="4" rx="2" fill="url(#accent)"/>
+
+  <text x="152" y="442" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="31" font-weight="650" fill="#3F3F46">Internships • Co-ops • New Grad</text>
+  <text x="152" y="486" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="24" font-weight="500" fill="#71717A">All majors • Finance · Engineering · Business · Sciences · Tech</text>
+
+  <g transform="translate(828 164)">
+    <rect x="0" y="0" width="210" height="258" rx="28" fill="#111827"/>
+    <rect x="22" y="28" width="166" height="18" rx="9" fill="#FBBF24"/>
+    <rect x="22" y="70" width="118" height="14" rx="7" fill="#E5E7EB" opacity="0.95"/>
+    <rect x="22" y="104" width="160" height="14" rx="7" fill="#9CA3AF" opacity="0.85"/>
+    <rect x="22" y="138" width="132" height="14" rx="7" fill="#9CA3AF" opacity="0.85"/>
+    <rect x="22" y="178" width="72" height="28" rx="14" fill="#2563EB"/>
+    <rect x="106" y="178" width="82" height="28" rx="14" fill="#D97706"/>
+    <rect x="22" y="222" width="166" height="10" rx="5" fill="#374151"/>
+  </g>
+  <g transform="translate(760 400)">
+    <rect x="0" y="0" width="314" height="64" rx="32" fill="#F59E0B"/>
+    <text x="157" y="40" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="23" font-weight="800" fill="white">jobs.hanzilla.co</text>
+  </g>
 </svg>
