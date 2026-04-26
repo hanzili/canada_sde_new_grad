@@ -240,6 +240,95 @@ h1, h2, h3, h4 {
     margin: 0 auto var(--spacing-xl);
 }
 
+.landing-hero {
+    max-width: 920px;
+    padding: var(--spacing-3xl) var(--spacing-lg);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at top left, rgba(234, 179, 8, 0.16), transparent 32%),
+        linear-gradient(135deg, #fffaf0 0%, #ffffff 54%, #f8fafc 100%);
+    border: 1px solid rgba(217, 119, 6, 0.12);
+    box-shadow: var(--shadow-md);
+}
+
+.hero-kicker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-sm);
+    padding: 5px 12px;
+    border-radius: 9999px;
+    background: rgba(217, 119, 6, 0.10);
+    color: var(--color-primary-dark);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.landing-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    margin: var(--spacing-lg) 0 var(--spacing-md);
+}
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0.55rem 0.95rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(0,0,0,0.08);
+    background: rgba(255,255,255,0.82);
+    color: var(--color-text);
+    font-size: 0.9rem;
+    font-weight: 700;
+    box-shadow: var(--shadow-sm);
+}
+
+.hero-cta:hover {
+    transform: translateY(-1px);
+    text-decoration: none;
+    background: var(--color-accent-light);
+    color: var(--color-text);
+}
+
+.hero-cta-primary {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.hero-cta-primary:hover {
+    background: var(--color-primary-dark);
+    color: white;
+}
+
+.landing-proof-points {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    color: var(--color-text-muted);
+    font-size: 0.82rem;
+}
+
+.landing-proof-points span {
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-md);
+    background: rgba(255,255,255,0.72);
+    border: 1px solid rgba(0,0,0,0.04);
+}
+
+@media (max-width: 720px) {
+    .landing-proof-points {
+        grid-template-columns: 1fr;
+    }
+}
+
 .page-header h1 {
     font-size: 2.25rem;
     font-weight: 700;
