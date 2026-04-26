@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -420,7 +425,7 @@
     
 
     <div class="apply-section">
-        <a href="https://ca.linkedin.com/jobs/view/summer-student-route-sales-representative-at-pepsico-4379948467" class="btn-apply" target="_blank" rel="noopener" itemprop="url">
+        <a href="https://ca.linkedin.com/jobs/view/summer-student-route-sales-representative-at-pepsico-4379948467" class="btn-apply" target="_blank" rel="noopener" itemprop="url" data-job-title="Summer Student Route Sales Representative" data-job-company="PepsiCo" data-job-location="Ontario">
             Apply Now →
         </a>
         <p class="apply-note">Opens in a new tab on the company's website</p>
@@ -436,7 +441,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-account-executive-incture-671220948/" class="job-link">
+    <a href="/jobs/junior-account-executive-incture-671220948/" class="job-link" data-job-title="Junior Account Executive" data-job-company="Incture">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -457,7 +462,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-account-executive-at-incture-4405749017" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-account-executive-at-incture-4405749017" data-job-title="Junior Account Executive" data-job-company="Incture" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -469,7 +474,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/kobo-sales-representative-mothers-day-event-acosta-group-671078791/" class="job-link">
+    <a href="/jobs/kobo-sales-representative-mothers-day-event-acosta-group-671078791/" class="job-link" data-job-title="Kobo Sales Representative – Mother’s Day Event" data-job-company="Acosta Group">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -490,7 +495,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/kobo-sales-representative-%E2%80%93-mother%E2%80%99s-day-event-at-acosta-group-4404121755" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/kobo-sales-representative-%E2%80%93-mother%E2%80%99s-day-event-at-acosta-group-4404121755" data-job-title="Kobo Sales Representative – Mother’s Day Event" data-job-company="Acosta Group" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -502,7 +507,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-sales-representative-looking-for-new-grads-minus-waste-solutions-670691468/" class="job-link">
+    <a href="/jobs/junior-sales-representative-looking-for-new-grads-minus-waste-solutions-670691468/" class="job-link" data-job-title="Junior Sales Representative (Looking for New Grads)" data-job-company="Minus Waste Solutions">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -523,7 +528,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-sales-representative-looking-for-new-grads-at-minus-waste-solutions-4406619128" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-sales-representative-looking-for-new-grads-at-minus-waste-solutions-4406619128" data-job-title="Junior Sales Representative (Looking for New Grads)" data-job-company="Minus Waste Solutions" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -535,7 +540,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-inside-sales-representative-arxium-670219588/" class="job-link">
+    <a href="/jobs/junior-inside-sales-representative-arxium-670219588/" class="job-link" data-job-title="Junior Inside Sales Representative" data-job-company="ARxIUM">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -556,7 +561,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-inside-sales-representative-at-arxium-4406106923" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-inside-sales-representative-at-arxium-4406106923" data-job-title="Junior Inside Sales Representative" data-job-company="ARxIUM" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -568,7 +573,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-account-manager-customer-solutions-rzm-solutions-associates-669940469/" class="job-link">
+    <a href="/jobs/junior-account-manager-customer-solutions-rzm-solutions-associates-669940469/" class="job-link" data-job-title="Junior Account Manager – Customer Solutions" data-job-company="RZM Solutions Associates">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -589,7 +594,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-account-manager-customer-solutions-cdee07988511c4ea" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-account-manager-customer-solutions-cdee07988511c4ea" data-job-title="Junior Account Manager – Customer Solutions" data-job-company="RZM Solutions Associates" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -680,6 +685,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -689,6 +699,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

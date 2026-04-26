@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -284,6 +289,31 @@
         
     </div>
 
+    
+    <section class="seo-content-block">
+        <h2>How to use this business jobs board</h2>
+        <p>This page is built for students and recent grads searching for 2026 Canada business internships and co-op roles. Listings are refreshed daily, grouped by career track, and kept focused on roles that are practical for early-career candidates in Canada.</p>
+        <ul class="seo-content-list">
+            
+            <li>Browse currently active business openings from employers such as Clinic Marketing, SkyFlow Yoga, Kinaxis, Ranch Ehrlo Society, NATIONAL ZAKAT FOUNDATION.</li>
+            
+            <li>Use city pages for local intent: Toronto, Vancouver, Montreal, Waterloo, Ottawa, Calgary, and remote Canada roles.</li>
+            
+            <li>Open a job page before applying to confirm posting date, category, location, and related roles from the same track.</li>
+            
+            <li>Check back daily: stale or closed jobs are removed from listings so the board stays useful for real applications.</li>
+            
+        </ul>
+        <p class="seo-content-links">
+            Start with <a href="/locations/toronto/">Toronto jobs</a>,
+            <a href="/locations/vancouver/">Vancouver jobs</a>,
+            <a href="/locations/montreal/">Montreal jobs</a>,
+            <a href="/locations/waterloo/">Waterloo jobs</a>, or
+            <a href="/locations/remote/">remote Canada jobs</a>.
+        </p>
+    </section>
+    
+
     <div class="emoji-legend">
         <div class="legend-item"><span class="emoji">🔥</span> Hot Opportunity - Big Tech, high pay, exciting role</div>
         <div class="legend-item"><span class="emoji">💤</span> Consider Carefully - May be less exciting</div>
@@ -362,7 +392,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/marketing-assistant-internship-clinic-marketing-671549125/" class="job-link">
+    <a href="/jobs/marketing-assistant-internship-clinic-marketing-671549125/" class="job-link" data-job-title="Marketing Assistant (Internship)" data-job-company="Clinic Marketing">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -383,7 +413,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/marketing-assistant-internship-ec3096b1ae3c1a6a" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/marketing-assistant-internship-ec3096b1ae3c1a6a" data-job-title="Marketing Assistant (Internship)" data-job-company="Clinic Marketing" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -394,7 +424,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/part-time-content-and-marketing-assistant-wellness-studio-skyflow-yoga-671058138/" class="job-link">
+    <a href="/jobs/part-time-content-and-marketing-assistant-wellness-studio-skyflow-yoga-671058138/" class="job-link" data-job-title="Part Time Content and Marketing Assistant (Wellness Studio - Student Friendly)" data-job-company="SkyFlow Yoga">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -415,7 +445,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/part-time-content-and-marketing-assistant-wellness-studio-student-friendly-d6146c5a321d6abf" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/part-time-content-and-marketing-assistant-wellness-studio-student-friendly-d6146c5a321d6abf" data-job-title="Part Time Content and Marketing Assistant (Wellness Studio - Student Friendly)" data-job-company="SkyFlow Yoga" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -426,7 +456,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-marketing-coordinator-csj-national-zakat-foundation-671026108/" class="job-link">
+    <a href="/jobs/junior-marketing-coordinator-csj-national-zakat-foundation-671026108/" class="job-link" data-job-title="Junior Marketing Coordinator (CSJ)" data-job-company="NATIONAL ZAKAT FOUNDATION">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -447,7 +477,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?ccId=19000101_000001&amp;cid=0217a471-c94a-404a-94bb-58ed321d9f8f&amp;jobId=542058&amp;lang=en_CA&amp;source=IN" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?ccId=19000101_000001&amp;cid=0217a471-c94a-404a-94bb-58ed321d9f8f&amp;jobId=542058&amp;lang=en_CA&amp;source=IN" data-job-title="Junior Marketing Coordinator (CSJ)" data-job-company="NATIONAL ZAKAT FOUNDATION" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -458,7 +488,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/marketing-assistant-summer-student-the-centre-for-epilepsy-seizure-education-in-bc-670922185/" class="job-link">
+    <a href="/jobs/marketing-assistant-summer-student-the-centre-for-epilepsy-seizure-education-in-bc-670922185/" class="job-link" data-job-title="Marketing Assistant (Summer Student)" data-job-company="The Centre for Epilepsy &amp; Seizure Education in BC">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -479,7 +509,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-assistant-summer-student-at-the-centre-for-epilepsy-seizure-education-in-bc-4405399020" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-assistant-summer-student-at-the-centre-for-epilepsy-seizure-education-in-bc-4405399020" data-job-title="Marketing Assistant (Summer Student)" data-job-company="The Centre for Epilepsy &amp; Seizure Education in BC" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -490,7 +520,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/marketing-coordinator-summer-student-8-week-position-35-northreach-society-670876840/" class="job-link">
+    <a href="/jobs/marketing-coordinator-summer-student-8-week-position-35-northreach-society-670876840/" class="job-link" data-job-title="Marketing Coordinator – Summer Student (8-week position - 35 hours per week)" data-job-company="Northreach Society">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -511,7 +541,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/marketing-coordinator-summer-student-8-week-position-35-hours-week-6487d71e22ab0844" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/marketing-coordinator-summer-student-8-week-position-35-hours-week-6487d71e22ab0844" data-job-title="Marketing Coordinator – Summer Student (8-week position - 35 hours per week)" data-job-company="Northreach Society" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -522,7 +552,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/marketing-coordinator-student-base31-partners-inc-670839422/" class="job-link">
+    <a href="/jobs/marketing-coordinator-student-base31-partners-inc-670839422/" class="job-link" data-job-title="Marketing Coordinator (Student)" data-job-company="Base31 Partners Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -543,7 +573,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/marketing-coordinator-student-66c4403c0f4dc1c0" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/marketing-coordinator-student-66c4403c0f4dc1c0" data-job-title="Marketing Coordinator (Student)" data-job-company="Base31 Partners Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -554,7 +584,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/sales-and-marketing-coordinator-mtw-markting-inc-670709768/" class="job-link">
+    <a href="/jobs/sales-and-marketing-coordinator-mtw-markting-inc-670709768/" class="job-link" data-job-title="Sales and Marketing Coordinator" data-job-company="MTW Markting Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -575,7 +605,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/sales-and-marketing-coordinator-2b5378cd3e38970a" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/sales-and-marketing-coordinator-2b5378cd3e38970a" data-job-title="Sales and Marketing Coordinator" data-job-company="MTW Markting Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -586,7 +616,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/marketing-specialist-canada-summer-jobs-intern-heritage-christian-online-school-670214231/" class="job-link">
+    <a href="/jobs/marketing-specialist-canada-summer-jobs-intern-heritage-christian-online-school-670214231/" class="job-link" data-job-title="Marketing Specialist – Canada Summer Jobs Intern" data-job-company="Heritage Christian Online School">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -607,7 +637,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://onlineschool.ca/job/marketing-specialist-canada-summer-jobs-intern/" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://onlineschool.ca/job/marketing-specialist-canada-summer-jobs-intern/" data-job-title="Marketing Specialist – Canada Summer Jobs Intern" data-job-company="Heritage Christian Online School" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -618,7 +648,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/marketing-specialist-canada-summer-jobs-intern-studyforge-670119010/" class="job-link">
+    <a href="/jobs/marketing-specialist-canada-summer-jobs-intern-studyforge-670119010/" class="job-link" data-job-title="Marketing Specialist - Canada Summer Jobs Intern" data-job-company="StudyForge">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -639,7 +669,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-specialist-canada-summer-jobs-intern-at-studyforge-4405042165" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-specialist-canada-summer-jobs-intern-at-studyforge-4405042165" data-job-title="Marketing Specialist - Canada Summer Jobs Intern" data-job-company="StudyForge" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -650,7 +680,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/digital-marketing-social-media-marketing-otto-670059289/" class="job-link">
+    <a href="/jobs/digital-marketing-social-media-marketing-otto-670059289/" class="job-link" data-job-title="Digital Marketing/ Social Media Marketing" data-job-company="otto">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -671,7 +701,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/digital-marketing-social-media-marketing-6ca6ca85375adec6" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/digital-marketing-social-media-marketing-6ca6ca85375adec6" data-job-title="Digital Marketing/ Social Media Marketing" data-job-company="otto" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -682,7 +712,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/digital-marketing-post-internship-backlinkgen-669958494/" class="job-link">
+    <a href="/jobs/digital-marketing-post-internship-backlinkgen-669958494/" class="job-link" data-job-title="Digital Marketing Post Internship" data-job-company="Backlinkgen">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -703,7 +733,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/digital-marketing-post-internship-at-backlinkgen-4405002629" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/digital-marketing-post-internship-at-backlinkgen-4405002629" data-job-title="Digital Marketing Post Internship" data-job-company="Backlinkgen" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -714,7 +744,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/marketing-coordinator-summer-student-concerts-in-care-ontario-669923453/" class="job-link">
+    <a href="/jobs/marketing-coordinator-summer-student-concerts-in-care-ontario-669923453/" class="job-link" data-job-title="Marketing Coordinator Summer Student" data-job-company="Concerts in Care Ontario">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -735,7 +765,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/marketing-coordinator-summer-student-3a14b041142ecac4" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/marketing-coordinator-summer-student-3a14b041142ecac4" data-job-title="Marketing Coordinator Summer Student" data-job-company="Concerts in Care Ontario" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -746,7 +776,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/marketing-analyst-supply-chain-co-op-loblaw-companies-limited-669417550/" class="job-link">
+    <a href="/jobs/marketing-analyst-supply-chain-co-op-loblaw-companies-limited-669417550/" class="job-link" data-job-title="Marketing Analyst,  Supply Chain (Co-op)" data-job-company="Loblaw Companies Limited">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -767,7 +797,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-analyst-supply-chain-co-op-at-loblaw-companies-limited-4405496213" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-analyst-supply-chain-co-op-at-loblaw-companies-limited-4405496213" data-job-title="Marketing Analyst,  Supply Chain (Co-op)" data-job-company="Loblaw Companies Limited" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -778,7 +808,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/marketing-analyst-supply-chain-co-op-loblaw-669303577/" class="job-link">
+    <a href="/jobs/marketing-analyst-supply-chain-co-op-loblaw-669303577/" class="job-link" data-job-title="Marketing Analyst, Supply Chain (Co-op)" data-job-company="Loblaw">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -799,7 +829,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://careers.loblaw.ca/marketing-analyst-supply-chain-co-op/job/PAF-LCL-E8264E6D-C6F1-43A4-8B5A-CB687C65B9F9_4479_1776888012_0" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://careers.loblaw.ca/marketing-analyst-supply-chain-co-op/job/PAF-LCL-E8264E6D-C6F1-43A4-8B5A-CB687C65B9F9_4479_1776888012_0" data-job-title="Marketing Analyst, Supply Chain (Co-op)" data-job-company="Loblaw" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -810,7 +840,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/digital-marketing-position-internship-backlinkgen-669102883/" class="job-link">
+    <a href="/jobs/digital-marketing-position-internship-backlinkgen-669102883/" class="job-link" data-job-title="Digital Marketing Position Internship" data-job-company="Backlinkgen">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -831,7 +861,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/digital-marketing-position-internship-at-backlinkgen-4404461060" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/digital-marketing-position-internship-at-backlinkgen-4404461060" data-job-title="Digital Marketing Position Internship" data-job-company="Backlinkgen" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -842,7 +872,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/marketing-assistant-intern-full-time-remote-stellargrade-669098738/" class="job-link">
+    <a href="/jobs/marketing-assistant-intern-full-time-remote-stellargrade-669098738/" class="job-link" data-job-title="Marketing Assistant Intern (Full-Time, Remote)" data-job-company="StellarGrade">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -863,7 +893,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ht-jobs.net/3xdn97e?s=in" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ht-jobs.net/3xdn97e?s=in" data-job-title="Marketing Assistant Intern (Full-Time, Remote)" data-job-company="StellarGrade" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -874,7 +904,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/field-marketing-associate-student-summer-kickoff-vilampara-media-v-media-668558133/" class="job-link">
+    <a href="/jobs/field-marketing-associate-student-summer-kickoff-vilampara-media-v-media-668558133/" class="job-link" data-job-title="Field Marketing Associate (Student Summer Kickoff)" data-job-company="Vilampara Media (V-Media)">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -895,7 +925,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/field-marketing-associate-student-summer-kickoff-d7f72ce02baf7425" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/field-marketing-associate-student-summer-kickoff-d7f72ce02baf7425" data-job-title="Field Marketing Associate (Student Summer Kickoff)" data-job-company="Vilampara Media (V-Media)" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -906,7 +936,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/events-marketing-assistant-southern-interior-construction-association-668312114/" class="job-link">
+    <a href="/jobs/events-marketing-assistant-southern-interior-construction-association-668312114/" class="job-link" data-job-title="Events/Marketing Assistant" data-job-company="Southern Interior Construction Association">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -927,7 +957,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/eventsmarketing-assistant-70de49fc33aac72a" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/eventsmarketing-assistant-70de49fc33aac72a" data-job-title="Events/Marketing Assistant" data-job-company="Southern Interior Construction Association" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -938,7 +968,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/marketing-assistant-student-skyline-group-of-companies-667569904/" class="job-link">
+    <a href="/jobs/marketing-assistant-student-skyline-group-of-companies-667569904/" class="job-link" data-job-title="Marketing Assistant, Student" data-job-company="Skyline Group of Companies">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -959,7 +989,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-assistant-student-at-skyline-group-of-companies-4403634867" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-assistant-student-at-skyline-group-of-companies-4403634867" data-job-title="Marketing Assistant, Student" data-job-company="Skyline Group of Companies" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -970,7 +1000,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/marketing-assistant-riide-saskatoon-667562453/" class="job-link">
+    <a href="/jobs/marketing-assistant-riide-saskatoon-667562453/" class="job-link" data-job-title="Marketing Assistant" data-job-company="Riide Saskatoon">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -991,7 +1021,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-assistant-at-riide-saskatoon-4401658194" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-assistant-at-riide-saskatoon-4401658194" data-job-title="Marketing Assistant" data-job-company="Riide Saskatoon" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1002,7 +1032,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/marketing-coordinator-summer-student-bgc-fm-667526776/" class="job-link">
+    <a href="/jobs/marketing-coordinator-summer-student-bgc-fm-667526776/" class="job-link" data-job-title="Marketing Coordinator (Summer Student)" data-job-company="BGC FM">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1023,7 +1053,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/marketing-coordinator-summer-student-a560754dac0b24dc" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/marketing-coordinator-summer-student-a560754dac0b24dc" data-job-title="Marketing Coordinator (Summer Student)" data-job-company="BGC FM" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1034,7 +1064,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/digital-marketing-intern-the-aber-group-667464008/" class="job-link">
+    <a href="/jobs/digital-marketing-intern-the-aber-group-667464008/" class="job-link" data-job-title="Digital Marketing Intern" data-job-company="The Aber Group">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1055,7 +1085,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/digital-marketing-intern-at-the-aber-group-4404309120" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/digital-marketing-intern-at-the-aber-group-4404309120" data-job-title="Digital Marketing Intern" data-job-company="The Aber Group" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1066,7 +1096,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/freelance-content-creator-the-media-firm-666593869/" class="job-link">
+    <a href="/jobs/freelance-content-creator-the-media-firm-666593869/" class="job-link" data-job-title="Freelance Content Creator" data-job-company="The Media Firm.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1087,7 +1117,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/freelance-content-creator-5a8bd93e00cf1279" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/freelance-content-creator-5a8bd93e00cf1279" data-job-title="Freelance Content Creator" data-job-company="The Media Firm." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1098,7 +1128,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/marketing-coordinator-canadian-grapevine-certification-network-665842927/" class="job-link">
+    <a href="/jobs/marketing-coordinator-canadian-grapevine-certification-network-665842927/" class="job-link" data-job-title="Marketing Coordinator" data-job-company="Canadian Grapevine Certification Network">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1119,7 +1149,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/marketing-coordinator-f642a3f1a943a792" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/marketing-coordinator-f642a3f1a943a792" data-job-title="Marketing Coordinator" data-job-company="Canadian Grapevine Certification Network" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1130,7 +1160,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/marketing-coordinator-summer-intern-techalliance-of-southwestern-ontario-670028506/" class="job-link">
+    <a href="/jobs/marketing-coordinator-summer-intern-techalliance-of-southwestern-ontario-670028506/" class="job-link" data-job-title="Marketing Coordinator (Summer Intern)" data-job-company="TechAlliance of Southwestern Ontario">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1151,7 +1181,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://secure.collage.co/jobs/techalliance/61619?origin=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://secure.collage.co/jobs/techalliance/61619?origin=indeed" data-job-title="Marketing Coordinator (Summer Intern)" data-job-company="TechAlliance of Southwestern Ontario" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1162,7 +1192,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/digital-marketing-coordinator-intern-mantaro-capital-corp-665173490/" class="job-link">
+    <a href="/jobs/digital-marketing-coordinator-intern-mantaro-capital-corp-665173490/" class="job-link" data-job-title="Digital Marketing Coordinator Intern" data-job-company="Mantaro Capital Corp.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1183,7 +1213,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/digital-marketing-coordinator-intern-at-mantaro-capital-corp-4402197603" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/digital-marketing-coordinator-intern-at-mantaro-capital-corp-4402197603" data-job-title="Digital Marketing Coordinator Intern" data-job-company="Mantaro Capital Corp." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1194,7 +1224,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/digital-marketing-intern-paid-ads-seo-mrktops-665006690/" class="job-link">
+    <a href="/jobs/digital-marketing-intern-paid-ads-seo-mrktops-665006690/" class="job-link" data-job-title="Digital Marketing Intern (Paid Ads &amp; SEO)" data-job-company="MRKTOPS">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1215,7 +1245,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/digital-marketing-intern-paid-ads-seo-at-mrktops-4402159143" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/digital-marketing-intern-paid-ads-seo-at-mrktops-4402159143" data-job-title="Digital Marketing Intern (Paid Ads &amp; SEO)" data-job-company="MRKTOPS" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1226,7 +1256,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/digital-marketing-intern-air-liquide-664508577/" class="job-link">
+    <a href="/jobs/digital-marketing-intern-air-liquide-664508577/" class="job-link" data-job-title="Digital Marketing Intern" data-job-company="Air Liquide">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1247,7 +1277,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://airliquidehr.wd3.myworkdayjobs.com/fr-CA/AirLiquideExternalCareer/job/Montreal-QC---rue-de-la-Montagne---Respiratory-therapy/Digital-Marketing-Intern_R10089360?q=Qu%C3%A9bec" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://airliquidehr.wd3.myworkdayjobs.com/fr-CA/AirLiquideExternalCareer/job/Montreal-QC---rue-de-la-Montagne---Respiratory-therapy/Digital-Marketing-Intern_R10089360?q=Qu%C3%A9bec" data-job-title="Digital Marketing Intern" data-job-company="Air Liquide" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1258,7 +1288,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/digital-marketing-coordinator-summer-student-habitat-for-humanity-southern-alberta-664220804/" class="job-link">
+    <a href="/jobs/digital-marketing-coordinator-summer-student-habitat-for-humanity-southern-alberta-664220804/" class="job-link" data-job-title="Digital Marketing Coordinator - Summer Student" data-job-company="Habitat for Humanity Southern Alberta">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1279,7 +1309,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/digital-marketing-coordinator-summer-student-926de2e2391a7025" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/digital-marketing-coordinator-summer-student-926de2e2391a7025" data-job-title="Digital Marketing Coordinator - Summer Student" data-job-company="Habitat for Humanity Southern Alberta" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1290,7 +1320,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/video-content-creator-digital-media-co-op-onetwo-stop-portable-sanitation-inc-664202826/" class="job-link">
+    <a href="/jobs/video-content-creator-digital-media-co-op-onetwo-stop-portable-sanitation-inc-664202826/" class="job-link" data-job-title="Video Content Creator – Digital Media Co-op" data-job-company="OneTwo Stop Portable Sanitation Inc">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1311,7 +1341,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/video-content-creator-digital-media-co-op-5fbe63f50597f41c" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/video-content-creator-digital-media-co-op-5fbe63f50597f41c" data-job-title="Video Content Creator – Digital Media Co-op" data-job-company="OneTwo Stop Portable Sanitation Inc" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1322,7 +1352,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/event-marketing-specialist-summer-student-alberta-emerald-foundation-664120530/" class="job-link">
+    <a href="/jobs/event-marketing-specialist-summer-student-alberta-emerald-foundation-664120530/" class="job-link" data-job-title="Event Marketing Specialist (Summer Student)" data-job-company="Alberta Emerald Foundation">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1343,7 +1373,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/event-marketing-specialist-summer-student-at-alberta-emerald-foundation-4401472065" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/event-marketing-specialist-summer-student-at-alberta-emerald-foundation-4401472065" data-job-title="Event Marketing Specialist (Summer Student)" data-job-company="Alberta Emerald Foundation" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1354,7 +1384,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/on-line-content-writer-internship-backlinkgen-663893649/" class="job-link">
+    <a href="/jobs/on-line-content-writer-internship-backlinkgen-663893649/" class="job-link" data-job-title="On line Content Writer Internship" data-job-company="Backlinkgen">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1375,7 +1405,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-line-content-writer-internship-at-backlinkgen-4401429235" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-line-content-writer-internship-at-backlinkgen-4401429235" data-job-title="On line Content Writer Internship" data-job-company="Backlinkgen" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1386,7 +1416,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/e-commerce-digital-marketing-coordinator-co-op-internship-hand-in-hand-wellness-group-663574527/" class="job-link">
+    <a href="/jobs/e-commerce-digital-marketing-coordinator-co-op-internship-hand-in-hand-wellness-group-663574527/" class="job-link" data-job-title="E-Commerce &amp; Digital Marketing Coordinator (Co-op / Internship) The Wellness Group – Aurora, ON" data-job-company="Hand in Hand Wellness Group">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1407,7 +1437,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/e-commerce-digital-marketing-coordinator-co-op-internship-wellness-group-aurora-312f61abe2422ffb" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/e-commerce-digital-marketing-coordinator-co-op-internship-wellness-group-aurora-312f61abe2422ffb" data-job-title="E-Commerce &amp; Digital Marketing Coordinator (Co-op / Internship) The Wellness Group – Aurora, ON" data-job-company="Hand in Hand Wellness Group" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1418,7 +1448,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/marketing-coordinator-intern-co-op-intern-summer-2026-bmo-662907675/" class="job-link">
+    <a href="/jobs/marketing-coordinator-intern-co-op-intern-summer-2026-bmo-662907675/" class="job-link" data-job-title="Marketing Coordinator Intern (Co-op/Intern), Summer 2026, Montreal - 4 months" data-job-company="BMO">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1439,7 +1469,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-coordinator-intern-co-op-intern-summer-2026-montreal-4-months-at-bmo-4401565098" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-coordinator-intern-co-op-intern-summer-2026-montreal-4-months-at-bmo-4401565098" data-job-title="Marketing Coordinator Intern (Co-op/Intern), Summer 2026, Montreal - 4 months" data-job-company="BMO" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1450,7 +1480,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/marketing-coordinator-intern-co-op-intern-summer-2026-bmo-financial-group-662833985/" class="job-link">
+    <a href="/jobs/marketing-coordinator-intern-co-op-intern-summer-2026-bmo-financial-group-662833985/" class="job-link" data-job-title="Marketing Coordinator Intern (Co-op/Intern), Summer 2026, Montreal - 4 months" data-job-company="BMO Financial Group">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1471,7 +1501,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://bmo.wd3.myworkdayjobs.com/en-CA/External/job/MONTREAL-QC-CAN/Marketing-Coordinator-Intern--Co-op-Intern---Summer-2026--Montreal---4-months_R250029435" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://bmo.wd3.myworkdayjobs.com/en-CA/External/job/MONTREAL-QC-CAN/Marketing-Coordinator-Intern--Co-op-Intern---Summer-2026--Montreal---4-months_R250029435" data-job-title="Marketing Coordinator Intern (Co-op/Intern), Summer 2026, Montreal - 4 months" data-job-company="BMO Financial Group" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1482,7 +1512,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/digital-marketing-student-teldisco-inc-662796357/" class="job-link">
+    <a href="/jobs/digital-marketing-student-teldisco-inc-662796357/" class="job-link" data-job-title="Digital Marketing Student" data-job-company="Teldisco Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1503,7 +1533,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/digital-marketing-student-8e728ba91465cc65" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/digital-marketing-student-8e728ba91465cc65" data-job-title="Digital Marketing Student" data-job-company="Teldisco Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1514,7 +1544,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/marketing-coordinator-internship-chick-fil-a-yonge-and-bloor-eaton-centre-662607234/" class="job-link">
+    <a href="/jobs/marketing-coordinator-internship-chick-fil-a-yonge-and-bloor-eaton-centre-662607234/" class="job-link" data-job-title="Marketing Coordinator - Internship" data-job-company="Chick-fil-A Yonge and Bloor / Eaton Centre">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1535,7 +1565,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/marketing-coordinator-internship-4e580aa9204e3bdf" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/marketing-coordinator-internship-4e580aa9204e3bdf" data-job-title="Marketing Coordinator - Internship" data-job-company="Chick-fil-A Yonge and Bloor / Eaton Centre" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1546,7 +1576,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/digital-marketing-intern-entegra-661337418/" class="job-link">
+    <a href="/jobs/digital-marketing-intern-entegra-661337418/" class="job-link" data-job-title="Digital Marketing Intern" data-job-company="Entegra">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1567,7 +1597,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/digital-marketing-intern-at-entegra-4400643064" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/digital-marketing-intern-at-entegra-4400643064" data-job-title="Digital Marketing Intern" data-job-company="Entegra" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1578,7 +1608,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/early-childhood-community-development-centre-eccdc-summer-early-childhood-community-development-centre-661333869/" class="job-link">
+    <a href="/jobs/early-childhood-community-development-centre-eccdc-summer-early-childhood-community-development-centre-661333869/" class="job-link" data-job-title="EARLY CHILDHOOD COMMUNITY DEVELOPMENT CENTRE (ECCDC) - SUMMER STUDENT: EVENT MARKETING SPECIALIST (APR. 10, 2026)" data-job-company="Early Childhood Community Development Centre">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1599,7 +1629,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/early-childhood-community-development-centre-eccdc-summer-student-event-marketing-specialist-apr-10-2026-at-early-childhood-community-development-centre-4398185413" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/early-childhood-community-development-centre-eccdc-summer-student-event-marketing-specialist-apr-10-2026-at-early-childhood-community-development-centre-4398185413" data-job-title="EARLY CHILDHOOD COMMUNITY DEVELOPMENT CENTRE (ECCDC) - SUMMER STUDENT: EVENT MARKETING SPECIALIST (APR. 10, 2026)" data-job-company="Early Childhood Community Development Centre" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1610,7 +1640,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/summer-student-community-development-and-marketing-assistant-big-brothers-big-sisters-of-north-simcoe-661315534/" class="job-link">
+    <a href="/jobs/summer-student-community-development-and-marketing-assistant-big-brothers-big-sisters-of-north-simcoe-661315534/" class="job-link" data-job-title="SUMMER STUDENT Community Development and Marketing Assistant" data-job-company="Big Brothers Big Sisters of North Simcoe">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1631,7 +1661,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/summer-student-community-development-and-marketing-assistant-0094f51fcd228fc4" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/summer-student-community-development-and-marketing-assistant-0094f51fcd228fc4" data-job-title="SUMMER STUDENT Community Development and Marketing Assistant" data-job-company="Big Brothers Big Sisters of North Simcoe" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1642,7 +1672,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/digital-marketing-intern-sitegine-661303819/" class="job-link">
+    <a href="/jobs/digital-marketing-intern-sitegine-661303819/" class="job-link" data-job-title="Digital Marketing Intern" data-job-company="SiteGine">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1663,7 +1693,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/digital-marketing-intern-at-sitegine-4400625644" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/digital-marketing-intern-at-sitegine-4400625644" data-job-title="Digital Marketing Intern" data-job-company="SiteGine" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1674,7 +1704,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/early-childhood-community-development-centre-eccdc-summer-early-childhood-community-development-centre-eccdc-661026444/" class="job-link">
+    <a href="/jobs/early-childhood-community-development-centre-eccdc-summer-early-childhood-community-development-centre-eccdc-661026444/" class="job-link" data-job-title="Early Childhood Community Development Centre (ECCDC) - Summer Student: Event Marketing Specialist (Apr. 10, 2026)" data-job-company="Early Childhood Community Development Centre (ECCDC)">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1695,7 +1725,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://eccdc.org/employment/596" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://eccdc.org/employment/596" data-job-title="Early Childhood Community Development Centre (ECCDC) - Summer Student: Event Marketing Specialist (Apr. 10, 2026)" data-job-company="Early Childhood Community Development Centre (ECCDC)" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1706,7 +1736,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/marketing-coordinator-intern-summer-brampton-board-of-trade-661004532/" class="job-link">
+    <a href="/jobs/marketing-coordinator-intern-summer-brampton-board-of-trade-661004532/" class="job-link" data-job-title="Marketing Coordinator Intern (Summer)" data-job-company="Brampton Board of Trade">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1727,7 +1757,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-coordinator-intern-summer-at-brampton-board-of-trade-4400540401" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-coordinator-intern-summer-at-brampton-board-of-trade-4400540401" data-job-title="Marketing Coordinator Intern (Summer)" data-job-company="Brampton Board of Trade" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1738,7 +1768,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/marketing-analyst-summer-student-hi-kalibre-equipment-ltd-660424522/" class="job-link">
+    <a href="/jobs/marketing-analyst-summer-student-hi-kalibre-equipment-ltd-660424522/" class="job-link" data-job-title="Marketing Analyst (Summer Student)" data-job-company="Hi-Kalibre Equipment Ltd.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1759,7 +1789,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/marketing-analyst-summer-student-54b7cbea00c424e4" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/marketing-analyst-summer-student-54b7cbea00c424e4" data-job-title="Marketing Analyst (Summer Student)" data-job-company="Hi-Kalibre Equipment Ltd." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1770,7 +1800,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/digital-marketing-website-intern-canadian-national-institute-for-the-blind-658827896/" class="job-link">
+    <a href="/jobs/digital-marketing-website-intern-canadian-national-institute-for-the-blind-658827896/" class="job-link" data-job-title="Digital Marketing &amp; Website Intern" data-job-company="Canadian National Institute for the Blind">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1791,7 +1821,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?ccId=9201339194099_2&amp;cid=d11ffc9d-03c4-42b1-91e9-67585affd0b9&amp;jobId=961613&amp;lang=en_CA&amp;source=IN" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?ccId=9201339194099_2&amp;cid=d11ffc9d-03c4-42b1-91e9-67585affd0b9&amp;jobId=961613&amp;lang=en_CA&amp;source=IN" data-job-title="Digital Marketing &amp; Website Intern" data-job-company="Canadian National Institute for the Blind" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1802,7 +1832,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/digital-marketing-website-intern-cnib-658679275/" class="job-link">
+    <a href="/jobs/digital-marketing-website-intern-cnib-658679275/" class="job-link" data-job-title="Digital Marketing &amp; Website Intern" data-job-company="CNIB">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1823,7 +1853,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/digital-marketing-website-intern-at-cnib-4395908083" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/digital-marketing-website-intern-at-cnib-4395908083" data-job-title="Digital Marketing &amp; Website Intern" data-job-company="CNIB" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1834,7 +1864,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/internship-marketing-coordinator-hydro-solution-658500469/" class="job-link">
+    <a href="/jobs/internship-marketing-coordinator-hydro-solution-658500469/" class="job-link" data-job-title="Internship - Marketing Coordinator" data-job-company="Hydro Solution">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1855,7 +1885,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://jobs.dayforcehcm.com/en-CA/enercare/HYDROSOLUTION/jobs/19040" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://jobs.dayforcehcm.com/en-CA/enercare/HYDROSOLUTION/jobs/19040" data-job-title="Internship - Marketing Coordinator" data-job-company="Hydro Solution" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1866,7 +1896,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/marketing-specialist-intern-tadera-658491253/" class="job-link">
+    <a href="/jobs/marketing-specialist-intern-tadera-658491253/" class="job-link" data-job-title="Marketing Specialist Intern" data-job-company="TADERA">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1887,7 +1917,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-specialist-intern-at-tadera-4395444808" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-specialist-intern-at-tadera-4395444808" data-job-title="Marketing Specialist Intern" data-job-company="TADERA" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1898,7 +1928,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/field-marketing-coordinator-intern-burlington-on-stanley-black-decker-inc-658034428/" class="job-link">
+    <a href="/jobs/field-marketing-coordinator-intern-burlington-on-stanley-black-decker-inc-658034428/" class="job-link" data-job-title="Field Marketing Coordinator Intern - Burlington, ON" data-job-company="Stanley Black &amp; Decker, Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1919,7 +1949,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/field-marketing-coordinator-intern-burlington-on-at-stanley-black-decker-inc-4398094596" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/field-marketing-coordinator-intern-burlington-on-at-stanley-black-decker-inc-4398094596" data-job-title="Field Marketing Coordinator Intern - Burlington, ON" data-job-company="Stanley Black &amp; Decker, Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1930,7 +1960,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/digital-marketing-coordinator-summer-internship-prepr-657948831/" class="job-link">
+    <a href="/jobs/digital-marketing-coordinator-summer-internship-prepr-657948831/" class="job-link" data-job-title="Digital Marketing Coordinator - Summer Internship" data-job-company="Prepr">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1951,7 +1981,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://secure.collage.co/jobs/prepr/61287?origin=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://secure.collage.co/jobs/prepr/61287?origin=indeed" data-job-title="Digital Marketing Coordinator - Summer Internship" data-job-company="Prepr" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1973,7 +2003,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/co-op-intern-business-analyst-kinaxis-671049336/" class="job-link">
+    <a href="/jobs/co-op-intern-business-analyst-kinaxis-671049336/" class="job-link" data-job-title="Co-op/Intern Business Analyst" data-job-company="Kinaxis">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1994,7 +2024,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/co-op-intern-business-analyst-at-kinaxis-4406699744" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/co-op-intern-business-analyst-at-kinaxis-4406699744" data-job-title="Co-op/Intern Business Analyst" data-job-company="Kinaxis" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2005,7 +2035,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-jr-business-analyst-canada-summer-jobs-2026-simplycast-670745673/" class="job-link">
+    <a href="/jobs/junior-jr-business-analyst-canada-summer-jobs-2026-simplycast-670745673/" class="job-link" data-job-title="Junior (Jr.) Business Analyst (Canada Summer Jobs 2026)" data-job-company="SimplyCast">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2026,7 +2056,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://www.simplycast.com/company/careers/jr-business-analyst-summer-job-2026" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://www.simplycast.com/company/careers/jr-business-analyst-summer-job-2026" data-job-title="Junior (Jr.) Business Analyst (Canada Summer Jobs 2026)" data-job-company="SimplyCast" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2037,7 +2067,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/student-business-analyst-fall-2026-sun-life-670163571/" class="job-link">
+    <a href="/jobs/student-business-analyst-fall-2026-sun-life-670163571/" class="job-link" data-job-title="Student, Business Analyst (Fall 2026)" data-job-company="Sun Life">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2058,7 +2088,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/student-business-analyst-fall-2026-at-sun-life-4406102051" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/student-business-analyst-fall-2026-at-sun-life-4406102051" data-job-title="Student, Business Analyst (Fall 2026)" data-job-company="Sun Life" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2069,7 +2099,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/business-analyst-co-op-student-vale-base-metals-670091529/" class="job-link">
+    <a href="/jobs/business-analyst-co-op-student-vale-base-metals-670091529/" class="job-link" data-job-title="Business Analyst Co-Op Student" data-job-company="Vale Base Metals">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2090,7 +2120,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/business-analyst-co-op-student-at-vale-base-metals-4405035616" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/business-analyst-co-op-student-at-vale-base-metals-4405035616" data-job-title="Business Analyst Co-Op Student" data-job-company="Vale Base Metals" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2101,7 +2131,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/intern-strategy-analyst-fall-2026-capital-one-668878871/" class="job-link">
+    <a href="/jobs/intern-strategy-analyst-fall-2026-capital-one-668878871/" class="job-link" data-job-title="Intern, Strategy Analyst - Fall 2026" data-job-company="Capital One">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2122,7 +2152,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/intern-strategy-analyst-fall-2026-at-capital-one-4404864410" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/intern-strategy-analyst-fall-2026-at-capital-one-4404864410" data-job-title="Intern, Strategy Analyst - Fall 2026" data-job-company="Capital One" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2133,7 +2163,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/fall-2026-student-business-analyst-personal-banking-4-8-rbc-669446930/" class="job-link">
+    <a href="/jobs/fall-2026-student-business-analyst-personal-banking-4-8-rbc-669446930/" class="job-link" data-job-title="Fall 2026 Student – Business Analyst, Personal Banking (4 - 8 months)" data-job-company="RBC">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -2154,7 +2184,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://jsv3.recruitics.com/redirect?rx_cid=3618&amp;rx_jobId=R-0000168777&amp;rx_url=https%3A%2F%2Fjobs.rbc.com%2Fca%2Fen%2Fjob%2FR-0000168777%3Frx_a%3D0%26rx_c%3D%26rx_ch%3Djobp4p%26rx_group%3D300081%26rx_id%3D38f2f78a-3eac-11f1-a12a-731d2c02826d%26rx_job%3DR-0000168777%26rx_medium%3Dcpc%26rx_r%3Dnone%26rx_source%3Dindeed%26rx_ts%3D20260423T040450Z%26rx_vp%3Dcpc%26source%3DAPPLICANT_SOURCE_INDEEDORGANIC%26utm_medium%3Dcpc%26utm_source%3Dindeedorganic" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://jsv3.recruitics.com/redirect?rx_cid=3618&amp;rx_jobId=R-0000168777&amp;rx_url=https%3A%2F%2Fjobs.rbc.com%2Fca%2Fen%2Fjob%2FR-0000168777%3Frx_a%3D0%26rx_c%3D%26rx_ch%3Djobp4p%26rx_group%3D300081%26rx_id%3D38f2f78a-3eac-11f1-a12a-731d2c02826d%26rx_job%3DR-0000168777%26rx_medium%3Dcpc%26rx_r%3Dnone%26rx_source%3Dindeed%26rx_ts%3D20260423T040450Z%26rx_vp%3Dcpc%26source%3DAPPLICANT_SOURCE_INDEEDORGANIC%26utm_medium%3Dcpc%26utm_source%3Dindeedorganic" data-job-title="Fall 2026 Student – Business Analyst, Personal Banking (4 - 8 months)" data-job-company="RBC" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2165,7 +2195,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/fall-2026-student-business-analyst-personal-banking-rbc-667816366/" class="job-link">
+    <a href="/jobs/fall-2026-student-business-analyst-personal-banking-rbc-667816366/" class="job-link" data-job-title="Fall 2026 Student – Business Analyst, Personal Banking" data-job-company="RBC">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -2186,7 +2216,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/fall-2026-student-%E2%80%93-business-analyst-personal-banking-at-rbc-4404525710" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/fall-2026-student-%E2%80%93-business-analyst-personal-banking-at-rbc-4404525710" data-job-title="Fall 2026 Student – Business Analyst, Personal Banking" data-job-company="RBC" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2197,7 +2227,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/canada-summer-jobs-business-analyst-productivity-intern-calgary-economic-development-667806602/" class="job-link">
+    <a href="/jobs/canada-summer-jobs-business-analyst-productivity-intern-calgary-economic-development-667806602/" class="job-link" data-job-title="Canada Summer Jobs - Business Analyst, Productivity (Intern)" data-job-company="Calgary Economic Development">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2218,7 +2248,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://calgaryeconomic.bamboohr.com/careers/274?postedDate=2026-04-20&amp;source=indeed&amp;src=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://calgaryeconomic.bamboohr.com/careers/274?postedDate=2026-04-20&amp;source=indeed&amp;src=indeed" data-job-title="Canada Summer Jobs - Business Analyst, Productivity (Intern)" data-job-company="Calgary Economic Development" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2229,7 +2259,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/business-analyst-co-op-fire-safety-protection-666043404/" class="job-link">
+    <a href="/jobs/business-analyst-co-op-fire-safety-protection-666043404/" class="job-link" data-job-title="Business Analyst Co-Op" data-job-company="Fire Safety &amp; Protection">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2250,7 +2280,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?ccId=59995581_2&amp;cid=7d20ea6d-77f2-4323-a470-fcd134c98f57&amp;jobId=16933&amp;lang=en_CA&amp;source=IN" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?ccId=59995581_2&amp;cid=7d20ea6d-77f2-4323-a470-fcd134c98f57&amp;jobId=16933&amp;lang=en_CA&amp;source=IN" data-job-title="Business Analyst Co-Op" data-job-company="Fire Safety &amp; Protection" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2261,7 +2291,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/advisory-business-analyst-intern-avanade-665997665/" class="job-link">
+    <a href="/jobs/advisory-business-analyst-intern-avanade-665997665/" class="job-link" data-job-title="Advisory Business Analyst, Intern" data-job-company="Avanade">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2282,7 +2312,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/advisory-business-analyst-intern-at-avanade-4403500412" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/advisory-business-analyst-intern-at-avanade-4403500412" data-job-title="Advisory Business Analyst, Intern" data-job-company="Avanade" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2293,7 +2323,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/business-analyst-summer-student-university-health-network-665855809/" class="job-link">
+    <a href="/jobs/business-analyst-summer-student-university-health-network-665855809/" class="job-link" data-job-title="Business Analyst (Summer Student)" data-job-company="University Health Network">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2314,7 +2344,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/business-analyst-summer-student-at-university-health-network-4403468340" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/business-analyst-summer-student-at-university-health-network-4403468340" data-job-title="Business Analyst (Summer Student)" data-job-company="University Health Network" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2325,7 +2355,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/business-analyst-co-op-fire-safety-and-protection-665829361/" class="job-link">
+    <a href="/jobs/business-analyst-co-op-fire-safety-and-protection-665829361/" class="job-link" data-job-title="Business Analyst Co-Op" data-job-company="Fire Safety and Protection">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2346,7 +2376,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/business-analyst-co-op-at-fire-safety-and-protection-4400826687" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/business-analyst-co-op-at-fire-safety-and-protection-4400826687" data-job-title="Business Analyst Co-Op" data-job-company="Fire Safety and Protection" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2357,7 +2387,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/wealth-management-business-and-strategy-analyst-internship-scotiabank-662608778/" class="job-link">
+    <a href="/jobs/wealth-management-business-and-strategy-analyst-internship-scotiabank-662608778/" class="job-link" data-job-title="Wealth Management - Business and Strategy Analyst Internship/Co-op - Summer 2026" data-job-company="Scotiabank">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2378,7 +2408,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/wealth-management-business-and-strategy-analyst-internship-co-op-summer-2026-at-scotiabank-4399641193" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/wealth-management-business-and-strategy-analyst-internship-co-op-summer-2026-at-scotiabank-4399641193" data-job-title="Wealth Management - Business and Strategy Analyst Internship/Co-op - Summer 2026" data-job-company="Scotiabank" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2389,7 +2419,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/account-manager-intern-co-op-fall-2026-td-securities-662448823/" class="job-link">
+    <a href="/jobs/account-manager-intern-co-op-fall-2026-td-securities-662448823/" class="job-link" data-job-title="Account Manager Intern / Co-Op (FALL 2026)" data-job-company="TD Securities">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -2410,7 +2440,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/account-manager-intern-co-op-fall-2026-at-td-securities-4401049563" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/account-manager-intern-co-op-fall-2026-at-td-securities-4401049563" data-job-title="Account Manager Intern / Co-Op (FALL 2026)" data-job-company="TD Securities" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2421,7 +2451,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/business-intelligence-specialist-intern-summer-2026-mygwork-lgbtq-business-community-662007341/" class="job-link">
+    <a href="/jobs/business-intelligence-specialist-intern-summer-2026-mygwork-lgbtq-business-community-662007341/" class="job-link" data-job-title="Business Intelligence Specialist Intern-Summer 2026" data-job-company="myGwork - LGBTQ+ Business Community">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2442,7 +2472,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/business-intelligence-specialist-intern-summer-2026-at-mygwork-lgbtq+-business-community-4399376027" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/business-intelligence-specialist-intern-summer-2026-at-mygwork-lgbtq+-business-community-4399376027" data-job-title="Business Intelligence Specialist Intern-Summer 2026" data-job-company="myGwork - LGBTQ+ Business Community" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2453,7 +2483,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/business-intelligence-specialist-intern-summer-2026-abb-661214352/" class="job-link">
+    <a href="/jobs/business-intelligence-specialist-intern-summer-2026-abb-661214352/" class="job-link" data-job-title="Business Intelligence Specialist Intern-Summer 2026" data-job-company="ABB">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2474,7 +2504,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://careers.abb/global/en/job/ABB1GLOBALJR00029751EXTERNALENGLOBAL/Business-Intelligence-Specialist-Intern-Summer-2026?utm_medium=phenom-feeds&amp;utm_source=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://careers.abb/global/en/job/ABB1GLOBALJR00029751EXTERNALENGLOBAL/Business-Intelligence-Specialist-Intern-Summer-2026?utm_medium=phenom-feeds&amp;utm_source=indeed" data-job-title="Business Intelligence Specialist Intern-Summer 2026" data-job-company="ABB" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2485,7 +2515,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/summer-2026-business-analyst-intern-4-or-8-months-dayforce-658655324/" class="job-link">
+    <a href="/jobs/summer-2026-business-analyst-intern-4-or-8-months-dayforce-658655324/" class="job-link" data-job-title="[SUMMER 2026] Business Analyst Intern 4 or 8 Months" data-job-company="Dayforce">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2506,7 +2536,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/summer-2026-business-analyst-intern-4-or-8-months-at-dayforce-4398419442" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/summer-2026-business-analyst-intern-4-or-8-months-at-dayforce-4398419442" data-job-title="[SUMMER 2026] Business Analyst Intern 4 or 8 Months" data-job-company="Dayforce" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2517,7 +2547,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/inside-sales-intern-nova-biomedical-657832272/" class="job-link">
+    <a href="/jobs/inside-sales-intern-nova-biomedical-657832272/" class="job-link" data-job-title="Inside Sales Intern" data-job-company="Nova Biomedical">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2538,7 +2568,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/inside-sales-intern-at-nova-biomedical-4397933999" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/inside-sales-intern-at-nova-biomedical-4397933999" data-job-title="Inside Sales Intern" data-job-company="Nova Biomedical" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2560,7 +2590,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/summer-student-position-office-assistant-human-resources-ranch-ehrlo-society-671027439/" class="job-link">
+    <a href="/jobs/summer-student-position-office-assistant-human-resources-ranch-ehrlo-society-671027439/" class="job-link" data-job-title="Summer Student Position - Office Assistant Human Resources" data-job-company="Ranch Ehrlo Society">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2581,7 +2611,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://recruiting.ultipro.ca/RAN5000/JobBoard/41fe6ea9-0941-4171-3b58-059407eea845/OpportunityDetail?opportunityId=60b1a5f9-4fe4-4241-b66e-4aa404e17de7&amp;postingId=2f6c9279-b434-4b3d-bf6e-d09291316a85" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://recruiting.ultipro.ca/RAN5000/JobBoard/41fe6ea9-0941-4171-3b58-059407eea845/OpportunityDetail?opportunityId=60b1a5f9-4fe4-4241-b66e-4aa404e17de7&amp;postingId=2f6c9279-b434-4b3d-bf6e-d09291316a85" data-job-title="Summer Student Position - Office Assistant Human Resources" data-job-company="Ranch Ehrlo Society" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2592,7 +2622,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/human-resources-summer-student-casey-house-670895245/" class="job-link">
+    <a href="/jobs/human-resources-summer-student-casey-house-670895245/" class="job-link" data-job-title="Human Resources Summer Student" data-job-company="CASEY HOUSE">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2613,7 +2643,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?ccId=19000101_000001&amp;cid=63e1e480-5039-4a99-89b6-937da79087bb&amp;jobId=596594&amp;lang=en_CA&amp;source=IN" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?ccId=19000101_000001&amp;cid=63e1e480-5039-4a99-89b6-937da79087bb&amp;jobId=596594&amp;lang=en_CA&amp;source=IN" data-job-title="Human Resources Summer Student" data-job-company="CASEY HOUSE" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2624,7 +2654,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/human-resources-summer-student-casey-house-670761993/" class="job-link">
+    <a href="/jobs/human-resources-summer-student-casey-house-670761993/" class="job-link" data-job-title="Human Resources Summer Student" data-job-company="Casey House">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2645,7 +2675,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-summer-student-at-casey-house-4403783009" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-summer-student-at-casey-house-4403783009" data-job-title="Human Resources Summer Student" data-job-company="Casey House" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2656,7 +2686,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/hr-assistant-summer-intern-job-skills-670609346/" class="job-link">
+    <a href="/jobs/hr-assistant-summer-intern-job-skills-670609346/" class="job-link" data-job-title="HR Assistant Summer Intern" data-job-company="Job Skills">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2677,7 +2707,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/hr-assistant-summer-intern-0533deeecd2574b8" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/hr-assistant-summer-intern-0533deeecd2574b8" data-job-title="HR Assistant Summer Intern" data-job-company="Job Skills" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2688,7 +2718,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/human-resources-intern-opta-group-668490905/" class="job-link">
+    <a href="/jobs/human-resources-intern-opta-group-668490905/" class="job-link" data-job-title="Human Resources Intern" data-job-company="Opta Group">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2709,7 +2739,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://jobs.dayforcehcm.com/en-US/opta/CANDIDATEPORTAL/jobs/3757" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://jobs.dayforcehcm.com/en-US/opta/CANDIDATEPORTAL/jobs/3757" data-job-title="Human Resources Intern" data-job-company="Opta Group" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2720,7 +2750,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/stage-automne-2026-stagiaire-en-recrutement-internship-fall-pratt-whitney-668281232/" class="job-link">
+    <a href="/jobs/stage-automne-2026-stagiaire-en-recrutement-internship-fall-pratt-whitney-668281232/" class="job-link" data-job-title="Stage - Automne 2026 - Stagiaire en recrutement / Internship - Fall 2026 - Talent Acquisition Intern" data-job-company="Pratt &amp; Whitney">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2741,7 +2771,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/stage-automne-2026-stagiaire-en-recrutement-internship-fall-2026-talent-acquisition-intern-at-pratt-whitney-4404854494" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/stage-automne-2026-stagiaire-en-recrutement-internship-fall-2026-talent-acquisition-intern-at-pratt-whitney-4404854494" data-job-title="Stage - Automne 2026 - Stagiaire en recrutement / Internship - Fall 2026 - Talent Acquisition Intern" data-job-company="Pratt &amp; Whitney" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2752,7 +2782,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/human-resources-summer-student-positive-living-niagara-668123189/" class="job-link">
+    <a href="/jobs/human-resources-summer-student-positive-living-niagara-668123189/" class="job-link" data-job-title="Human Resources - Summer Student" data-job-company="Positive Living Niagara">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2773,7 +2803,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/human-resources-summer-student-4198b7a32f20a049" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/human-resources-summer-student-4198b7a32f20a049" data-job-title="Human Resources - Summer Student" data-job-company="Positive Living Niagara" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2784,7 +2814,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/human-resources-summer-student-co-op-halton-healthcare-668371779/" class="job-link">
+    <a href="/jobs/human-resources-summer-student-co-op-halton-healthcare-668371779/" class="job-link" data-job-title="Human Resources Summer Student Co-op" data-job-company="Halton Healthcare">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2805,7 +2835,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://jobs.smartrecruiters.com/HaltonHealthcare1/3743990012682125-human-resources-summer-student-co-op" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://jobs.smartrecruiters.com/HaltonHealthcare1/3743990012682125-human-resources-summer-student-co-op" data-job-title="Human Resources Summer Student Co-op" data-job-company="Halton Healthcare" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2816,7 +2846,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/student-assistant-human-resources-clerk-hands-thefamilyhelpnetwork-ca-668370545/" class="job-link">
+    <a href="/jobs/student-assistant-human-resources-clerk-hands-thefamilyhelpnetwork-ca-668370545/" class="job-link" data-job-title="Student Assistant – Human Resources Clerk" data-job-company="Hands TheFamilyHelpNetwork.ca">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2837,7 +2867,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://recruiting.ultipro.ca/ALG5100ACFS/JobBoard/63d9aa6a-f11f-4731-832a-8b003d6dd422/OpportunityDetail?opportunityId=8754a9aa-a377-4e13-8fa4-4dbf3b9a480c&amp;postingId=b0e3c189-2145-4877-8153-bd0f2315d103" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://recruiting.ultipro.ca/ALG5100ACFS/JobBoard/63d9aa6a-f11f-4731-832a-8b003d6dd422/OpportunityDetail?opportunityId=8754a9aa-a377-4e13-8fa4-4dbf3b9a480c&amp;postingId=b0e3c189-2145-4877-8153-bd0f2315d103" data-job-title="Student Assistant – Human Resources Clerk" data-job-company="Hands TheFamilyHelpNetwork.ca" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2848,7 +2878,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/human-resources-intern-seasonal-westside-regional-recreation-society-668343716/" class="job-link">
+    <a href="/jobs/human-resources-intern-seasonal-westside-regional-recreation-society-668343716/" class="job-link" data-job-title="Human Resources Intern - Seasonal" data-job-company="Westside Regional Recreation Society">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2869,7 +2899,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://recruiting.ultipro.ca/WES5005WESR/JobBoard/ee6f6323-3f3a-4416-bb04-47d40aa788bc/OpportunityDetail?opportunityId=6d9accf8-c9cb-425c-81a4-00876a58f31a&amp;postingId=30ddb523-cd95-4a1c-845d-e1bc49d8b7a2" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://recruiting.ultipro.ca/WES5005WESR/JobBoard/ee6f6323-3f3a-4416-bb04-47d40aa788bc/OpportunityDetail?opportunityId=6d9accf8-c9cb-425c-81a4-00876a58f31a&amp;postingId=30ddb523-cd95-4a1c-845d-e1bc49d8b7a2" data-job-title="Human Resources Intern - Seasonal" data-job-company="Westside Regional Recreation Society" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2880,7 +2910,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/hr-assistant-contract-summer-student-remote-cwb-group-668340606/" class="job-link">
+    <a href="/jobs/hr-assistant-contract-summer-student-remote-cwb-group-668340606/" class="job-link" data-job-title="HR Assistant (Contract-Summer Student Remote)" data-job-company="CWB Group">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2901,7 +2931,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://recruiting.ultipro.ca/CWB5000CWBG/JobBoard/45a3be9f-75f1-477a-a9f4-e722acab65f8/OpportunityDetail?opportunityId=1d5420c0-32b9-471d-acca-2888db63a878&amp;postingId=966225d6-9ee8-43bf-a438-30fbce65d2b4" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://recruiting.ultipro.ca/CWB5000CWBG/JobBoard/45a3be9f-75f1-477a-a9f4-e722acab65f8/OpportunityDetail?opportunityId=1d5420c0-32b9-471d-acca-2888db63a878&amp;postingId=966225d6-9ee8-43bf-a438-30fbce65d2b4" data-job-title="HR Assistant (Contract-Summer Student Remote)" data-job-company="CWB Group" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2912,7 +2942,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/2026-fall-hr-talent-acquisition-programming-intern-4-months-rbc-667599580/" class="job-link">
+    <a href="/jobs/2026-fall-hr-talent-acquisition-programming-intern-4-months-rbc-667599580/" class="job-link" data-job-title="2026 Fall - HR, Talent Acquisition Programming Intern (4 months)" data-job-company="RBC">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -2933,7 +2963,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/2026-fall-hr-talent-acquisition-programming-intern-4-months-at-rbc-4404331949" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/2026-fall-hr-talent-acquisition-programming-intern-4-months-at-rbc-4404331949" data-job-title="2026 Fall - HR, Talent Acquisition Programming Intern (4 months)" data-job-company="RBC" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2944,7 +2974,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/human-resources-intern-oak-bay-hr-inc-667429975/" class="job-link">
+    <a href="/jobs/human-resources-intern-oak-bay-hr-inc-667429975/" class="job-link" data-job-title="Human Resources Intern" data-job-company="Oak Bay HR Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2965,7 +2995,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-intern-at-oak-bay-hr-inc-4403609696" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-intern-at-oak-bay-hr-inc-4403609696" data-job-title="Human Resources Intern" data-job-company="Oak Bay HR Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2976,7 +3006,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/temporary-full-time-summer-student-human-resources-ontario-shores-centre-for-mental-health-sciences-666245883/" class="job-link">
+    <a href="/jobs/temporary-full-time-summer-student-human-resources-ontario-shores-centre-for-mental-health-sciences-666245883/" class="job-link" data-job-title="(TEMPORARY FULL TIME) SUMMER STUDENT - HUMAN RESOURCES &amp; OCCUPATIONAL HEALTH" data-job-company="Ontario Shores Centre for Mental Health Sciences">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2997,7 +3027,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/temporary-full-time-summer-student-human-resources-occupational-health-at-ontario-shores-centre-for-mental-health-sciences-4400892513" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/temporary-full-time-summer-student-human-resources-occupational-health-at-ontario-shores-centre-for-mental-health-sciences-4400892513" data-job-title="(TEMPORARY FULL TIME) SUMMER STUDENT - HUMAN RESOURCES &amp; OCCUPATIONAL HEALTH" data-job-company="Ontario Shores Centre for Mental Health Sciences" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3008,7 +3038,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/september-2026-human-resources-co-op-glencore-666188281/" class="job-link">
+    <a href="/jobs/september-2026-human-resources-co-op-glencore-666188281/" class="job-link" data-job-title="September 2026 Human Resources Co-op" data-job-company="Glencore">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3029,7 +3059,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/september-2026-human-resources-co-op-at-glencore-4402784184" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/september-2026-human-resources-co-op-at-glencore-4402784184" data-job-title="September 2026 Human Resources Co-op" data-job-company="Glencore" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3040,7 +3070,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/human-resources-intern-methanex-corporation-666127949/" class="job-link">
+    <a href="/jobs/human-resources-intern-methanex-corporation-666127949/" class="job-link" data-job-title="Human Resources Intern" data-job-company="Methanex Corporation">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3061,7 +3091,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-intern-at-methanex-corporation-4400013504" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-intern-at-methanex-corporation-4400013504" data-job-title="Human Resources Intern" data-job-company="Methanex Corporation" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3072,7 +3102,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/september-2026-human-resources-co-op-elk-valley-resources-666057130/" class="job-link">
+    <a href="/jobs/september-2026-human-resources-co-op-elk-valley-resources-666057130/" class="job-link" data-job-title="September 2026 Human Resources Co-op" data-job-company="Elk Valley Resources">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3093,7 +3123,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/september-2026-human-resources-co-op-at-elk-valley-resources-4400856858" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/september-2026-human-resources-co-op-at-elk-valley-resources-4400856858" data-job-title="September 2026 Human Resources Co-op" data-job-company="Elk Valley Resources" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3104,7 +3134,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/human-resources-summer-intern-supreme-international-limited-666025069/" class="job-link">
+    <a href="/jobs/human-resources-summer-intern-supreme-international-limited-666025069/" class="job-link" data-job-title="Human Resources Summer Intern" data-job-company="Supreme International Limited">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3125,7 +3155,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-summer-intern-at-supreme-international-limited-4403523044" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-summer-intern-at-supreme-international-limited-4403523044" data-job-title="Human Resources Summer Intern" data-job-company="Supreme International Limited" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3136,7 +3166,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/human-resources-intern-keystone-child-youth-family-services-666017088/" class="job-link">
+    <a href="/jobs/human-resources-intern-keystone-child-youth-family-services-666017088/" class="job-link" data-job-title="Human Resources Intern" data-job-company="Keystone Child, Youth &amp; Family Services">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3157,7 +3187,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-intern-at-keystone-child-youth-family-services-4403531071" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-intern-at-keystone-child-youth-family-services-4403531071" data-job-title="Human Resources Intern" data-job-company="Keystone Child, Youth &amp; Family Services" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3168,7 +3198,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/summer-student-hr-assistant-clare-parker-homes-665859478/" class="job-link">
+    <a href="/jobs/summer-student-hr-assistant-clare-parker-homes-665859478/" class="job-link" data-job-title="Summer Student (HR Assistant)" data-job-company="Clare Parker Homes">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3189,7 +3219,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/summer-student-hr-assistant-b2cd6f61100577d4" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/summer-student-hr-assistant-b2cd6f61100577d4" data-job-title="Summer Student (HR Assistant)" data-job-company="Clare Parker Homes" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3200,7 +3230,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/temporary-full-time-summer-student-human-resources-ontario-shores-centre-for-mhs-665859305/" class="job-link">
+    <a href="/jobs/temporary-full-time-summer-student-human-resources-ontario-shores-centre-for-mhs-665859305/" class="job-link" data-job-title="(TEMPORARY FULL TIME) SUMMER STUDENT - HUMAN RESOURCES &amp; OCCUPATIONAL HEALTH" data-job-company="Ontario Shores Centre for MHS">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3221,7 +3251,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://recruiting.ultipro.ca/ONT5002ONTS/JobBoard/31832fa9-ea47-4976-8434-5c0e82e2c1d0/OpportunityDetail?opportunityId=e209bf8d-6c2b-4001-a808-1f38404a16c7&amp;postingId=9e650691-c41b-497d-ad54-d11566fbe72d" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://recruiting.ultipro.ca/ONT5002ONTS/JobBoard/31832fa9-ea47-4976-8434-5c0e82e2c1d0/OpportunityDetail?opportunityId=e209bf8d-6c2b-4001-a808-1f38404a16c7&amp;postingId=9e650691-c41b-497d-ad54-d11566fbe72d" data-job-title="(TEMPORARY FULL TIME) SUMMER STUDENT - HUMAN RESOURCES &amp; OCCUPATIONAL HEALTH" data-job-company="Ontario Shores Centre for MHS" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3232,7 +3262,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/human-resources-summer-intern-supreme-international-665787213/" class="job-link">
+    <a href="/jobs/human-resources-summer-intern-supreme-international-665787213/" class="job-link" data-job-title="Human Resources Summer Intern" data-job-company="Supreme International">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3253,7 +3283,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ats.rippling.com/supremeinternational/jobs/416b6b00-b8d0-4090-a288-5c54542d1d21?jobSite=Indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ats.rippling.com/supremeinternational/jobs/416b6b00-b8d0-4090-a288-5c54542d1d21?jobSite=Indeed" data-job-title="Human Resources Summer Intern" data-job-company="Supreme International" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3264,7 +3294,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/human-resources-summer-student-amnesty-international-canada-664850776/" class="job-link">
+    <a href="/jobs/human-resources-summer-student-amnesty-international-canada-664850776/" class="job-link" data-job-title="HUMAN RESOURCES SUMMER STUDENT" data-job-company="Amnesty International Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3285,7 +3315,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://amnesty.humi.ca/job-board/human+resources/46875?source=Indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://amnesty.humi.ca/job-board/human+resources/46875?source=Indeed" data-job-title="HUMAN RESOURCES SUMMER STUDENT" data-job-company="Amnesty International Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3296,7 +3326,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/human-resources-assistant-internship-canada-summer-job-2026-banyan-community-services-664253013/" class="job-link">
+    <a href="/jobs/human-resources-assistant-internship-canada-summer-job-2026-banyan-community-services-664253013/" class="job-link" data-job-title="Human Resources Assistant (Internship)-Canada Summer Job-2026" data-job-company="Banyan Community Services">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3317,7 +3347,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/human-resources-assistant-internship-canada-summer-job-2026-159667823e288797" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/human-resources-assistant-internship-canada-summer-job-2026-159667823e288797" data-job-title="Human Resources Assistant (Internship)-Canada Summer Job-2026" data-job-company="Banyan Community Services" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3328,7 +3358,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/intern-talent-acquisition-cnib-664198006/" class="job-link">
+    <a href="/jobs/intern-talent-acquisition-cnib-664198006/" class="job-link" data-job-title="Intern, Talent Acquisition" data-job-company="CNIB">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3349,7 +3379,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/intern-talent-acquisition-at-cnib-4401484259" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/intern-talent-acquisition-at-cnib-4401484259" data-job-title="Intern, Talent Acquisition" data-job-company="CNIB" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3360,7 +3390,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/human-resources-intern-columbia-forest-products-662735521/" class="job-link">
+    <a href="/jobs/human-resources-intern-columbia-forest-products-662735521/" class="job-link" data-job-title="Human Resources Intern" data-job-company="Columbia Forest Products">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3381,7 +3411,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://recruiting.ultipro.com/COL1010CFP/JobBoard/e3414ec0-05a2-4fad-8665-b07b36f66250/OpportunityDetail?opportunityId=597acb2f-4b1a-46cc-b4d5-7d4a52d8406b&amp;postingId=65c81feb-93db-4dcf-b02f-78b4a7e7dbdb" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://recruiting.ultipro.com/COL1010CFP/JobBoard/e3414ec0-05a2-4fad-8665-b07b36f66250/OpportunityDetail?opportunityId=597acb2f-4b1a-46cc-b4d5-7d4a52d8406b&amp;postingId=65c81feb-93db-4dcf-b02f-78b4a7e7dbdb" data-job-title="Human Resources Intern" data-job-company="Columbia Forest Products" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3392,7 +3422,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/student-human-resources-assistant-newgate-180-addiction-solutions-662607354/" class="job-link">
+    <a href="/jobs/student-human-resources-assistant-newgate-180-addiction-solutions-662607354/" class="job-link" data-job-title="STUDENT-Human Resources Assistant" data-job-company="Newgate 180 Addiction Solutions">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3413,7 +3443,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/student-human-resources-assistant-454b83ddd18ae56d" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/student-human-resources-assistant-454b83ddd18ae56d" data-job-title="STUDENT-Human Resources Assistant" data-job-company="Newgate 180 Addiction Solutions" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3424,7 +3454,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/human-resources-intern-dart-aerospace-661909346/" class="job-link">
+    <a href="/jobs/human-resources-intern-dart-aerospace-661909346/" class="job-link" data-job-title="Human Resources Intern" data-job-company="DART Aerospace">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3445,7 +3475,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-intern-at-dart-aerospace-4398753541" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-intern-at-dart-aerospace-4398753541" data-job-title="Human Resources Intern" data-job-company="DART Aerospace" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3456,7 +3486,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/talent-acquisition-intern-saputo-inc-661723884/" class="job-link">
+    <a href="/jobs/talent-acquisition-intern-saputo-inc-661723884/" class="job-link" data-job-title="Talent acquisition, intern" data-job-company="Saputo Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3477,7 +3507,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/talent-acquisition-intern-at-saputo-inc-4379262629" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/talent-acquisition-intern-at-saputo-inc-4379262629" data-job-title="Talent acquisition, intern" data-job-company="Saputo Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3488,7 +3518,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/human-resources-coordinator-summer-hiring-purolator-inc-661402850/" class="job-link">
+    <a href="/jobs/human-resources-coordinator-summer-hiring-purolator-inc-661402850/" class="job-link" data-job-title="Human Resources Coordinator - Summer Hiring" data-job-company="Purolator Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3509,7 +3539,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-coordinator-summer-hiring-at-purolator-inc-4398718276" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-coordinator-summer-hiring-at-purolator-inc-4398718276" data-job-title="Human Resources Coordinator - Summer Hiring" data-job-company="Purolator Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3520,7 +3550,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/hr-assistant-summer-student-catholic-crosscultural-services-661340310/" class="job-link">
+    <a href="/jobs/hr-assistant-summer-student-catholic-crosscultural-services-661340310/" class="job-link" data-job-title="HR Assistant - Summer Student" data-job-company="Catholic Crosscultural Services">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3541,7 +3571,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ccs.sutihr.com/jobs/jid/pnsa3d" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ccs.sutihr.com/jobs/jid/pnsa3d" data-job-title="HR Assistant - Summer Student" data-job-company="Catholic Crosscultural Services" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3552,7 +3582,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/talent-acquisition-dei-intern-jam-industries-661001980/" class="job-link">
+    <a href="/jobs/talent-acquisition-dei-intern-jam-industries-661001980/" class="job-link" data-job-title="Talent Acquisition &amp; DEI - Intern" data-job-company="JAM Industries">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3573,7 +3603,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/talent-acquisition-dei-intern-at-jam-industries-4375589295" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/talent-acquisition-dei-intern-at-jam-industries-4375589295" data-job-title="Talent Acquisition &amp; DEI - Intern" data-job-company="JAM Industries" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3584,7 +3614,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/human-resources-intern-1-year-contract-bimose-tribal-council-660342219/" class="job-link">
+    <a href="/jobs/human-resources-intern-1-year-contract-bimose-tribal-council-660342219/" class="job-link" data-job-title="Human Resources Intern – 1 year contract" data-job-company="Bimose Tribal Council">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3605,7 +3635,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://www.bimose.ca/human-resources-intern-1-year-contract" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://www.bimose.ca/human-resources-intern-1-year-contract" data-job-title="Human Resources Intern – 1 year contract" data-job-company="Bimose Tribal Council" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3616,7 +3646,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/talent-acquisition-internship-match-retail-659546023/" class="job-link">
+    <a href="/jobs/talent-acquisition-internship-match-retail-659546023/" class="job-link" data-job-title="Talent Acquisition Internship" data-job-company="Match Retail">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3637,7 +3667,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/talent-acquisition-internship-at-match-retail-4396377514" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/talent-acquisition-internship-at-match-retail-4396377514" data-job-title="Talent Acquisition Internship" data-job-company="Match Retail" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3648,7 +3678,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/human-resources-intern-online-gamera-658521941/" class="job-link">
+    <a href="/jobs/human-resources-intern-online-gamera-658521941/" class="job-link" data-job-title="Human Resources Intern" data-job-company="Online Gamera">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3669,7 +3699,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-intern-at-online-gamera-4398576033" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-intern-at-online-gamera-4398576033" data-job-title="Human Resources Intern" data-job-company="Online Gamera" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3680,7 +3710,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/summer-student-intern-admin-human-resources-march-consulting-lp-657922825/" class="job-link">
+    <a href="/jobs/summer-student-intern-admin-human-resources-march-consulting-lp-657922825/" class="job-link" data-job-title="Summer Student-Intern, Admin &amp; Human Resources" data-job-company="March Consulting LP">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3701,7 +3731,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://march-consulting.humi.ca/job-board/admin/46570?source=Indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://march-consulting.humi.ca/job-board/admin/46570?source=Indeed" data-job-title="Summer Student-Intern, Admin &amp; Human Resources" data-job-company="March Consulting LP" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3712,7 +3742,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/assistant-human-resources-co-op-aecon-group-inc-657894468/" class="job-link">
+    <a href="/jobs/assistant-human-resources-co-op-aecon-group-inc-657894468/" class="job-link" data-job-title="Assistant, Human Resources (Co-op)" data-job-company="Aecon Group Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3733,7 +3763,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/assistant-human-resources-co-op-at-aecon-group-inc-4394488621" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/assistant-human-resources-co-op-at-aecon-group-inc-4394488621" data-job-title="Assistant, Human Resources (Co-op)" data-job-company="Aecon Group Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3755,7 +3785,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/stage-automne-2026-analyste-de-la-chaine-dapprovisionnement-pratt-whitney-666223928/" class="job-link">
+    <a href="/jobs/stage-automne-2026-analyste-de-la-chaine-dapprovisionnement-pratt-whitney-666223928/" class="job-link" data-job-title="Stage - Automne 2026 - Analyste de la chaine d’approvisionnement / Internship - Fall 2026 - Supply Chain Analyst" data-job-company="Pratt &amp; Whitney">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3776,7 +3806,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/stage-automne-2026-analyste-de-la-chaine-d%E2%80%99approvisionnement-internship-fall-2026-supply-chain-analyst-at-pratt-whitney-4403570589" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/stage-automne-2026-analyste-de-la-chaine-d%E2%80%99approvisionnement-internship-fall-2026-supply-chain-analyst-at-pratt-whitney-4403570589" data-job-title="Stage - Automne 2026 - Analyste de la chaine d’approvisionnement / Internship - Fall 2026 - Supply Chain Analyst" data-job-company="Pratt &amp; Whitney" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3787,7 +3817,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/inventory-analyst-student-ciena-664268507/" class="job-link">
+    <a href="/jobs/inventory-analyst-student-ciena-664268507/" class="job-link" data-job-title="Inventory Analyst Student" data-job-company="Ciena">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3808,7 +3838,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ciena.wd5.myworkdayjobs.com/en-US/Careers/job/Remote-Canada/Inventory-Analyst-Student_R030681" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ciena.wd5.myworkdayjobs.com/en-US/Careers/job/Remote-Canada/Inventory-Analyst-Student_R030681" data-job-title="Inventory Analyst Student" data-job-company="Ciena" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3830,7 +3860,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/inside-sales-intern-nova-biomedical-662729569/" class="job-link">
+    <a href="/jobs/inside-sales-intern-nova-biomedical-662729569/" class="job-link" data-job-title="Inside Sales Intern" data-job-company="Nova Biomedical">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3851,7 +3881,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/inside-sales-intern-at-nova-biomedical-4400255904" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/inside-sales-intern-at-nova-biomedical-4400255904" data-job-title="Inside Sales Intern" data-job-company="Nova Biomedical" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3862,7 +3892,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/sales-marketing-associate-summer-intern-focal-ai-superpowers-for-wealth-662697965/" class="job-link">
+    <a href="/jobs/sales-marketing-associate-summer-intern-focal-ai-superpowers-for-wealth-662697965/" class="job-link" data-job-title="Sales &amp; Marketing Associate [Summer Intern]" data-job-company="Focal | AI Superpowers for Wealth">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3883,7 +3913,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/sales-marketing-associate-summer-intern-at-focal-ai-superpowers-for-wealth-4401340045" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/sales-marketing-associate-summer-intern-at-focal-ai-superpowers-for-wealth-4401340045" data-job-title="Sales &amp; Marketing Associate [Summer Intern]" data-job-company="Focal | AI Superpowers for Wealth" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3894,7 +3924,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/account-manager-intern-co-op-fall-2026-td-662474045/" class="job-link">
+    <a href="/jobs/account-manager-intern-co-op-fall-2026-td-662474045/" class="job-link" data-job-title="Account Manager Intern / Co-Op (FALL 2026)" data-job-company="TD">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3915,7 +3945,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/account-manager-intern-co-op-fall-2026-at-td-4401045736" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/account-manager-intern-co-op-fall-2026-at-td-4401045736" data-job-title="Account Manager Intern / Co-Op (FALL 2026)" data-job-company="TD" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3926,7 +3956,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/account-manager-intern-co-op-fall-2026-td-securities-662448822/" class="job-link">
+    <a href="/jobs/account-manager-intern-co-op-fall-2026-td-securities-662448822/" class="job-link" data-job-title="Account Manager Intern / Co-Op (FALL 2026)" data-job-company="TD Securities">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -3947,7 +3977,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/account-manager-intern-co-op-fall-2026-at-td-securities-4401041845" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/account-manager-intern-co-op-fall-2026-at-td-securities-4401041845" data-job-title="Account Manager Intern / Co-Op (FALL 2026)" data-job-company="TD Securities" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3958,7 +3988,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/account-manager-intern-co-op-fall-2026-td-securities-662448595/" class="job-link">
+    <a href="/jobs/account-manager-intern-co-op-fall-2026-td-securities-662448595/" class="job-link" data-job-title="Account Manager Intern / Co-Op (FALL 2026)" data-job-company="TD Securities">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -3979,7 +4009,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/account-manager-intern-co-op-fall-2026-at-td-securities-4401053463" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/account-manager-intern-co-op-fall-2026-at-td-securities-4401053463" data-job-title="Account Manager Intern / Co-Op (FALL 2026)" data-job-company="TD Securities" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3990,7 +4020,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/advertising-sales-representative-olympus-edge-pictures-661973289/" class="job-link">
+    <a href="/jobs/advertising-sales-representative-olympus-edge-pictures-661973289/" class="job-link" data-job-title="Advertising Sales Representative" data-job-company="Olympus Edge Pictures">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4011,7 +4041,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/advertising-sales-representative-at-olympus-edge-pictures-4400961105" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/advertising-sales-representative-at-olympus-edge-pictures-4400961105" data-job-title="Advertising Sales Representative" data-job-company="Olympus Edge Pictures" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4022,7 +4052,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/field-sales-representative-internship-tech-start-up-social-goodself-661294862/" class="job-link">
+    <a href="/jobs/field-sales-representative-internship-tech-start-up-social-goodself-661294862/" class="job-link" data-job-title="Field Sales Representative Internship- (Tech Start-up/Social Health)" data-job-company="Goodself">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4043,7 +4073,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/field-sales-representative-internship-tech-start-social-health-d6ebc0eede3b8c2e" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/field-sales-representative-internship-tech-start-social-health-d6ebc0eede3b8c2e" data-job-title="Field Sales Representative Internship- (Tech Start-up/Social Health)" data-job-company="Goodself" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4054,7 +4084,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/sales-representative-intern-hnr-solutions-inc-659201039/" class="job-link">
+    <a href="/jobs/sales-representative-intern-hnr-solutions-inc-659201039/" class="job-link" data-job-title="Sales Representative – Intern" data-job-company="HNR Solutions Inc">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4075,7 +4105,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/sales-representative-%E2%80%93-intern-at-hnr-solutions-inc-4399283268" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/sales-representative-%E2%80%93-intern-at-hnr-solutions-inc-4399283268" data-job-title="Sales Representative – Intern" data-job-company="HNR Solutions Inc" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4086,7 +4116,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/advertising-sales-representative-olympus-edge-pictures-657974106/" class="job-link">
+    <a href="/jobs/advertising-sales-representative-olympus-edge-pictures-657974106/" class="job-link" data-job-title="Advertising Sales Representative" data-job-company="Olympus Edge Pictures">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4107,7 +4137,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/advertising-sales-representative-at-olympus-edge-pictures-4398059310" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/advertising-sales-representative-at-olympus-edge-pictures-4398059310" data-job-title="Advertising Sales Representative" data-job-company="Olympus Edge Pictures" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4118,7 +4148,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/retail-summer-field-sales-representative-toronto-molson-coors-beverage-company-657858932/" class="job-link">
+    <a href="/jobs/retail-summer-field-sales-representative-toronto-molson-coors-beverage-company-657858932/" class="job-link" data-job-title="Retail Summer Field Sales Representative, Toronto" data-job-company="Molson Coors Beverage Company">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4139,7 +4169,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/retail-summer-field-sales-representative-toronto-at-molson-coors-beverage-company-4394498313" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/retail-summer-field-sales-representative-toronto-at-molson-coors-beverage-company-4394498313" data-job-title="Retail Summer Field Sales Representative, Toronto" data-job-company="Molson Coors Beverage Company" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4150,7 +4180,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/on-premise-summer-field-sales-representative-toronto-molson-coors-beverage-company-657858665/" class="job-link">
+    <a href="/jobs/on-premise-summer-field-sales-representative-toronto-molson-coors-beverage-company-657858665/" class="job-link" data-job-title="On-Premise Summer Field Sales Representative, Toronto Mississauga" data-job-company="Molson Coors Beverage Company">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4171,7 +4201,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-summer-field-sales-representative-toronto-mississauga-at-molson-coors-beverage-company-4394497327" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-summer-field-sales-representative-toronto-mississauga-at-molson-coors-beverage-company-4394497327" data-job-title="On-Premise Summer Field Sales Representative, Toronto Mississauga" data-job-company="Molson Coors Beverage Company" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4182,7 +4212,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/on-premise-summer-field-sales-representative-windsor-sarnia-molson-coors-beverage-company-657858664/" class="job-link">
+    <a href="/jobs/on-premise-summer-field-sales-representative-windsor-sarnia-molson-coors-beverage-company-657858664/" class="job-link" data-job-title="On-Premise Summer Field Sales Representative, Windsor/Sarnia" data-job-company="Molson Coors Beverage Company">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4203,7 +4233,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-summer-field-sales-representative-windsor-sarnia-at-molson-coors-beverage-company-4394497326" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-summer-field-sales-representative-windsor-sarnia-at-molson-coors-beverage-company-4394497326" data-job-title="On-Premise Summer Field Sales Representative, Windsor/Sarnia" data-job-company="Molson Coors Beverage Company" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4214,7 +4244,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/on-premise-summer-field-sales-representative-calgary-molson-coors-beverage-company-657858268/" class="job-link">
+    <a href="/jobs/on-premise-summer-field-sales-representative-calgary-molson-coors-beverage-company-657858268/" class="job-link" data-job-title="On-Premise Summer Field Sales Representative, Calgary" data-job-company="Molson Coors Beverage Company">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4235,7 +4265,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-summer-field-sales-representative-calgary-at-molson-coors-beverage-company-4394481554" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-summer-field-sales-representative-calgary-at-molson-coors-beverage-company-4394481554" data-job-title="On-Premise Summer Field Sales Representative, Calgary" data-job-company="Molson Coors Beverage Company" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4246,7 +4276,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/on-premise-retail-summer-field-sales-representative-molson-coors-beverage-company-657858264/" class="job-link">
+    <a href="/jobs/on-premise-retail-summer-field-sales-representative-molson-coors-beverage-company-657858264/" class="job-link" data-job-title="On-Premise/Retail Summer Field Sales Representative, Fredericton" data-job-company="Molson Coors Beverage Company">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4267,7 +4297,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-retail-summer-field-sales-representative-fredericton-at-molson-coors-beverage-company-4394484485" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-retail-summer-field-sales-representative-fredericton-at-molson-coors-beverage-company-4394484485" data-job-title="On-Premise/Retail Summer Field Sales Representative, Fredericton" data-job-company="Molson Coors Beverage Company" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4278,7 +4308,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/on-premise-retail-summer-field-sales-representative-central-molson-coors-beverage-company-657858078/" class="job-link">
+    <a href="/jobs/on-premise-retail-summer-field-sales-representative-central-molson-coors-beverage-company-657858078/" class="job-link" data-job-title="On-Premise/Retail Summer Field Sales Representative, Central Newfoundland" data-job-company="Molson Coors Beverage Company">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4299,7 +4329,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-retail-summer-field-sales-representative-central-newfoundland-at-molson-coors-beverage-company-4394478610" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-retail-summer-field-sales-representative-central-newfoundland-at-molson-coors-beverage-company-4394478610" data-job-title="On-Premise/Retail Summer Field Sales Representative, Central Newfoundland" data-job-company="Molson Coors Beverage Company" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4310,7 +4340,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/on-premise-retail-summer-field-sales-representative-western-molson-coors-beverage-company-657858077/" class="job-link">
+    <a href="/jobs/on-premise-retail-summer-field-sales-representative-western-molson-coors-beverage-company-657858077/" class="job-link" data-job-title="On-Premise/Retail Summer Field Sales Representative, Western Newfoundland" data-job-company="Molson Coors Beverage Company">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4331,7 +4361,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-retail-summer-field-sales-representative-western-newfoundland-at-molson-coors-beverage-company-4394492408" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-retail-summer-field-sales-representative-western-newfoundland-at-molson-coors-beverage-company-4394492408" data-job-title="On-Premise/Retail Summer Field Sales Representative, Western Newfoundland" data-job-company="Molson Coors Beverage Company" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4342,7 +4372,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/on-premise-summer-field-sales-representative-regina-molson-coors-beverage-company-657857896/" class="job-link">
+    <a href="/jobs/on-premise-summer-field-sales-representative-regina-molson-coors-beverage-company-657857896/" class="job-link" data-job-title="On-Premise Summer Field Sales Representative, Regina/Saskatoon" data-job-company="Molson Coors Beverage Company">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4363,7 +4393,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-summer-field-sales-representative-regina-saskatoon-at-molson-coors-beverage-company-4394488402" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-summer-field-sales-representative-regina-saskatoon-at-molson-coors-beverage-company-4394488402" data-job-title="On-Premise Summer Field Sales Representative, Regina/Saskatoon" data-job-company="Molson Coors Beverage Company" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4374,7 +4404,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/on-premise-summer-field-sales-representative-toronto-molson-coors-beverage-company-657857895/" class="job-link">
+    <a href="/jobs/on-premise-summer-field-sales-representative-toronto-molson-coors-beverage-company-657857895/" class="job-link" data-job-title="On-Premise Summer Field Sales Representative, Toronto Scarborough" data-job-company="Molson Coors Beverage Company">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4395,7 +4425,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-summer-field-sales-representative-toronto-scarborough-at-molson-coors-beverage-company-4394489383" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-summer-field-sales-representative-toronto-scarborough-at-molson-coors-beverage-company-4394489383" data-job-title="On-Premise Summer Field Sales Representative, Toronto Scarborough" data-job-company="Molson Coors Beverage Company" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4406,7 +4436,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/on-premise-retail-summer-field-sales-representative-durham-molson-coors-beverage-company-657857684/" class="job-link">
+    <a href="/jobs/on-premise-retail-summer-field-sales-representative-durham-molson-coors-beverage-company-657857684/" class="job-link" data-job-title="On-Premise/Retail Summer Field Sales Representative, Durham/Peterborough" data-job-company="Molson Coors Beverage Company">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4427,7 +4457,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-retail-summer-field-sales-representative-durham-peterborough-at-molson-coors-beverage-company-4394484493" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-retail-summer-field-sales-representative-durham-peterborough-at-molson-coors-beverage-company-4394484493" data-job-title="On-Premise/Retail Summer Field Sales Representative, Durham/Peterborough" data-job-company="Molson Coors Beverage Company" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4438,7 +4468,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/on-premise-retail-summer-field-sales-representative-cape-molson-coors-beverage-company-657857519/" class="job-link">
+    <a href="/jobs/on-premise-retail-summer-field-sales-representative-cape-molson-coors-beverage-company-657857519/" class="job-link" data-job-title="On-Premise/Retail Summer Field Sales Representative, Cape Breton" data-job-company="Molson Coors Beverage Company">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4459,7 +4489,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-retail-summer-field-sales-representative-cape-breton-at-molson-coors-beverage-company-4394491410" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-retail-summer-field-sales-representative-cape-breton-at-molson-coors-beverage-company-4394491410" data-job-title="On-Premise/Retail Summer Field Sales Representative, Cape Breton" data-job-company="Molson Coors Beverage Company" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4470,7 +4500,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/on-premise-summer-field-sales-representative-brampton-molson-coors-beverage-company-657857383/" class="job-link">
+    <a href="/jobs/on-premise-summer-field-sales-representative-brampton-molson-coors-beverage-company-657857383/" class="job-link" data-job-title="On-Premise Summer Field Sales Representative, Brampton" data-job-company="Molson Coors Beverage Company">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4491,7 +4521,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-summer-field-sales-representative-brampton-at-molson-coors-beverage-company-4394484497" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-summer-field-sales-representative-brampton-at-molson-coors-beverage-company-4394484497" data-job-title="On-Premise Summer Field Sales Representative, Brampton" data-job-company="Molson Coors Beverage Company" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4502,7 +4532,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/on-premise-retail-summer-field-sales-representative-molson-coors-beverage-company-657857103/" class="job-link">
+    <a href="/jobs/on-premise-retail-summer-field-sales-representative-molson-coors-beverage-company-657857103/" class="job-link" data-job-title="On-Premise/Retail Summer Field Sales Representative, Charlottetown" data-job-company="Molson Coors Beverage Company">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4523,7 +4553,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-retail-summer-field-sales-representative-charlottetown-at-molson-coors-beverage-company-4394491424" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-retail-summer-field-sales-representative-charlottetown-at-molson-coors-beverage-company-4394491424" data-job-title="On-Premise/Retail Summer Field Sales Representative, Charlottetown" data-job-company="Molson Coors Beverage Company" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4534,7 +4564,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/on-premise-summer-field-sales-representative-vancouver-molson-coors-beverage-company-657857039/" class="job-link">
+    <a href="/jobs/on-premise-summer-field-sales-representative-vancouver-molson-coors-beverage-company-657857039/" class="job-link" data-job-title="On-Premise Summer Field Sales Representative, Vancouver" data-job-company="Molson Coors Beverage Company">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4555,7 +4585,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-summer-field-sales-representative-vancouver-at-molson-coors-beverage-company-4394498309" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-summer-field-sales-representative-vancouver-at-molson-coors-beverage-company-4394498309" data-job-title="On-Premise Summer Field Sales Representative, Vancouver" data-job-company="Molson Coors Beverage Company" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4566,7 +4596,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/on-premise-retail-summer-field-sales-representative-halifax-molson-coors-beverage-company-657856962/" class="job-link">
+    <a href="/jobs/on-premise-retail-summer-field-sales-representative-halifax-molson-coors-beverage-company-657856962/" class="job-link" data-job-title="On-Premise/Retail Summer Field Sales Representative, Halifax" data-job-company="Molson Coors Beverage Company">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4587,7 +4617,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-retail-summer-field-sales-representative-halifax-at-molson-coors-beverage-company-4394490427" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/on-premise-retail-summer-field-sales-representative-halifax-at-molson-coors-beverage-company-4394490427" data-job-title="On-Premise/Retail Summer Field Sales Representative, Halifax" data-job-company="Molson Coors Beverage Company" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4609,7 +4639,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/sap-ixp-intern-associate-project-manager-apm-sap-670951978/" class="job-link">
+    <a href="/jobs/sap-ixp-intern-associate-project-manager-apm-sap-670951978/" class="job-link" data-job-title="SAP iXp Intern - Associate Project Manager (APM)" data-job-company="SAP">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4630,7 +4660,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/sap-ixp-intern-associate-project-manager-apm-at-sap-4405395241" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/sap-ixp-intern-associate-project-manager-apm-at-sap-4405395241" data-job-title="SAP iXp Intern - Associate Project Manager (APM)" data-job-company="SAP" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4641,7 +4671,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/project-coordinator-intern-calgary-municipal-land-corporation-670845910/" class="job-link">
+    <a href="/jobs/project-coordinator-intern-calgary-municipal-land-corporation-670845910/" class="job-link" data-job-title="Project Coordinator Intern" data-job-company="Calgary Municipal Land Corporation">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4662,7 +4692,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/project-coordinator-intern-at-calgary-municipal-land-corporation-4405367169" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/project-coordinator-intern-at-calgary-municipal-land-corporation-4405367169" data-job-title="Project Coordinator Intern" data-job-company="Calgary Municipal Land Corporation" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4673,7 +4703,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/medical-project-coordinator-intern-aerocardia-670303136/" class="job-link">
+    <a href="/jobs/medical-project-coordinator-intern-aerocardia-670303136/" class="job-link" data-job-title="Medical project coordinator intern" data-job-company="AeroCardia">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4694,7 +4724,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/medical-project-coordinator-intern-at-aerocardia-4406147179" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/medical-project-coordinator-intern-at-aerocardia-4406147179" data-job-title="Medical project coordinator intern" data-job-company="AeroCardia" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4705,7 +4735,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/summer-program-coordinator-fort-st-john-public-library-association-670027894/" class="job-link">
+    <a href="/jobs/summer-program-coordinator-fort-st-john-public-library-association-670027894/" class="job-link" data-job-title="Summer Program Coordinator" data-job-company="Fort St. John Public Library Association">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4726,7 +4756,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/summer-program-coordinator-12b9e648f9dae986" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/summer-program-coordinator-12b9e648f9dae986" data-job-title="Summer Program Coordinator" data-job-company="Fort St. John Public Library Association" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4737,7 +4767,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/project-coordinator-co-op-aecon-group-inc-667399698/" class="job-link">
+    <a href="/jobs/project-coordinator-co-op-aecon-group-inc-667399698/" class="job-link" data-job-title="Project Coordinator Co-op" data-job-company="Aecon Group Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4758,7 +4788,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/project-coordinator-co-op-at-aecon-group-inc-4327126489" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/project-coordinator-co-op-at-aecon-group-inc-4327126489" data-job-title="Project Coordinator Co-op" data-job-company="Aecon Group Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4769,7 +4799,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/pmo-analyst-and-business-intelligence-intern-hitachi-rail-665004016/" class="job-link">
+    <a href="/jobs/pmo-analyst-and-business-intelligence-intern-hitachi-rail-665004016/" class="job-link" data-job-title="PMO Analyst and Business Intelligence Intern" data-job-company="Hitachi Rail">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4790,7 +4820,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/pmo-analyst-and-business-intelligence-intern-at-hitachi-rail-4400443471" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/pmo-analyst-and-business-intelligence-intern-at-hitachi-rail-4400443471" data-job-title="PMO Analyst and Business Intelligence Intern" data-job-company="Hitachi Rail" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4801,7 +4831,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/youth-recreational-leisure-activities-program-coordinator-el-shama-c-a-r-e-s-foundation-inc-664379818/" class="job-link">
+    <a href="/jobs/youth-recreational-leisure-activities-program-coordinator-el-shama-c-a-r-e-s-foundation-inc-664379818/" class="job-link" data-job-title="Youth Recreational &amp; Leisure Activities Program Coordinator / Canada Summer Jobs 2026" data-job-company="EL Shama C.A.R.E.S FOUNDATION Inc">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4822,7 +4852,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/youth-recreational-leisure-activities-program-coordinator-canada-summer-jobs-2026-34ffcee84e4d759c" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/youth-recreational-leisure-activities-program-coordinator-canada-summer-jobs-2026-34ffcee84e4d759c" data-job-title="Youth Recreational &amp; Leisure Activities Program Coordinator / Canada Summer Jobs 2026" data-job-company="EL Shama C.A.R.E.S FOUNDATION Inc" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4833,7 +4863,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/project-coordinator-co-op-buildings-summer-2026-stantec-664200596/" class="job-link">
+    <a href="/jobs/project-coordinator-co-op-buildings-summer-2026-stantec-664200596/" class="job-link" data-job-title="Project Coordinator Co-Op – Buildings (Summer 2026)" data-job-company="Stantec">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4854,7 +4884,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://rr.jobsyn.org/86085AF4962B4F7B8B9AFC3FB0A707991554" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://rr.jobsyn.org/86085AF4962B4F7B8B9AFC3FB0A707991554" data-job-title="Project Coordinator Co-Op – Buildings (Summer 2026)" data-job-company="Stantec" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4865,7 +4895,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-project-coordinator-summer-intern-flatirondragados-661392387/" class="job-link">
+    <a href="/jobs/junior-project-coordinator-summer-intern-flatirondragados-661392387/" class="job-link" data-job-title="Junior Project Coordinator (Summer Intern)" data-job-company="FlatironDragados">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4886,7 +4916,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://careers-fdcorpcan.icims.com/jobs/8482/job?iis=Job+Board&amp;iisn=Indeed&amp;indeed-apply-token=73a2d2b2a8d6d5c0a62696875eaebd669103652d3f0c2cd5445d3e66b1592b0f&amp;utm_source=indeed_integration" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://careers-fdcorpcan.icims.com/jobs/8482/job?iis=Job+Board&amp;iisn=Indeed&amp;indeed-apply-token=73a2d2b2a8d6d5c0a62696875eaebd669103652d3f0c2cd5445d3e66b1592b0f&amp;utm_source=indeed_integration" data-job-title="Junior Project Coordinator (Summer Intern)" data-job-company="FlatironDragados" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4897,7 +4927,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/intern-project-manager-schneider-electric-659545288/" class="job-link">
+    <a href="/jobs/intern-project-manager-schneider-electric-659545288/" class="job-link" data-job-title="Intern - Project Manager" data-job-company="Schneider Electric">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4918,7 +4948,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/intern-project-manager-at-schneider-electric-4396387220" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/intern-project-manager-at-schneider-electric-4396387220" data-job-title="Intern - Project Manager" data-job-company="Schneider Electric" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -4929,7 +4959,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/program-coordinator-internship-match-retail-659518801/" class="job-link">
+    <a href="/jobs/program-coordinator-internship-match-retail-659518801/" class="job-link" data-job-title="Program Coordinator Internship" data-job-company="Match Retail">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -4950,7 +4980,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/program-coordinator-internship-at-match-retail-4396367709" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/program-coordinator-internship-at-match-retail-4396367709" data-job-title="Program Coordinator Internship" data-job-company="Match Retail" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -5333,6 +5363,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -5342,6 +5377,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

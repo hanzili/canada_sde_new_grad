@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -469,7 +474,7 @@
     
 
     <div class="apply-section">
-        <a href="https://ehif.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/26969" class="btn-apply" target="_blank" rel="noopener" itemprop="url">
+        <a href="https://ehif.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/26969" class="btn-apply" target="_blank" rel="noopener" itemprop="url" data-job-title="Junior Document Controller" data-job-company="Wood" data-job-location="Saskatoon, SK">
             Apply Now →
         </a>
         <p class="apply-note">Opens in a new tab on the company's website</p>
@@ -485,7 +490,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-energy-auditor-8760-670807050/" class="job-link">
+    <a href="/jobs/junior-energy-auditor-8760-670807050/" class="job-link" data-job-title="Junior Energy Auditor" data-job-company="8760">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -506,7 +511,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-energy-auditor-17ac89cf5f3f81fe" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-energy-auditor-17ac89cf5f3f81fe" data-job-title="Junior Energy Auditor" data-job-company="8760" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -518,7 +523,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-software-quality-engineer-helic-co-670758579/" class="job-link">
+    <a href="/jobs/junior-software-quality-engineer-helic-co-670758579/" class="job-link" data-job-title="Junior Software Quality Engineer" data-job-company="Helic &amp; Co.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -539,7 +544,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-quality-engineer-at-helic-co-4406621565" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-quality-engineer-at-helic-co-4406621565" data-job-title="Junior Software Quality Engineer" data-job-company="Helic &amp; Co." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -551,7 +556,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-quality-engineer-developer-ontario-power-generation-670646447/" class="job-link">
+    <a href="/jobs/junior-quality-engineer-developer-ontario-power-generation-670646447/" class="job-link" data-job-title="Junior Quality Engineer (Developer)" data-job-company="Ontario Power Generation">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -572,7 +577,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-quality-engineer-developer-at-ontario-power-generation-4403751077" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-quality-engineer-developer-at-ontario-power-generation-4403751077" data-job-title="Junior Quality Engineer (Developer)" data-job-company="Ontario Power Generation" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -584,7 +589,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/marketing-operations-engineer-junior-contract-prime-quadrant-661042314/" class="job-link">
+    <a href="/jobs/marketing-operations-engineer-junior-contract-prime-quadrant-661042314/" class="job-link" data-job-title="Marketing Operations Engineer (Junior-Contract)" data-job-company="Prime Quadrant">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -605,7 +610,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-operations-engineer-junior-contract-at-prime-quadrant-4399043213" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/marketing-operations-engineer-junior-contract-at-prime-quadrant-4399043213" data-job-title="Marketing Operations Engineer (Junior-Contract)" data-job-company="Prime Quadrant" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -617,7 +622,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/digital-marketing-intern-content-design-ai-research-idig-marketing-670074764/" class="job-link">
+    <a href="/jobs/digital-marketing-intern-content-design-ai-research-idig-marketing-670074764/" class="job-link" data-job-title="Digital Marketing Intern (Content Design &amp; AI Research)" data-job-company="idig Marketing">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -638,7 +643,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/digital-marketing-intern-content-design-ai-research-f81a090389062936" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/digital-marketing-intern-content-design-ai-research-f81a090389062936" data-job-title="Digital Marketing Intern (Content Design &amp; AI Research)" data-job-company="idig Marketing" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -730,6 +735,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -739,6 +749,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

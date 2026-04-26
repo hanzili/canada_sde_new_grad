@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -437,7 +442,7 @@ Interested candidates should submit their resume and a brief cover letter outlin
     
 
     <div class="apply-section">
-        <a href="http://ca.indeed.com/job/entry-level-industrial-chemist-0670cc273d72b760" class="btn-apply" target="_blank" rel="noopener" itemprop="url">
+        <a href="http://ca.indeed.com/job/entry-level-industrial-chemist-0670cc273d72b760" class="btn-apply" target="_blank" rel="noopener" itemprop="url" data-job-title="Entry-Level Industrial Chemist" data-job-company="Capcrete" data-job-location="Vaughan, ON">
             Apply Now →
         </a>
         <p class="apply-note">Opens in a new tab on the company's website</p>
@@ -453,7 +458,7 @@ Interested candidates should submit their resume and a brief cover letter outlin
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-construction-materials-lab-technician-wsp-in-canada-669411891/" class="job-link">
+    <a href="/jobs/junior-construction-materials-lab-technician-wsp-in-canada-669411891/" class="job-link" data-job-title="Junior Construction Materials Lab Technician" data-job-company="WSP in Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -474,7 +479,7 @@ Interested candidates should submit their resume and a brief cover letter outlin
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-construction-materials-lab-technician-at-wsp-in-canada-4404719120" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-construction-materials-lab-technician-at-wsp-in-canada-4404719120" data-job-title="Junior Construction Materials Lab Technician" data-job-company="WSP in Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -486,7 +491,7 @@ Interested candidates should submit their resume and a brief cover letter outlin
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/medical-lab-technologist-opseu-lab-chemistry-lifelabs-medical-laboratory-services-668310948/" class="job-link">
+    <a href="/jobs/medical-lab-technologist-opseu-lab-chemistry-lifelabs-medical-laboratory-services-668310948/" class="job-link" data-job-title="Medical Lab Technologist (OPSEU LAB), Chemistry" data-job-company="LifeLabs Medical Laboratory Services">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -507,7 +512,7 @@ Interested candidates should submit their resume and a brief cover letter outlin
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/medical-lab-technologist-opseu-lab-chemistry-at-lifelabs-medical-laboratory-services-4404869382" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/medical-lab-technologist-opseu-lab-chemistry-at-lifelabs-medical-laboratory-services-4404869382" data-job-title="Medical Lab Technologist (OPSEU LAB), Chemistry" data-job-company="LifeLabs Medical Laboratory Services" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -519,7 +524,7 @@ Interested candidates should submit their resume and a brief cover letter outlin
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-construction-material-laboratory-technician-wsp-in-canada-665958036/" class="job-link">
+    <a href="/jobs/junior-construction-material-laboratory-technician-wsp-in-canada-665958036/" class="job-link" data-job-title="Junior Construction Material Laboratory Technician" data-job-company="WSP in Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -540,7 +545,7 @@ Interested candidates should submit their resume and a brief cover letter outlin
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-construction-material-laboratory-technician-at-wsp-in-canada-4390985248" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-construction-material-laboratory-technician-at-wsp-in-canada-4390985248" data-job-title="Junior Construction Material Laboratory Technician" data-job-company="WSP in Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -552,7 +557,7 @@ Interested candidates should submit their resume and a brief cover letter outlin
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/student-employee-lab-technician-okanagan-college-670136446/" class="job-link">
+    <a href="/jobs/student-employee-lab-technician-okanagan-college-670136446/" class="job-link" data-job-title="Student Employee - Lab Technician" data-job-company="Okanagan College">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -573,7 +578,7 @@ Interested candidates should submit their resume and a brief cover letter outlin
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://careers.okanagan.bc.ca/postings/15965" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://careers.okanagan.bc.ca/postings/15965" data-job-title="Student Employee - Lab Technician" data-job-company="Okanagan College" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -585,7 +590,7 @@ Interested candidates should submit their resume and a brief cover letter outlin
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/student-construction-material-lab-technician-wsp-in-canada-670004503/" class="job-link">
+    <a href="/jobs/student-construction-material-lab-technician-wsp-in-canada-670004503/" class="job-link" data-job-title="Student Construction Material Lab Technician" data-job-company="WSP in Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -606,7 +611,7 @@ Interested candidates should submit their resume and a brief cover letter outlin
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/student-construction-material-lab-technician-at-wsp-in-canada-4393051146" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/student-construction-material-lab-technician-at-wsp-in-canada-4393051146" data-job-title="Student Construction Material Lab Technician" data-job-company="WSP in Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -708,6 +713,11 @@ Interested candidates should submit their resume and a brief cover letter outlin
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -717,6 +727,42 @@ Interested candidates should submit their resume and a brief cover letter outlin
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

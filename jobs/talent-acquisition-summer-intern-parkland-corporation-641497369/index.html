@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -427,7 +432,7 @@ Candidates must be legally eligible to work in the country in which they applied
     
 
     <div class="apply-section">
-        <a href="https://parkland-careers.ttcportals.com/jobs/17463188-talent-acquisition-summer-intern?__jvsd=LinkedIn&amp;__jvst=Job+Board" class="btn-apply" target="_blank" rel="noopener" itemprop="url">
+        <a href="https://parkland-careers.ttcportals.com/jobs/17463188-talent-acquisition-summer-intern?__jvsd=LinkedIn&amp;__jvst=Job+Board" class="btn-apply" target="_blank" rel="noopener" itemprop="url" data-job-title="Talent Acquisition Summer Intern" data-job-company="Parkland Corporation" data-job-location="Calgary, Alberta">
             Apply Now →
         </a>
         <p class="apply-note">Opens in a new tab on the company's website</p>
@@ -443,7 +448,7 @@ Candidates must be legally eligible to work in the country in which they applied
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-recruiter-r-w-tomlinson-668466355/" class="job-link">
+    <a href="/jobs/junior-recruiter-r-w-tomlinson-668466355/" class="job-link" data-job-title="Junior Recruiter" data-job-company="R.W. Tomlinson">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -464,7 +469,7 @@ Candidates must be legally eligible to work in the country in which they applied
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://career8.successfactors.com/career?career_job_req_id=5068&amp;career_ns=job_listing&amp;company=rwtomlinso&amp;navBarLevel=JOB_SEARCH&amp;rcm_site_locale=en_US" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://career8.successfactors.com/career?career_job_req_id=5068&amp;career_ns=job_listing&amp;company=rwtomlinso&amp;navBarLevel=JOB_SEARCH&amp;rcm_site_locale=en_US" data-job-title="Junior Recruiter" data-job-company="R.W. Tomlinson" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -476,7 +481,7 @@ Candidates must be legally eligible to work in the country in which they applied
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-payroll-human-resources-administrator-magnus-hrs-667241587/" class="job-link">
+    <a href="/jobs/junior-payroll-human-resources-administrator-magnus-hrs-667241587/" class="job-link" data-job-title="Junior Payroll &amp; Human Resources Administrator" data-job-company="MAGNUS HRS">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -497,7 +502,7 @@ Candidates must be legally eligible to work in the country in which they applied
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://app.workwolf.com/pipelineLink/ZRK2O7FT?utm_source=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://app.workwolf.com/pipelineLink/ZRK2O7FT?utm_source=indeed" data-job-title="Junior Payroll &amp; Human Resources Administrator" data-job-company="MAGNUS HRS" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -509,7 +514,7 @@ Candidates must be legally eligible to work in the country in which they applied
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/human-resources-global-trainee-gabriella-co-666028753/" class="job-link">
+    <a href="/jobs/human-resources-global-trainee-gabriella-co-666028753/" class="job-link" data-job-title="Human Resources Global Trainee" data-job-company="Gabriella &amp; Co">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -530,7 +535,7 @@ Candidates must be legally eligible to work in the country in which they applied
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-global-trainee-at-gabriella-co-4403515204" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-global-trainee-at-gabriella-co-4403515204" data-job-title="Human Resources Global Trainee" data-job-company="Gabriella &amp; Co" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -542,7 +547,7 @@ Candidates must be legally eligible to work in the country in which they applied
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/human-resources-rotational-analyst-graduate-bnp-paribas-665721870/" class="job-link">
+    <a href="/jobs/human-resources-rotational-analyst-graduate-bnp-paribas-665721870/" class="job-link" data-job-title="Human Resources Rotational Analyst – Graduate" data-job-company="BNP Paribas">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -563,7 +568,7 @@ Candidates must be legally eligible to work in the country in which they applied
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-rotational-analyst-%E2%80%93-graduate-at-bnp-paribas-4379308621" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/human-resources-rotational-analyst-%E2%80%93-graduate-at-bnp-paribas-4379308621" data-job-title="Human Resources Rotational Analyst – Graduate" data-job-company="BNP Paribas" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -575,7 +580,7 @@ Candidates must be legally eligible to work in the country in which they applied
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-recruiter-entry-level-bluestar-professional-services-inc-664113876/" class="job-link">
+    <a href="/jobs/junior-recruiter-entry-level-bluestar-professional-services-inc-664113876/" class="job-link" data-job-title="Junior Recruiter (Entry Level)" data-job-company="Bluestar Professional Services Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -596,7 +601,7 @@ Candidates must be legally eligible to work in the country in which they applied
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://bluestar-equity.humi.ca/job-board/human+resources/46845?source=Indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://bluestar-equity.humi.ca/job-board/human+resources/46845?source=Indeed" data-job-title="Junior Recruiter (Entry Level)" data-job-company="Bluestar Professional Services Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -688,6 +693,11 @@ Candidates must be legally eligible to work in the country in which they applied
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -697,6 +707,42 @@ Candidates must be legally eligible to work in the country in which they applied
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

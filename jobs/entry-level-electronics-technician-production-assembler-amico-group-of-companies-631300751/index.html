@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -420,7 +425,7 @@
     
 
     <div class="apply-section">
-        <a href="https://amico.catsone.com/careers/78578-General/jobs/16777912-Entry-Level-Electronics-TechnicianProduction-Assembler-Amico-Corporation" class="btn-apply" target="_blank" rel="noopener" itemprop="url">
+        <a href="https://amico.catsone.com/careers/78578-General/jobs/16777912-Entry-Level-Electronics-TechnicianProduction-Assembler-Amico-Corporation" class="btn-apply" target="_blank" rel="noopener" itemprop="url" data-job-title="Entry Level Electronics Technician/Production Assembler - Amico Corporation" data-job-company="Amico Group of Companies" data-job-location="Richmond Hill, Ontario">
             Apply Now →
         </a>
         <p class="apply-note">Opens in a new tab on the company's website</p>
@@ -436,7 +441,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-electrical-engineer-platinum-engineering-ltd-670750742/" class="job-link">
+    <a href="/jobs/junior-electrical-engineer-platinum-engineering-ltd-670750742/" class="job-link" data-job-title="Junior Electrical Engineer" data-job-company="Platinum Engineering Ltd.">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -457,7 +462,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-electrical-engineer-7b844d0b0fa6d009" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-electrical-engineer-7b844d0b0fa6d009" data-job-title="Junior Electrical Engineer" data-job-company="Platinum Engineering Ltd." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -469,7 +474,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-field-electrical-instrumentation-engineer-vancouver-ausenco-670039999/" class="job-link">
+    <a href="/jobs/junior-field-electrical-instrumentation-engineer-vancouver-ausenco-670039999/" class="job-link" data-job-title="Junior Field Electrical &amp; Instrumentation Engineer – Vancouver/Calgary/Site" data-job-company="Ausenco">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -490,7 +495,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-field-electrical-instrumentation-engineer-%E2%80%93-vancouver-calgary-site-at-ausenco-4405034256" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-field-electrical-instrumentation-engineer-%E2%80%93-vancouver-calgary-site-at-ausenco-4405034256" data-job-title="Junior Field Electrical &amp; Instrumentation Engineer – Vancouver/Calgary/Site" data-job-company="Ausenco" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -502,7 +507,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-electrical-engineer-bp-automation-669927845/" class="job-link">
+    <a href="/jobs/junior-electrical-engineer-bp-automation-669927845/" class="job-link" data-job-title="Junior Electrical Engineer" data-job-company="BP Automation">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -523,7 +528,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-electrical-engineer-e5471eb8e667226f" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-electrical-engineer-e5471eb8e667226f" data-job-title="Junior Electrical Engineer" data-job-company="BP Automation" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -535,7 +540,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-electrical-engineer-klohn-crippen-berger-669109554/" class="job-link">
+    <a href="/jobs/junior-electrical-engineer-klohn-crippen-berger-669109554/" class="job-link" data-job-title="Junior Electrical Engineer" data-job-company="Klohn Crippen Berger">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -556,7 +561,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-electrical-engineer-at-klohn-crippen-berger-4404457094" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-electrical-engineer-at-klohn-crippen-berger-4404457094" data-job-title="Junior Electrical Engineer" data-job-company="Klohn Crippen Berger" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -568,7 +573,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-electrical-engineer-eit-industrial-and-power-bba-consultants-667620396/" class="job-link">
+    <a href="/jobs/junior-electrical-engineer-eit-industrial-and-power-bba-consultants-667620396/" class="job-link" data-job-title="Junior Electrical Engineer EIT - Industrial and Power" data-job-company="BBA Consultants">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -589,7 +594,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-electrical-engineer-eit-industrial-and-power-at-bba-consultants-4404363659" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-electrical-engineer-eit-industrial-and-power-at-bba-consultants-4404363659" data-job-title="Junior Electrical Engineer EIT - Industrial and Power" data-job-company="BBA Consultants" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -690,6 +695,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -699,6 +709,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

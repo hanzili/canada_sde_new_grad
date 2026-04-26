@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -284,6 +289,31 @@
         
     </div>
 
+    
+    <section class="seo-content-block">
+        <h2>How to use this engineering jobs board</h2>
+        <p>This page is built for students and recent grads searching for 2026 Canada engineering new grad, junior, and entry-level roles. Listings are refreshed daily, grouped by career track, and kept focused on roles that are practical for early-career candidates in Canada.</p>
+        <ul class="seo-content-list">
+            
+            <li>Browse currently active engineering openings from employers such as BBA Consultants, GE Vernova, Stantec, Platinum Engineering Ltd., Whitemud Ironworks Limited.</li>
+            
+            <li>Use city pages for local intent: Toronto, Vancouver, Montreal, Waterloo, Ottawa, Calgary, and remote Canada roles.</li>
+            
+            <li>Open a job page before applying to confirm posting date, category, location, and related roles from the same track.</li>
+            
+            <li>Check back daily: stale or closed jobs are removed from listings so the board stays useful for real applications.</li>
+            
+        </ul>
+        <p class="seo-content-links">
+            Start with <a href="/locations/toronto/">Toronto jobs</a>,
+            <a href="/locations/vancouver/">Vancouver jobs</a>,
+            <a href="/locations/montreal/">Montreal jobs</a>,
+            <a href="/locations/waterloo/">Waterloo jobs</a>, or
+            <a href="/locations/remote/">remote Canada jobs</a>.
+        </p>
+    </section>
+    
+
     <div class="emoji-legend">
         <div class="legend-item"><span class="emoji">🔥</span> Hot Opportunity - Big Tech, high pay, exciting role</div>
         <div class="legend-item"><span class="emoji">💤</span> Consider Carefully - May be less exciting</div>
@@ -362,7 +392,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/candidat-e-a-la-profession-d-ingenieur-mecanique-fiabilite-ge-vernova-671360168/" class="job-link">
+    <a href="/jobs/candidat-e-a-la-profession-d-ingenieur-mecanique-fiabilite-ge-vernova-671360168/" class="job-link" data-job-title="Candidat(e) à la profession d&#39;ingénieur mécanique, Fiabilité et Opérations / EIT mechanical engineer, Reliability and Operations" data-job-company="GE Vernova">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -383,7 +413,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/candidat-e-%C3%A0-la-profession-d-ing%C3%A9nieur-m%C3%A9canique-fiabilit%C3%A9-et-op%C3%A9rations-eit-mechanical-engineer-reliability-and-operations-at-ge-vernova-4397362324" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/candidat-e-%C3%A0-la-profession-d-ing%C3%A9nieur-m%C3%A9canique-fiabilit%C3%A9-et-op%C3%A9rations-eit-mechanical-engineer-reliability-and-operations-at-ge-vernova-4397362324" data-job-title="Candidat(e) à la profession d&#39;ingénieur mécanique, Fiabilité et Opérations / EIT mechanical engineer, Reliability and Operations" data-job-company="GE Vernova" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -394,7 +424,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-mechanical-design-engineer-agilus-work-solutions-669289214/" class="job-link">
+    <a href="/jobs/junior-mechanical-design-engineer-agilus-work-solutions-669289214/" class="job-link" data-job-title="Junior Mechanical Design Engineer" data-job-company="Agilus Work Solutions">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -415,7 +445,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-mechanical-design-engineer-at-agilus-work-solutions-4404485578" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-mechanical-design-engineer-at-agilus-work-solutions-4404485578" data-job-title="Junior Mechanical Design Engineer" data-job-company="Agilus Work Solutions" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -426,7 +456,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-mechanical-cad-designer-chick-pick-solutions-668992605/" class="job-link">
+    <a href="/jobs/junior-mechanical-cad-designer-chick-pick-solutions-668992605/" class="job-link" data-job-title="Junior Mechanical CAD Designer" data-job-company="Chick Pick Solutions">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -447,7 +477,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-mechanical-cad-designer-dade49d99ed353ca" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-mechanical-cad-designer-dade49d99ed353ca" data-job-title="Junior Mechanical CAD Designer" data-job-company="Chick Pick Solutions" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -458,7 +488,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-mechanical-design-technologist-general-dynamics-mission-systems-668886530/" class="job-link">
+    <a href="/jobs/junior-mechanical-design-technologist-general-dynamics-mission-systems-668886530/" class="job-link" data-job-title="Junior Mechanical Design Technologist" data-job-company="General Dynamics Mission Systems">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -479,7 +509,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://jobs.smartrecruiters.com/GDMSI/744000122254111-junior-mechanical-design-technologist-" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://jobs.smartrecruiters.com/GDMSI/744000122254111-junior-mechanical-design-technologist-" data-job-title="Junior Mechanical Design Technologist" data-job-company="General Dynamics Mission Systems" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -490,7 +520,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-cad-designer-jj-home-products-division-of-renin-canada-corp-665713494/" class="job-link">
+    <a href="/jobs/junior-cad-designer-jj-home-products-division-of-renin-canada-corp-665713494/" class="job-link" data-job-title="Junior CAD Designer" data-job-company="JJ Home Products - Division of Renin Canada Corp.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -511,7 +541,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-cad-designer-e3910e605ba1f2fe" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-cad-designer-e3910e605ba1f2fe" data-job-title="Junior CAD Designer" data-job-company="JJ Home Products - Division of Renin Canada Corp." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -522,7 +552,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/mechanical-engineer-eit-pe-hello-fire-protection-corp-664366770/" class="job-link">
+    <a href="/jobs/mechanical-engineer-eit-pe-hello-fire-protection-corp-664366770/" class="job-link" data-job-title="Mechanical Engineer EIT/PE" data-job-company="Hello Fire Protection Corp.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -543,7 +573,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/mechanical-engineer-eitpe-4b3a643cd68ffcaf" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/mechanical-engineer-eitpe-4b3a643cd68ffcaf" data-job-title="Mechanical Engineer EIT/PE" data-job-company="Hello Fire Protection Corp." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -554,7 +584,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/mechanical-engineer-in-training-eit-custom-energized-air-661165456/" class="job-link">
+    <a href="/jobs/mechanical-engineer-in-training-eit-custom-energized-air-661165456/" class="job-link" data-job-title="Mechanical Engineer-in-Training (EIT)" data-job-company="Custom Energized Air">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -575,7 +605,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/mechanical-engineer-training-eit-6e97900b7512446a" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/mechanical-engineer-training-eit-6e97900b7512446a" data-job-title="Mechanical Engineer-in-Training (EIT)" data-job-company="Custom Energized Air" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -586,7 +616,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-packaging-mechanical-engineer-crystal-int-l-group-inc-crystal-claire-cosmetics-inc-660092757/" class="job-link">
+    <a href="/jobs/junior-packaging-mechanical-engineer-crystal-int-l-group-inc-crystal-claire-cosmetics-inc-660092757/" class="job-link" data-job-title="Junior Packaging/Mechanical Engineer" data-job-company="Crystal Int&#39;l (Group) Inc. &amp; Crystal Claire Cosmetics Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -607,7 +637,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-packaging-mechanical-engineer-at-crystal-int-l-group-inc-crystal-claire-cosmetics-inc-4400209949" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-packaging-mechanical-engineer-at-crystal-int-l-group-inc-crystal-claire-cosmetics-inc-4400209949" data-job-title="Junior Packaging/Mechanical Engineer" data-job-company="Crystal Int&#39;l (Group) Inc. &amp; Crystal Claire Cosmetics Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -618,7 +648,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/jr-manufacturing-engineer-magna-international-658461987/" class="job-link">
+    <a href="/jobs/jr-manufacturing-engineer-magna-international-658461987/" class="job-link" data-job-title="Jr. Manufacturing Engineer" data-job-company="Magna International">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -639,7 +669,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/jr-manufacturing-engineer-at-magna-international-4377108040" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/jr-manufacturing-engineer-at-magna-international-4377108040" data-job-title="Jr. Manufacturing Engineer" data-job-company="Magna International" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -650,7 +680,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-mechanical-engineer-wsp-in-canada-657985744/" class="job-link">
+    <a href="/jobs/junior-mechanical-engineer-wsp-in-canada-657985744/" class="job-link" data-job-title="Junior Mechanical Engineer" data-job-company="WSP in Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -671,7 +701,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-mechanical-engineer-at-wsp-in-canada-4397968422" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-mechanical-engineer-at-wsp-in-canada-4397968422" data-job-title="Junior Mechanical Engineer" data-job-company="WSP in Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -682,7 +712,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-mechanical-cad-technician-kraken-robotics-657836315/" class="job-link">
+    <a href="/jobs/junior-mechanical-cad-technician-kraken-robotics-657836315/" class="job-link" data-job-title="Junior Mechanical CAD Technician" data-job-company="Kraken Robotics">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -703,7 +733,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ats.rippling.com/kraken-robotics-inc/jobs/60ab8656-a683-4887-a7d3-74dd2d6efef3?jobSite=Indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ats.rippling.com/kraken-robotics-inc/jobs/60ab8656-a683-4887-a7d3-74dd2d6efef3?jobSite=Indeed" data-job-title="Junior Mechanical CAD Technician" data-job-company="Kraken Robotics" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -725,7 +755,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-electrical-engineer-platinum-engineering-ltd-670750742/" class="job-link">
+    <a href="/jobs/junior-electrical-engineer-platinum-engineering-ltd-670750742/" class="job-link" data-job-title="Junior Electrical Engineer" data-job-company="Platinum Engineering Ltd.">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -746,7 +776,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-electrical-engineer-7b844d0b0fa6d009" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-electrical-engineer-7b844d0b0fa6d009" data-job-title="Junior Electrical Engineer" data-job-company="Platinum Engineering Ltd." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -757,7 +787,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-field-electrical-instrumentation-engineer-vancouver-ausenco-670039999/" class="job-link">
+    <a href="/jobs/junior-field-electrical-instrumentation-engineer-vancouver-ausenco-670039999/" class="job-link" data-job-title="Junior Field Electrical &amp; Instrumentation Engineer – Vancouver/Calgary/Site" data-job-company="Ausenco">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -778,7 +808,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-field-electrical-instrumentation-engineer-%E2%80%93-vancouver-calgary-site-at-ausenco-4405034256" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-field-electrical-instrumentation-engineer-%E2%80%93-vancouver-calgary-site-at-ausenco-4405034256" data-job-title="Junior Field Electrical &amp; Instrumentation Engineer – Vancouver/Calgary/Site" data-job-company="Ausenco" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -789,7 +819,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-electrical-engineer-bp-automation-669927845/" class="job-link">
+    <a href="/jobs/junior-electrical-engineer-bp-automation-669927845/" class="job-link" data-job-title="Junior Electrical Engineer" data-job-company="BP Automation">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -810,7 +840,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-electrical-engineer-e5471eb8e667226f" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-electrical-engineer-e5471eb8e667226f" data-job-title="Junior Electrical Engineer" data-job-company="BP Automation" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -821,7 +851,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-electrical-engineer-klohn-crippen-berger-669109554/" class="job-link">
+    <a href="/jobs/junior-electrical-engineer-klohn-crippen-berger-669109554/" class="job-link" data-job-title="Junior Electrical Engineer" data-job-company="Klohn Crippen Berger">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -842,7 +872,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-electrical-engineer-at-klohn-crippen-berger-4404457094" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-electrical-engineer-at-klohn-crippen-berger-4404457094" data-job-title="Junior Electrical Engineer" data-job-company="Klohn Crippen Berger" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -853,7 +883,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-electrical-engineer-eit-industrial-and-power-bba-consultants-667620396/" class="job-link">
+    <a href="/jobs/junior-electrical-engineer-eit-industrial-and-power-bba-consultants-667620396/" class="job-link" data-job-title="Junior Electrical Engineer EIT - Industrial and Power" data-job-company="BBA Consultants">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -874,7 +904,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-electrical-engineer-eit-industrial-and-power-at-bba-consultants-4404363659" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-electrical-engineer-eit-industrial-and-power-at-bba-consultants-4404363659" data-job-title="Junior Electrical Engineer EIT - Industrial and Power" data-job-company="BBA Consultants" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -885,7 +915,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-electrical-engineer-eit-industrial-and-power-bba-inc-667566014/" class="job-link">
+    <a href="/jobs/junior-electrical-engineer-eit-industrial-and-power-bba-inc-667566014/" class="job-link" data-job-title="Junior Electrical Engineer EIT - Industrial and Power" data-job-company="BBA inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -906,7 +936,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://bba.csod.com/ux/ats/careersite/4/home/requisition/2913?c=bba&amp;lang=en-US" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://bba.csod.com/ux/ats/careersite/4/home/requisition/2913?c=bba&amp;lang=en-US" data-job-title="Junior Electrical Engineer EIT - Industrial and Power" data-job-company="BBA inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -917,7 +947,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/electrical-engineer-eit-high-voltage-laboratory-powertech-labs-inc-661395827/" class="job-link">
+    <a href="/jobs/electrical-engineer-eit-high-voltage-laboratory-powertech-labs-inc-661395827/" class="job-link" data-job-title="Electrical Engineer (EIT) - High Voltage Laboratory" data-job-company="Powertech Labs Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -938,7 +968,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://powertechlabs.applytojob.com/apply/qO7G5jQKKp/Electrical-Engineer-EIT-High-Voltage-Laboratory?source=INDE&amp;~=" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://powertechlabs.applytojob.com/apply/qO7G5jQKKp/Electrical-Engineer-EIT-High-Voltage-Laboratory?source=INDE&amp;~=" data-job-title="Electrical Engineer (EIT) - High Voltage Laboratory" data-job-company="Powertech Labs Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -949,7 +979,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-controls-engineer-technologist-altec-integrated-solutions-660376160/" class="job-link">
+    <a href="/jobs/junior-controls-engineer-technologist-altec-integrated-solutions-660376160/" class="job-link" data-job-title="Junior Controls Engineer/Technologist" data-job-company="Altec Integrated Solutions">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -970,7 +1000,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://altec.bamboohr.com/careers/45?postedDate=2026-04-09&amp;source=indeed&amp;src=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://altec.bamboohr.com/careers/45?postedDate=2026-04-09&amp;source=indeed&amp;src=indeed" data-job-title="Junior Controls Engineer/Technologist" data-job-company="Altec Integrated Solutions" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -981,7 +1011,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-electrical-engineer-jamesway-660184100/" class="job-link">
+    <a href="/jobs/junior-electrical-engineer-jamesway-660184100/" class="job-link" data-job-title="Junior Electrical Engineer" data-job-company="Jamesway">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1002,7 +1032,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-electrical-engineer-at-jamesway-4400253105" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-electrical-engineer-at-jamesway-4400253105" data-job-title="Junior Electrical Engineer" data-job-company="Jamesway" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1024,7 +1054,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-civil-structural-engineer-bba-consultants-671535943/" class="job-link">
+    <a href="/jobs/junior-civil-structural-engineer-bba-consultants-671535943/" class="job-link" data-job-title="Junior Civil/Structural Engineer" data-job-company="BBA Consultants">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1045,7 +1075,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-civil-structural-engineer-at-bba-consultants-4373764491" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-civil-structural-engineer-at-bba-consultants-4373764491" data-job-title="Junior Civil/Structural Engineer" data-job-company="BBA Consultants" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1056,7 +1086,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-structural-engineer-structural-technologist-whitemud-ironworks-limited-670653261/" class="job-link">
+    <a href="/jobs/junior-structural-engineer-structural-technologist-whitemud-ironworks-limited-670653261/" class="job-link" data-job-title="Junior Structural Engineer/Structural Technologist" data-job-company="Whitemud Ironworks Limited">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1077,7 +1107,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-structural-engineerstructural-technologist-cfe77fd24b38f313" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-structural-engineerstructural-technologist-cfe77fd24b38f313" data-job-title="Junior Structural Engineer/Structural Technologist" data-job-company="Whitemud Ironworks Limited" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1088,7 +1118,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-geotechnical-engineer-in-training-wsp-in-canada-668510214/" class="job-link">
+    <a href="/jobs/junior-geotechnical-engineer-in-training-wsp-in-canada-668510214/" class="job-link" data-job-title="Junior Geotechnical Engineer-in-Training" data-job-company="WSP in Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1109,7 +1139,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-geotechnical-engineer-in-training-at-wsp-in-canada-4404257079" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-geotechnical-engineer-in-training-at-wsp-in-canada-4404257079" data-job-title="Junior Geotechnical Engineer-in-Training" data-job-company="WSP in Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1120,7 +1150,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-civil-engineer-mcelhanney-666495322/" class="job-link">
+    <a href="/jobs/junior-civil-engineer-mcelhanney-666495322/" class="job-link" data-job-title="Junior Civil Engineer" data-job-company="McElhanney">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1141,7 +1171,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-civil-engineer-at-mcelhanney-4279586646" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-civil-engineer-at-mcelhanney-4279586646" data-job-title="Junior Civil Engineer" data-job-company="McElhanney" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1152,7 +1182,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/water-resources-engineer-entry-level-hybrid-barr-engineering-co-666100830/" class="job-link">
+    <a href="/jobs/water-resources-engineer-entry-level-hybrid-barr-engineering-co-666100830/" class="job-link" data-job-title="Water Resources Engineer – Entry Level (Hybrid)" data-job-company="Barr Engineering Co.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1173,7 +1203,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/water-resources-engineer-%E2%80%93-entry-level-hybrid-at-barr-engineering-co-4400856963" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/water-resources-engineer-%E2%80%93-entry-level-hybrid-at-barr-engineering-co-4400856963" data-job-title="Water Resources Engineer – Entry Level (Hybrid)" data-job-company="Barr Engineering Co." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1184,7 +1214,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-structural-engineer-norda-stelo-665421892/" class="job-link">
+    <a href="/jobs/junior-structural-engineer-norda-stelo-665421892/" class="job-link" data-job-title="Junior Structural Engineer" data-job-company="Norda Stelo">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1205,7 +1235,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://nordastelo.teamtailor.com/en-GB/jobs/7583305-junior-structural-engineer" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://nordastelo.teamtailor.com/en-GB/jobs/7583305-junior-structural-engineer" data-job-title="Junior Structural Engineer" data-job-company="Norda Stelo" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1216,7 +1246,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-structural-engineer-canada-masonry-design-centre-664217045/" class="job-link">
+    <a href="/jobs/junior-structural-engineer-canada-masonry-design-centre-664217045/" class="job-link" data-job-title="Junior Structural Engineer" data-job-company="Canada Masonry Design Centre">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1237,7 +1267,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-structural-engineer-22bf2efaca944588" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-structural-engineer-22bf2efaca944588" data-job-title="Junior Structural Engineer" data-job-company="Canada Masonry Design Centre" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1248,7 +1278,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/civil-engineer-eit-stantec-661433849/" class="job-link">
+    <a href="/jobs/civil-engineer-eit-stantec-661433849/" class="job-link" data-job-title="Civil Engineer - EIT" data-job-company="Stantec">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1269,7 +1299,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/civil-engineer-eit-at-stantec-4400667630" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/civil-engineer-eit-at-stantec-4400667630" data-job-title="Civil Engineer - EIT" data-job-company="Stantec" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1280,7 +1310,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-structural-cad-designer-engcomp-661274716/" class="job-link">
+    <a href="/jobs/junior-structural-cad-designer-engcomp-661274716/" class="job-link" data-job-title="Junior Structural CAD Designer" data-job-company="Engcomp">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1301,7 +1331,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-structural-cad-designer-at-engcomp-4398179107" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-structural-cad-designer-at-engcomp-4398179107" data-job-title="Junior Structural CAD Designer" data-job-company="Engcomp" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1312,7 +1342,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-geotechnical-or-geological-engineer-2026041081-thurber-engineering-ltd-661232085/" class="job-link">
+    <a href="/jobs/junior-geotechnical-or-geological-engineer-2026041081-thurber-engineering-ltd-661232085/" class="job-link" data-job-title="Junior Geotechnical or Geological Engineer (2026041081)" data-job-company="Thurber Engineering Ltd.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1333,7 +1363,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://thurber.ca/Career-Opportunities/details/110/Junior-Geotechnical-or-Geological-Engineer-2026041081" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://thurber.ca/Career-Opportunities/details/110/Junior-Geotechnical-or-Geological-Engineer-2026041081" data-job-title="Junior Geotechnical or Geological Engineer (2026041081)" data-job-company="Thurber Engineering Ltd." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1344,7 +1374,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-geotechnical-or-geological-engineer-2026041010-thurber-engineering-ltd-661231881/" class="job-link">
+    <a href="/jobs/junior-geotechnical-or-geological-engineer-2026041010-thurber-engineering-ltd-661231881/" class="job-link" data-job-title="Junior Geotechnical or Geological Engineer (2026041010)" data-job-company="Thurber Engineering Ltd.">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1365,7 +1395,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://thurber.ca/Career-Opportunities/details/45/Junior-Geotechnical-or-Geological-Engineer-2026041010" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://thurber.ca/Career-Opportunities/details/45/Junior-Geotechnical-or-Geological-Engineer-2026041010" data-job-title="Junior Geotechnical or Geological Engineer (2026041010)" data-job-company="Thurber Engineering Ltd." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1376,7 +1406,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-construction-engineer-kent-661018962/" class="job-link">
+    <a href="/jobs/junior-construction-engineer-kent-661018962/" class="job-link" data-job-title="Junior Construction Engineer" data-job-company="Kent">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1397,7 +1427,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://kentplc.com/junior-construction-engineer" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://kentplc.com/junior-construction-engineer" data-job-title="Junior Construction Engineer" data-job-company="Kent" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1408,7 +1438,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/geotechnical-junior-field-technician-sola-engineering-inc-661030488/" class="job-link">
+    <a href="/jobs/geotechnical-junior-field-technician-sola-engineering-inc-661030488/" class="job-link" data-job-title="Geotechnical Junior Field Technician" data-job-company="Sola Engineering Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1429,7 +1459,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/geotechnical-junior-field-technician-ec5f5704e02b9974" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/geotechnical-junior-field-technician-ec5f5704e02b9974" data-job-title="Geotechnical Junior Field Technician" data-job-company="Sola Engineering Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1440,7 +1470,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-or-intermediate-civil-cad-technician-ze-power-engineering-659600795/" class="job-link">
+    <a href="/jobs/junior-or-intermediate-civil-cad-technician-ze-power-engineering-659600795/" class="job-link" data-job-title="(Junior or Intermediate) Civil CAD Technician" data-job-company="ZE Power Engineering">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1461,7 +1491,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://zepowerengineering.acquiretm.com/job_details_clean.aspx?ID=1939&amp;source=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://zepowerengineering.acquiretm.com/job_details_clean.aspx?ID=1939&amp;source=indeed" data-job-title="(Junior or Intermediate) Civil CAD Technician" data-job-company="ZE Power Engineering" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1483,7 +1513,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/metallurgy-eit-equinox-gold-668441071/" class="job-link">
+    <a href="/jobs/metallurgy-eit-equinox-gold-668441071/" class="job-link" data-job-title="Metallurgy EIT" data-job-company="EQUINOX GOLD">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1504,7 +1534,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://careers.equinoxgold.com/job/Metallurgy-EIT/2324-en_US" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://careers.equinoxgold.com/job/Metallurgy-EIT/2324-en_US" data-job-title="Metallurgy EIT" data-job-company="EQUINOX GOLD" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1515,7 +1545,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-chemical-process-engineer-saltworks-technologies-665433791/" class="job-link">
+    <a href="/jobs/junior-chemical-process-engineer-saltworks-technologies-665433791/" class="job-link" data-job-title="Junior Chemical Process Engineer" data-job-company="Saltworks Technologies">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1536,7 +1566,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://saltworkstech.applytojob.com/apply/Q9OsCItcq4/Junior-Chemical-Process-Engineer?source=INDE&amp;~=" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://saltworkstech.applytojob.com/apply/Q9OsCItcq4/Junior-Chemical-Process-Engineer?source=INDE&amp;~=" data-job-title="Junior Chemical Process Engineer" data-job-company="Saltworks Technologies" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1547,7 +1577,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/process-engineer-new-grad-eit-junior-intermediate-oil-gas-pioneer-engineering-661251648/" class="job-link">
+    <a href="/jobs/process-engineer-new-grad-eit-junior-intermediate-oil-gas-pioneer-engineering-661251648/" class="job-link" data-job-title="Process Engineer (New Grad / EIT / Junior / Intermediate) – Oil &amp; Gas" data-job-company="Pioneer Engineering">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1568,7 +1598,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/process-engineer-new-grad-eit-junior-intermediate-oil-gas-6009a46930e78415" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/process-engineer-new-grad-eit-junior-intermediate-oil-gas-6009a46930e78415" data-job-title="Process Engineer (New Grad / EIT / Junior / Intermediate) – Oil &amp; Gas" data-job-company="Pioneer Engineering" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1590,7 +1620,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-process-engineer-fgf-brands-670123918/" class="job-link">
+    <a href="/jobs/junior-process-engineer-fgf-brands-670123918/" class="job-link" data-job-title="Junior Process Engineer" data-job-company="FGF Brands">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1611,7 +1641,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-process-engineer-at-fgf-brands-4405874737" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-process-engineer-at-fgf-brands-4405874737" data-job-title="Junior Process Engineer" data-job-company="FGF Brands" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1622,7 +1652,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-manufacturing-engineer-jacobs-thompson-inc-668263823/" class="job-link">
+    <a href="/jobs/junior-manufacturing-engineer-jacobs-thompson-inc-668263823/" class="job-link" data-job-title="Junior Manufacturing Engineer" data-job-company="Jacobs &amp; Thompson Inc">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1643,7 +1673,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://jacobsandthompson.applytojob.com/apply/JavIwNTNNk/Junior-Manufacturing-Engineer?source=INDE&amp;~=" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://jacobsandthompson.applytojob.com/apply/JavIwNTNNk/Junior-Manufacturing-Engineer?source=INDE&amp;~=" data-job-title="Junior Manufacturing Engineer" data-job-company="Jacobs &amp; Thompson Inc" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1665,7 +1695,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-environmental-scientist-or-eit-stantec-671081687/" class="job-link">
+    <a href="/jobs/junior-environmental-scientist-or-eit-stantec-671081687/" class="job-link" data-job-title="Junior Environmental Scientist or EIT" data-job-company="Stantec">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1686,7 +1716,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-scientist-or-eit-at-stantec-4406814169" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-scientist-or-eit-at-stantec-4406814169" data-job-title="Junior Environmental Scientist or EIT" data-job-company="Stantec" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1697,7 +1727,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-environmental-scientist-or-eit-stantec-671081686/" class="job-link">
+    <a href="/jobs/junior-environmental-scientist-or-eit-stantec-671081686/" class="job-link" data-job-title="Junior Environmental Scientist or EIT" data-job-company="Stantec">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1718,7 +1748,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-scientist-or-eit-at-stantec-4406810238" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-scientist-or-eit-at-stantec-4406810238" data-job-title="Junior Environmental Scientist or EIT" data-job-company="Stantec" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1729,7 +1759,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-environmental-technician-vertex-resource-group-ltd-669418181/" class="job-link">
+    <a href="/jobs/junior-environmental-technician-vertex-resource-group-ltd-669418181/" class="job-link" data-job-title="Junior Environmental Technician" data-job-company="Vertex Resource Group Ltd.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1750,7 +1780,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-technician-at-vertex-resource-group-ltd-4404708457" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-technician-at-vertex-resource-group-ltd-4404708457" data-job-title="Junior Environmental Technician" data-job-company="Vertex Resource Group Ltd." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1761,7 +1791,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-environmental-engineer-geoscientist-26038-gemtec-consulting-engineers-and-scientists-limited-669235981/" class="job-link">
+    <a href="/jobs/junior-environmental-engineer-geoscientist-26038-gemtec-consulting-engineers-and-scientists-limited-669235981/" class="job-link" data-job-title="Junior Environmental Engineer / Geoscientist (26038)" data-job-company="GEMTEC Consulting Engineers and Scientists Limited">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1782,7 +1812,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://gemtec.bamboohr.com/careers/311?postedDate=2026-04-22&amp;source=indeed&amp;src=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://gemtec.bamboohr.com/careers/311?postedDate=2026-04-22&amp;source=indeed&amp;src=indeed" data-job-title="Junior Environmental Engineer / Geoscientist (26038)" data-job-company="GEMTEC Consulting Engineers and Scientists Limited" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1793,7 +1823,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-environmental-scientist-millennium-ems-solutions-ltd-667465773/" class="job-link">
+    <a href="/jobs/junior-environmental-scientist-millennium-ems-solutions-ltd-667465773/" class="job-link" data-job-title="Junior Environmental Scientist" data-job-company="Millennium EMS Solutions Ltd.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1814,7 +1844,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-scientist-at-millennium-ems-solutions-ltd-4403606868" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-scientist-at-millennium-ems-solutions-ltd-4403606868" data-job-title="Junior Environmental Scientist" data-job-company="Millennium EMS Solutions Ltd." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1825,7 +1855,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-environmental-scientist-allrock-consulting-limited-665365951/" class="job-link">
+    <a href="/jobs/junior-environmental-scientist-allrock-consulting-limited-665365951/" class="job-link" data-job-title="Junior Environmental Scientist" data-job-company="AllRock Consulting Limited">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1846,7 +1876,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://allrock.bamboohr.com/careers/125?postedDate=2026-04-16&amp;source=indeed&amp;src=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://allrock.bamboohr.com/careers/125?postedDate=2026-04-16&amp;source=indeed&amp;src=indeed" data-job-title="Junior Environmental Scientist" data-job-company="AllRock Consulting Limited" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1857,7 +1887,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-environmental-scientist-atkinsrealis-664971942/" class="job-link">
+    <a href="/jobs/junior-environmental-scientist-atkinsrealis-664971942/" class="job-link" data-job-title="Junior Environmental Scientist" data-job-company="AtkinsRéalis">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1878,7 +1908,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://careers.atkinsrealis.com/fr-fr/jobs/junior-environmental-scientist-r-153241?utm_source=indeed_feed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://careers.atkinsrealis.com/fr-fr/jobs/junior-environmental-scientist-r-153241?utm_source=indeed_feed" data-job-title="Junior Environmental Scientist" data-job-company="AtkinsRéalis" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1889,7 +1919,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-environmental-engineer-or-eit-wsp-in-canada-661461623/" class="job-link">
+    <a href="/jobs/junior-environmental-engineer-or-eit-wsp-in-canada-661461623/" class="job-link" data-job-title="Junior Environmental Engineer or EIT" data-job-company="WSP in Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1910,7 +1940,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-engineer-or-eit-at-wsp-in-canada-4398707646" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-engineer-or-eit-at-wsp-in-canada-4398707646" data-job-title="Junior Environmental Engineer or EIT" data-job-company="WSP in Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1921,7 +1951,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-environmental-engineer-or-eit-wsp-661411060/" class="job-link">
+    <a href="/jobs/junior-environmental-engineer-or-eit-wsp-661411060/" class="job-link" data-job-title="Junior Environmental Engineer or EIT" data-job-company="WSP">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1942,7 +1972,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://emit.fa.ca3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/requisitions/preview/84653" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://emit.fa.ca3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/requisitions/preview/84653" data-job-title="Junior Environmental Engineer or EIT" data-job-company="WSP" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2307,6 +2337,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -2316,6 +2351,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

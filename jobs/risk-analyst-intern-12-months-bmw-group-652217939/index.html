@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -436,7 +441,7 @@ The compensation range for this role is $46,000 - $48,000, with variations based
     
 
     <div class="apply-section">
-        <a href="https://ca.linkedin.com/jobs/view/risk-analyst-intern-12-months-at-bmw-group-4391703995" class="btn-apply" target="_blank" rel="noopener" itemprop="url">
+        <a href="https://ca.linkedin.com/jobs/view/risk-analyst-intern-12-months-at-bmw-group-4391703995" class="btn-apply" target="_blank" rel="noopener" itemprop="url" data-job-title="Risk Analyst Intern (12 Months)" data-job-company="BMW Group" data-job-location="Richmond Hill, Ontario">
             Apply Now →
         </a>
         <p class="apply-note">Opens in a new tab on the company's website</p>
@@ -452,7 +457,7 @@ The compensation range for this role is $46,000 - $48,000, with variations based
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-underwriterconstruction-lions-gate-underwriting-agency-670594625/" class="job-link">
+    <a href="/jobs/junior-underwriterconstruction-lions-gate-underwriting-agency-670594625/" class="job-link" data-job-title="Junior Underwriter—Construction" data-job-company="Lions Gate Underwriting Agency">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -473,7 +478,7 @@ The compensation range for this role is $46,000 - $48,000, with variations based
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-underwriterconstruction-2c744af9383f02c6" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-underwriterconstruction-2c744af9383f02c6" data-job-title="Junior Underwriter—Construction" data-job-company="Lions Gate Underwriting Agency" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -485,7 +490,7 @@ The compensation range for this role is $46,000 - $48,000, with variations based
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/bilingual-underwriting-trainee-empire-life-670057126/" class="job-link">
+    <a href="/jobs/bilingual-underwriting-trainee-empire-life-670057126/" class="job-link" data-job-title="Bilingual Underwriting Trainee" data-job-company="Empire Life">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -506,7 +511,7 @@ The compensation range for this role is $46,000 - $48,000, with variations based
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/bilingual-underwriting-trainee-at-empire-life-4405041201" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/bilingual-underwriting-trainee-at-empire-life-4405041201" data-job-title="Bilingual Underwriting Trainee" data-job-company="Empire Life" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -518,7 +523,7 @@ The compensation range for this role is $46,000 - $48,000, with variations based
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-mortgage-underwriter-licensed-calgary-mortgages-669469226/" class="job-link">
+    <a href="/jobs/junior-mortgage-underwriter-licensed-calgary-mortgages-669469226/" class="job-link" data-job-title="Junior Mortgage Underwriter (Licensed)" data-job-company="Calgary Mortgages">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -539,7 +544,7 @@ The compensation range for this role is $46,000 - $48,000, with variations based
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-mortgage-underwriter-licensed-87f519fbe7a2861e" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-mortgage-underwriter-licensed-87f519fbe7a2861e" data-job-title="Junior Mortgage Underwriter (Licensed)" data-job-company="Calgary Mortgages" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -551,7 +556,7 @@ The compensation range for this role is $46,000 - $48,000, with variations based
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/commercial-lines-junior-underwriter-transportation-cansure-669342928/" class="job-link">
+    <a href="/jobs/commercial-lines-junior-underwriter-transportation-cansure-669342928/" class="job-link" data-job-title="Commercial Lines Junior Underwriter, Transportation" data-job-company="Cansure">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -572,7 +577,7 @@ The compensation range for this role is $46,000 - $48,000, with variations based
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://spgcanada.ca/careers/commercial-lines-junior-underwriter-transportation/" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://spgcanada.ca/careers/commercial-lines-junior-underwriter-transportation/" data-job-title="Commercial Lines Junior Underwriter, Transportation" data-job-company="Cansure" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -584,7 +589,7 @@ The compensation range for this role is $46,000 - $48,000, with variations based
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-underwriter-ia-financial-group-industrial-alliance-662880408/" class="job-link">
+    <a href="/jobs/junior-underwriter-ia-financial-group-industrial-alliance-662880408/" class="job-link" data-job-title="Junior Underwriter" data-job-company="iA Financial Group (Industrial Alliance)">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -605,7 +610,7 @@ The compensation range for this role is $46,000 - $48,000, with variations based
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-underwriter-at-ia-financial-group-industrial-alliance-4401536800" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-underwriter-at-ia-financial-group-industrial-alliance-4401536800" data-job-title="Junior Underwriter" data-job-company="iA Financial Group (Industrial Alliance)" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -713,6 +718,11 @@ The compensation range for this role is $46,000 - $48,000, with variations based
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -722,6 +732,42 @@ The compensation range for this role is $46,000 - $48,000, with variations based
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

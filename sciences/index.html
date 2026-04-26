@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -284,6 +289,31 @@
         
     </div>
 
+    
+    <section class="seo-content-block">
+        <h2>How to use this sciences jobs board</h2>
+        <p>This page is built for students and recent grads searching for 2026 Canada sciences new grad, junior, and entry-level roles. Listings are refreshed daily, grouped by career track, and kept focused on roles that are practical for early-career candidates in Canada.</p>
+        <ul class="seo-content-list">
+            
+            <li>Browse currently active sciences openings from employers such as RC BioSolutions Ltd., Uranium Energy Corp., Brixton Metals Corp, WSP in Canada, WSP.</li>
+            
+            <li>Use city pages for local intent: Toronto, Vancouver, Montreal, Waterloo, Ottawa, Calgary, and remote Canada roles.</li>
+            
+            <li>Open a job page before applying to confirm posting date, category, location, and related roles from the same track.</li>
+            
+            <li>Check back daily: stale or closed jobs are removed from listings so the board stays useful for real applications.</li>
+            
+        </ul>
+        <p class="seo-content-links">
+            Start with <a href="/locations/toronto/">Toronto jobs</a>,
+            <a href="/locations/vancouver/">Vancouver jobs</a>,
+            <a href="/locations/montreal/">Montreal jobs</a>,
+            <a href="/locations/waterloo/">Waterloo jobs</a>, or
+            <a href="/locations/remote/">remote Canada jobs</a>.
+        </p>
+    </section>
+    
+
     <div class="emoji-legend">
         <div class="legend-item"><span class="emoji">🔥</span> Hot Opportunity - Big Tech, high pay, exciting role</div>
         <div class="legend-item"><span class="emoji">💤</span> Consider Carefully - May be less exciting</div>
@@ -347,7 +377,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-construction-materials-lab-technician-wsp-in-canada-669411891/" class="job-link">
+    <a href="/jobs/junior-construction-materials-lab-technician-wsp-in-canada-669411891/" class="job-link" data-job-title="Junior Construction Materials Lab Technician" data-job-company="WSP in Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -368,7 +398,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-construction-materials-lab-technician-at-wsp-in-canada-4404719120" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-construction-materials-lab-technician-at-wsp-in-canada-4404719120" data-job-title="Junior Construction Materials Lab Technician" data-job-company="WSP in Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -379,7 +409,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/medical-lab-technologist-opseu-lab-chemistry-lifelabs-medical-laboratory-services-668310948/" class="job-link">
+    <a href="/jobs/medical-lab-technologist-opseu-lab-chemistry-lifelabs-medical-laboratory-services-668310948/" class="job-link" data-job-title="Medical Lab Technologist (OPSEU LAB), Chemistry" data-job-company="LifeLabs Medical Laboratory Services">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -400,7 +430,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/medical-lab-technologist-opseu-lab-chemistry-at-lifelabs-medical-laboratory-services-4404869382" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/medical-lab-technologist-opseu-lab-chemistry-at-lifelabs-medical-laboratory-services-4404869382" data-job-title="Medical Lab Technologist (OPSEU LAB), Chemistry" data-job-company="LifeLabs Medical Laboratory Services" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -411,7 +441,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-construction-material-laboratory-technician-wsp-in-canada-665958036/" class="job-link">
+    <a href="/jobs/junior-construction-material-laboratory-technician-wsp-in-canada-665958036/" class="job-link" data-job-title="Junior Construction Material Laboratory Technician" data-job-company="WSP in Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -432,7 +462,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-construction-material-laboratory-technician-at-wsp-in-canada-4390985248" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-construction-material-laboratory-technician-at-wsp-in-canada-4390985248" data-job-title="Junior Construction Material Laboratory Technician" data-job-company="WSP in Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -454,7 +484,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/intermediate-and-junior-biologist-rc-biosolutions-ltd-671541113/" class="job-link">
+    <a href="/jobs/intermediate-and-junior-biologist-rc-biosolutions-ltd-671541113/" class="job-link" data-job-title="Intermediate and Junior Biologist" data-job-company="RC BioSolutions Ltd.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -475,7 +505,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/intermediate-and-junior-biologist-29e5ed99511009f6" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/intermediate-and-junior-biologist-29e5ed99511009f6" data-job-title="Intermediate and Junior Biologist" data-job-company="RC BioSolutions Ltd." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -486,7 +516,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-laboratory-analyst-asbestos-paracel-laboratories-669304150/" class="job-link">
+    <a href="/jobs/junior-laboratory-analyst-asbestos-paracel-laboratories-669304150/" class="job-link" data-job-title="Junior Laboratory Analyst (Asbestos)" data-job-company="PARACEL LABORATORIES">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -507,7 +537,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://paracellabs.applytojob.com/apply/U6nUtDwV1T/Junior-Laboratory-Analyst-Asbestos?source=INDE&amp;~=" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://paracellabs.applytojob.com/apply/U6nUtDwV1T/Junior-Laboratory-Analyst-Asbestos?source=INDE&amp;~=" data-job-title="Junior Laboratory Analyst (Asbestos)" data-job-company="PARACEL LABORATORIES" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -518,7 +548,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-aquatic-ecologist-ghd-668723588/" class="job-link">
+    <a href="/jobs/junior-aquatic-ecologist-ghd-668723588/" class="job-link" data-job-title="Junior Aquatic Ecologist" data-job-company="GHD">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -539,7 +569,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-aquatic-ecologist-at-ghd-4382251137" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-aquatic-ecologist-at-ghd-4382251137" data-job-title="Junior Aquatic Ecologist" data-job-company="GHD" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -550,7 +580,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-wildlife-field-biologist-burnaby-calgary-jacobs-663635885/" class="job-link">
+    <a href="/jobs/junior-wildlife-field-biologist-burnaby-calgary-jacobs-663635885/" class="job-link" data-job-title="Junior Wildlife Field Biologist (Burnaby/Calgary)" data-job-company="Jacobs">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -571,7 +601,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-wildlife-field-biologist-burnaby-calgary-at-jacobs-4402097405" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-wildlife-field-biologist-burnaby-calgary-at-jacobs-4402097405" data-job-title="Junior Wildlife Field Biologist (Burnaby/Calgary)" data-job-company="Jacobs" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -582,7 +612,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-wildlife-field-biologist-burnaby-calgary-jacobs-663635884/" class="job-link">
+    <a href="/jobs/junior-wildlife-field-biologist-burnaby-calgary-jacobs-663635884/" class="job-link" data-job-title="Junior Wildlife Field Biologist (Burnaby/Calgary)" data-job-company="Jacobs">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -603,7 +633,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-wildlife-field-biologist-burnaby-calgary-at-jacobs-4402094649" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-wildlife-field-biologist-burnaby-calgary-at-jacobs-4402094649" data-job-title="Junior Wildlife Field Biologist (Burnaby/Calgary)" data-job-company="Jacobs" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -614,7 +644,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-wildlife-biologist-stantec-662877974/" class="job-link">
+    <a href="/jobs/junior-wildlife-biologist-stantec-662877974/" class="job-link" data-job-title="Junior Wildlife Biologist" data-job-company="Stantec">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -635,7 +665,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://rr.jobsyn.org/3659C74768CA45DC8BB22E72A8DF026A1554" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://rr.jobsyn.org/3659C74768CA45DC8BB22E72A8DF026A1554" data-job-title="Junior Wildlife Biologist" data-job-company="Stantec" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -657,7 +687,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/intern-conversion-only-early-careers-retirement-actuarial-wtw-665163236/" class="job-link">
+    <a href="/jobs/intern-conversion-only-early-careers-retirement-actuarial-wtw-665163236/" class="job-link" data-job-title="Intern Conversion Only: Early Careers: Retirement Actuarial Analyst - Vancouver - 2026" data-job-company="WTW">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -678,7 +708,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://careers.wtwco.com/jobs/intern-conversion-only-early-careers-retirement-actuarial-analyst-vancouver-2026-vancouver-british-columbia-canada?source=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://careers.wtwco.com/jobs/intern-conversion-only-early-careers-retirement-actuarial-analyst-vancouver-2026-vancouver-british-columbia-canada?source=indeed" data-job-title="Intern Conversion Only: Early Careers: Retirement Actuarial Analyst - Vancouver - 2026" data-job-company="WTW" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -689,7 +719,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/intern-conversion-only-early-careers-retirement-actuarial-wtw-664081717/" class="job-link">
+    <a href="/jobs/intern-conversion-only-early-careers-retirement-actuarial-wtw-664081717/" class="job-link" data-job-title="Intern Conversion Only: Early Careers: Retirement Actuarial Analyst – Montreal– 2026" data-job-company="WTW">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -710,7 +740,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://careers.wtwco.com/jobs/intern-conversion-only-early-careers-retirement-actuarial-analyst-montreal-2026-montreal-quebec-canada-d3904bf4-9f49-4577-9d10-f996dd7a8b03?source=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://careers.wtwco.com/jobs/intern-conversion-only-early-careers-retirement-actuarial-analyst-montreal-2026-montreal-quebec-canada-d3904bf4-9f49-4577-9d10-f996dd7a8b03?source=indeed" data-job-title="Intern Conversion Only: Early Careers: Retirement Actuarial Analyst – Montreal– 2026" data-job-company="WTW" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -732,7 +762,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-geologist-uranium-energy-corp-670967237/" class="job-link">
+    <a href="/jobs/junior-geologist-uranium-energy-corp-670967237/" class="job-link" data-job-title="Junior Geologist" data-job-company="Uranium Energy Corp.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -753,7 +783,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-geologist-082e1a7e0d658e4e" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-geologist-082e1a7e0d658e4e" data-job-title="Junior Geologist" data-job-company="Uranium Energy Corp." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -764,7 +794,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/core-logger-junior-geologist-brixton-metals-corp-670126172/" class="job-link">
+    <a href="/jobs/core-logger-junior-geologist-brixton-metals-corp-670126172/" class="job-link" data-job-title="Core Logger / Junior Geologist" data-job-company="Brixton Metals Corp">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -785,7 +815,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/core-logger-junior-geologist-ccd31ea67db58df8" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/core-logger-junior-geologist-ccd31ea67db58df8" data-job-title="Core Logger / Junior Geologist" data-job-company="Brixton Metals Corp" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -796,7 +826,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-construction-materials-lab-technician-wsp-669351894/" class="job-link">
+    <a href="/jobs/junior-construction-materials-lab-technician-wsp-669351894/" class="job-link" data-job-title="Junior Construction Materials Lab Technician" data-job-company="WSP">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -817,7 +847,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://emit.fa.ca3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/requisitions/preview/84640" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://emit.fa.ca3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/requisitions/preview/84640" data-job-title="Junior Construction Materials Lab Technician" data-job-company="WSP" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -828,7 +858,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-geologist-bayside-geoscience-inc-666141297/" class="job-link">
+    <a href="/jobs/junior-geologist-bayside-geoscience-inc-666141297/" class="job-link" data-job-title="Junior Geologist" data-job-company="Bayside Geoscience Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -849,7 +879,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-geologist-e184cfdaa9cdf3a0" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-geologist-e184cfdaa9cdf3a0" data-job-title="Junior Geologist" data-job-company="Bayside Geoscience Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -860,7 +890,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-quality-control-technician-the-forest-group-664271678/" class="job-link">
+    <a href="/jobs/junior-quality-control-technician-the-forest-group-664271678/" class="job-link" data-job-title="Junior Quality Control Technician" data-job-company="The Forest Group">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -881,7 +911,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://forestgroup.humi.ca/job-board/field/46862?source=Indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://forestgroup.humi.ca/job-board/field/46862?source=Indeed" data-job-title="Junior Quality Control Technician" data-job-company="The Forest Group" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -892,7 +922,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-terrain-geologist-tetra-tech-661460941/" class="job-link">
+    <a href="/jobs/junior-terrain-geologist-tetra-tech-661460941/" class="job-link" data-job-title="Junior Terrain Geologist" data-job-company="Tetra Tech">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -913,7 +943,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-terrain-geologist-at-tetra-tech-4400669804" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-terrain-geologist-at-tetra-tech-4400669804" data-job-title="Junior Terrain Geologist" data-job-company="Tetra Tech" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -924,7 +954,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-geological-engineer-or-engineering-geologist-gei-consultants-661456350/" class="job-link">
+    <a href="/jobs/junior-geological-engineer-or-engineering-geologist-gei-consultants-661456350/" class="job-link" data-job-title="Junior Geological Engineer or Engineering Geologist" data-job-company="GEI Consultants">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -945,7 +975,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://jointeamgei.geiconsultants.com/jobs/17602788-junior-geological-engineer-or-engineering-geologist?tm_company=90289&amp;tm_event=view&amp;tm_job=856259" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://jointeamgei.geiconsultants.com/jobs/17602788-junior-geological-engineer-or-engineering-geologist?tm_company=90289&amp;tm_event=view&amp;tm_job=856259" data-job-title="Junior Geological Engineer or Engineering Geologist" data-job-company="GEI Consultants" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -956,7 +986,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-geological-engineer-or-engineering-geologist-gei-consultants-inc-661165001/" class="job-link">
+    <a href="/jobs/junior-geological-engineer-or-engineering-geologist-gei-consultants-inc-661165001/" class="job-link" data-job-title="Junior Geological Engineer or Engineering Geologist" data-job-company="GEI Consultants, Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -977,7 +1007,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-geological-engineer-or-engineering-geologist-at-gei-consultants-inc-4398158406" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-geological-engineer-or-engineering-geologist-at-gei-consultants-inc-4398158406" data-job-title="Junior Geological Engineer or Engineering Geologist" data-job-company="GEI Consultants, Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1168,6 +1198,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -1177,6 +1212,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

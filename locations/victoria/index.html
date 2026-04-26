@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -485,7 +490,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/victoria-office-cpa-opportunities-in-private-enterprise-kpmg-canada-671334414/" class="job-link">
+    <a href="/jobs/victoria-office-cpa-opportunities-in-private-enterprise-kpmg-canada-671334414/" class="job-link" data-job-title="Victoria Office – CPA Opportunities in Private Enterprise Audit – Summer Internship – Summer 2027 Start" data-job-company="KPMG Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -506,7 +511,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/victoria-office-%E2%80%93-cpa-opportunities-in-private-enterprise-audit-%E2%80%93-summer-internship-%E2%80%93-summer-2027-start-at-kpmg-canada-4385313396" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/victoria-office-%E2%80%93-cpa-opportunities-in-private-enterprise-audit-%E2%80%93-summer-internship-%E2%80%93-summer-2027-start-at-kpmg-canada-4385313396" data-job-title="Victoria Office – CPA Opportunities in Private Enterprise Audit – Summer Internship – Summer 2027 Start" data-job-company="KPMG Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -517,7 +522,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/intern-or-co-op-student-assurance-and-accounting-winter-2027-mnp-668213716/" class="job-link">
+    <a href="/jobs/intern-or-co-op-student-assurance-and-accounting-winter-2027-mnp-668213716/" class="job-link" data-job-title="Intern or Co-op Student, Assurance and Accounting (Winter 2027)" data-job-company="MNP">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -538,7 +543,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/intern-or-co-op-student-assurance-and-accounting-winter-2027-at-mnp-4382218524" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/intern-or-co-op-student-assurance-and-accounting-winter-2027-at-mnp-4382218524" data-job-title="Intern or Co-op Student, Assurance and Accounting (Winter 2027)" data-job-company="MNP" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -560,7 +565,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/commercial-banking-intern-co-op-fall-2026-td-securities-662448545/" class="job-link">
+    <a href="/jobs/commercial-banking-intern-co-op-fall-2026-td-securities-662448545/" class="job-link" data-job-title="Commercial Banking Intern / Co-Op (FALL 2026)" data-job-company="TD Securities">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -581,7 +586,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/commercial-banking-intern-co-op-fall-2026-at-td-securities-4401054427" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/commercial-banking-intern-co-op-fall-2026-at-td-securities-4401054427" data-job-title="Commercial Banking Intern / Co-Op (FALL 2026)" data-job-company="TD Securities" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -603,7 +608,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-project-manager-randstad-digital-668251135/" class="job-link">
+    <a href="/jobs/junior-project-manager-randstad-digital-668251135/" class="job-link" data-job-title="Junior Project Manager" data-job-company="Randstad Digital">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -624,7 +629,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-project-manager-at-randstad-digital-4403990837" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-project-manager-at-randstad-digital-4403990837" data-job-title="Junior Project Manager" data-job-company="Randstad Digital" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -839,6 +844,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -848,6 +858,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

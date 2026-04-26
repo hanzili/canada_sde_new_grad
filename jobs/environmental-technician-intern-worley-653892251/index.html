@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -436,7 +441,7 @@ Whatever your ambition, there’s a path for you here. And there’s no barrier 
     
 
     <div class="apply-section">
-        <a href="https://ca.linkedin.com/jobs/view/environmental-technician-intern-at-worley-4393210384" class="btn-apply" target="_blank" rel="noopener" itemprop="url">
+        <a href="https://ca.linkedin.com/jobs/view/environmental-technician-intern-at-worley-4393210384" class="btn-apply" target="_blank" rel="noopener" itemprop="url" data-job-title="Environmental Technician Intern" data-job-company="Worley" data-job-location="Kelowna, British Columbia">
             Apply Now →
         </a>
         <p class="apply-note">Opens in a new tab on the company's website</p>
@@ -452,7 +457,7 @@ Whatever your ambition, there’s a path for you here. And there’s no barrier 
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-environmental-scientist-or-eit-stantec-671081687/" class="job-link">
+    <a href="/jobs/junior-environmental-scientist-or-eit-stantec-671081687/" class="job-link" data-job-title="Junior Environmental Scientist or EIT" data-job-company="Stantec">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -473,7 +478,7 @@ Whatever your ambition, there’s a path for you here. And there’s no barrier 
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-scientist-or-eit-at-stantec-4406814169" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-scientist-or-eit-at-stantec-4406814169" data-job-title="Junior Environmental Scientist or EIT" data-job-company="Stantec" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -485,7 +490,7 @@ Whatever your ambition, there’s a path for you here. And there’s no barrier 
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-environmental-scientist-or-eit-stantec-671081686/" class="job-link">
+    <a href="/jobs/junior-environmental-scientist-or-eit-stantec-671081686/" class="job-link" data-job-title="Junior Environmental Scientist or EIT" data-job-company="Stantec">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -506,7 +511,7 @@ Whatever your ambition, there’s a path for you here. And there’s no barrier 
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-scientist-or-eit-at-stantec-4406810238" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-scientist-or-eit-at-stantec-4406810238" data-job-title="Junior Environmental Scientist or EIT" data-job-company="Stantec" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -518,7 +523,7 @@ Whatever your ambition, there’s a path for you here. And there’s no barrier 
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-environmental-technician-vertex-resource-group-ltd-669418181/" class="job-link">
+    <a href="/jobs/junior-environmental-technician-vertex-resource-group-ltd-669418181/" class="job-link" data-job-title="Junior Environmental Technician" data-job-company="Vertex Resource Group Ltd.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -539,7 +544,7 @@ Whatever your ambition, there’s a path for you here. And there’s no barrier 
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-technician-at-vertex-resource-group-ltd-4404708457" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-technician-at-vertex-resource-group-ltd-4404708457" data-job-title="Junior Environmental Technician" data-job-company="Vertex Resource Group Ltd." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -551,7 +556,7 @@ Whatever your ambition, there’s a path for you here. And there’s no barrier 
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-environmental-engineer-geoscientist-26038-gemtec-consulting-engineers-and-scientists-limited-669235981/" class="job-link">
+    <a href="/jobs/junior-environmental-engineer-geoscientist-26038-gemtec-consulting-engineers-and-scientists-limited-669235981/" class="job-link" data-job-title="Junior Environmental Engineer / Geoscientist (26038)" data-job-company="GEMTEC Consulting Engineers and Scientists Limited">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -572,7 +577,7 @@ Whatever your ambition, there’s a path for you here. And there’s no barrier 
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://gemtec.bamboohr.com/careers/311?postedDate=2026-04-22&amp;source=indeed&amp;src=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://gemtec.bamboohr.com/careers/311?postedDate=2026-04-22&amp;source=indeed&amp;src=indeed" data-job-title="Junior Environmental Engineer / Geoscientist (26038)" data-job-company="GEMTEC Consulting Engineers and Scientists Limited" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -584,7 +589,7 @@ Whatever your ambition, there’s a path for you here. And there’s no barrier 
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-environmental-scientist-millennium-ems-solutions-ltd-667465773/" class="job-link">
+    <a href="/jobs/junior-environmental-scientist-millennium-ems-solutions-ltd-667465773/" class="job-link" data-job-title="Junior Environmental Scientist" data-job-company="Millennium EMS Solutions Ltd.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -605,7 +610,7 @@ Whatever your ambition, there’s a path for you here. And there’s no barrier 
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-scientist-at-millennium-ems-solutions-ltd-4403606868" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-environmental-scientist-at-millennium-ems-solutions-ltd-4403606868" data-job-title="Junior Environmental Scientist" data-job-company="Millennium EMS Solutions Ltd." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -707,6 +712,11 @@ Whatever your ambition, there’s a path for you here. And there’s no barrier 
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -716,6 +726,42 @@ Whatever your ambition, there’s a path for you here. And there’s no barrier 
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

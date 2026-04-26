@@ -1967,3 +1967,31 @@ h1, h2, h3, h4 {
         background: white;
     }
 }
+
+/* === Growth SEO content blocks === */
+.seo-content-block {
+    margin: var(--spacing-xl) 0;
+    padding: var(--spacing-xl);
+    background: linear-gradient(135deg, #fffbeb 0%, #fff7ed 100%);
+    border: 1px solid #fed7aa;
+    border-radius: var(--radius-lg);
+}
+
+.seo-content-block h2 {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+}
+
+.seo-content-list {
+    margin: var(--spacing-md) 0;
+    padding-left: 1.25rem;
+}
+
+.seo-content-list li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.seo-content-links {
+    margin-top: var(--spacing-md);
+    color: var(--color-text-muted);
+}

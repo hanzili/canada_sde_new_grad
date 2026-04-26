@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -423,7 +428,7 @@ We may collect, use or disclose your personal information for the purpose of est
     
 
     <div class="apply-section">
-        <a href="https://ca.linkedin.com/jobs/view/intern-capital-markets-at-laurentian-bank-4405014560" class="btn-apply" target="_blank" rel="noopener" itemprop="url">
+        <a href="https://ca.linkedin.com/jobs/view/intern-capital-markets-at-laurentian-bank-4405014560" class="btn-apply" target="_blank" rel="noopener" itemprop="url" data-job-title="Intern,  Capital Markets" data-job-company="Laurentian Bank" data-job-location="Montreal, Quebec">
             Apply Now →
         </a>
         <p class="apply-note">Opens in a new tab on the company's website</p>
@@ -439,7 +444,7 @@ We may collect, use or disclose your personal information for the purpose of est
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/investment-banking-program-junior-associate-wells-fargo-670642718/" class="job-link">
+    <a href="/jobs/investment-banking-program-junior-associate-wells-fargo-670642718/" class="job-link" data-job-title="Investment Banking Program Junior Associate" data-job-company="Wells Fargo">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -460,7 +465,7 @@ We may collect, use or disclose your personal information for the purpose of est
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/investment-banking-program-junior-associate-at-wells-fargo-4396582264" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/investment-banking-program-junior-associate-at-wells-fargo-4396582264" data-job-title="Investment Banking Program Junior Associate" data-job-company="Wells Fargo" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -472,7 +477,7 @@ We may collect, use or disclose your personal information for the purpose of est
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/bmo-capital-markets-investment-banking-analyst-calgary-fall-bmo-671140765/" class="job-link">
+    <a href="/jobs/bmo-capital-markets-investment-banking-analyst-calgary-fall-bmo-671140765/" class="job-link" data-job-title="BMO Capital Markets Investment Banking Analyst, Calgary – Fall 2026 or Winter 2027 Co-Op Opportunities" data-job-company="BMO">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -493,7 +498,7 @@ We may collect, use or disclose your personal information for the purpose of est
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/bmo-capital-markets-investment-banking-analyst-calgary-%E2%80%93-fall-2026-or-winter-2027-co-op-opportunities-at-bmo-4406816480" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/bmo-capital-markets-investment-banking-analyst-calgary-%E2%80%93-fall-2026-or-winter-2027-co-op-opportunities-at-bmo-4406816480" data-job-title="BMO Capital Markets Investment Banking Analyst, Calgary – Fall 2026 or Winter 2027 Co-Op Opportunities" data-job-company="BMO" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -505,7 +510,7 @@ We may collect, use or disclose your personal information for the purpose of est
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/intern-analyst-private-equity-connor-clark-lunn-financial-group-cc-l-670653913/" class="job-link">
+    <a href="/jobs/intern-analyst-private-equity-connor-clark-lunn-financial-group-cc-l-670653913/" class="job-link" data-job-title="Intern Analyst, Private Equity" data-job-company="Connor, Clark &amp; Lunn Financial Group (CC&amp;L)">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -526,7 +531,7 @@ We may collect, use or disclose your personal information for the purpose of est
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/intern-analyst-private-equity-at-connor-clark-lunn-financial-group-cc-l-4406609615" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/intern-analyst-private-equity-at-connor-clark-lunn-financial-group-cc-l-4406609615" data-job-title="Intern Analyst, Private Equity" data-job-company="Connor, Clark &amp; Lunn Financial Group (CC&amp;L)" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -538,7 +543,7 @@ We may collect, use or disclose your personal information for the purpose of est
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/intern-capital-markets-laurentian-bank-financial-group-669957044/" class="job-link">
+    <a href="/jobs/intern-capital-markets-laurentian-bank-financial-group-669957044/" class="job-link" data-job-title="Intern, Capital Markets" data-job-company="Laurentian Bank Financial Group">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -559,7 +564,7 @@ We may collect, use or disclose your personal information for the purpose of est
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://jobs.banquelaurentienne.ca/en/job-detail/intern--capital-markets-montreal-1-28477" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://jobs.banquelaurentienne.ca/en/job-detail/intern--capital-markets-montreal-1-28477" data-job-title="Intern, Capital Markets" data-job-company="Laurentian Bank Financial Group" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -571,7 +576,7 @@ We may collect, use or disclose your personal information for the purpose of est
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/investment-banking-intern-summer-2026-comcap-holdings-llc-668367558/" class="job-link">
+    <a href="/jobs/investment-banking-intern-summer-2026-comcap-holdings-llc-668367558/" class="job-link" data-job-title="Investment Banking Intern (Summer 2026)" data-job-company="ComCap Holdings LLC">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -592,7 +597,7 @@ We may collect, use or disclose your personal information for the purpose of est
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://comcapholdings.bamboohr.com/careers/179?postedDate=2026-04-21&amp;source=indeed&amp;src=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://comcapholdings.bamboohr.com/careers/179?postedDate=2026-04-21&amp;source=indeed&amp;src=indeed" data-job-title="Investment Banking Intern (Summer 2026)" data-job-company="ComCap Holdings LLC" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -690,6 +695,11 @@ We may collect, use or disclose your personal information for the purpose of est
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -699,6 +709,42 @@ We may collect, use or disclose your personal information for the purpose of est
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

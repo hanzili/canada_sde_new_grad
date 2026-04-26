@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -450,7 +455,7 @@ Nokia maintains broad annual base salary ranges for its roles in order to accoun
     
 
     <div class="apply-section">
-        <a href="https://fa-evmr-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/job/28098/?src=SNS-102&amp;utm_medium=jobshare" class="btn-apply" target="_blank" rel="noopener" itemprop="url">
+        <a href="https://fa-evmr-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/job/28098/?src=SNS-102&amp;utm_medium=jobshare" class="btn-apply" target="_blank" rel="noopener" itemprop="url" data-job-title="IP Routing Customer Application Engineer Co-op/Intern" data-job-company="Nokia" data-job-location="Kanata, Ontario">
             Apply Now →
         </a>
         <p class="apply-note">Opens in a new tab on the company's website</p>
@@ -466,7 +471,7 @@ Nokia maintains broad annual base salary ranges for its roles in order to accoun
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/demand-generation-agentic-ai-intern-robocart-ai-661195715/" class="job-link">
+    <a href="/jobs/demand-generation-agentic-ai-intern-robocart-ai-661195715/" class="job-link" data-job-title="Demand Generation Agentic AI Intern" data-job-company="Robocart.ai">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -487,7 +492,7 @@ Nokia maintains broad annual base salary ranges for its roles in order to accoun
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/demand-generation-agentic-ai-intern-at-robocart-ai-4395339650" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/demand-generation-agentic-ai-intern-at-robocart-ai-4395339650" data-job-title="Demand Generation Agentic AI Intern" data-job-company="Robocart.ai" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -499,7 +504,7 @@ Nokia maintains broad annual base salary ranges for its roles in order to accoun
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/ai-enablement-content-producer-intern-salt-xc-660164083/" class="job-link">
+    <a href="/jobs/ai-enablement-content-producer-intern-salt-xc-660164083/" class="job-link" data-job-title="AI Enablement Content Producer (Intern)" data-job-company="Salt XC">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -520,7 +525,7 @@ Nokia maintains broad annual base salary ranges for its roles in order to accoun
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/ai-enablement-content-producer-intern-at-salt-xc-4357781754" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/ai-enablement-content-producer-intern-at-salt-xc-4357781754" data-job-title="AI Enablement Content Producer (Intern)" data-job-company="Salt XC" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -532,7 +537,7 @@ Nokia maintains broad annual base salary ranges for its roles in order to accoun
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/demand-generation-agentic-ai-intern-cgx-medical-inc-660120669/" class="job-link">
+    <a href="/jobs/demand-generation-agentic-ai-intern-cgx-medical-inc-660120669/" class="job-link" data-job-title="Demand Generation &amp; Agentic AI Intern" data-job-company="CGX Medical Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -553,7 +558,7 @@ Nokia maintains broad annual base salary ranges for its roles in order to accoun
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/demand-generation-agentic-ai-intern-at-cgx-medical-inc-4399455621" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/demand-generation-agentic-ai-intern-at-cgx-medical-inc-4399455621" data-job-title="Demand Generation &amp; Agentic AI Intern" data-job-company="CGX Medical Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -565,7 +570,7 @@ Nokia maintains broad annual base salary ranges for its roles in order to accoun
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/summer-internship-program-ai-enablement-intern-cdw-canada-658846488/" class="job-link">
+    <a href="/jobs/summer-internship-program-ai-enablement-intern-cdw-canada-658846488/" class="job-link" data-job-title="Summer Internship Program: AI Enablement Intern" data-job-company="CDW Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -586,7 +591,7 @@ Nokia maintains broad annual base salary ranges for its roles in order to accoun
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/summer-internship-program-ai-enablement-intern-at-cdw-canada-4398997730" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/summer-internship-program-ai-enablement-intern-at-cdw-canada-4398997730" data-job-title="Summer Internship Program: AI Enablement Intern" data-job-company="CDW Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -678,6 +683,11 @@ Nokia maintains broad annual base salary ranges for its roles in order to accoun
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -687,6 +697,42 @@ Nokia maintains broad annual base salary ranges for its roles in order to accoun
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

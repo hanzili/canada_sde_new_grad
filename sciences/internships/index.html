@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -284,6 +289,31 @@
         
     </div>
 
+    
+    <section class="seo-content-block">
+        <h2>How to use this sciences jobs board</h2>
+        <p>This page is built for students and recent grads searching for 2026 Canada sciences internships and co-op roles. Listings are refreshed daily, grouped by career track, and kept focused on roles that are practical for early-career candidates in Canada.</p>
+        <ul class="seo-content-list">
+            
+            <li>Browse currently active sciences openings from employers such as Okanagan College, WSP in Canada, Kinross Gold Corporation, BMO Financial Group, Elk Valley Resources.</li>
+            
+            <li>Use city pages for local intent: Toronto, Vancouver, Montreal, Waterloo, Ottawa, Calgary, and remote Canada roles.</li>
+            
+            <li>Open a job page before applying to confirm posting date, category, location, and related roles from the same track.</li>
+            
+            <li>Check back daily: stale or closed jobs are removed from listings so the board stays useful for real applications.</li>
+            
+        </ul>
+        <p class="seo-content-links">
+            Start with <a href="/locations/toronto/">Toronto jobs</a>,
+            <a href="/locations/vancouver/">Vancouver jobs</a>,
+            <a href="/locations/montreal/">Montreal jobs</a>,
+            <a href="/locations/waterloo/">Waterloo jobs</a>, or
+            <a href="/locations/remote/">remote Canada jobs</a>.
+        </p>
+    </section>
+    
+
     <div class="emoji-legend">
         <div class="legend-item"><span class="emoji">🔥</span> Hot Opportunity - Big Tech, high pay, exciting role</div>
         <div class="legend-item"><span class="emoji">💤</span> Consider Carefully - May be less exciting</div>
@@ -347,7 +377,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/student-employee-lab-technician-okanagan-college-670136446/" class="job-link">
+    <a href="/jobs/student-employee-lab-technician-okanagan-college-670136446/" class="job-link" data-job-title="Student Employee - Lab Technician" data-job-company="Okanagan College">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -368,7 +398,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://careers.okanagan.bc.ca/postings/15965" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://careers.okanagan.bc.ca/postings/15965" data-job-title="Student Employee - Lab Technician" data-job-company="Okanagan College" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -379,7 +409,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/student-construction-material-lab-technician-wsp-in-canada-670004503/" class="job-link">
+    <a href="/jobs/student-construction-material-lab-technician-wsp-in-canada-670004503/" class="job-link" data-job-title="Student Construction Material Lab Technician" data-job-company="WSP in Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -400,7 +430,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/student-construction-material-lab-technician-at-wsp-in-canada-4393051146" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/student-construction-material-lab-technician-at-wsp-in-canada-4393051146" data-job-title="Student Construction Material Lab Technician" data-job-company="WSP in Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -411,7 +441,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/laboratory-technician-summer-student-mcasphalt-industries-limited-668377325/" class="job-link">
+    <a href="/jobs/laboratory-technician-summer-student-mcasphalt-industries-limited-668377325/" class="job-link" data-job-title="Laboratory Technician (Summer Student)" data-job-company="McAsphalt Industries Limited">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -432,7 +462,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/laboratory-technician-summer-student-at-mcasphalt-industries-limited-4400829776" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/laboratory-technician-summer-student-at-mcasphalt-industries-limited-4400829776" data-job-title="Laboratory Technician (Summer Student)" data-job-company="McAsphalt Industries Limited" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -443,7 +473,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/quality-assurance-technician-student-3-month-term-position-burnbrae-farms-668342671/" class="job-link">
+    <a href="/jobs/quality-assurance-technician-student-3-month-term-position-burnbrae-farms-668342671/" class="job-link" data-job-title="Quality Assurance Technician – Student (3 month Term Position)" data-job-company="Burnbrae Farms">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -464,7 +494,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://recruiting.ultipro.ca/BUR5100BRNF/JobBoard/65450eb1-478c-4780-8abd-f21432a6dcb6/OpportunityDetail?opportunityId=79d7dbf4-5353-42ef-b540-be25eb7024d6&amp;postingId=887fc0ae-f489-4f8b-a729-522a2d3809fa" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://recruiting.ultipro.ca/BUR5100BRNF/JobBoard/65450eb1-478c-4780-8abd-f21432a6dcb6/OpportunityDetail?opportunityId=79d7dbf4-5353-42ef-b540-be25eb7024d6&amp;postingId=887fc0ae-f489-4f8b-a729-522a2d3809fa" data-job-title="Quality Assurance Technician – Student (3 month Term Position)" data-job-company="Burnbrae Farms" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -475,7 +505,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/laboratory-technician-student-redpath-sugar-ltd-666568948/" class="job-link">
+    <a href="/jobs/laboratory-technician-student-redpath-sugar-ltd-666568948/" class="job-link" data-job-title="Laboratory Technician, Student" data-job-company="Redpath Sugar Ltd">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -496,7 +526,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/laboratory-technician-student-at-redpath-sugar-ltd-4391744302" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/laboratory-technician-student-at-redpath-sugar-ltd-4391744302" data-job-title="Laboratory Technician, Student" data-job-company="Redpath Sugar Ltd" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -507,7 +537,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/laboratory-technician-summer-student-mcasphalt-industries-665900142/" class="job-link">
+    <a href="/jobs/laboratory-technician-summer-student-mcasphalt-industries-665900142/" class="job-link" data-job-title="Laboratory Technician (Summer Student)" data-job-company="McAsphalt Industries">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -528,7 +558,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://colas.jobs.hr.cloud.sap/job/REGINA-Laboratory-Technician-(Summer-Student)-SK-S4N-0S5/1358430857/?feedId=416957&amp;utm_campaign=Colas_Indeed&amp;utm_source=Indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://colas.jobs.hr.cloud.sap/job/REGINA-Laboratory-Technician-(Summer-Student)-SK-S4N-0S5/1358430857/?feedId=416957&amp;utm_campaign=Colas_Indeed&amp;utm_source=Indeed" data-job-title="Laboratory Technician (Summer Student)" data-job-company="McAsphalt Industries" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -539,7 +569,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/laboratory-analyst-summer-student-redpath-sugar-ltd-663609169/" class="job-link">
+    <a href="/jobs/laboratory-analyst-summer-student-redpath-sugar-ltd-663609169/" class="job-link" data-job-title="Laboratory Analyst, Summer Student" data-job-company="Redpath Sugar Ltd">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -560,7 +590,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/laboratory-analyst-summer-student-at-redpath-sugar-ltd-4402097162" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/laboratory-analyst-summer-student-at-redpath-sugar-ltd-4402097162" data-job-title="Laboratory Analyst, Summer Student" data-job-company="Redpath Sugar Ltd" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -571,7 +601,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/summer-student-quality-control-technician-4-month-contract-crh-canada-660257557/" class="job-link">
+    <a href="/jobs/summer-student-quality-control-technician-4-month-contract-crh-canada-660257557/" class="job-link" data-job-title="Summer Student - Quality Control Technician (4-Month Contract)" data-job-company="CRH Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -592,7 +622,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/summer-student-quality-control-technician-4-month-contract-at-crh-canada-4400261626" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/summer-student-quality-control-technician-4-month-contract-at-crh-canada-4400261626" data-job-title="Summer Student - Quality Control Technician (4-Month Contract)" data-job-company="CRH Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -603,7 +633,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/summer-student-quality-control-technician-8-month-contract-crh-canada-660255199/" class="job-link">
+    <a href="/jobs/summer-student-quality-control-technician-8-month-contract-crh-canada-660255199/" class="job-link" data-job-title="Summer Student - Quality Control Technician (8-Month Contract)" data-job-company="CRH Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -624,7 +654,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/summer-student-quality-control-technician-8-month-contract-at-crh-canada-4400269331" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/summer-student-quality-control-technician-8-month-contract-at-crh-canada-4400269331" data-job-title="Summer Student - Quality Control Technician (8-Month Contract)" data-job-company="CRH Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -635,7 +665,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/quality-assurance-technician-summer-student-cargill-658328929/" class="job-link">
+    <a href="/jobs/quality-assurance-technician-summer-student-cargill-658328929/" class="job-link" data-job-title="Quality Assurance Technician - Summer Student" data-job-company="Cargill">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -656,7 +686,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://careers.cargill.com/en/job/-/-/23251/93650752784" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://careers.cargill.com/en/job/-/-/23251/93650752784" data-job-title="Quality Assurance Technician - Summer Student" data-job-company="Cargill" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -678,7 +708,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/summer-student-pest-control-technician-mosquito-busters-inc-668286613/" class="job-link">
+    <a href="/jobs/summer-student-pest-control-technician-mosquito-busters-inc-668286613/" class="job-link" data-job-title="Summer Student - Pest Control Technician" data-job-company="Mosquito Busters Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -699,7 +729,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/summer-student-pest-control-technician-8f1820ca225a3428" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/summer-student-pest-control-technician-8f1820ca225a3428" data-job-title="Summer Student - Pest Control Technician" data-job-company="Mosquito Busters Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -710,7 +740,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-intermediate-ecologist-birks-natural-heritage-consultants-inc-664045339/" class="job-link">
+    <a href="/jobs/junior-intermediate-ecologist-birks-natural-heritage-consultants-inc-664045339/" class="job-link" data-job-title="Junior/Intermediate Ecologist" data-job-company="Birks Natural Heritage Consultants Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -731,7 +761,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-intermediate-ecologist-at-birks-natural-heritage-consultants-inc-4402283950" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-intermediate-ecologist-at-birks-natural-heritage-consultants-inc-4402283950" data-job-title="Junior/Intermediate Ecologist" data-job-company="Birks Natural Heritage Consultants Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -742,7 +772,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/mosquito-control-technician-summer-student-nutri-lawn-658501445/" class="job-link">
+    <a href="/jobs/mosquito-control-technician-summer-student-nutri-lawn-658501445/" class="job-link" data-job-title="Mosquito Control Technician Summer Student" data-job-company="Nutri-Lawn">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -763,7 +793,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/mosquito-control-technician-summer-student-abb978abcdfdd926" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/mosquito-control-technician-summer-student-abb978abcdfdd926" data-job-title="Mosquito Control Technician Summer Student" data-job-company="Nutri-Lawn" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -785,7 +815,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/quantitative-analyst-fall-2026-co-op-internship-4-months-bmo-financial-group-669279667/" class="job-link">
+    <a href="/jobs/quantitative-analyst-fall-2026-co-op-internship-4-months-bmo-financial-group-669279667/" class="job-link" data-job-title="Quantitative Analyst, Fall 2026 (Co-op/Internship) - 4 Months" data-job-company="BMO Financial Group">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -806,7 +836,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://bmo.wd3.myworkdayjobs.com/en-CA/External/job/Toronto-ON-CAN/Quantitative-Analyst--Fall-2026--Co-op-Internship----4-Months_R260012627-1" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://bmo.wd3.myworkdayjobs.com/en-CA/External/job/Toronto-ON-CAN/Quantitative-Analyst--Fall-2026--Co-op-Internship----4-Months_R260012627-1" data-job-title="Quantitative Analyst, Fall 2026 (Co-op/Internship) - 4 Months" data-job-company="BMO Financial Group" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -817,7 +847,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/quantitative-analyst-fall-2026-co-op-internship-4-months-bmo-669248112/" class="job-link">
+    <a href="/jobs/quantitative-analyst-fall-2026-co-op-internship-4-months-bmo-669248112/" class="job-link" data-job-title="Quantitative Analyst, Fall 2026 (Co-op/Internship) - 4 Months" data-job-company="BMO">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -838,7 +868,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/quantitative-analyst-fall-2026-co-op-internship-4-months-at-bmo-4405436762" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/quantitative-analyst-fall-2026-co-op-internship-4-months-at-bmo-4405436762" data-job-title="Quantitative Analyst, Fall 2026 (Co-op/Internship) - 4 Months" data-job-company="BMO" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -849,7 +879,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/2026-insurance-fall-pricing-actuarial-intern-4-16-months-rbc-667819218/" class="job-link">
+    <a href="/jobs/2026-insurance-fall-pricing-actuarial-intern-4-16-months-rbc-667819218/" class="job-link" data-job-title="2026 Insurance – Fall, Pricing, Actuarial Intern (4-16 months)" data-job-company="RBC">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -870,7 +900,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://jsv3.recruitics.com/redirect?rx_cid=3618&amp;rx_jobId=R-0000168619&amp;rx_url=https%3A%2F%2Fjobs.rbc.com%2Fca%2Fen%2Fjob%2FR-0000168619%3Frx_a%3D0%26rx_c%3D%26rx_ch%3Djobp4p%26rx_group%3D300081%26rx_id%3Dc4dda9df-3d08-11f1-aa9b-ed87c5c19c4b%26rx_job%3DR-0000168619%26rx_medium%3Dcpc%26rx_r%3Dnone%26rx_source%3Dindeed%26rx_ts%3D20260421T040527Z%26rx_vp%3Dcpc%26source%3DAPPLICANT_SOURCE_INDEEDORGANIC%26utm_medium%3Dcpc%26utm_source%3Dindeedorganic" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://jsv3.recruitics.com/redirect?rx_cid=3618&amp;rx_jobId=R-0000168619&amp;rx_url=https%3A%2F%2Fjobs.rbc.com%2Fca%2Fen%2Fjob%2FR-0000168619%3Frx_a%3D0%26rx_c%3D%26rx_ch%3Djobp4p%26rx_group%3D300081%26rx_id%3Dc4dda9df-3d08-11f1-aa9b-ed87c5c19c4b%26rx_job%3DR-0000168619%26rx_medium%3Dcpc%26rx_r%3Dnone%26rx_source%3Dindeed%26rx_ts%3D20260421T040527Z%26rx_vp%3Dcpc%26source%3DAPPLICANT_SOURCE_INDEEDORGANIC%26utm_medium%3Dcpc%26utm_source%3Dindeedorganic" data-job-title="2026 Insurance – Fall, Pricing, Actuarial Intern (4-16 months)" data-job-company="RBC" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -881,7 +911,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/2026-insurance-fall-pricing-actuarial-intern-4-16-months-rbc-667819217/" class="job-link">
+    <a href="/jobs/2026-insurance-fall-pricing-actuarial-intern-4-16-months-rbc-667819217/" class="job-link" data-job-title="2026 Insurance – Fall, Pricing, Actuarial Intern (4-16 months)" data-job-company="RBC">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -902,7 +932,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://jsv3.recruitics.com/redirect?rx_cid=3618&amp;rx_jobId=R-0000168619_1001&amp;rx_url=https%3A%2F%2Fjobs.rbc.com%2Fca%2Fen%2Fjob%2FR-0000168619%3Frx_a%3D0%26rx_c%3D%26rx_ch%3Djobp4p%26rx_group%3D300081%26rx_id%3Dc4608abc-3d08-11f1-aa9b-7b87879ea98d%26rx_job%3DR-0000168619_1001%26rx_medium%3Dcpc%26rx_r%3Dnone%26rx_source%3Dindeed%26rx_ts%3D20260421T040527Z%26rx_vp%3Dcpc%26source%3DAPPLICANT_SOURCE_INDEEDORGANIC%26utm_medium%3Dcpc%26utm_source%3Dindeedorganic" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://jsv3.recruitics.com/redirect?rx_cid=3618&amp;rx_jobId=R-0000168619_1001&amp;rx_url=https%3A%2F%2Fjobs.rbc.com%2Fca%2Fen%2Fjob%2FR-0000168619%3Frx_a%3D0%26rx_c%3D%26rx_ch%3Djobp4p%26rx_group%3D300081%26rx_id%3Dc4608abc-3d08-11f1-aa9b-7b87879ea98d%26rx_job%3DR-0000168619_1001%26rx_medium%3Dcpc%26rx_r%3Dnone%26rx_source%3Dindeed%26rx_ts%3D20260421T040527Z%26rx_vp%3Dcpc%26source%3DAPPLICANT_SOURCE_INDEEDORGANIC%26utm_medium%3Dcpc%26utm_source%3Dindeedorganic" data-job-title="2026 Insurance – Fall, Pricing, Actuarial Intern (4-16 months)" data-job-company="RBC" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -913,7 +943,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/2026-insurance-summer-pricing-actuarial-intern-4-16-months-rbc-667229392/" class="job-link">
+    <a href="/jobs/2026-insurance-summer-pricing-actuarial-intern-4-16-months-rbc-667229392/" class="job-link" data-job-title="2026 Insurance – Summer, Pricing, Actuarial Intern (4-16 months)" data-job-company="RBC">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -934,7 +964,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/2026-insurance-%E2%80%93-summer-pricing-actuarial-intern-4-16-months-at-rbc-4404049149" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/2026-insurance-%E2%80%93-summer-pricing-actuarial-intern-4-16-months-at-rbc-4404049149" data-job-title="2026 Insurance – Summer, Pricing, Actuarial Intern (4-16 months)" data-job-company="RBC" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -945,7 +975,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/actuarial-associate-equitable-659373679/" class="job-link">
+    <a href="/jobs/actuarial-associate-equitable-659373679/" class="job-link" data-job-title="Actuarial Associate" data-job-company="Equitable">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -966,7 +996,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/actuarial-associate-at-equitable-4398616786" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/actuarial-associate-at-equitable-4398616786" data-job-title="Actuarial Associate" data-job-company="Equitable" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -977,7 +1007,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/actuarial-analyst-co-op-atlantic-region-telus-health-658692314/" class="job-link">
+    <a href="/jobs/actuarial-analyst-co-op-atlantic-region-telus-health-658692314/" class="job-link" data-job-title="Actuarial Analyst Co-op (Atlantic Region)" data-job-company="TELUS Health">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -998,7 +1028,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/actuarial-analyst-co-op-atlantic-region-at-telus-health-4392941417" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/actuarial-analyst-co-op-atlantic-region-at-telus-health-4392941417" data-job-title="Actuarial Analyst Co-op (Atlantic Region)" data-job-company="TELUS Health" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1020,7 +1050,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/geology-summer-student-kinross-gold-corporation-669984225/" class="job-link">
+    <a href="/jobs/geology-summer-student-kinross-gold-corporation-669984225/" class="job-link" data-job-title="Geology Summer Student" data-job-company="Kinross Gold Corporation">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1041,7 +1071,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/geology-summer-student-at-kinross-gold-corporation-4394917164" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/geology-summer-student-at-kinross-gold-corporation-4394917164" data-job-title="Geology Summer Student" data-job-company="Kinross Gold Corporation" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1052,7 +1082,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/september-2026-geology-co-op-elk-valley-resources-669253065/" class="job-link">
+    <a href="/jobs/september-2026-geology-co-op-elk-valley-resources-669253065/" class="job-link" data-job-title="September 2026 Geology Co-op" data-job-company="Elk Valley Resources">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1073,7 +1103,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/september-2026-geology-co-op-at-elk-valley-resources-4402823536" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/september-2026-geology-co-op-at-elk-valley-resources-4402823536" data-job-title="September 2026 Geology Co-op" data-job-company="Elk Valley Resources" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1084,7 +1114,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/jr-geologist-summer-student-b2gold-corp-667677158/" class="job-link">
+    <a href="/jobs/jr-geologist-summer-student-b2gold-corp-667677158/" class="job-link" data-job-title="Jr. Geologist, Summer Student" data-job-company="B2Gold Corp.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1105,7 +1135,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://careers.b2gold.com/job/Nunavut-Jr_-Geologist,-Summer-Student/601713817/" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://careers.b2gold.com/job/Nunavut-Jr_-Geologist,-Summer-Student/601713817/" data-job-title="Jr. Geologist, Summer Student" data-job-company="B2Gold Corp." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1116,7 +1146,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/co-op-student-geology-nutrien-666033658/" class="job-link">
+    <a href="/jobs/co-op-student-geology-nutrien-666033658/" class="job-link" data-job-title="Co-op Student, Geology" data-job-company="Nutrien">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1137,7 +1167,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://career17.sapsf.com/career?career_job_req_id=31389&amp;career_ns=job_listing&amp;company=nutrien&amp;source=Indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://career17.sapsf.com/career?career_job_req_id=31389&amp;career_ns=job_listing&amp;company=nutrien&amp;source=Indeed" data-job-title="Co-op Student, Geology" data-job-company="Nutrien" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1148,7 +1178,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/fall-26-geology-internship-agnico-eagle-664301427/" class="job-link">
+    <a href="/jobs/fall-26-geology-internship-agnico-eagle-664301427/" class="job-link" data-job-title="(FALL 26) GEOLOGY INTERNSHIP" data-job-company="Agnico Eagle">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1169,7 +1199,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://agnicoeagle.taleo.net/careersection/jobdetail.ftl?job=MEL01580&amp;lang=en" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://agnicoeagle.taleo.net/careersection/jobdetail.ftl?job=MEL01580&amp;lang=en" data-job-title="(FALL 26) GEOLOGY INTERNSHIP" data-job-company="Agnico Eagle" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1180,7 +1210,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/fall-26-geology-internship-agnico-eagle-mines-limited-664254158/" class="job-link">
+    <a href="/jobs/fall-26-geology-internship-agnico-eagle-mines-limited-664254158/" class="job-link" data-job-title="(Fall 26) Geology Internship" data-job-company="Agnico Eagle Mines Limited">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1201,7 +1231,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/fall-26-geology-internship-at-agnico-eagle-mines-limited-4402615183" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/fall-26-geology-internship-at-agnico-eagle-mines-limited-4402615183" data-job-title="(Fall 26) Geology Internship" data-job-company="Agnico Eagle Mines Limited" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1212,7 +1242,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/geology-mining-engineering-student-september-2026-suncor-energy-662893831/" class="job-link">
+    <a href="/jobs/geology-mining-engineering-student-september-2026-suncor-energy-662893831/" class="job-link" data-job-title="Geology &amp; Mining Engineering Student - September 2026" data-job-company="Suncor Energy">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1233,7 +1263,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://suncor.wd1.myworkdayjobs.com/en-US/Suncor_External/job/Fort-McMurray-Base-Plant-AB-CAN/Geology---Mining-Engineering-Student---September-2026_R0016168" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://suncor.wd1.myworkdayjobs.com/en-US/Suncor_External/job/Fort-McMurray-Base-Plant-AB-CAN/Geology---Mining-Engineering-Student---September-2026_R0016168" data-job-title="Geology &amp; Mining Engineering Student - September 2026" data-job-company="Suncor Energy" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1244,7 +1274,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/geology-mining-engineering-student-january-2027-suncor-energy-662893827/" class="job-link">
+    <a href="/jobs/geology-mining-engineering-student-january-2027-suncor-energy-662893827/" class="job-link" data-job-title="Geology &amp; Mining Engineering Student - January 2027" data-job-company="Suncor Energy">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1265,7 +1295,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://suncor.wd1.myworkdayjobs.com/en-US/Suncor_External/job/Fort-McMurray-Base-Plant-AB-CAN/Geology---Mining-Engineering-Student---January-2027_R0016169" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://suncor.wd1.myworkdayjobs.com/en-US/Suncor_External/job/Fort-McMurray-Base-Plant-AB-CAN/Geology---Mining-Engineering-Student---January-2027_R0016169" data-job-title="Geology &amp; Mining Engineering Student - January 2027" data-job-company="Suncor Energy" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1516,6 +1546,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -1525,6 +1560,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

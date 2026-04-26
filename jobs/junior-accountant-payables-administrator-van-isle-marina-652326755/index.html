@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -499,7 +504,7 @@
     
 
     <div class="apply-section">
-        <a href="http://ca.indeed.com/job/junior-accountant-payables-administrator-b647606d4e3c42e8" class="btn-apply" target="_blank" rel="noopener" itemprop="url">
+        <a href="http://ca.indeed.com/job/junior-accountant-payables-administrator-b647606d4e3c42e8" class="btn-apply" target="_blank" rel="noopener" itemprop="url" data-job-title="Junior Accountant - Payables Administrator" data-job-company="Van Isle Marina" data-job-location="Victoria, BC">
             Apply Now →
         </a>
         <p class="apply-note">Opens in a new tab on the company's website</p>
@@ -515,7 +520,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-accounting-associate-global-citrus-group-671496629/" class="job-link">
+    <a href="/jobs/junior-accounting-associate-global-citrus-group-671496629/" class="job-link" data-job-title="Junior Accounting Associate" data-job-company="Global Citrus Group">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -536,7 +541,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-accounting-associate-38516ea1810d04e4" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-accounting-associate-38516ea1810d04e4" data-job-title="Junior Accounting Associate" data-job-company="Global Citrus Group" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -548,7 +553,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-financial-analyst-new-grad-1-year-contract-siemens-electronic-systems-design-manufacturing-671362352/" class="job-link">
+    <a href="/jobs/junior-financial-analyst-new-grad-1-year-contract-siemens-electronic-systems-design-manufacturing-671362352/" class="job-link" data-job-title="Junior Financial Analyst  (New Grad)- 1 year contract" data-job-company="Siemens Electronic Systems Design &amp; Manufacturing">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -569,7 +574,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-financial-analyst-new-grad-1-year-contract-at-siemens-electronic-systems-design-manufacturing-4406851782" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-financial-analyst-new-grad-1-year-contract-at-siemens-electronic-systems-design-manufacturing-4406851782" data-job-title="Junior Financial Analyst  (New Grad)- 1 year contract" data-job-company="Siemens Electronic Systems Design &amp; Manufacturing" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -581,7 +586,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-accountant-bc-temp-remote-exp-realty-671248941/" class="job-link">
+    <a href="/jobs/junior-accountant-bc-temp-remote-exp-realty-671248941/" class="job-link" data-job-title="Junior Accountant - BC - Temp - (REMOTE)" data-job-company="eXp Realty">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -602,7 +607,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-accountant-bc-temp-remote-at-exp-realty-4406839216" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-accountant-bc-temp-remote-at-exp-realty-4406839216" data-job-title="Junior Accountant - BC - Temp - (REMOTE)" data-job-company="eXp Realty" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -614,7 +619,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/jr-fp-a-analyst-reporting-forecasting-brookfield-residential-671082213/" class="job-link">
+    <a href="/jobs/jr-fp-a-analyst-reporting-forecasting-brookfield-residential-671082213/" class="job-link" data-job-title="Jr. FP&amp;A Analyst, Reporting &amp; Forecasting" data-job-company="Brookfield Residential">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -635,7 +640,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/jr-fp-a-analyst-reporting-forecasting-at-brookfield-residential-4405719393" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/jr-fp-a-analyst-reporting-forecasting-at-brookfield-residential-4405719393" data-job-title="Jr. FP&amp;A Analyst, Reporting &amp; Forecasting" data-job-company="Brookfield Residential" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -647,7 +652,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-controller-carepros-671128835/" class="job-link">
+    <a href="/jobs/junior-controller-carepros-671128835/" class="job-link" data-job-title="Junior Controller" data-job-company="CarePros">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -668,7 +673,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://carepros.bamboohr.com/careers/549?postedDate=2026-04-24&amp;source=indeed&amp;src=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://carepros.bamboohr.com/careers/549?postedDate=2026-04-24&amp;source=indeed&amp;src=indeed" data-job-title="Junior Controller" data-job-company="CarePros" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -775,6 +780,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -784,6 +794,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

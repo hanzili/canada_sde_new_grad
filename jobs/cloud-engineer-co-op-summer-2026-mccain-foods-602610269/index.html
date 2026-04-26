@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -466,7 +471,7 @@ McCain Foods (Canada)</p>
     
 
     <div class="apply-section">
-        <a href="https://careers.mccain.com/us/en/job/MFOMFBUS40046EXTERNALENUS/Cloud-Engineer-Co-op-Summer-2026?utm_medium=phenom-feeds&amp;utm_source=linkedin" class="btn-apply" target="_blank" rel="noopener" itemprop="url">
+        <a href="https://careers.mccain.com/us/en/job/MFOMFBUS40046EXTERNALENUS/Cloud-Engineer-Co-op-Summer-2026?utm_medium=phenom-feeds&amp;utm_source=linkedin" class="btn-apply" target="_blank" rel="noopener" itemprop="url" data-job-title="Cloud Engineer Co-op - Summer 2026" data-job-company="McCain Foods" data-job-location="Florenceville-Bristol, New Brunswick">
             Apply Now →
         </a>
         <p class="apply-note">Opens in a new tab on the company's website</p>
@@ -482,7 +487,7 @@ McCain Foods (Canada)</p>
             <li class="job-card job-snooze"
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-systems-engineer-fdm-group-667625772/" class="job-link">
+    <a href="/jobs/junior-systems-engineer-fdm-group-667625772/" class="job-link" data-job-title="Junior Systems Engineer" data-job-company="FDM Group">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -503,7 +508,7 @@ McCain Foods (Canada)</p>
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-systems-engineer-at-fdm-group-4404354339" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-systems-engineer-at-fdm-group-4404354339" data-job-title="Junior Systems Engineer" data-job-company="FDM Group" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -515,7 +520,7 @@ McCain Foods (Canada)</p>
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/developpeur-devops-junior-et-support-applicatif-nanoxplore-inc-665063779/" class="job-link">
+    <a href="/jobs/developpeur-devops-junior-et-support-applicatif-nanoxplore-inc-665063779/" class="job-link" data-job-title="Développeur DevOps junior et support applicatif" data-job-company="NanoXplore Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -536,7 +541,7 @@ McCain Foods (Canada)</p>
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/d%C3%A9veloppeur-devops-junior-et-support-applicatif-at-nanoxplore-inc-4402996372" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/d%C3%A9veloppeur-devops-junior-et-support-applicatif-at-nanoxplore-inc-4402996372" data-job-title="Développeur DevOps junior et support applicatif" data-job-company="NanoXplore Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -548,7 +553,7 @@ McCain Foods (Canada)</p>
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-devops-engineer-timeplay-660986168/" class="job-link">
+    <a href="/jobs/junior-devops-engineer-timeplay-660986168/" class="job-link" data-job-title="Junior DevOps Engineer" data-job-company="TimePlay">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -569,7 +574,7 @@ McCain Foods (Canada)</p>
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-devops-engineer-6477cdab1ace1e77" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-devops-engineer-6477cdab1ace1e77" data-job-title="Junior DevOps Engineer" data-job-company="TimePlay" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -581,7 +586,7 @@ McCain Foods (Canada)</p>
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-devops-analyst-ajopro-658967775/" class="job-link">
+    <a href="/jobs/junior-devops-analyst-ajopro-658967775/" class="job-link" data-job-title="Junior DevOps analyst" data-job-company="Ajopro">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -602,7 +607,7 @@ McCain Foods (Canada)</p>
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-devops-analyst-at-ajopro-4395951898" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-devops-analyst-at-ajopro-4395951898" data-job-title="Junior DevOps analyst" data-job-company="Ajopro" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -614,7 +619,7 @@ McCain Foods (Canada)</p>
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-systems-engineer-jsi-658535219/" class="job-link">
+    <a href="/jobs/junior-systems-engineer-jsi-658535219/" class="job-link" data-job-title="Junior Systems Engineer" data-job-company="JSI">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -635,7 +640,7 @@ McCain Foods (Canada)</p>
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://recruiting.ultipro.ca/JAT5000JAT/JobBoard/df50e66e-c710-4410-afdb-88066904e063/OpportunityDetail?opportunityId=b8fd3b3f-4c44-476c-888a-61712f9631dc&amp;postingId=71563e42-777f-4523-9128-c6f9a4b0568b" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://recruiting.ultipro.ca/JAT5000JAT/JobBoard/df50e66e-c710-4410-afdb-88066904e063/OpportunityDetail?opportunityId=b8fd3b3f-4c44-476c-888a-61712f9631dc&amp;postingId=71563e42-777f-4523-9128-c6f9a4b0568b" data-job-title="Junior Systems Engineer" data-job-company="JSI" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -736,6 +741,11 @@ McCain Foods (Canada)</p>
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -745,6 +755,42 @@ McCain Foods (Canada)</p>
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

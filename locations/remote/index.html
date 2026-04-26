@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -489,7 +494,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/jr-software-engineer-shopra-canada-inc-657894042/" class="job-link">
+    <a href="/jobs/jr-software-engineer-shopra-canada-inc-657894042/" class="job-link" data-job-title="Jr. Software Engineer" data-job-company="Shopra canada inc">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -510,7 +515,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/jr-software-engineer-ee0a08724d6781d8" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/jr-software-engineer-ee0a08724d6781d8" data-job-title="Jr. Software Engineer" data-job-company="Shopra canada inc" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -532,7 +537,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/data-analyst-intern-summer-2026-co-op-onestop-esg-668798221/" class="job-link">
+    <a href="/jobs/data-analyst-intern-summer-2026-co-op-onestop-esg-668798221/" class="job-link" data-job-title="Data Analyst Intern (Summer 2026 Co-op)" data-job-company="OneStop ESG">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -553,7 +558,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/data-analyst-intern-summer-2026-co-op-5d62a82946074e4e" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/data-analyst-intern-summer-2026-co-op-5d62a82946074e4e" data-job-title="Data Analyst Intern (Summer 2026 Co-op)" data-job-company="OneStop ESG" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -575,7 +580,7 @@
             <li class="job-card job-snooze"
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-business-quality-assurance-analyst-the-edge-benefits-inc-669009498/" class="job-link">
+    <a href="/jobs/junior-business-quality-assurance-analyst-the-edge-benefits-inc-669009498/" class="job-link" data-job-title="Junior Business/Quality Assurance Analyst" data-job-company="The Edge Benefits Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -596,7 +601,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-businessquality-assurance-analyst-6bb9381128dda887" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-businessquality-assurance-analyst-6bb9381128dda887" data-job-title="Junior Business/Quality Assurance Analyst" data-job-company="The Edge Benefits Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -618,7 +623,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-bookkeeper-wilson-lue-llp-669113029/" class="job-link">
+    <a href="/jobs/junior-bookkeeper-wilson-lue-llp-669113029/" class="job-link" data-job-title="Junior Bookkeeper" data-job-company="Wilson Lue LLP">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -639,7 +644,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-bookkeeper-3cd06a497ef1fbb4" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-bookkeeper-3cd06a497ef1fbb4" data-job-title="Junior Bookkeeper" data-job-company="Wilson Lue LLP" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -661,7 +666,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/sales-and-marketing-coordinator-mtw-markting-inc-670709768/" class="job-link">
+    <a href="/jobs/sales-and-marketing-coordinator-mtw-markting-inc-670709768/" class="job-link" data-job-title="Sales and Marketing Coordinator" data-job-company="MTW Markting Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -682,7 +687,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/sales-and-marketing-coordinator-2b5378cd3e38970a" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/sales-and-marketing-coordinator-2b5378cd3e38970a" data-job-title="Sales and Marketing Coordinator" data-job-company="MTW Markting Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -693,7 +698,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/marketing-assistant-intern-full-time-remote-stellargrade-669098738/" class="job-link">
+    <a href="/jobs/marketing-assistant-intern-full-time-remote-stellargrade-669098738/" class="job-link" data-job-title="Marketing Assistant Intern (Full-Time, Remote)" data-job-company="StellarGrade">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -714,7 +719,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ht-jobs.net/3xdn97e?s=in" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ht-jobs.net/3xdn97e?s=in" data-job-title="Marketing Assistant Intern (Full-Time, Remote)" data-job-company="StellarGrade" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -736,7 +741,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-jr-business-analyst-canada-summer-jobs-2026-simplycast-670745673/" class="job-link">
+    <a href="/jobs/junior-jr-business-analyst-canada-summer-jobs-2026-simplycast-670745673/" class="job-link" data-job-title="Junior (Jr.) Business Analyst (Canada Summer Jobs 2026)" data-job-company="SimplyCast">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -757,7 +762,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://www.simplycast.com/company/careers/jr-business-analyst-summer-job-2026" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://www.simplycast.com/company/careers/jr-business-analyst-summer-job-2026" data-job-title="Junior (Jr.) Business Analyst (Canada Summer Jobs 2026)" data-job-company="SimplyCast" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -779,7 +784,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/inventory-analyst-student-ciena-664268507/" class="job-link">
+    <a href="/jobs/inventory-analyst-student-ciena-664268507/" class="job-link" data-job-title="Inventory Analyst Student" data-job-company="Ciena">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -800,7 +805,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ciena.wd5.myworkdayjobs.com/en-US/Careers/job/Remote-Canada/Inventory-Analyst-Student_R030681" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ciena.wd5.myworkdayjobs.com/en-US/Careers/job/Remote-Canada/Inventory-Analyst-Student_R030681" data-job-title="Inventory Analyst Student" data-job-company="Ciena" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -822,7 +827,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/digital-marketing-intern-content-design-ai-research-idig-marketing-670074764/" class="job-link">
+    <a href="/jobs/digital-marketing-intern-content-design-ai-research-idig-marketing-670074764/" class="job-link" data-job-title="Digital Marketing Intern (Content Design &amp; AI Research)" data-job-company="idig Marketing">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -843,7 +848,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/digital-marketing-intern-content-design-ai-research-f81a090389062936" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/digital-marketing-intern-content-design-ai-research-f81a090389062936" data-job-title="Digital Marketing Intern (Content Design &amp; AI Research)" data-job-company="idig Marketing" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1130,6 +1135,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -1139,6 +1149,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

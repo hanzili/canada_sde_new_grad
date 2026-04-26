@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -461,7 +466,7 @@
     
 
     <div class="apply-section">
-        <a href="https://careers.worksafebc.com/?_4x1F8B08000000000000FF6D8FBB0EC2201846DF86D1F0532EEDC080564D67C34C6A4143AD40689BE8DB7B899DEC7EBE2FE7A4981A2B318AD9BA2C0175ED30B83CCFDE4A8052548C0B3005949888CA149A128381708CC69B7B1E5DA89FE18F1306345BB0982759EF4F3BB4765912C334D01F9B72ECDC383693BBCBF4DEB5C3A68FE714C7C987EBA60782518EAD0DF3FDFC515DB15BE47CF093D64DBD9EB0A83D3A192F1797BDFDD648C59412742F0E5B4A48CD2AA538E7AAE0181764BB3BD017E9942AFD2B010000=&amp;offerid=4915" class="btn-apply" target="_blank" rel="noopener" itemprop="url">
+        <a href="https://careers.worksafebc.com/?_4x1F8B08000000000000FF6D8FBB0EC2201846DF86D1F0532EEDC080564D67C34C6A4143AD40689BE8DB7B899DEC7EBE2FE7A4981A2B318AD9BA2C0175ED30B83CCFDE4A8052548C0B3005949888CA149A128381708CC69B7B1E5DA89FE18F1306345BB0982759EF4F3BB4765912C334D01F9B72ECDC383693BBCBF4DEB5C3A68FE714C7C987EBA60782518EAD0DF3FDFC515DB15BE47CF093D64DBD9EB0A83D3A192F1797BDFDD648C59412742F0E5B4A48CD2AA538E7AAE0181764BB3BD017E9942AFD2B010000=&amp;offerid=4915" class="btn-apply" target="_blank" rel="noopener" itemprop="url" data-job-title="Student Intern, Business Analyst (Co-op)" data-job-company="WorkSafeBC" data-job-location="Richmond, BC V7C 1C6">
             Apply Now →
         </a>
         <p class="apply-note">Opens in a new tab on the company's website</p>
@@ -477,7 +482,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/rq10875-business-analyst-junior-s-m-software-solutions-inc-671077808/" class="job-link">
+    <a href="/jobs/rq10875-business-analyst-junior-s-m-software-solutions-inc-671077808/" class="job-link" data-job-title="RQ10875 - Business Analyst - Junior" data-job-company="S M Software Solutions Inc">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -498,7 +503,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/rq10875-business-analyst-junior-at-s-m-software-solutions-inc-4406810060" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/rq10875-business-analyst-junior-at-s-m-software-solutions-inc-4406810060" data-job-title="RQ10875 - Business Analyst - Junior" data-job-company="S M Software Solutions Inc" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -510,7 +515,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/associate-business-analyst-entry-level-ibm-669928091/" class="job-link">
+    <a href="/jobs/associate-business-analyst-entry-level-ibm-669928091/" class="job-link" data-job-title="Associate Business Analyst - Entry Level" data-job-company="IBM">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -531,7 +536,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/associate-business-analyst-entry-level-at-ibm-4382797516" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/associate-business-analyst-entry-level-at-ibm-4382797516" data-job-title="Associate Business Analyst - Entry Level" data-job-company="IBM" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -543,7 +548,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/business-analyst-junior-the-code-crackers-inc-669505452/" class="job-link">
+    <a href="/jobs/business-analyst-junior-the-code-crackers-inc-669505452/" class="job-link" data-job-title="Business Analyst - Junior" data-job-company="The Code Crackers Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -564,7 +569,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://www.thecodecrackers.ca/careers/business-analyst---junior/66761b7a-e1ca-4fe6-be7f-0e3760664e92" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://www.thecodecrackers.ca/careers/business-analyst---junior/66761b7a-e1ca-4fe6-be7f-0e3760664e92" data-job-title="Business Analyst - Junior" data-job-company="The Code Crackers Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -576,7 +581,7 @@
             <li class="job-card job-snooze"
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-business-analyst-north-york-on-hybrid-enbridge-669262020/" class="job-link">
+    <a href="/jobs/junior-business-analyst-north-york-on-hybrid-enbridge-669262020/" class="job-link" data-job-title="Junior Business Analyst (North York, ON) - Hybrid" data-job-company="Enbridge">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -597,7 +602,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://www.livehire.com/job/enbridge-contractor/G6D4X?source=Indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://www.livehire.com/job/enbridge-contractor/G6D4X?source=Indeed" data-job-title="Junior Business Analyst (North York, ON) - Hybrid" data-job-company="Enbridge" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -609,7 +614,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-business-analyst-bits-recruiting-669000605/" class="job-link">
+    <a href="/jobs/junior-business-analyst-bits-recruiting-669000605/" class="job-link" data-job-title="Junior Business Analyst" data-job-company="BITS Recruiting">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -630,7 +635,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-business-analyst-at-bits-recruiting-4405272214" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-business-analyst-at-bits-recruiting-4405272214" data-job-title="Junior Business Analyst" data-job-company="BITS Recruiting" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -732,6 +737,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -741,6 +751,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

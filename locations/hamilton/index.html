@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -483,7 +488,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/jr-accounts-receivable-coordinator-evertz-667701104/" class="job-link">
+    <a href="/jobs/jr-accounts-receivable-coordinator-evertz-667701104/" class="job-link" data-job-title="Jr. Accounts Receivable Coordinator" data-job-company="Evertz">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -504,7 +509,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/jr-accounts-receivable-coordinator-at-evertz-4404386395" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/jr-accounts-receivable-coordinator-at-evertz-4404386395" data-job-title="Jr. Accounts Receivable Coordinator" data-job-company="Evertz" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -515,7 +520,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-corporate-accountant-equiton-662724536/" class="job-link">
+    <a href="/jobs/junior-corporate-accountant-equiton-662724536/" class="job-link" data-job-title="Junior Corporate Accountant" data-job-company="Equiton">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -536,7 +541,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-corporate-accountant-at-equiton-4382114535" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-corporate-accountant-at-equiton-4382114535" data-job-title="Junior Corporate Accountant" data-job-company="Equiton" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -558,7 +563,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/canadian-banking-accounting-automotive-finance-internship-scotiabank-667234467/" class="job-link">
+    <a href="/jobs/canadian-banking-accounting-automotive-finance-internship-scotiabank-667234467/" class="job-link" data-job-title="Canadian Banking - Accounting Automotive Finance Internship/Co-op - Fall 2026" data-job-company="Scotiabank">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -579,7 +584,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://jobs.scotiabank.com/job/Hamilton-Canadian-Banking-Accounting-Automotive-Finance-InternshipCo-op-Fall-2026-ON/601672117/" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://jobs.scotiabank.com/job/Hamilton-Canadian-Banking-Accounting-Automotive-Finance-InternshipCo-op-Fall-2026-ON/601672117/" data-job-title="Canadian Banking - Accounting Automotive Finance Internship/Co-op - Fall 2026" data-job-company="Scotiabank" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -601,7 +606,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/field-marketing-coordinator-intern-burlington-on-stanley-black-decker-inc-658034428/" class="job-link">
+    <a href="/jobs/field-marketing-coordinator-intern-burlington-on-stanley-black-decker-inc-658034428/" class="job-link" data-job-title="Field Marketing Coordinator Intern - Burlington, ON" data-job-company="Stanley Black &amp; Decker, Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -622,7 +627,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/field-marketing-coordinator-intern-burlington-on-at-stanley-black-decker-inc-4398094596" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/field-marketing-coordinator-intern-burlington-on-at-stanley-black-decker-inc-4398094596" data-job-title="Field Marketing Coordinator Intern - Burlington, ON" data-job-company="Stanley Black &amp; Decker, Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -837,6 +842,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -846,6 +856,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

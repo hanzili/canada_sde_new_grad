@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -344,7 +349,7 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/quality-assurance-auditor-aurora-cannabis-inc-670067916/" class="job-link">
+    <a href="/jobs/quality-assurance-auditor-aurora-cannabis-inc-670067916/" class="job-link" data-job-title="Quality Assurance Auditor" data-job-company="Aurora Cannabis Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -365,7 +370,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/quality-assurance-auditor-at-aurora-cannabis-inc-4405031394" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/quality-assurance-auditor-at-aurora-cannabis-inc-4405031394" data-job-title="Quality Assurance Auditor" data-job-company="Aurora Cannabis Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -376,7 +381,7 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-test-engineer-bevertec-669254745/" class="job-link">
+    <a href="/jobs/junior-test-engineer-bevertec-669254745/" class="job-link" data-job-title="Junior Test Engineer" data-job-company="Bevertec">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -397,7 +402,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-test-engineer-at-bevertec-4405440365" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-test-engineer-at-bevertec-4405440365" data-job-title="Junior Test Engineer" data-job-company="Bevertec" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -408,7 +413,7 @@
         <li class="job-card job-snooze"
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-business-quality-assurance-analyst-the-edge-benefits-inc-669009498/" class="job-link">
+    <a href="/jobs/junior-business-quality-assurance-analyst-the-edge-benefits-inc-669009498/" class="job-link" data-job-title="Junior Business/Quality Assurance Analyst" data-job-company="The Edge Benefits Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -429,7 +434,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-businessquality-assurance-analyst-6bb9381128dda887" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-businessquality-assurance-analyst-6bb9381128dda887" data-job-title="Junior Business/Quality Assurance Analyst" data-job-company="The Edge Benefits Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -440,7 +445,7 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/jr-deep-packet-inspection-qa-engineer-nokia-660370316/" class="job-link">
+    <a href="/jobs/jr-deep-packet-inspection-qa-engineer-nokia-660370316/" class="job-link" data-job-title="Jr. Deep Packet Inspection QA Engineer" data-job-company="Nokia">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -461,7 +466,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/jr-deep-packet-inspection-qa-engineer-at-nokia-4398844828" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/jr-deep-packet-inspection-qa-engineer-at-nokia-4398844828" data-job-title="Jr. Deep Packet Inspection QA Engineer" data-job-company="Nokia" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -472,7 +477,7 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/embedded-test-engineer-co-op-stryker-670313847/" class="job-link">
+    <a href="/jobs/embedded-test-engineer-co-op-stryker-670313847/" class="job-link" data-job-title="Embedded Test Engineer Co-op" data-job-company="Stryker">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -493,7 +498,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://careers.stryker.com/embedded-test-engineer-co-op/job/E268636A563AEF9A13F49F2A4225B14A" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://careers.stryker.com/embedded-test-engineer-co-op/job/E268636A563AEF9A13F49F2A4225B14A" data-job-title="Embedded Test Engineer Co-op" data-job-company="Stryker" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -504,7 +509,7 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/software-quality-assurance-intern-assurance-qualite-dormakaba-669713441/" class="job-link">
+    <a href="/jobs/software-quality-assurance-intern-assurance-qualite-dormakaba-669713441/" class="job-link" data-job-title="Software Quality Assurance Intern / Assurance Qualité Logicielle" data-job-company="dormakaba">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -525,7 +530,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/software-quality-assurance-intern-assurance-qualit%C3%A9-logicielle-at-dormakaba-4373347821" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/software-quality-assurance-intern-assurance-qualit%C3%A9-logicielle-at-dormakaba-4373347821" data-job-title="Software Quality Assurance Intern / Assurance Qualité Logicielle" data-job-company="dormakaba" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -536,7 +541,7 @@
         <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/intern-software-engineer-in-test-veeva-systems-667740024/" class="job-link">
+    <a href="/jobs/intern-software-engineer-in-test-veeva-systems-667740024/" class="job-link" data-job-title="Intern: Software Engineer in Test" data-job-company="Veeva Systems">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -557,7 +562,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://jobs.lever.co/veeva/02b4428c-240e-456a-80d2-59ef8e6a013c?lever-source=Indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://jobs.lever.co/veeva/02b4428c-240e-456a-80d2-59ef8e6a013c?lever-source=Indeed" data-job-title="Intern: Software Engineer in Test" data-job-company="Veeva Systems" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -568,7 +573,7 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/embedded-software-test-developer-propulsion-and-thermal-general-motors-660379750/" class="job-link">
+    <a href="/jobs/embedded-software-test-developer-propulsion-and-thermal-general-motors-660379750/" class="job-link" data-job-title="Embedded Software Test Developer – Propulsion and Thermal Management - Co-Op" data-job-company="General Motors">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -589,7 +594,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/embedded-software-test-developer-%E2%80%93-propulsion-and-thermal-management-co-op-at-general-motors-4400288946" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/embedded-software-test-developer-%E2%80%93-propulsion-and-thermal-management-co-op-at-general-motors-4400288946" data-job-title="Embedded Software Test Developer – Propulsion and Thermal Management - Co-Op" data-job-company="General Motors" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -600,7 +605,7 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/embedded-software-test-developer-propulsion-and-thermal-general-motors-gm-660326822/" class="job-link">
+    <a href="/jobs/embedded-software-test-developer-propulsion-and-thermal-general-motors-gm-660326822/" class="job-link" data-job-title="Embedded Software Test Developer – Propulsion and Thermal Management - Co-Op" data-job-company="General Motors (GM)">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -621,7 +626,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://generalmotors.wd5.myworkdayjobs.com/en-US/Careers_GM/job/Markham-Ontario-Canada/Embedded-Software-Test-Developer---Propulsion-and-Thermal-Management---Co-Op_JR-202607672" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://generalmotors.wd5.myworkdayjobs.com/en-US/Careers_GM/job/Markham-Ontario-Canada/Embedded-Software-Test-Developer---Propulsion-and-Thermal-Management---Co-Op_JR-202607672" data-job-title="Embedded Software Test Developer – Propulsion and Thermal Management - Co-Op" data-job-company="General Motors (GM)" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -632,7 +637,7 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/operational-excellence-and-quality-assurance-intern-trench-group-659548949/" class="job-link">
+    <a href="/jobs/operational-excellence-and-quality-assurance-intern-trench-group-659548949/" class="job-link" data-job-title="Operational Excellence and Quality Assurance Intern" data-job-company="Trench Group">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -653,7 +658,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/operational-excellence-and-quality-assurance-intern-at-trench-group-4399499102" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/operational-excellence-and-quality-assurance-intern-at-trench-group-4399499102" data-job-title="Operational Excellence and Quality Assurance Intern" data-job-company="Trench Group" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -664,7 +669,7 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/operational-excellence-and-quality-assurance-intern-trench-659371100/" class="job-link">
+    <a href="/jobs/operational-excellence-and-quality-assurance-intern-trench-659371100/" class="job-link" data-job-title="Operational Excellence and Quality Assurance Intern" data-job-company="Trench">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -685,7 +690,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://trench.csod.com/ux/ats/careersite/1/home/requisition/1589?c=trench" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://trench.csod.com/ux/ats/careersite/1/home/requisition/1589?c=trench" data-job-title="Operational Excellence and Quality Assurance Intern" data-job-company="Trench" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -696,7 +701,7 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/quality-assurance-intern-people-inc-658345638/" class="job-link">
+    <a href="/jobs/quality-assurance-intern-people-inc-658345638/" class="job-link" data-job-title="Quality Assurance Intern" data-job-company="People Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -717,7 +722,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/quality-assurance-intern-at-people-inc-4386354708" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/quality-assurance-intern-at-people-inc-4386354708" data-job-title="Quality Assurance Intern" data-job-company="People Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -728,7 +733,7 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/stagiaire-sap-ixp-developpement-logiciel-pour-les-tests-sdet-sap-658123137/" class="job-link">
+    <a href="/jobs/stagiaire-sap-ixp-developpement-logiciel-pour-les-tests-sdet-sap-658123137/" class="job-link" data-job-title="Stagiaire SAP iXp - Développement logiciel pour les tests (SDET)" data-job-company="SAP">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -749,7 +754,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/stagiaire-sap-ixp-d%C3%A9veloppement-logiciel-pour-les-tests-sdet-at-sap-4394746910" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/stagiaire-sap-ixp-d%C3%A9veloppement-logiciel-pour-les-tests-sdet-at-sap-4394746910" data-job-title="Stagiaire SAP iXp - Développement logiciel pour les tests (SDET)" data-job-company="SAP" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -760,7 +765,7 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/sap-ixp-intern-software-development-engineer-in-test-sdet-sap-658123135/" class="job-link">
+    <a href="/jobs/sap-ixp-intern-software-development-engineer-in-test-sdet-sap-658123135/" class="job-link" data-job-title="SAP iXp Intern - Software Development Engineer in Test (SDET)" data-job-company="SAP">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -781,7 +786,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/sap-ixp-intern-software-development-engineer-in-test-sdet-at-sap-4394750210" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/sap-ixp-intern-software-development-engineer-in-test-sdet-at-sap-4394750210" data-job-title="SAP iXp Intern - Software Development Engineer in Test (SDET)" data-job-company="SAP" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -792,7 +797,7 @@
         <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/qa-engineer-summer-internship-prepr-657951616/" class="job-link">
+    <a href="/jobs/qa-engineer-summer-internship-prepr-657951616/" class="job-link" data-job-title="QA Engineer - Summer Internship" data-job-company="Prepr">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -813,7 +818,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://secure.collage.co/jobs/prepr/61283?origin=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://secure.collage.co/jobs/prepr/61283?origin=indeed" data-job-title="QA Engineer - Summer Internship" data-job-company="Prepr" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1109,6 +1114,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -1118,6 +1128,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

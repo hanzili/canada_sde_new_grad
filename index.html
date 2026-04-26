@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -284,6 +289,31 @@
         
     </div>
 
+    
+    <section class="seo-content-block">
+        <h2>How to use this tech jobs board</h2>
+        <p>This page is built for students and recent grads searching for 2026 Canada tech new grad, junior, and entry-level roles. Listings are refreshed daily, grouped by career track, and kept focused on roles that are practical for early-career candidates in Canada.</p>
+        <ul class="seo-content-list">
+            
+            <li>Browse currently active tech openings from employers such as XO Homes Inc., Joveo AI, WTW, S M Software Solutions Inc, Hays.</li>
+            
+            <li>Use city pages for local intent: Toronto, Vancouver, Montreal, Waterloo, Ottawa, Calgary, and remote Canada roles.</li>
+            
+            <li>Open a job page before applying to confirm posting date, category, location, and related roles from the same track.</li>
+            
+            <li>Check back daily: stale or closed jobs are removed from listings so the board stays useful for real applications.</li>
+            
+        </ul>
+        <p class="seo-content-links">
+            Start with <a href="/locations/toronto/">Toronto jobs</a>,
+            <a href="/locations/vancouver/">Vancouver jobs</a>,
+            <a href="/locations/montreal/">Montreal jobs</a>,
+            <a href="/locations/waterloo/">Waterloo jobs</a>, or
+            <a href="/locations/remote/">remote Canada jobs</a>.
+        </p>
+    </section>
+    
+
     <div class="emoji-legend">
         <div class="legend-item"><span class="emoji">🔥</span> Hot Opportunity - Big Tech, high pay, exciting role</div>
         <div class="legend-item"><span class="emoji">💤</span> Consider Carefully - May be less exciting</div>
@@ -389,7 +419,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-software-engineer-joveo-ai-671302567/" class="job-link">
+    <a href="/jobs/junior-software-engineer-joveo-ai-671302567/" class="job-link" data-job-title="Junior Software Engineer" data-job-company="Joveo AI">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -410,7 +440,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4406839687" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4406839687" data-job-title="Junior Software Engineer" data-job-company="Joveo AI" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -421,7 +451,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/rq10660-software-developer-junior-s-m-software-solutions-inc-671059630/" class="job-link">
+    <a href="/jobs/rq10660-software-developer-junior-s-m-software-solutions-inc-671059630/" class="job-link" data-job-title="RQ10660 - Software Developer - Junior" data-job-company="S M Software Solutions Inc">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -442,7 +472,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/rq10660-software-developer-junior-at-s-m-software-solutions-inc-4406804905" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/rq10660-software-developer-junior-at-s-m-software-solutions-inc-4406804905" data-job-title="RQ10660 - Software Developer - Junior" data-job-company="S M Software Solutions Inc" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -453,7 +483,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-software-engineer-joveo-ai-670460501/" class="job-link">
+    <a href="/jobs/junior-software-engineer-joveo-ai-670460501/" class="job-link" data-job-title="Junior Software Engineer" data-job-company="Joveo AI">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -474,7 +504,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4406160985" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4406160985" data-job-title="Junior Software Engineer" data-job-company="Joveo AI" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -485,7 +515,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-software-engineer-trulioo-670188411/" class="job-link">
+    <a href="/jobs/junior-software-engineer-trulioo-670188411/" class="job-link" data-job-title="Junior Software Engineer" data-job-company="Trulioo">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -506,7 +536,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-trulioo-4406123029" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-trulioo-4406123029" data-job-title="Junior Software Engineer" data-job-company="Trulioo" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -517,7 +547,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/frontend-software-developer-jr-sundayy-669714567/" class="job-link">
+    <a href="/jobs/frontend-software-developer-jr-sundayy-669714567/" class="job-link" data-job-title="Frontend Software Developer, Jr." data-job-company="Sundayy">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -538,7 +568,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/frontend-software-developer-jr-at-sundayy-4405655220" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/frontend-software-developer-jr-at-sundayy-4405655220" data-job-title="Frontend Software Developer, Jr." data-job-company="Sundayy" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -549,7 +579,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-software-engineer-joveo-ai-669620393/" class="job-link">
+    <a href="/jobs/junior-software-engineer-joveo-ai-669620393/" class="job-link" data-job-title="Junior Software Engineer" data-job-company="Joveo AI">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -570,7 +600,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4405638021" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4405638021" data-job-title="Junior Software Engineer" data-job-company="Joveo AI" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -581,7 +611,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-software-developer-sharp-ideas-in-mining-669235982/" class="job-link">
+    <a href="/jobs/junior-software-developer-sharp-ideas-in-mining-669235982/" class="job-link" data-job-title="Junior Software Developer" data-job-company="Sharp Ideas In Mining">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -602,7 +632,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-software-developer-7a543798f98ded1f" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-software-developer-7a543798f98ded1f" data-job-title="Junior Software Developer" data-job-company="Sharp Ideas In Mining" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -613,7 +643,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-full-stack-ai-engineer-maple-spark-669164522/" class="job-link">
+    <a href="/jobs/junior-full-stack-ai-engineer-maple-spark-669164522/" class="job-link" data-job-title="Junior Full Stack AI Engineer" data-job-company="Maple Spark">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -634,7 +664,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-full-stack-ai-engineer-at-maple-spark-4405299851" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-full-stack-ai-engineer-at-maple-spark-4405299851" data-job-title="Junior Full Stack AI Engineer" data-job-company="Maple Spark" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -645,7 +675,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-web-developer-remote-wilderman-cosmetic-clinic-669034531/" class="job-link">
+    <a href="/jobs/junior-web-developer-remote-wilderman-cosmetic-clinic-669034531/" class="job-link" data-job-title="Junior Web Developer (Remote)" data-job-company="Wilderman Cosmetic Clinic">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -666,7 +696,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-web-developer-remote-4d8b133a99c821c6" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-web-developer-remote-4d8b133a99c821c6" data-job-title="Junior Web Developer (Remote)" data-job-company="Wilderman Cosmetic Clinic" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -677,7 +707,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-software-engineer-joveo-ai-668840480/" class="job-link">
+    <a href="/jobs/junior-software-engineer-joveo-ai-668840480/" class="job-link" data-job-title="Junior Software Engineer" data-job-company="Joveo AI">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -698,7 +728,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4405215641" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4405215641" data-job-title="Junior Software Engineer" data-job-company="Joveo AI" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -709,7 +739,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-software-developer-ellement-consulting-group-668367739/" class="job-link">
+    <a href="/jobs/junior-software-developer-ellement-consulting-group-668367739/" class="job-link" data-job-title="Junior Software Developer" data-job-company="Ellement Consulting Group">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -730,7 +760,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ellement.bamboohr.com/careers/30?postedDate=2026-04-21&amp;source=indeed&amp;src=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ellement.bamboohr.com/careers/30?postedDate=2026-04-21&amp;source=indeed&amp;src=indeed" data-job-title="Junior Software Developer" data-job-company="Ellement Consulting Group" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -741,7 +771,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-full-stack-developer-second-harvest-668330732/" class="job-link">
+    <a href="/jobs/junior-full-stack-developer-second-harvest-668330732/" class="job-link" data-job-title="Junior Full-Stack Developer" data-job-company="Second Harvest">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -762,7 +792,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://www.secondharvest.ca/get-involved/careers" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://www.secondharvest.ca/get-involved/careers" data-job-title="Junior Full-Stack Developer" data-job-company="Second Harvest" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -773,7 +803,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-software-engineer-joveo-ai-667887097/" class="job-link">
+    <a href="/jobs/junior-software-engineer-joveo-ai-667887097/" class="job-link" data-job-title="Junior Software Engineer" data-job-company="Joveo Ai">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -794,7 +824,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4404550349" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4404550349" data-job-title="Junior Software Engineer" data-job-company="Joveo Ai" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -805,7 +835,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-software-engineer-joveo-ai-667283347/" class="job-link">
+    <a href="/jobs/junior-software-engineer-joveo-ai-667283347/" class="job-link" data-job-title="Junior Software Engineer" data-job-company="Joveo Ai">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -826,7 +856,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4404054254" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4404054254" data-job-title="Junior Software Engineer" data-job-company="Joveo Ai" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -837,7 +867,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-software-engineer-joveo-ai-666640579/" class="job-link">
+    <a href="/jobs/junior-software-engineer-joveo-ai-666640579/" class="job-link" data-job-title="Junior Software Engineer" data-job-company="Joveo Ai">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -858,7 +888,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4403846163" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4403846163" data-job-title="Junior Software Engineer" data-job-company="Joveo Ai" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -869,7 +899,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-software-developer-conversant-teamware-inc-666616208/" class="job-link">
+    <a href="/jobs/junior-software-developer-conversant-teamware-inc-666616208/" class="job-link" data-job-title="Junior Software Developer" data-job-company="Conversant Teamware Inc">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -890,7 +920,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-developer-at-conversant-teamware-inc-4403073335" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-developer-at-conversant-teamware-inc-4403073335" data-job-title="Junior Software Developer" data-job-company="Conversant Teamware Inc" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -901,7 +931,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/backend-engineer-knowledge-graph-rust-gitlab-666490739/" class="job-link">
+    <a href="/jobs/backend-engineer-knowledge-graph-rust-gitlab-666490739/" class="job-link" data-job-title="Backend Engineer, Knowledge Graph (Rust)" data-job-company="GitLab">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -922,7 +952,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/backend-engineer-knowledge-graph-rust-at-gitlab-4382197237" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/backend-engineer-knowledge-graph-rust-at-gitlab-4382197237" data-job-title="Backend Engineer, Knowledge Graph (Rust)" data-job-company="GitLab" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -933,7 +963,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/engineer-ai-driven-software-automation-engineer-huawei-canada-666087323/" class="job-link">
+    <a href="/jobs/engineer-ai-driven-software-automation-engineer-huawei-canada-666087323/" class="job-link" data-job-title="Engineer - AI-Driven Software &amp; Automation Engineer" data-job-company="Huawei Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -954,7 +984,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/engineer-ai-driven-software-automation-engineer-at-huawei-canada-4403545182" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/engineer-ai-driven-software-automation-engineer-at-huawei-canada-4403545182" data-job-title="Engineer - AI-Driven Software &amp; Automation Engineer" data-job-company="Huawei Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -965,7 +995,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/developpeur-euse-full-stack-junior-junior-full-stack-dynacom-technologies-665695628/" class="job-link">
+    <a href="/jobs/developpeur-euse-full-stack-junior-junior-full-stack-dynacom-technologies-665695628/" class="job-link" data-job-title="Développeur(euse) Full Stack junior- Junior Full-stack Developer" data-job-company="Dynacom Technologies">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -986,7 +1016,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/d%C3%A9veloppeureuse-full-stack-junior-junior-full-stack-developer-5e894c75f6cc70fa" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/d%C3%A9veloppeureuse-full-stack-junior-junior-full-stack-developer-5e894c75f6cc70fa" data-job-title="Développeur(euse) Full Stack junior- Junior Full-stack Developer" data-job-company="Dynacom Technologies" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -997,7 +1027,7 @@
             <li class="job-card job-hot"
     data-remote="true"
     data-hot="true">
-    <a href="/jobs/junior-software-developer-frontend-hootsuite-665171769/" class="job-link">
+    <a href="/jobs/junior-software-developer-frontend-hootsuite-665171769/" class="job-link" data-job-title="Junior Software Developer, Frontend" data-job-company="Hootsuite">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1018,7 +1048,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-developer-frontend-at-hootsuite-4402313099" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-developer-frontend-at-hootsuite-4402313099" data-job-title="Junior Software Developer, Frontend" data-job-company="Hootsuite" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1029,7 +1059,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-software-developer-12-month-term-vecima-networks-inc-665063311/" class="job-link">
+    <a href="/jobs/junior-software-developer-12-month-term-vecima-networks-inc-665063311/" class="job-link" data-job-title="Junior Software Developer - 12 month term" data-job-company="Vecima Networks Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1050,7 +1080,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-developer-12-month-term-at-vecima-networks-inc-4402178558" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-developer-12-month-term-at-vecima-networks-inc-4402178558" data-job-title="Junior Software Developer - 12 month term" data-job-company="Vecima Networks Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1061,7 +1091,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-software-engineer-mynexttrip-ai-664840821/" class="job-link">
+    <a href="/jobs/junior-software-engineer-mynexttrip-ai-664840821/" class="job-link" data-job-title="Junior Software Engineer" data-job-company="mynexttrip.ai">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1082,7 +1112,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-mynexttrip-ai-4402127774" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-mynexttrip-ai-4402127774" data-job-title="Junior Software Engineer" data-job-company="mynexttrip.ai" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1093,7 +1123,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/applied-ai-junior-web-developer-ottawa-on-trendai-664309543/" class="job-link">
+    <a href="/jobs/applied-ai-junior-web-developer-ottawa-on-trendai-664309543/" class="job-link" data-job-title="Applied AI Junior Web Developer - Ottawa, ON" data-job-company="TrendAI">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1114,7 +1144,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/applied-ai-junior-web-developer-ottawa-on-at-trendai-4402618616" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/applied-ai-junior-web-developer-ottawa-on-at-trendai-4402618616" data-job-title="Applied AI Junior Web Developer - Ottawa, ON" data-job-company="TrendAI" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1125,7 +1155,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/applied-ai-junior-web-developer-ottawa-on-trendai-664308013/" class="job-link">
+    <a href="/jobs/applied-ai-junior-web-developer-ottawa-on-trendai-664308013/" class="job-link" data-job-title="Applied AI Junior Web Developer - Ottawa, ON" data-job-company="TrendAI">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1146,7 +1176,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/applied-ai-junior-web-developer-ottawa-on-at-trendai-4402604717" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/applied-ai-junior-web-developer-ottawa-on-at-trendai-4402604717" data-job-title="Applied AI Junior Web Developer - Ottawa, ON" data-job-company="TrendAI" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1157,7 +1187,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/applied-ai-junior-web-developer-ottawa-on-trend-micro-inc-664152731/" class="job-link">
+    <a href="/jobs/applied-ai-junior-web-developer-ottawa-on-trend-micro-inc-664152731/" class="job-link" data-job-title="Applied AI Junior Web Developer - Ottawa, ON" data-job-company="Trend Micro Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1178,7 +1208,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://trendmicro.wd3.myworkdayjobs.com/en-US/External/job/Ottawa/Applied-AI-Junior-Web-Developer---Ottawa--ON_R0009512" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://trendmicro.wd3.myworkdayjobs.com/en-US/External/job/Ottawa/Applied-AI-Junior-Web-Developer---Ottawa--ON_R0009512" data-job-title="Applied AI Junior Web Developer - Ottawa, ON" data-job-company="Trend Micro Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1189,7 +1219,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-front-end-web-developer-autocanada-663638070/" class="job-link">
+    <a href="/jobs/junior-front-end-web-developer-autocanada-663638070/" class="job-link" data-job-title="Junior Front-End Web Developer" data-job-company="AutoCanada">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1210,7 +1240,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-front-end-web-developer-at-autocanada-4401156910" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-front-end-web-developer-at-autocanada-4401156910" data-job-title="Junior Front-End Web Developer" data-job-company="AutoCanada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1221,7 +1251,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/applied-ai-junior-front-end-developer-ottawa-on-trend-micro-inc-662988473/" class="job-link">
+    <a href="/jobs/applied-ai-junior-front-end-developer-ottawa-on-trend-micro-inc-662988473/" class="job-link" data-job-title="Applied AI Junior Front-End Developer - Ottawa, ON" data-job-company="Trend Micro Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1242,7 +1272,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://trendmicro.wd3.myworkdayjobs.com/en-US/External/job/Ottawa/Applied-AI-Junior-Front-End-Developer---Ottawa--ON_R0009484" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://trendmicro.wd3.myworkdayjobs.com/en-US/External/job/Ottawa/Applied-AI-Junior-Front-End-Developer---Ottawa--ON_R0009484" data-job-title="Applied AI Junior Front-End Developer - Ottawa, ON" data-job-company="Trend Micro Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1253,7 +1283,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/applied-ai-junior-front-end-developer-ottawa-on-trendai-662950176/" class="job-link">
+    <a href="/jobs/applied-ai-junior-front-end-developer-ottawa-on-trendai-662950176/" class="job-link" data-job-title="Applied AI Junior Front-End Developer - Ottawa, ON" data-job-company="TrendAI">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1274,7 +1304,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/applied-ai-junior-front-end-developer-ottawa-on-at-trendai-4401507273" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/applied-ai-junior-front-end-developer-ottawa-on-at-trendai-4401507273" data-job-title="Applied AI Junior Front-End Developer - Ottawa, ON" data-job-company="TrendAI" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1285,7 +1315,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/jr-software-application-engineer-aptiv-662784272/" class="job-link">
+    <a href="/jobs/jr-software-application-engineer-aptiv-662784272/" class="job-link" data-job-title="Jr Software Application Engineer" data-job-company="Aptiv">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1306,7 +1336,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/jr-software-application-engineer-at-aptiv-4401399047" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/jr-software-application-engineer-at-aptiv-4401399047" data-job-title="Jr Software Application Engineer" data-job-company="Aptiv" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1317,7 +1347,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-software-engineer-vizzion-662763394/" class="job-link">
+    <a href="/jobs/junior-software-engineer-vizzion-662763394/" class="job-link" data-job-title="Junior Software Engineer" data-job-company="Vizzion">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1338,7 +1368,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-software-engineer-c8e606cbb60ab3cf" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-software-engineer-c8e606cbb60ab3cf" data-job-title="Junior Software Engineer" data-job-company="Vizzion" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1349,7 +1379,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-software-engineer-pr-or-canadian-only-astrom-training-solutions-inc-661484470/" class="job-link">
+    <a href="/jobs/junior-software-engineer-pr-or-canadian-only-astrom-training-solutions-inc-661484470/" class="job-link" data-job-title="Junior Software Engineer (PR or Canadian only)" data-job-company="Astrom Training Solutions Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1370,7 +1400,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-software-engineer-pr-or-canadian-only-fd614dc26278d022" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-software-engineer-pr-or-canadian-only-fd614dc26278d022" data-job-title="Junior Software Engineer (PR or Canadian only)" data-job-company="Astrom Training Solutions Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1381,7 +1411,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-programmer-software-developer-adga-group-661085591/" class="job-link">
+    <a href="/jobs/junior-programmer-software-developer-adga-group-661085591/" class="job-link" data-job-title="Junior Programmer/Software Developer" data-job-company="ADGA Group">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1402,7 +1432,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-programmer-software-developer-at-adga-group-4400554747" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-programmer-software-developer-at-adga-group-4400554747" data-job-title="Junior Programmer/Software Developer" data-job-company="ADGA Group" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1413,7 +1443,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/developpeur-full-stack-junior-junior-full-stack-developer-siemens-energy-660867038/" class="job-link">
+    <a href="/jobs/developpeur-full-stack-junior-junior-full-stack-developer-siemens-energy-660867038/" class="job-link" data-job-title="Développeur full stack junior / Junior Full Stack Developer" data-job-company="Siemens Energy">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1434,7 +1464,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/d%C3%A9veloppeur-full-stack-junior-junior-full-stack-developer-at-siemens-energy-4368786527" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/d%C3%A9veloppeur-full-stack-junior-junior-full-stack-developer-at-siemens-energy-4368786527" data-job-title="Développeur full stack junior / Junior Full Stack Developer" data-job-company="Siemens Energy" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1445,7 +1475,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/software-engineer-missions-software-planet-660010325/" class="job-link">
+    <a href="/jobs/software-engineer-missions-software-planet-660010325/" class="job-link" data-job-title="Software Engineer, Missions Software" data-job-company="Planet">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1466,7 +1496,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/software-engineer-missions-software-at-planet-4377477067" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/software-engineer-missions-software-at-planet-4377477067" data-job-title="Software Engineer, Missions Software" data-job-company="Planet" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1477,7 +1507,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-web-developer-visual-capitalist-659611100/" class="job-link">
+    <a href="/jobs/junior-web-developer-visual-capitalist-659611100/" class="job-link" data-job-title="Junior Web Developer" data-job-company="Visual Capitalist">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1498,7 +1528,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-web-developer-at-visual-capitalist-4396364881" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-web-developer-at-visual-capitalist-4396364881" data-job-title="Junior Web Developer" data-job-company="Visual Capitalist" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1509,7 +1539,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-front-end-developer-grafton-apparel-659085949/" class="job-link">
+    <a href="/jobs/junior-front-end-developer-grafton-apparel-659085949/" class="job-link" data-job-title="Junior Front End Developer" data-job-company="Grafton Apparel">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1530,7 +1560,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-front-end-developer-266b2c71214cd9c4" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-front-end-developer-266b2c71214cd9c4" data-job-title="Junior Front End Developer" data-job-company="Grafton Apparel" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1541,7 +1571,7 @@
             <li class="job-card job-snooze"
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-web-developer-cybernest-658858821/" class="job-link">
+    <a href="/jobs/junior-web-developer-cybernest-658858821/" class="job-link" data-job-title="Junior Web Developer" data-job-company="Cybernest">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1562,7 +1592,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-web-developer-b6d8937e53c2f833" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-web-developer-b6d8937e53c2f833" data-job-title="Junior Web Developer" data-job-company="Cybernest" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1573,7 +1603,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-backend-engineer-lush-cosmetics-658729238/" class="job-link">
+    <a href="/jobs/junior-backend-engineer-lush-cosmetics-658729238/" class="job-link" data-job-title="Junior Backend Engineer" data-job-company="Lush Cosmetics">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1594,7 +1624,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://grnh.se/9judergz1us" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://grnh.se/9judergz1us" data-job-title="Junior Backend Engineer" data-job-company="Lush Cosmetics" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1605,7 +1635,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-full-stack-ai-developer-avanade-658638237/" class="job-link">
+    <a href="/jobs/junior-full-stack-ai-developer-avanade-658638237/" class="job-link" data-job-title="Junior Full-stack AI Developer" data-job-company="Avanade">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1626,7 +1656,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://www.avanade.com/en/career/job-details/R00322969" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://www.avanade.com/en/career/job-details/R00322969" data-job-title="Junior Full-stack AI Developer" data-job-company="Avanade" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1637,7 +1667,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-backend-engineer-lush-fresh-handmade-cosmetics-north-america-658622924/" class="job-link">
+    <a href="/jobs/junior-backend-engineer-lush-fresh-handmade-cosmetics-north-america-658622924/" class="job-link" data-job-title="Junior Backend Engineer" data-job-company="Lush Fresh Handmade Cosmetics North America">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1658,7 +1688,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-backend-engineer-at-lush-fresh-handmade-cosmetics-north-america-4395490720" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-backend-engineer-at-lush-fresh-handmade-cosmetics-north-america-4395490720" data-job-title="Junior Backend Engineer" data-job-company="Lush Fresh Handmade Cosmetics North America" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1669,7 +1699,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-web-developer-shout-media-657936239/" class="job-link">
+    <a href="/jobs/junior-web-developer-shout-media-657936239/" class="job-link" data-job-title="Junior Web Developer" data-job-company="Shout Media">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1690,7 +1720,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-web-developer-0dadfe32905a5190" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-web-developer-0dadfe32905a5190" data-job-title="Junior Web Developer" data-job-company="Shout Media" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1701,7 +1731,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/jr-software-engineer-shopra-canada-inc-657894042/" class="job-link">
+    <a href="/jobs/jr-software-engineer-shopra-canada-inc-657894042/" class="job-link" data-job-title="Jr. Software Engineer" data-job-company="Shopra canada inc">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1722,7 +1752,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/jr-software-engineer-ee0a08724d6781d8" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/jr-software-engineer-ee0a08724d6781d8" data-job-title="Jr. Software Engineer" data-job-company="Shopra canada inc" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1733,7 +1763,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-ai-software-engineer-agility-pr-solutions-657822419/" class="job-link">
+    <a href="/jobs/junior-ai-software-engineer-agility-pr-solutions-657822419/" class="job-link" data-job-title="Junior AI Software Engineer" data-job-company="Agility PR Solutions">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1754,7 +1784,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ats.rippling.com/agilitypr/jobs/85a46f3d-f9e0-4f2f-b73d-dc4d7d0e3217?jobSite=Indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ats.rippling.com/agilitypr/jobs/85a46f3d-f9e0-4f2f-b73d-dc4d7d0e3217?jobSite=Indeed" data-job-title="Junior AI Software Engineer" data-job-company="Agility PR Solutions" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1776,7 +1806,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-data-engineer-wtw-671302562/" class="job-link">
+    <a href="/jobs/junior-data-engineer-wtw-671302562/" class="job-link" data-job-title="Junior Data Engineer" data-job-company="WTW">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -1797,7 +1827,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-data-engineer-at-wtw-4397392127" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-data-engineer-at-wtw-4397392127" data-job-title="Junior Data Engineer" data-job-company="WTW" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1808,7 +1838,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-data-analyst-hays-670717349/" class="job-link">
+    <a href="/jobs/junior-data-analyst-hays-670717349/" class="job-link" data-job-title="Junior Data Analyst" data-job-company="Hays">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1829,7 +1859,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-data-analyst-at-hays-4406625293" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-data-analyst-at-hays-4406625293" data-job-title="Junior Data Analyst" data-job-company="Hays" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1840,7 +1870,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/research-and-data-analyst-uja-federation-of-greater-toronto-668344477/" class="job-link">
+    <a href="/jobs/research-and-data-analyst-uja-federation-of-greater-toronto-668344477/" class="job-link" data-job-title="Research and Data Analyst" data-job-company="UJA Federation of Greater Toronto">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1861,7 +1891,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/research-and-data-analyst-at-uja-federation-of-greater-toronto-4404894164" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/research-and-data-analyst-at-uja-federation-of-greater-toronto-4404894164" data-job-title="Research and Data Analyst" data-job-company="UJA Federation of Greater Toronto" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1872,7 +1902,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-ai-developer-beauceron-security-inc-669373127/" class="job-link">
+    <a href="/jobs/junior-ai-developer-beauceron-security-inc-669373127/" class="job-link" data-job-title="Junior AI Developer" data-job-company="Beauceron Security Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1893,7 +1923,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://secure.collage.co/jobs/beauceronsecurity/61715?origin=indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://secure.collage.co/jobs/beauceronsecurity/61715?origin=indeed" data-job-title="Junior AI Developer" data-job-company="Beauceron Security Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1904,7 +1934,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-data-analyst-amexio-666592628/" class="job-link">
+    <a href="/jobs/junior-data-analyst-amexio-666592628/" class="job-link" data-job-title="Junior Data Analyst" data-job-company="AMEXIO">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1925,7 +1955,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-data-analyst-at-amexio-4403821900" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-data-analyst-at-amexio-4403821900" data-job-title="Junior Data Analyst" data-job-company="AMEXIO" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1936,7 +1966,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-etl-test-coordinator-cgi-663065504/" class="job-link">
+    <a href="/jobs/junior-etl-test-coordinator-cgi-663065504/" class="job-link" data-job-title="Junior ETL Test Coordinator" data-job-company="CGI">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1957,7 +1987,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://indeed.njoyn.com/corp/xweb/XWeb.asp?BRID=1290512&amp;JobID=J0426-0811&amp;clid=21001&amp;page=jobdetails&amp;sbdid=936" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://indeed.njoyn.com/corp/xweb/XWeb.asp?BRID=1290512&amp;JobID=J0426-0811&amp;clid=21001&amp;page=jobdetails&amp;sbdid=936" data-job-title="Junior ETL Test Coordinator" data-job-company="CGI" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -1968,7 +1998,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-bi-developer-data-analyst-a1-innovation-group-inc-662652165/" class="job-link">
+    <a href="/jobs/junior-bi-developer-data-analyst-a1-innovation-group-inc-662652165/" class="job-link" data-job-title="Junior BI Developer &amp; Data Analyst" data-job-company="A1 Innovation Group Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -1989,7 +2019,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-bi-developer-data-analyst-aa509fe1e24033df" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-bi-developer-data-analyst-aa509fe1e24033df" data-job-title="Junior BI Developer &amp; Data Analyst" data-job-company="A1 Innovation Group Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2000,7 +2030,7 @@
             <li class="job-card job-snooze"
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/bilingual-jr-data-analyst-teksystems-661546055/" class="job-link">
+    <a href="/jobs/bilingual-jr-data-analyst-teksystems-661546055/" class="job-link" data-job-title="Bilingual Jr. Data Analyst" data-job-company="TEKsystems">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2021,7 +2051,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/bilingual-jr-data-analyst-at-teksystems-4400698037" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/bilingual-jr-data-analyst-at-teksystems-4400698037" data-job-title="Bilingual Jr. Data Analyst" data-job-company="TEKsystems" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2032,7 +2062,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/data-engineer-analyst-avanade-660242552/" class="job-link">
+    <a href="/jobs/data-engineer-analyst-avanade-660242552/" class="job-link" data-job-title="Data Engineer Analyst" data-job-company="Avanade">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2053,7 +2083,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/data-engineer-analyst-at-avanade-4400255719" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/data-engineer-analyst-at-avanade-4400255719" data-job-title="Data Engineer Analyst" data-job-company="Avanade" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2064,7 +2094,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/rci-rocg-40160-bioinformatics-contractor-ai-intern-rangam-659121032/" class="job-link">
+    <a href="/jobs/rci-rocg-40160-bioinformatics-contractor-ai-intern-rangam-659121032/" class="job-link" data-job-title="RCI-ROCG-40160 Bioinformatics contractor (AI Intern)" data-job-company="Rangam">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2085,7 +2115,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/rci-rocg-40160-bioinformatics-contractor-ai-intern-at-rangam-4399271368" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/rci-rocg-40160-bioinformatics-contractor-ai-intern-at-rangam-4399271368" data-job-title="RCI-ROCG-40160 Bioinformatics contractor (AI Intern)" data-job-company="Rangam" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2096,7 +2126,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-data-analytics-strategist-58k-68k-search-gather-658453227/" class="job-link">
+    <a href="/jobs/junior-data-analytics-strategist-58k-68k-search-gather-658453227/" class="job-link" data-job-title="Junior Data &amp; Analytics Strategist ($58K-$68K)" data-job-company="Search + Gather">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2117,7 +2147,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-data-analytics-strategist-$58k-$68k-at-search-+-gather-4398267748" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-data-analytics-strategist-$58k-$68k-at-search-+-gather-4398267748" data-job-title="Junior Data &amp; Analytics Strategist ($58K-$68K)" data-job-company="Search + Gather" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2128,7 +2158,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/business-data-analyst-lawdepot-657918720/" class="job-link">
+    <a href="/jobs/business-data-analyst-lawdepot-657918720/" class="job-link" data-job-title="Business Data Analyst" data-job-company="LawDepot">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2149,7 +2179,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/business-data-analyst-at-lawdepot-4397945909" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/business-data-analyst-at-lawdepot-4397945909" data-job-title="Business Data Analyst" data-job-company="LawDepot" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2171,7 +2201,7 @@
             <li class="job-card job-snooze"
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-systems-engineer-fdm-group-667625772/" class="job-link">
+    <a href="/jobs/junior-systems-engineer-fdm-group-667625772/" class="job-link" data-job-title="Junior Systems Engineer" data-job-company="FDM Group">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2192,7 +2222,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-systems-engineer-at-fdm-group-4404354339" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-systems-engineer-at-fdm-group-4404354339" data-job-title="Junior Systems Engineer" data-job-company="FDM Group" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2203,7 +2233,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/developpeur-devops-junior-et-support-applicatif-nanoxplore-inc-665063779/" class="job-link">
+    <a href="/jobs/developpeur-devops-junior-et-support-applicatif-nanoxplore-inc-665063779/" class="job-link" data-job-title="Développeur DevOps junior et support applicatif" data-job-company="NanoXplore Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2224,7 +2254,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/d%C3%A9veloppeur-devops-junior-et-support-applicatif-at-nanoxplore-inc-4402996372" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/d%C3%A9veloppeur-devops-junior-et-support-applicatif-at-nanoxplore-inc-4402996372" data-job-title="Développeur DevOps junior et support applicatif" data-job-company="NanoXplore Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2235,7 +2265,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-devops-engineer-timeplay-660986168/" class="job-link">
+    <a href="/jobs/junior-devops-engineer-timeplay-660986168/" class="job-link" data-job-title="Junior DevOps Engineer" data-job-company="TimePlay">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2256,7 +2286,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-devops-engineer-6477cdab1ace1e77" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-devops-engineer-6477cdab1ace1e77" data-job-title="Junior DevOps Engineer" data-job-company="TimePlay" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2267,7 +2297,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-devops-analyst-ajopro-658967775/" class="job-link">
+    <a href="/jobs/junior-devops-analyst-ajopro-658967775/" class="job-link" data-job-title="Junior DevOps analyst" data-job-company="Ajopro">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2288,7 +2318,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-devops-analyst-at-ajopro-4395951898" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-devops-analyst-at-ajopro-4395951898" data-job-title="Junior DevOps analyst" data-job-company="Ajopro" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2299,7 +2329,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-systems-engineer-jsi-658535219/" class="job-link">
+    <a href="/jobs/junior-systems-engineer-jsi-658535219/" class="job-link" data-job-title="Junior Systems Engineer" data-job-company="JSI">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2320,7 +2350,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://recruiting.ultipro.ca/JAT5000JAT/JobBoard/df50e66e-c710-4410-afdb-88066904e063/OpportunityDetail?opportunityId=b8fd3b3f-4c44-476c-888a-61712f9631dc&amp;postingId=71563e42-777f-4523-9128-c6f9a4b0568b" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://recruiting.ultipro.ca/JAT5000JAT/JobBoard/df50e66e-c710-4410-afdb-88066904e063/OpportunityDetail?opportunityId=b8fd3b3f-4c44-476c-888a-61712f9631dc&amp;postingId=71563e42-777f-4523-9128-c6f9a4b0568b" data-job-title="Junior Systems Engineer" data-job-company="JSI" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2342,7 +2372,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-soc-analyst-humankind-global-recruitment-661234393/" class="job-link">
+    <a href="/jobs/junior-soc-analyst-humankind-global-recruitment-661234393/" class="job-link" data-job-title="Junior SOC Analyst" data-job-company="Humankind Global Recruitment">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2363,7 +2393,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-soc-analyst-at-humankind-global-recruitment-4398166934" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-soc-analyst-at-humankind-global-recruitment-4398166934" data-job-title="Junior SOC Analyst" data-job-company="Humankind Global Recruitment" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2374,7 +2404,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-ai-security-analyst-stellaralgo-659369844/" class="job-link">
+    <a href="/jobs/junior-ai-security-analyst-stellaralgo-659369844/" class="job-link" data-job-title="Junior AI Security Analyst" data-job-company="StellarAlgo">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2395,7 +2425,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-ai-security-analyst-at-stellaralgo-4396352437" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-ai-security-analyst-at-stellaralgo-4396352437" data-job-title="Junior AI Security Analyst" data-job-company="StellarAlgo" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2406,7 +2436,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-cyber-systems-security-engineer-lockheed-martin-659213104/" class="job-link">
+    <a href="/jobs/junior-cyber-systems-security-engineer-lockheed-martin-659213104/" class="job-link" data-job-title="Junior Cyber Systems Security Engineer" data-job-company="Lockheed Martin">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2427,7 +2457,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://krb-sjobs.brassring.com/TGnewUI/Search/home/HomeWithPreLoad?PageType=JobDetails&amp;jobid=2279238&amp;partnerid=30122&amp;siteid=6598" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://krb-sjobs.brassring.com/TGnewUI/Search/home/HomeWithPreLoad?PageType=JobDetails&amp;jobid=2279238&amp;partnerid=30122&amp;siteid=6598" data-job-title="Junior Cyber Systems Security Engineer" data-job-company="Lockheed Martin" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2449,7 +2479,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/quality-assurance-auditor-aurora-cannabis-inc-670067916/" class="job-link">
+    <a href="/jobs/quality-assurance-auditor-aurora-cannabis-inc-670067916/" class="job-link" data-job-title="Quality Assurance Auditor" data-job-company="Aurora Cannabis Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2470,7 +2500,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/quality-assurance-auditor-at-aurora-cannabis-inc-4405031394" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/quality-assurance-auditor-at-aurora-cannabis-inc-4405031394" data-job-title="Quality Assurance Auditor" data-job-company="Aurora Cannabis Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2481,7 +2511,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-test-engineer-bevertec-669254745/" class="job-link">
+    <a href="/jobs/junior-test-engineer-bevertec-669254745/" class="job-link" data-job-title="Junior Test Engineer" data-job-company="Bevertec">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2502,7 +2532,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-test-engineer-at-bevertec-4405440365" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-test-engineer-at-bevertec-4405440365" data-job-title="Junior Test Engineer" data-job-company="Bevertec" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2513,7 +2543,7 @@
             <li class="job-card job-snooze"
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-business-quality-assurance-analyst-the-edge-benefits-inc-669009498/" class="job-link">
+    <a href="/jobs/junior-business-quality-assurance-analyst-the-edge-benefits-inc-669009498/" class="job-link" data-job-title="Junior Business/Quality Assurance Analyst" data-job-company="The Edge Benefits Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2534,7 +2564,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-businessquality-assurance-analyst-6bb9381128dda887" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-businessquality-assurance-analyst-6bb9381128dda887" data-job-title="Junior Business/Quality Assurance Analyst" data-job-company="The Edge Benefits Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2545,7 +2575,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/jr-deep-packet-inspection-qa-engineer-nokia-660370316/" class="job-link">
+    <a href="/jobs/jr-deep-packet-inspection-qa-engineer-nokia-660370316/" class="job-link" data-job-title="Jr. Deep Packet Inspection QA Engineer" data-job-company="Nokia">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2566,7 +2596,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/jr-deep-packet-inspection-qa-engineer-at-nokia-4398844828" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/jr-deep-packet-inspection-qa-engineer-at-nokia-4398844828" data-job-title="Jr. Deep Packet Inspection QA Engineer" data-job-company="Nokia" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2588,7 +2618,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-embedded-software-developer-syntronic-668493441/" class="job-link">
+    <a href="/jobs/junior-embedded-software-developer-syntronic-668493441/" class="job-link" data-job-title="Junior Embedded Software Developer" data-job-company="Syntronic">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2609,7 +2639,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://jobs.lever.co/syntronic/ebf3d9d5-bc08-4565-b835-3618f352e199?lever-source=Indeed" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://jobs.lever.co/syntronic/ebf3d9d5-bc08-4565-b835-3618f352e199?lever-source=Indeed" data-job-title="Junior Embedded Software Developer" data-job-company="Syntronic" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2620,7 +2650,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-embedded-software-developer-syntronic-a-global-design-house-668447937/" class="job-link">
+    <a href="/jobs/junior-embedded-software-developer-syntronic-a-global-design-house-668447937/" class="job-link" data-job-title="Junior Embedded Software Developer" data-job-company="Syntronic - A Global Design House">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2641,7 +2671,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-embedded-software-developer-at-syntronic-a-global-design-house-4401981861" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-embedded-software-developer-at-syntronic-a-global-design-house-4401981861" data-job-title="Junior Embedded Software Developer" data-job-company="Syntronic - A Global Design House" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2652,7 +2682,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-application-engineer-electrical-megaresistors-667601969/" class="job-link">
+    <a href="/jobs/junior-application-engineer-electrical-megaresistors-667601969/" class="job-link" data-job-title="Junior Application Engineer - Electrical" data-job-company="MegaResistors">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2673,7 +2703,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-application-engineer-electrical-b12a9845971c0008" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-application-engineer-electrical-b12a9845971c0008" data-job-title="Junior Application Engineer - Electrical" data-job-company="MegaResistors" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2684,7 +2714,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-fpga-engineer-hybrid-kardium-inc-666208885/" class="job-link">
+    <a href="/jobs/junior-fpga-engineer-hybrid-kardium-inc-666208885/" class="job-link" data-job-title="Junior FPGA Engineer (Hybrid)" data-job-company="Kardium Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2705,7 +2735,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://jobs.dayforcehcm.com/en-CA/kardium/CANDIDATEPORTAL/jobs/4022" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://jobs.dayforcehcm.com/en-CA/kardium/CANDIDATEPORTAL/jobs/4022" data-job-title="Junior FPGA Engineer (Hybrid)" data-job-company="Kardium Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2716,7 +2746,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-hardware-technician-drw-665604998/" class="job-link">
+    <a href="/jobs/junior-hardware-technician-drw-665604998/" class="job-link" data-job-title="Junior Hardware Technician" data-job-company="DRW">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2737,7 +2767,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-hardware-technician-at-drw-4365115441" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-hardware-technician-at-drw-4365115441" data-job-title="Junior Hardware Technician" data-job-company="DRW" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2748,7 +2778,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-hardware-designer-embedded-onsite-position-curtiss-wright-corporation-659380563/" class="job-link">
+    <a href="/jobs/junior-hardware-designer-embedded-onsite-position-curtiss-wright-corporation-659380563/" class="job-link" data-job-title="Junior Hardware Designer (Embedded) – Onsite Position" data-job-company="Curtiss-Wright Corporation">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2769,7 +2799,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-hardware-designer-embedded-%E2%80%93-onsite-position-at-curtiss-wright-corporation-4398621294" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-hardware-designer-embedded-%E2%80%93-onsite-position-at-curtiss-wright-corporation-4398621294" data-job-title="Junior Hardware Designer (Embedded) – Onsite Position" data-job-company="Curtiss-Wright Corporation" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2780,7 +2810,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-hardware-designer-embedded-onsite-position-curtiss-wright-659361041/" class="job-link">
+    <a href="/jobs/junior-hardware-designer-embedded-onsite-position-curtiss-wright-659361041/" class="job-link" data-job-title="Junior Hardware Designer (Embedded) – Onsite Position" data-job-company="Curtiss-Wright">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2801,7 +2831,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://curtisswright.wd1.myworkdayjobs.com/en-US/CW_External_Career_Site/job/Canada-Ottawa/Junior-Hardware-Designer--Embedded----Onsite-Position_JR11626-2" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://curtisswright.wd1.myworkdayjobs.com/en-US/CW_External_Career_Site/job/Canada-Ottawa/Junior-Hardware-Designer--Embedded----Onsite-Position_JR11626-2" data-job-title="Junior Hardware Designer (Embedded) – Onsite Position" data-job-company="Curtiss-Wright" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2812,7 +2842,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/ingenieur-e-firmware-junior-sentiom-658729261/" class="job-link">
+    <a href="/jobs/ingenieur-e-firmware-junior-sentiom-658729261/" class="job-link" data-job-title="Ingénieur(e) firmware junior" data-job-company="sentiom">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2833,7 +2863,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/ing%C3%A9nieure-firmware-junior-d43153e1907dd9c4" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/ing%C3%A9nieure-firmware-junior-d43153e1907dd9c4" data-job-title="Ingénieur(e) firmware junior" data-job-company="sentiom" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2844,7 +2874,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-hardware-engineer-aversan-inc-657942460/" class="job-link">
+    <a href="/jobs/junior-hardware-engineer-aversan-inc-657942460/" class="job-link" data-job-title="Junior Hardware Engineer" data-job-company="Aversan Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2865,7 +2895,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-hardware-engineer-at-aversan-inc-4394708146" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-hardware-engineer-at-aversan-inc-4394708146" data-job-title="Junior Hardware Engineer" data-job-company="Aversan Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2887,7 +2917,7 @@
             <li class="job-card job-snooze"
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-project-coordinator-ai-technology-focused-xo-homes-inc-671443091/" class="job-link">
+    <a href="/jobs/junior-project-coordinator-ai-technology-focused-xo-homes-inc-671443091/" class="job-link" data-job-title="Junior Project Coordinator (AI &amp; Technology Focused)" data-job-company="XO Homes Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2908,7 +2938,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-project-coordinator-ai-technology-focused-52c58962ad9b0f7a" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-project-coordinator-ai-technology-focused-52c58962ad9b0f7a" data-job-title="Junior Project Coordinator (AI &amp; Technology Focused)" data-job-company="XO Homes Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2930,7 +2960,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/jr-it-support-technician-amico-affiliates-669056768/" class="job-link">
+    <a href="/jobs/jr-it-support-technician-amico-affiliates-669056768/" class="job-link" data-job-title="Jr. IT Support Technician" data-job-company="Amico Affiliates">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2951,7 +2981,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/jr-it-support-technician-at-amico-affiliates-4402493493" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/jr-it-support-technician-at-amico-affiliates-4402493493" data-job-title="Jr. IT Support Technician" data-job-company="Amico Affiliates" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2962,7 +2992,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/technicien-ne-informatique-junior-it-support-niveau-1-magna-inoxydable-et-aluminium-668240737/" class="job-link">
+    <a href="/jobs/technicien-ne-informatique-junior-it-support-niveau-1-magna-inoxydable-et-aluminium-668240737/" class="job-link" data-job-title="Technicien(ne) informatique junior (IT Support – Niveau 1)" data-job-company="Magna Inoxydable et Aluminium">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -2983,7 +3013,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/technicienne-informatique-junior-it-support-niveau-1-d226b4f6930b8191" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/technicienne-informatique-junior-it-support-niveau-1-d226b4f6930b8191" data-job-title="Technicien(ne) informatique junior (IT Support – Niveau 1)" data-job-company="Magna Inoxydable et Aluminium" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -2994,7 +3024,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-it-support-field-technician-gennix-consulting-668140495/" class="job-link">
+    <a href="/jobs/junior-it-support-field-technician-gennix-consulting-668140495/" class="job-link" data-job-title="Junior IT Support Field Technician" data-job-company="Gennix Consulting">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3015,7 +3045,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-it-support-field-technician-f3efaa51c34fa8a6" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-it-support-field-technician-f3efaa51c34fa8a6" data-job-title="Junior IT Support Field Technician" data-job-company="Gennix Consulting" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3026,7 +3056,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-it-support-engineer-pointsbet-canada-667558469/" class="job-link">
+    <a href="/jobs/junior-it-support-engineer-pointsbet-canada-667558469/" class="job-link" data-job-title="JUNIOR IT SUPPORT ENGINEER" data-job-company="PointsBet Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -3047,7 +3077,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-it-support-engineer-at-pointsbet-canada-4404329474" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-it-support-engineer-at-pointsbet-canada-4404329474" data-job-title="JUNIOR IT SUPPORT ENGINEER" data-job-company="PointsBet Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -3520,6 +3550,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -3529,6 +3564,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -483,7 +488,7 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-devops-analyst-ajopro-658967775/" class="job-link">
+    <a href="/jobs/junior-devops-analyst-ajopro-658967775/" class="job-link" data-job-title="Junior DevOps analyst" data-job-company="Ajopro">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -504,7 +509,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-devops-analyst-at-ajopro-4395951898" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-devops-analyst-at-ajopro-4395951898" data-job-title="Junior DevOps analyst" data-job-company="Ajopro" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -526,7 +531,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-accounts-receivable-accounts-payable-coordinator-genuine-comfort-658499279/" class="job-link">
+    <a href="/jobs/junior-accounts-receivable-accounts-payable-coordinator-genuine-comfort-658499279/" class="job-link" data-job-title="Junior Accounts Receivable/Accounts Payable Coordinator" data-job-company="Genuine Comfort">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -547,7 +552,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-accounts-receivable-accounts-payable-coordinator-at-genuine-comfort-4398548553" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-accounts-receivable-accounts-payable-coordinator-at-genuine-comfort-4398548553" data-job-title="Junior Accounts Receivable/Accounts Payable Coordinator" data-job-company="Genuine Comfort" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -569,7 +574,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/finance-intern-audit-financial-reporting-boyd-group-services-inc-661434014/" class="job-link">
+    <a href="/jobs/finance-intern-audit-financial-reporting-boyd-group-services-inc-661434014/" class="job-link" data-job-title="Finance Intern – Audit &amp; Financial Reporting" data-job-company="Boyd Group Services Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -590,7 +595,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/finance-intern-%E2%80%93-audit-financial-reporting-at-boyd-group-services-inc-4398719490" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/finance-intern-%E2%80%93-audit-financial-reporting-at-boyd-group-services-inc-4398719490" data-job-title="Finance Intern – Audit &amp; Financial Reporting" data-job-company="Boyd Group Services Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -612,7 +617,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/aspire-commercial-banking-mid-market-fall-2026-co-op-scotiabank-667282282/" class="job-link">
+    <a href="/jobs/aspire-commercial-banking-mid-market-fall-2026-co-op-scotiabank-667282282/" class="job-link" data-job-title="ASPIRE Commercial Banking - Mid-Market - Fall 2026 Co-op / Internship - Manitoba" data-job-company="Scotiabank">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -633,7 +638,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/aspire-commercial-banking-mid-market-fall-2026-co-op-internship-manitoba-at-scotiabank-4403352697" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/aspire-commercial-banking-mid-market-fall-2026-co-op-internship-manitoba-at-scotiabank-4403352697" data-job-title="ASPIRE Commercial Banking - Mid-Market - Fall 2026 Co-op / Internship - Manitoba" data-job-company="Scotiabank" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -655,7 +660,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-inside-sales-representative-arxium-670219588/" class="job-link">
+    <a href="/jobs/junior-inside-sales-representative-arxium-670219588/" class="job-link" data-job-title="Junior Inside Sales Representative" data-job-company="ARxIUM">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -676,7 +681,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-inside-sales-representative-at-arxium-4406106923" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-inside-sales-representative-at-arxium-4406106923" data-job-title="Junior Inside Sales Representative" data-job-company="ARxIUM" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -687,7 +692,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-account-manager-digital-marketing-golden-west-broadcasting-657894002/" class="job-link">
+    <a href="/jobs/junior-account-manager-digital-marketing-golden-west-broadcasting-657894002/" class="job-link" data-job-title="Junior Account Manager - Digital Marketing" data-job-company="Golden West Broadcasting">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -708,7 +713,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-account-manager-digital-marketing-94e525de08a885c3" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-account-manager-digital-marketing-94e525de08a885c3" data-job-title="Junior Account Manager - Digital Marketing" data-job-company="Golden West Broadcasting" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -730,7 +735,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-scrum-master-bison-transport-inc-666016533/" class="job-link">
+    <a href="/jobs/junior-scrum-master-bison-transport-inc-666016533/" class="job-link" data-job-title="Junior Scrum Master" data-job-company="Bison Transport Inc.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -751,7 +756,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-scrum-master-at-bison-transport-inc-4402746765" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-scrum-master-at-bison-transport-inc-4402746765" data-job-title="Junior Scrum Master" data-job-company="Bison Transport Inc." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -984,6 +989,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -993,6 +1003,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

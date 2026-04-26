@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -399,7 +404,7 @@
     
 
     <div class="apply-section">
-        <a href="https://nordastelo.teamtailor.com/en-GB/jobs/7583305-junior-structural-engineer" class="btn-apply" target="_blank" rel="noopener" itemprop="url">
+        <a href="https://nordastelo.teamtailor.com/en-GB/jobs/7583305-junior-structural-engineer" class="btn-apply" target="_blank" rel="noopener" itemprop="url" data-job-title="Junior Structural Engineer" data-job-company="Norda Stelo" data-job-location="Vancouver, BC">
             Apply Now →
         </a>
         <p class="apply-note">Opens in a new tab on the company's website</p>
@@ -415,7 +420,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-civil-structural-engineer-bba-consultants-671535943/" class="job-link">
+    <a href="/jobs/junior-civil-structural-engineer-bba-consultants-671535943/" class="job-link" data-job-title="Junior Civil/Structural Engineer" data-job-company="BBA Consultants">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -436,7 +441,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-civil-structural-engineer-at-bba-consultants-4373764491" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-civil-structural-engineer-at-bba-consultants-4373764491" data-job-title="Junior Civil/Structural Engineer" data-job-company="BBA Consultants" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -448,7 +453,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-structural-engineer-structural-technologist-whitemud-ironworks-limited-670653261/" class="job-link">
+    <a href="/jobs/junior-structural-engineer-structural-technologist-whitemud-ironworks-limited-670653261/" class="job-link" data-job-title="Junior Structural Engineer/Structural Technologist" data-job-company="Whitemud Ironworks Limited">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -469,7 +474,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-structural-engineerstructural-technologist-cfe77fd24b38f313" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="http://ca.indeed.com/job/junior-structural-engineerstructural-technologist-cfe77fd24b38f313" data-job-title="Junior Structural Engineer/Structural Technologist" data-job-company="Whitemud Ironworks Limited" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -481,7 +486,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-geotechnical-engineer-in-training-wsp-in-canada-668510214/" class="job-link">
+    <a href="/jobs/junior-geotechnical-engineer-in-training-wsp-in-canada-668510214/" class="job-link" data-job-title="Junior Geotechnical Engineer-in-Training" data-job-company="WSP in Canada">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -502,7 +507,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-geotechnical-engineer-in-training-at-wsp-in-canada-4404257079" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-geotechnical-engineer-in-training-at-wsp-in-canada-4404257079" data-job-title="Junior Geotechnical Engineer-in-Training" data-job-company="WSP in Canada" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -514,7 +519,7 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/junior-civil-engineer-mcelhanney-666495322/" class="job-link">
+    <a href="/jobs/junior-civil-engineer-mcelhanney-666495322/" class="job-link" data-job-title="Junior Civil Engineer" data-job-company="McElhanney">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -535,7 +540,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-civil-engineer-at-mcelhanney-4279586646" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-civil-engineer-at-mcelhanney-4279586646" data-job-title="Junior Civil Engineer" data-job-company="McElhanney" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -547,7 +552,7 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/water-resources-engineer-entry-level-hybrid-barr-engineering-co-666100830/" class="job-link">
+    <a href="/jobs/water-resources-engineer-entry-level-hybrid-barr-engineering-co-666100830/" class="job-link" data-job-title="Water Resources Engineer – Entry Level (Hybrid)" data-job-company="Barr Engineering Co.">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -568,7 +573,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/water-resources-engineer-%E2%80%93-entry-level-hybrid-at-barr-engineering-co-4400856963" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/water-resources-engineer-%E2%80%93-entry-level-hybrid-at-barr-engineering-co-4400856963" data-job-title="Water Resources Engineer – Entry Level (Hybrid)" data-job-company="Barr Engineering Co." onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -660,6 +665,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -669,6 +679,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -340,7 +345,7 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-soc-analyst-humankind-global-recruitment-661234393/" class="job-link">
+    <a href="/jobs/junior-soc-analyst-humankind-global-recruitment-661234393/" class="job-link" data-job-title="Junior SOC Analyst" data-job-company="Humankind Global Recruitment">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -361,7 +366,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-soc-analyst-at-humankind-global-recruitment-4398166934" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-soc-analyst-at-humankind-global-recruitment-4398166934" data-job-title="Junior SOC Analyst" data-job-company="Humankind Global Recruitment" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -372,7 +377,7 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-ai-security-analyst-stellaralgo-659369844/" class="job-link">
+    <a href="/jobs/junior-ai-security-analyst-stellaralgo-659369844/" class="job-link" data-job-title="Junior AI Security Analyst" data-job-company="StellarAlgo">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -393,7 +398,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-ai-security-analyst-at-stellaralgo-4396352437" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-ai-security-analyst-at-stellaralgo-4396352437" data-job-title="Junior AI Security Analyst" data-job-company="StellarAlgo" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -404,7 +409,7 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-cyber-systems-security-engineer-lockheed-martin-659213104/" class="job-link">
+    <a href="/jobs/junior-cyber-systems-security-engineer-lockheed-martin-659213104/" class="job-link" data-job-title="Junior Cyber Systems Security Engineer" data-job-company="Lockheed Martin">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -425,7 +430,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://krb-sjobs.brassring.com/TGnewUI/Search/home/HomeWithPreLoad?PageType=JobDetails&amp;jobid=2279238&amp;partnerid=30122&amp;siteid=6598" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://krb-sjobs.brassring.com/TGnewUI/Search/home/HomeWithPreLoad?PageType=JobDetails&amp;jobid=2279238&amp;partnerid=30122&amp;siteid=6598" data-job-title="Junior Cyber Systems Security Engineer" data-job-company="Lockheed Martin" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -436,7 +441,7 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/sap-ixp-intern-security-engineer-analytics-cloud-sap-665145645/" class="job-link">
+    <a href="/jobs/sap-ixp-intern-security-engineer-analytics-cloud-sap-665145645/" class="job-link" data-job-title="SAP iXp Intern - Security Engineer Analytics Cloud" data-job-company="SAP">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -457,7 +462,7 @@
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/sap-ixp-intern-security-engineer-analytics-cloud-at-sap-4402314001" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/sap-ixp-intern-security-engineer-analytics-cloud-at-sap-4402314001" data-job-title="SAP iXp Intern - Security Engineer Analytics Cloud" data-job-company="SAP" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -687,6 +692,11 @@
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -696,6 +706,42 @@
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->

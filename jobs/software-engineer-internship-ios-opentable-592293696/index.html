@@ -12,6 +12,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KR0TP0MMQ4');
+      window.hanzillaTrack = function(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params || {});
+        }
+      };
     </script>
     <!-- Theme & PWA hints -->
     <meta name="theme-color" content="#d97706">
@@ -423,7 +428,7 @@ We’re committed to creating a workplace where everyone feels they belong and c
     
 
     <div class="apply-section">
-        <a href="https://job-boards.greenhouse.io/opentable/jobs/8216629002?s=LinkedIn" class="btn-apply" target="_blank" rel="noopener" itemprop="url">
+        <a href="https://job-boards.greenhouse.io/opentable/jobs/8216629002?s=LinkedIn" class="btn-apply" target="_blank" rel="noopener" itemprop="url" data-job-title="Software Engineer Internship - iOS" data-job-company="OpenTable" data-job-location="Toronto, Ontario">
             Apply Now →
         </a>
         <p class="apply-note">Opens in a new tab on the company's website</p>
@@ -439,7 +444,7 @@ We’re committed to creating a workplace where everyone feels they belong and c
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-software-engineer-joveo-ai-671302567/" class="job-link">
+    <a href="/jobs/junior-software-engineer-joveo-ai-671302567/" class="job-link" data-job-title="Junior Software Engineer" data-job-company="Joveo AI">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -460,7 +465,7 @@ We’re committed to creating a workplace where everyone feels they belong and c
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4406839687" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4406839687" data-job-title="Junior Software Engineer" data-job-company="Joveo AI" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -472,7 +477,7 @@ We’re committed to creating a workplace where everyone feels they belong and c
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/rq10660-software-developer-junior-s-m-software-solutions-inc-671059630/" class="job-link">
+    <a href="/jobs/rq10660-software-developer-junior-s-m-software-solutions-inc-671059630/" class="job-link" data-job-title="RQ10660 - Software Developer - Junior" data-job-company="S M Software Solutions Inc">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -493,7 +498,7 @@ We’re committed to creating a workplace where everyone feels they belong and c
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/rq10660-software-developer-junior-at-s-m-software-solutions-inc-4406804905" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/rq10660-software-developer-junior-at-s-m-software-solutions-inc-4406804905" data-job-title="RQ10660 - Software Developer - Junior" data-job-company="S M Software Solutions Inc" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -505,7 +510,7 @@ We’re committed to creating a workplace where everyone feels they belong and c
             <li class="job-card "
     data-remote="true"
     data-hot="false">
-    <a href="/jobs/junior-software-engineer-joveo-ai-670460501/" class="job-link">
+    <a href="/jobs/junior-software-engineer-joveo-ai-670460501/" class="job-link" data-job-title="Junior Software Engineer" data-job-company="Joveo AI">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -526,7 +531,7 @@ We’re committed to creating a workplace where everyone feels they belong and c
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4406160985" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-joveo-ai-4406160985" data-job-title="Junior Software Engineer" data-job-company="Joveo AI" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -538,7 +543,7 @@ We’re committed to creating a workplace where everyone feels they belong and c
             <li class="job-card "
     data-remote="false"
     data-hot="false">
-    <a href="/jobs/junior-software-engineer-trulioo-670188411/" class="job-link">
+    <a href="/jobs/junior-software-engineer-trulioo-670188411/" class="job-link" data-job-title="Junior Software Engineer" data-job-company="Trulioo">
         <div class="job-card-header">
             <div class="job-badges">
                 
@@ -559,7 +564,7 @@ We’re committed to creating a workplace where everyone feels they belong and c
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-trulioo-4406123029" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/junior-software-engineer-at-trulioo-4406123029" data-job-title="Junior Software Engineer" data-job-company="Trulioo" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -571,7 +576,7 @@ We’re committed to creating a workplace where everyone feels they belong and c
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true">
-    <a href="/jobs/frontend-software-developer-jr-sundayy-669714567/" class="job-link">
+    <a href="/jobs/frontend-software-developer-jr-sundayy-669714567/" class="job-link" data-job-title="Frontend Software Developer, Jr." data-job-company="Sundayy">
         <div class="job-card-header">
             <div class="job-badges">
                 <span class="badge badge-hot">🔥 Hot</span>
@@ -592,7 +597,7 @@ We’re committed to creating a workplace where everyone feels they belong and c
     </a>
     <div class="job-card-actions">
         
-        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/frontend-software-developer-jr-at-sundayy-4405655220" onclick="copyApplyLink(this, event)" title="Copy apply link">
+        <button class="copy-link-btn" data-url="https://ca.linkedin.com/jobs/view/frontend-software-developer-jr-at-sundayy-4405655220" data-job-title="Frontend Software Developer, Jr." data-job-company="Sundayy" onclick="copyApplyLink(this, event)" title="Copy apply link">
             <span class="copy-icon">🔗</span> Copy Link
         </button>
         
@@ -693,6 +698,11 @@ We’re committed to creating a workplace where everyone feels they belong and c
         e.stopPropagation();
         e.preventDefault();
         var url = btn.getAttribute('data-url');
+        window.hanzillaTrack && window.hanzillaTrack('copy_apply_link', {
+            event_category: 'engagement',
+            event_label: btn.getAttribute('data-job-title') || url,
+            job_company: btn.getAttribute('data-job-company') || undefined
+        });
         navigator.clipboard.writeText(url).then(function() {
             btn.classList.add('copied');
             btn.innerHTML = '<span class="copy-icon">✓</span> Copied!';
@@ -702,6 +712,42 @@ We’re committed to creating a workplace where everyone feels they belong and c
             }, 2000);
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a.btn-apply').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('apply_click', {
+                    event_category: 'conversion',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined,
+                    job_location: link.getAttribute('data-job-location') || undefined,
+                    outbound_url: link.href
+                });
+            });
+        });
+
+        document.querySelectorAll('a.job-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.hanzillaTrack && window.hanzillaTrack('job_card_click', {
+                    event_category: 'engagement',
+                    event_label: link.getAttribute('data-job-title') || link.href,
+                    job_company: link.getAttribute('data-job-company') || undefined
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (link.hostname && link.hostname !== window.location.hostname) {
+                link.addEventListener('click', function() {
+                    window.hanzillaTrack && window.hanzillaTrack('outbound_click', {
+                        event_category: 'engagement',
+                        event_label: link.href,
+                        link_text: (link.textContent || '').trim().slice(0, 80)
+                    });
+                });
+            }
+        });
+    });
     </script>
     <script src="/js/tracker.js"></script>
     <!-- Email Collection Popup -->
