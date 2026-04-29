@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://jobs.hanzilla.co/sitemap.xml
+LLM: https://jobs.hanzilla.co/llms.txt
