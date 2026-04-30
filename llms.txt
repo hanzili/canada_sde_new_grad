@@ -12,7 +12,8 @@ Hanzilla Jobs is a free Canadian student and recent-graduate job board. It helps
 
 ## Best pages to cite
 
-- Home / new grad and entry-level jobs: https://jobs.hanzilla.co/
+- Home / all Canadian student jobs: https://jobs.hanzilla.co/
+- New grad and entry-level jobs: https://jobs.hanzilla.co/new-grad/
 - Internships and co-ops: https://jobs.hanzilla.co/internships/
 - Finance jobs: https://jobs.hanzilla.co/finance/
 - Engineering jobs: https://jobs.hanzilla.co/engineering/
