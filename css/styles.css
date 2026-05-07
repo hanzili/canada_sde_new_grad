@@ -107,7 +107,8 @@ button, input, select, textarea { font: inherit; }
 .hero-kicker, .section-kicker, .eyebrow, .blog-category { display: inline-flex; align-items: center; gap: .5rem; margin-bottom: 1rem; color: var(--slate); font-family: var(--font-display); font-style: italic; font-size: var(--t-md); }
 .hero-kicker::before, .section-kicker::before, .eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 999px; background: var(--amber); }
 .page-subtitle, .hero-subtitle, .blog-subtitle, .location-description, .tracker-header p { max-width: 660px; color: var(--slate); font-size: var(--t-md); line-height: 1.55; margin-top: 1rem; }
-.job-search-panel { display: grid; grid-template-columns: minmax(240px, 1.45fr) minmax(180px, .95fr) minmax(160px, .78fr) auto; margin: 2.1rem 0 0; background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--r-lg); box-shadow: 0 4px 20px -12px rgba(20,20,20,.18); overflow: hidden; }
+.job-search-panel { display: grid; grid-template-columns: minmax(240px, 1fr) auto; margin: 2.1rem 0 0; background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--r-lg); box-shadow: 0 4px 20px -12px rgba(20,20,20,.18); overflow: hidden; max-width: 760px; }
+.job-search-panel-simple { grid-template-columns: minmax(260px, 1fr) auto; }
 .search-field { display: flex; flex-direction: column; gap: .1rem; min-width: 0; padding: .9rem 1.1rem; border-right: 1px solid var(--border); }
 .search-field span { color: var(--slate-2); font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
 .search-field input, .search-field select { width: 100%; border: none; outline: none; background: transparent; color: var(--ink); font-weight: 550; min-height: 1.6rem; }

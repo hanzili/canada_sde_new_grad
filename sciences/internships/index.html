@@ -296,40 +296,20 @@
         <p class="hero-kicker">Daily-updated Canadian student jobs</p>
         <h1>2026 Canadian Sciences Internships</h1>
         <p class="page-subtitle">Search 34 positions from company career pages across internships, co-ops, new grad, junior, and entry-level roles.</p>
-        <form class="job-search-panel" role="search" aria-label="Filter jobs on this page" data-job-search-form>
+        <form class="job-search-panel job-search-panel-simple" role="search" aria-label="Search jobs on this page" data-job-search-form>
             <label class="search-field search-field-keyword">
-                <span>Search this page</span>
-                <input type="search" name="keyword" placeholder="Title, company, skill…" autocomplete="off" data-job-search-input>
+                <span>Search jobs</span>
+                <input type="search" name="keyword" placeholder="Try software, RBC, data, Toronto…" autocomplete="off" data-job-search-input>
             </label>
-            <label class="search-field">
-                <span>Location</span>
-                <input type="search" name="location" placeholder="Toronto, Vancouver, remote…" autocomplete="off" data-job-location-input>
-            </label>
-            <label class="search-field search-field-select">
-                <span>Work mode</span>
-                <select name="work_mode" data-job-work-mode-input>
-                    <option value="">Any mode</option>
-                    <option value="remote">Remote</option>
-                    <option value="hybrid">Hybrid</option>
-                    <option value="onsite">On-site</option>
-                </select>
-            </label>
-            <button class="hero-cta hero-cta-primary search-submit" type="submit">Filter jobs</button>
+            <button class="hero-cta hero-cta-primary search-submit" type="submit">Search</button>
         </form>
         <div class="search-feedback" data-job-search-feedback aria-live="polite"></div>
         <div class="stage-switcher" aria-label="Choose job stage">
-            <span class="stage-switcher-label">I’m looking for</span>
+            <span class="stage-switcher-label">Stage</span>
             <a class="stage-tab " href="/sciences/">New grad / junior</a>
             <a class="stage-tab active" href="/sciences/internships/">Internships / co-ops</a>
         </div>
-        <p class="search-scope-note">Search filters the jobs loaded on this page. Use the stage links above to switch between full-time new grad roles and internships.</p>
-        <div class="landing-hero-actions quick-filters" aria-label="Popular job searches" data-search-static>
-            <a class="hero-cta" href="/locations/toronto/">Toronto</a>
-            <a class="hero-cta" href="/locations/vancouver/">Vancouver</a>
-            <a class="hero-cta" href="/locations/remote/">Remote Canada</a>
-            <a class="hero-cta" href="/finance/">Finance</a>
-            <a class="hero-cta" href="/engineering/">Engineering</a>
-        </div>
+        <p class="search-scope-note">One search box filters the jobs already loaded on this page. For city or field pages, use the browse sections below.</p>
         <div class="landing-proof-points" aria-label="Why students use Hanzilla" data-search-static>
             <span><strong>Updated daily</strong> fresh roles stay visible</span>
             <span><strong>Direct apply</strong> links to company career pages</span>
@@ -384,48 +364,9 @@
 
     
 
-    <!-- SEO intro content -->
-    <div class="intro-content" data-search-static>
-        
-        <p>Welcome to Canada's daily-updated directory of <strong>internships and co-op positions</strong> for 2026. Browse student opportunities across tech, finance, engineering, business, sciences, and more from Canadian companies, banks, startups, labs, public organizations, and firms across Toronto, Vancouver, Montreal, Ottawa, Waterloo, Calgary, and remote Canada.</p>
-        
-    </div>
-
-    
-    <section class="seo-content-block" data-search-static>
-        <h2>How to use this sciences jobs board</h2>
-        <p>This daily-updated page is built for Canadian students and recent grads searching for sciences internships and co-op roles: biology, biotech, lab, chemistry, environmental science, geoscience, clinical research, and science operations roles. Hanzilla gives science students a dedicated path for lab, research, environmental, biotech, quality, and field roles that are usually buried across university boards and employer career pages.</p>
-        <ul class="seo-content-list">
-            
-            <li>Use this page for Canadian science internships, lab assistant roles, research technician openings, biotech jobs, environmental field roles, geoscience roles, chemistry positions, and quality-assurance jobs.</li>
-            
-            <li>Browse student and new-grad opportunities across universities, hospitals, labs, biotech companies, environmental consultancies, mining/geoscience employers, and public agencies.</li>
-            
-            <li>Check posting dates, required lab/field skills, location, and work authorization before applying because science roles often have specific credential or site requirements.</li>
-            
-            <li>Current listings include active openings from employers such as Teck Resources Limited, Finning, Suncor, Ontario Power Generation, targetjobs UK when those roles are available.</li>
-            
-            <li>Check back daily: stale or closed jobs are removed from listings so the board stays useful for real applications.</li>
-            
-        </ul>
-        <p class="seo-content-links">
-            Start with <a href="/locations/toronto/">Toronto jobs</a>,
-            <a href="/locations/vancouver/">Vancouver jobs</a>,
-            <a href="/locations/montreal/">Montreal jobs</a>,
-            <a href="/locations/waterloo/">Waterloo jobs</a>, or
-            <a href="/locations/remote/">remote Canada jobs</a>.
-        </p>
-    </section>
-    
-
-    <div class="emoji-legend" data-search-static>
-        <div class="legend-item"><span class="emoji">🔥</span> Strong fit - fresh, selective, or high-signal student opportunity</div>
-        <div class="legend-item"><span class="emoji">💤</span> Review carefully - role may be less relevant, older, or less student-focused</div>
-    </div>
-
     <div class="job-search-empty" data-job-search-empty hidden>
         <strong>No matches on this page.</strong>
-        <span>Try a broader keyword, clear location, or switch between New grad and Internships above.</span>
+        <span>Try a broader keyword or switch between New grad and Internships above.</span>
     </div>
 
     <nav class="category-nav" data-search-static>
@@ -2235,8 +2176,6 @@
         var searchForm = document.querySelector('[data-job-search-form]');
         if (searchForm) {
             var keywordInput = searchForm.querySelector('[data-job-search-input]');
-            var locationInput = searchForm.querySelector('[data-job-location-input]');
-            var workModeInput = searchForm.querySelector('[data-job-work-mode-input]');
             var feedback = document.querySelector('[data-job-search-feedback]');
             var emptyState = document.querySelector('[data-job-search-empty]');
             var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
@@ -2245,32 +2184,16 @@
             var normalize = function(value) {
                 return (value || '').toString().toLowerCase().trim();
             };
-            var matchesWorkMode = function(card, modeValue) {
-                if (!modeValue) return true;
-                var text = normalize(card.getAttribute('data-search-text') || card.textContent);
-                var location = normalize(card.getAttribute('data-location'));
-                var isRemote = card.getAttribute('data-remote') === 'true' || text.indexOf('remote') !== -1 || location.indexOf('remote') !== -1;
-                var isHybrid = card.getAttribute('data-hybrid') === 'true' || text.indexOf('hybrid') !== -1 || location.indexOf('hybrid') !== -1;
-                if (modeValue === 'remote') return isRemote;
-                if (modeValue === 'hybrid') return isHybrid;
-                if (modeValue === 'onsite') return !isRemote && !isHybrid;
-                return true;
-            };
             var applySearch = function() {
                 var keyword = normalize(keywordInput && keywordInput.value);
-                var location = normalize(locationInput && locationInput.value);
-                var workMode = normalize(workModeInput && workModeInput.value);
                 var visibleCount = 0;
                 jobCards.forEach(function(card) {
                     var text = normalize(card.getAttribute('data-search-text') || card.textContent);
-                    var cardLocation = normalize(card.getAttribute('data-location'));
-                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
-                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
-                        matchesWorkMode(card, workMode);
+                    var visible = !keyword || text.indexOf(keyword) !== -1;
                     card.hidden = !visible;
                     if (visible) visibleCount += 1;
                 });
-                var hasFilter = keyword || location || workMode;
+                var hasFilter = !!keyword;
                 categorySections.forEach(function(section) {
                     var visibleInSection = Array.prototype.slice.call(section.querySelectorAll('.job-card')).filter(function(card) { return !card.hidden; }).length;
                     var sectionVisible = visibleInSection > 0;
@@ -2283,7 +2206,7 @@
                 staticSections.forEach(function(section) { section.hidden = !!hasFilter; });
                 document.body.classList.toggle('search-active', !!hasFilter);
                 if (feedback) {
-                    feedback.textContent = hasFilter ? ('Showing ' + visibleCount + ' of ' + jobCards.length + ' jobs matching filters on this page') : '';
+                    feedback.textContent = hasFilter ? ('Showing ' + visibleCount + ' of ' + jobCards.length + ' jobs matching “' + keyword + '”') : '';
                 }
                 if (emptyState) {
                     emptyState.hidden = !hasFilter || visibleCount > 0;
