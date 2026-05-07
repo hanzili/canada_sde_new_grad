@@ -108,12 +108,14 @@ button, input, select, textarea { font: inherit; }
 .hero-kicker::before, .section-kicker::before, .eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 999px; background: var(--amber); }
 .page-subtitle, .hero-subtitle, .blog-subtitle, .location-description, .tracker-header p { max-width: 660px; color: var(--slate); font-size: var(--t-md); line-height: 1.55; margin-top: 1rem; }
 .job-search-panel { display: grid; grid-template-columns: minmax(240px, 1fr) auto; margin: 2.1rem 0 0; background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--r-lg); box-shadow: 0 4px 20px -12px rgba(20,20,20,.18); overflow: hidden; max-width: 760px; }
-.job-search-panel-simple { grid-template-columns: minmax(260px, 1fr) auto; }
-.search-field { display: flex; flex-direction: column; gap: .1rem; min-width: 0; padding: .9rem 1.1rem; border-right: 1px solid var(--border); }
-.search-field span { color: var(--slate-2); font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
-.search-field input, .search-field select { width: 100%; border: none; outline: none; background: transparent; color: var(--ink); font-weight: 550; min-height: 1.6rem; }
+.job-search-panel-simple { grid-template-columns: minmax(260px, 1fr) auto; max-width: 720px; }
+.search-field { display: flex; align-items: center; gap: .75rem; min-width: 0; padding: .88rem 1.05rem; border-right: 1px solid var(--border); }
+.search-field svg { color: var(--slate-2); flex: 0 0 auto; }
+.field-stack { display: flex; flex-direction: column; min-width: 0; flex: 1; gap: .08rem; }
+.field-label, .search-field > span:not(.field-stack) { color: var(--slate-2); font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.search-field input, .search-field select { width: 100%; border: none; outline: none; background: transparent; color: var(--ink); font-weight: 550; min-height: 1.6rem; padding: 0; }
 .search-field input::placeholder { color: var(--muted); font-weight: 400; }
-.search-submit { border: 0; border-radius: 0; min-width: 140px; justify-content: center; }
+.search-submit { display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 0; min-width: 108px; padding: 0 1.15rem; background: var(--primary); color: #FDF8F0; font-weight: 650; cursor: pointer; }
 .search-feedback { min-height: 1.2rem; margin-top: .65rem; color: var(--slate); font-size: var(--t-sm); }
 .stage-switcher { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; margin-top: 1rem; }
 .stage-switcher-label { color: var(--slate-2); font-size: var(--t-sm); font-weight: 700; }
@@ -260,9 +262,12 @@ button, input, select, textarea { font: inherit; }
   .dropdown-menu { left: 0; right: auto; }
 }
 @media (max-width: 900px) {
-  .job-search-panel { grid-template-columns: 1fr; }
-  .search-field { border-right: 0; border-bottom: 1px solid var(--border); }
-  .search-submit { min-height: 3.2rem; }
+  .job-search-panel:not(.job-search-panel-simple) { grid-template-columns: 1fr; }
+  .job-search-panel:not(.job-search-panel-simple) .search-field { border-right: 0; border-bottom: 1px solid var(--border); }
+  .job-search-panel:not(.job-search-panel-simple) .search-submit { min-height: 3.2rem; }
+  .job-search-panel-simple { grid-template-columns: minmax(0, 1fr) auto; }
+  .job-search-panel-simple .search-field { border-right: 1px solid var(--border); border-bottom: 0; }
+  .job-search-panel-simple .search-submit { min-width: 88px; padding: 0 .85rem; min-height: auto; align-self: stretch; }
   .landing-why-grid, .landing-proof-points { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
@@ -291,4 +296,10 @@ button, input, select, textarea { font: inherit; }
   .job-card .job-card-actions { align-items: flex-start; }
   .category-title, .latest-jobs-header, .tracker-actions-bar, .tracker-job-header { align-items: flex-start; flex-direction: column; }
   .btn-apply, .btn-primary, .btn-secondary { width: 100%; }
+}
+@media (max-width: 380px) {
+  .nav-links a, .dropdown-trigger { padding: .35rem .42rem; font-size: .78rem; }
+  .nav-links { gap: .05rem; }
+  .job-search-panel-simple .search-submit { min-width: 76px; padding: 0 .65rem; }
+  .search-field { padding-left: .85rem; padding-right: .85rem; gap: .55rem; }
 }
