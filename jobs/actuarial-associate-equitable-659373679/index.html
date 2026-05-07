@@ -466,7 +466,12 @@ This position is open and we are excited to find the right person to join our te
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="actuarial student"
+    data-company="canada life"
+    data-location="london, ontario hybrid"
+    data-category="sci_actuarial"
+    data-search-text="actuarial student canada life london, ontario assist actuarial tasks, data analysis, and exam prep temporary full time  b7 4 months  b7 $49,020-$88,350 annually  b7 temporary sci_actuarial">
     <a href="/jobs/actuarial-student-canada-life-676883659/" class="job-link" data-job-title="Actuarial Student" data-job-company="Canada Life">
         <div class="job-card-header">
             <div class="job-badges">
@@ -499,7 +504,12 @@ This position is open and we are excited to find the right person to join our te
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="actuarial post-graduation intern"
+    data-company="canada life"
+    data-location="london, ontario hybrid"
+    data-category="sci_actuarial"
+    data-search-text="actuarial post-graduation intern canada life london, ontario execute entry-level actuarial tasks across domains temporary full time · 8-12 months · $49,020 - $88,350 · aug 31, 2026 sci_actuarial">
     <a href="/jobs/actuarial-post-graduation-intern-canada-life-676883658/" class="job-link" data-job-title="Actuarial Post-Graduation Intern" data-job-company="Canada Life">
         <div class="job-card-header">
             <div class="job-badges">
@@ -532,7 +542,12 @@ This position is open and we are excited to find the right person to join our te
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="actuarial intern (ech-on)"
+    data-company="caa club group"
+    data-location="vaughan, ontario"
+    data-category="sci_actuarial"
+    data-search-text="actuarial intern (ech-on) caa club group vaughan, ontario perform actuarial trend analysis and forecasting type: internship sci_actuarial">
     <a href="/jobs/actuarial-intern-ech-on-caa-club-group-676258270/" class="job-link" data-job-title="Actuarial Intern (ECH-ON)" data-job-company="CAA Club Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -565,7 +580,12 @@ This position is open and we are excited to find the right person to join our te
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="actuarial analyst co-op (atlantic region)"
+    data-company="telus health"
+    data-location="halifax, nova scotia"
+    data-category="sci_actuarial"
+    data-search-text="actuarial analyst co-op (atlantic region) telus health halifax, nova scotia support actuarial analysis and valuation reporting internship/co-op · may 4 - aug 21, 2026 · in-person sci_actuarial">
     <a href="/jobs/actuarial-analyst-co-op-atlantic-region-telus-health-673909084/" class="job-link" data-job-title="Actuarial Analyst Co-op (Atlantic Region)" data-job-company="TELUS Health">
         <div class="job-card-header">
             <div class="job-badges">
@@ -598,7 +618,12 @@ This position is open and we are excited to find the right person to join our te
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="actuarial student co-op program fall 2026 - life &amp; health"
+    data-company="partnerre"
+    data-location="toronto, ontario hybrid"
+    data-category="sci_actuarial"
+    data-search-text="actuarial student co-op program fall 2026 - life &amp; health partnerre toronto, ontario build actuarial models, analyze experience data internship · 4 months (extendable to 8) · cad 1125-1375/week · fall 2026 sci_actuarial">
     <a href="/jobs/actuarial-student-co-op-program-fall-2026-life-health-partnerre-671799825/" class="job-link" data-job-title="Actuarial Student Co-op Program Fall 2026 - Life &amp; Health" data-job-company="PartnerRe">
         <div class="job-card-header">
             <div class="job-badges">
@@ -729,6 +754,57 @@ This position is open and we are excited to find the right person to join our te
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

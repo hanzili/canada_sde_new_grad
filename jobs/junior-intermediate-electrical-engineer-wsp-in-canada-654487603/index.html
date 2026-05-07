@@ -482,7 +482,12 @@ At
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="3rd/4th year apprentice instrumentation technician"
+    data-company="strike group"
+    data-location="elkford, bc"
+    data-category="eng_electrical"
+    data-search-text="3rd/4th year apprentice instrumentation technician strike group elkford, bc assist instrumentation installation, calibration, and maintenance apprentice eng_electrical">
     <a href="/jobs/3rd-4th-year-apprentice-instrumentation-technician-strike-group-677141279/" class="job-link" data-job-title="3rd/4th Year Apprentice Instrumentation Technician" data-job-company="Strike Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -515,7 +520,12 @@ At
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="instrumentation and controls engineer in training (eit)"
+    data-company="wood plc"
+    data-location="calgary, ab"
+    data-category="eng_electrical"
+    data-search-text="instrumentation and controls engineer in training (eit) wood plc calgary, ab specify instrumentation, wire loops, support engineers onsite · full-time eng_electrical">
     <a href="/jobs/instrumentation-and-controls-engineer-in-training-eit-wood-plc-677104523/" class="job-link" data-job-title="Instrumentation and Controls Engineer in Training (EIT)" data-job-company="Wood PLC">
         <div class="job-card-header">
             <div class="job-badges">
@@ -548,7 +558,12 @@ At
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="instrumentation and controls engineer in training (eit)"
+    data-company="wood"
+    data-location="calgary, alberta"
+    data-category="eng_electrical"
+    data-search-text="instrumentation and controls engineer in training (eit) wood calgary, alberta specify instrumentation, develop datasheets, loop diagrams, support engineers full-time · permanent · competitive salary · onsite eng_electrical">
     <a href="/jobs/instrumentation-and-controls-engineer-in-training-eit-wood-677048917/" class="job-link" data-job-title="Instrumentation and Controls Engineer in Training (EIT)" data-job-company="Wood">
         <div class="job-card-header">
             <div class="job-badges">
@@ -581,7 +596,12 @@ At
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="trainee, engineering (power systems)"
+    data-company="aecon group inc."
+    data-location="toronto, ontario"
+    data-category="eng_electrical"
+    data-search-text="trainee, engineering (power systems) aecon group inc. toronto, ontario design hv power systems and support field surveys full-time · permanent · $60,000-$80,000 · n/a eng_electrical">
     <a href="/jobs/trainee-engineering-power-systems-aecon-group-inc-675635128/" class="job-link" data-job-title="Trainee, Engineering (Power Systems)" data-job-company="Aecon Group Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -614,7 +634,12 @@ At
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior electrical engineer"
+    data-company="parasol innovations"
+    data-location="greater montreal metropolitan area"
+    data-category="eng_electrical"
+    data-search-text="junior electrical engineer parasol innovations greater montreal metropolitan area assist with electrical system design and testing full-time · permanent · competitive salary · permanent eng_electrical">
     <a href="/jobs/junior-electrical-engineer-parasol-innovations-674189123/" class="job-link" data-job-title="Junior Electrical Engineer" data-job-company="Parasol Innovations">
         <div class="job-card-header">
             <div class="job-badges">
@@ -745,6 +770,57 @@ At
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

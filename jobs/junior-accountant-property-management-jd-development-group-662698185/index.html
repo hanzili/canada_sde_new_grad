@@ -441,7 +441,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="private equity fund administration - associate"
+    data-company="jpmorganchase"
+    data-location="toronto, on m2j 1r4"
+    data-category="finance_acct"
+    data-search-text="private equity fund administration - associate jpmorganchase toronto, on m2j 1r4 prepare and review fund navs and capital calls full-time finance_acct">
     <a href="/jobs/private-equity-fund-administration-associate-jpmorganchase-678278017/" class="job-link" data-job-title="Private Equity Fund Administration - Associate" data-job-company="JPMorganChase">
         <div class="job-card-header">
             <div class="job-badges">
@@ -474,7 +479,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="accounting associate"
+    data-company="ghy international"
+    data-location="winnipeg, mb r3b 3h8"
+    data-category="finance_acct"
+    data-search-text="accounting associate ghy international winnipeg, mb r3b 3h8 issue invoices and support billing operations daily full-time · n/a · n/a · n/a finance_acct">
     <a href="/jobs/accounting-associate-ghy-international-678128157/" class="job-link" data-job-title="Accounting Associate" data-job-company="GHY International">
         <div class="job-card-header">
             <div class="job-badges">
@@ -507,7 +517,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="jr. accountant - 028-2026"
+    data-company="fort mckay first nation"
+    data-location="fort mackay, ab"
+    data-category="finance_acct"
+    data-search-text="jr. accountant - 028-2026 fort mckay first nation fort mackay, ab assist senior accountant; perform month-end accounting tasks full-time finance_acct">
     <a href="/jobs/jr-accountant-028-2026-fort-mckay-first-nation-678128153/" class="job-link" data-job-title="Jr. Accountant - 028-2026" data-job-company="Fort McKay First Nation">
         <div class="job-card-header">
             <div class="job-badges">
@@ -540,7 +555,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="accounting associate - accounts payable"
+    data-company="imperial dade"
+    data-location="saint-laurent, qc hybrid"
+    data-category="finance_acct"
+    data-search-text="accounting associate - accounts payable imperial dade saint-laurent, qc process ap invoices, journal entries, assist close full-time · permanent · not disclosed · not disclosed finance_acct">
     <a href="/jobs/accounting-associate-accounts-payable-imperial-dade-678031749/" class="job-link" data-job-title="Accounting Associate - Accounts Payable" data-job-company="Imperial Dade">
         <div class="job-card-header">
             <div class="job-badges">
@@ -573,7 +593,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior accountant"
+    data-company="marathon mortgage corp."
+    data-location="greater toronto area hybrid"
+    data-category="finance_acct"
+    data-search-text="junior accountant marathon mortgage corp. greater toronto area coordinate funding, ap, and bank reconciliations full-time · permanent · $50-55k · n/a finance_acct">
     <a href="/jobs/junior-accountant-marathon-mortgage-corp-677902912/" class="job-link" data-job-title="Junior Accountant" data-job-company="Marathon Mortgage Corp.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -711,6 +736,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

@@ -463,7 +463,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="graduate teaching assistant- health data analytics course: health data and visualization"
+    data-company="university of british columbia"
+    data-location="vancouver, bc"
+    data-category="data_ml"
+    data-search-text="graduate teaching assistant- health data analytics course: health data and visualization university of british columbia vancouver, bc assist course instructor, grade assignments, support students part-time · 5-10h/wk · gta 1: $40.16/hr; gta 2: $38.65/hr · fall 2026 data_ml">
     <a href="/jobs/graduate-teaching-assistant-health-data-analytics-course-university-of-british-columbia-678243563/" class="job-link" data-job-title="Graduate Teaching Assistant- Health Data Analytics Course: Health Data and Visualization" data-job-company="University of British Columbia">
         <div class="job-card-header">
             <div class="job-badges">
@@ -496,7 +501,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="associate data developer, data/ai/ml"
+    data-company="priceline.com"
+    data-location="toronto, on hybrid"
+    data-category="data_ml"
+    data-search-text="associate data developer, data/ai/ml priceline.com toronto, on build and optimize data pipelines and models full-time · $85k-100k cad/yr data_ml">
     <a href="/jobs/associate-data-developer-data-ai-ml-priceline-com-678009052/" class="job-link" data-job-title="Associate Data Developer, Data/AI/ML" data-job-company="Priceline.com">
         <div class="job-card-header">
             <div class="job-badges">
@@ -529,7 +539,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="associate data developer, data/ai/ml"
+    data-company="priceline"
+    data-location="toronto, ontario hybrid"
+    data-category="data_ml"
+    data-search-text="associate data developer, data/ai/ml priceline toronto, ontario build data pipelines, test, and optimize data flows full-time · $85k-$100k cad data_ml">
     <a href="/jobs/associate-data-developer-data-ai-ml-priceline-677849137/" class="job-link" data-job-title="Associate Data Developer, Data/AI/ML" data-job-company="Priceline">
         <div class="job-card-header">
             <div class="job-badges">
@@ -562,7 +577,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="junior machine learning engineer"
+    data-company="bmo financial group"
+    data-location="toronto, on"
+    data-category="data_ml"
+    data-search-text="junior machine learning engineer bmo financial group toronto, on build and train ml models; deploy to production full-time · $67,200-$124,200/yr data_ml">
     <a href="/jobs/junior-machine-learning-engineer-bmo-financial-group-677784123/" class="job-link" data-job-title="Junior Machine Learning Engineer" data-job-company="BMO Financial Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -595,7 +615,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior machine learning engineer"
+    data-company="bmo"
+    data-location="toronto, ontario hybrid"
+    data-category="data_ml"
+    data-search-text="junior machine learning engineer bmo toronto, ontario build and deploy ml models and pipelines full-time · $67,200 - $124,200/yr data_ml">
     <a href="/jobs/junior-machine-learning-engineer-bmo-677741518/" class="job-link" data-job-title="Junior Machine Learning Engineer" data-job-company="BMO">
         <div class="job-card-header">
             <div class="job-badges">
@@ -736,6 +761,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

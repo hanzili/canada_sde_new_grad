@@ -274,19 +274,40 @@
     <header class="page-header landing-hero">
         <p class="hero-kicker">Daily-updated Canadian student jobs</p>
         <h1>2026 Canadian Sciences Jobs</h1>
-        <p class="page-subtitle">18 positions available for university students, new grads, interns, co-op candidates, and early-career job seekers.</p>
-        <div class="landing-hero-actions" aria-label="Start browsing jobs">
-            <a class="hero-cta hero-cta-primary" href="/new-grad/">Browse new grad jobs</a>
-            <a class="hero-cta hero-cta-primary" href="/internships/">Browse internships & co-ops</a>
+        <p class="page-subtitle">Search 18 positions from company career pages across internships, co-ops, new grad, junior, and entry-level roles.</p>
+        <form class="job-search-panel" role="search" aria-label="Filter visible Hanzilla jobs" data-job-search-form>
+            <label class="search-field search-field-keyword">
+                <span>Keyword</span>
+                <input type="search" name="keyword" placeholder="Title, company, skill…" autocomplete="off" data-job-search-input>
+            </label>
+            <label class="search-field">
+                <span>Location</span>
+                <input type="search" name="location" placeholder="Toronto, Vancouver, remote…" autocomplete="off" data-job-location-input>
+            </label>
+            <label class="search-field search-field-select">
+                <span>Role type</span>
+                <select name="role_type" data-job-type-input>
+                    <option value="">All roles</option>
+                    <option value="intern">Internships / co-ops</option>
+                    <option value="new grad junior entry-level">New grad / junior</option>
+                    <option value="remote">Remote</option>
+                </select>
+            </label>
+            <button class="hero-cta hero-cta-primary search-submit" type="submit">Search jobs</button>
+        </form>
+        <div class="search-feedback" data-job-search-feedback aria-live="polite"></div>
+        <div class="landing-hero-actions quick-filters" aria-label="Popular job searches">
+            <a class="hero-cta" href="/internships/">Internships & co-ops</a>
+            <a class="hero-cta" href="/new-grad/">New grad jobs</a>
             <a class="hero-cta" href="/locations/toronto/">Toronto</a>
             <a class="hero-cta" href="/locations/vancouver/">Vancouver</a>
             <a class="hero-cta" href="/finance/">Finance</a>
             <a class="hero-cta" href="/engineering/">Engineering</a>
         </div>
-        <div class="landing-proof-points">
-            <span>Across tech, finance, engineering, business, sciences + more</span>
-            <span>Fresh roles from company career pages</span>
-            <span>Built for Canadian university students</span>
+        <div class="landing-proof-points" aria-label="Why students use Hanzilla">
+            <span><strong>Updated daily</strong> fresh roles stay visible</span>
+            <span><strong>Direct apply</strong> links to company career pages</span>
+            <span><strong>Student-first</strong> Canada-specific filters</span>
         </div>
         
             
@@ -294,6 +315,46 @@
             
         
     </header>
+
+    
+    <section class="latest-jobs-strip" aria-labelledby="latest-jobs-title">
+        <div class="latest-jobs-header">
+            <div>
+                <p class="section-kicker">Hiring now</p>
+                <h2 id="latest-jobs-title">Fresh roles you can open today</h2>
+            </div>
+            <a href="#biology-biotech">Jump to all jobs</a>
+        </div>
+        <div class="latest-job-list">
+            
+            <a class="latest-job-row" href="/jobs/junior-technician-biologist-aquatic-wildlife-bba-consultants-677746210/">
+                <span class="latest-job-main"><strong>Junior Technician/Biologist, Aquatic Wildlife</strong><span>BBA Consultants</span></span>
+                <span class="latest-job-meta">Montreal, Quebec · May 05, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/junior-biologist-horizon-environment-corp-677743433/">
+                <span class="latest-job-main"><strong>Junior Biologist</strong><span>Horizon Environment Corp.</span></span>
+                <span class="latest-job-meta">Calgary, Alberta · May 05, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/junior-geologist-founders-metals-677320669/">
+                <span class="latest-job-main"><strong>Junior Geologist</strong><span>Founders Metals</span></span>
+                <span class="latest-job-meta">Vancouver, British Columbia · May 05, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/junior-biologist-horizon-environment-corp-677251527/">
+                <span class="latest-job-main"><strong>Junior Biologist</strong><span>Horizon Environment Corp.</span></span>
+                <span class="latest-job-meta">Calgary, Alberta · May 04, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/junior-geologist-golden-cariboo-resources-ltd-cse-gcc-otcqb-gccff-wkn-a0r2cq-677090985/">
+                <span class="latest-job-main"><strong>Junior Geologist</strong><span>Golden Cariboo Resources Ltd. (CSE: GCC | OTCQB: GCCFF | WKN: A0R2CQ | FSE: 3TZ)</span></span>
+                <span class="latest-job-meta">Vancouver, British Columbia · May 04, 2026</span>
+            </a>
+            
+        </div>
+    </section>
+    
 
     
 
@@ -387,7 +448,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior organic chemist"
+    data-company="oti lumionics inc."
+    data-location="mississauga, on"
+    data-category="sci_chemistry"
+    data-search-text="junior organic chemist oti lumionics inc. mississauga, on perform organic synthesis, purification, and analyses full-time · tbd · competitive salary · permanent sci_chemistry">
     <a href="/jobs/junior-organic-chemist-oti-lumionics-inc-673302836/" class="job-link" data-job-title="Junior Organic Chemist" data-job-company="OTI Lumionics Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -419,7 +485,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior organic chemist"
+    data-company="oti lumionics"
+    data-location="mississauga, ontario"
+    data-category="sci_chemistry"
+    data-search-text="junior organic chemist oti lumionics mississauga, ontario synthesize organic compounds, analyze products, report results full-time · n/a · n/a · n/a sci_chemistry">
     <a href="/jobs/junior-organic-chemist-oti-lumionics-673275888/" class="job-link" data-job-title="Junior Organic Chemist" data-job-company="OTI Lumionics">
         <div class="job-card-header">
             <div class="job-badges">
@@ -451,7 +522,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior construction materials lab technician"
+    data-company="wsp in canada"
+    data-location="mississauga, ontario hybrid"
+    data-category="sci_chemistry"
+    data-search-text="junior construction materials lab technician wsp in canada mississauga, ontario perform routine construction materials lab testing full-time · permanent · varied by region: 46,800–68,600 cad · permanent sci_chemistry">
     <a href="/jobs/junior-construction-materials-lab-technician-wsp-in-canada-669411891/" class="job-link" data-job-title="Junior Construction Materials Lab Technician" data-job-company="WSP in Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -483,7 +559,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="medical lab technologist (opseu lab), chemistry"
+    data-company="lifelabs medical laboratory services"
+    data-location="etobicoke, ontario"
+    data-category="sci_chemistry"
+    data-search-text="medical lab technologist (opseu lab), chemistry lifelabs medical laboratory services etobicoke, ontario perform diagnostic tests; prepare samples; ensure qa permanent · full-time · not disclosed · permanent sci_chemistry">
     <a href="/jobs/medical-lab-technologist-opseu-lab-chemistry-lifelabs-medical-laboratory-services-668310948/" class="job-link" data-job-title="Medical Lab Technologist (OPSEU LAB), Chemistry" data-job-company="LifeLabs Medical Laboratory Services">
         <div class="job-card-header">
             <div class="job-badges">
@@ -515,7 +596,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior construction material laboratory technician"
+    data-company="wsp in canada"
+    data-location="whitby, ontario hybrid"
+    data-category="sci_chemistry"
+    data-search-text="junior construction material laboratory technician wsp in canada whitby, ontario perform routine construction materials testing and logging results full-time · permanent · cad 41,400–60,200 · canada sci_chemistry">
     <a href="/jobs/junior-construction-material-laboratory-technician-wsp-in-canada-665958036/" class="job-link" data-job-title="Junior Construction Material Laboratory Technician" data-job-company="WSP in Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -558,7 +644,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior technician/biologist, aquatic wildlife"
+    data-company="bba consultants"
+    data-location="montreal, quebec hybrid"
+    data-category="sci_environmental"
+    data-search-text="junior technician/biologist, aquatic wildlife bba consultants montreal, quebec conduct field surveys, collect samples, write reports regular sci_environmental">
     <a href="/jobs/junior-technician-biologist-aquatic-wildlife-bba-consultants-677746210/" class="job-link" data-job-title="Junior Technician/Biologist, Aquatic Wildlife" data-job-company="BBA Consultants">
         <div class="job-card-header">
             <div class="job-badges">
@@ -590,7 +681,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior biologist"
+    data-company="horizon environment corp."
+    data-location="calgary, alberta"
+    data-category="sci_environmental"
+    data-search-text="junior biologist horizon environment corp. calgary, alberta conduct field assessments, collect data, prepare regulatory reports full-time · permanent · not disclosed · permanent – full time sci_environmental">
     <a href="/jobs/junior-biologist-horizon-environment-corp-677743433/" class="job-link" data-job-title="Junior Biologist" data-job-company="Horizon Environment Corp.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -622,7 +718,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior biologist"
+    data-company="horizon environment corp."
+    data-location="calgary, alberta"
+    data-category="sci_environmental"
+    data-search-text="junior biologist horizon environment corp. calgary, alberta conduct field assessments, prepare regulatory reports field-based full-time · permanent · competitive pay · permanent sci_environmental">
     <a href="/jobs/junior-biologist-horizon-environment-corp-677251527/" class="job-link" data-job-title="Junior Biologist" data-job-company="Horizon Environment Corp.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -654,7 +755,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="entry-level biologist"
+    data-company="aecom"
+    data-location="burnaby, bc hybrid"
+    data-category="sci_environmental"
+    data-search-text="entry-level biologist aecom burnaby, bc perform aquatic field sampling and data analysis full-time · permanent sci_environmental">
     <a href="/jobs/entry-level-biologist-aecom-675690123/" class="job-link" data-job-title="Entry-Level Biologist" data-job-company="AECOM">
         <div class="job-card-header">
             <div class="job-badges">
@@ -686,7 +792,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior vegetation ecologist"
+    data-company="stantec"
+    data-location="saskatoon, sk s7k 3h5 hybrid"
+    data-category="sci_environmental"
+    data-search-text="junior vegetation ecologist stantec saskatoon, sk s7k 3h5 collect field data, assess wetlands, write reports regular full-time · permanent · not disclosed · permanent sci_environmental">
     <a href="/jobs/junior-vegetation-ecologist-stantec-675138568/" class="job-link" data-job-title="Junior Vegetation Ecologist" data-job-company="Stantec">
         <div class="job-card-header">
             <div class="job-badges">
@@ -718,7 +829,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior quality assurance technician"
+    data-company="kalesnikoff lumber"
+    data-location="castlegar, bc"
+    data-category="sci_environmental"
+    data-search-text="junior quality assurance technician kalesnikoff lumber castlegar, bc perform quality testing and data entry daily full-time · unknown duration · $28.75–$31.70 per hour · ongoing sci_environmental">
     <a href="/jobs/junior-quality-assurance-technician-kalesnikoff-lumber-673298060/" class="job-link" data-job-title="Junior Quality Assurance Technician" data-job-company="Kalesnikoff Lumber">
         <div class="job-card-header">
             <div class="job-badges">
@@ -750,7 +866,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior biologist"
+    data-company="alberta conservation association"
+    data-location="cochrane, alberta"
+    data-category="sci_environmental"
+    data-search-text="junior biologist alberta conservation association cochrane, alberta monitor sites and coordinate habitat projects full-time sci_environmental">
     <a href="/jobs/junior-biologist-alberta-conservation-association-673191428/" class="job-link" data-job-title="Junior Biologist" data-job-company="Alberta Conservation Association">
         <div class="job-card-header">
             <div class="job-badges">
@@ -782,7 +903,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior biologist"
+    data-company="chartwell resource group ltd."
+    data-location="terrace, british columbia"
+    data-category="sci_environmental"
+    data-search-text="junior biologist chartwell resource group ltd. terrace, british columbia conduct wildlife surveys, monitor habitats, support reports full-time · n/a · competitive wage · permanent sci_environmental">
     <a href="/jobs/junior-biologist-chartwell-resource-group-ltd-672507798/" class="job-link" data-job-title="Junior Biologist" data-job-company="Chartwell Resource Group Ltd.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -814,7 +940,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior laboratory analyst (asbestos)"
+    data-company="paracel laboratories"
+    data-location="mississauga, on l5n 5m1"
+    data-category="sci_environmental"
+    data-search-text="junior laboratory analyst (asbestos) paracel laboratories mississauga, on l5n 5m1 perform asbestos analysis, qa/qc, data management full-time · permanent · $17.60-$20.40/hour · permanent sci_environmental">
     <a href="/jobs/junior-laboratory-analyst-asbestos-paracel-laboratories-669304150/" class="job-link" data-job-title="Junior Laboratory Analyst (Asbestos)" data-job-company="PARACEL LABORATORIES">
         <div class="job-card-header">
             <div class="job-badges">
@@ -846,7 +977,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior aquatic ecologist"
+    data-company="ghd"
+    data-location="toronto, ontario"
+    data-category="sci_environmental"
+    data-search-text="junior aquatic ecologist ghd toronto, ontario perform field aquatic surveys and data analysis full-time · permanent · $60,000-$62,000 · permanent sci_environmental">
     <a href="/jobs/junior-aquatic-ecologist-ghd-668723588/" class="job-link" data-job-title="Junior Aquatic Ecologist" data-job-company="GHD">
         <div class="job-card-header">
             <div class="job-badges">
@@ -889,7 +1025,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior geologist"
+    data-company="founders metals"
+    data-location="vancouver, british columbia"
+    data-category="sci_geoscience"
+    data-search-text="junior geologist founders metals vancouver, british columbia georeference data, map, log cores, support drills full-time · permanent sci_geoscience">
     <a href="/jobs/junior-geologist-founders-metals-677320669/" class="job-link" data-job-title="Junior Geologist" data-job-company="Founders Metals">
         <div class="job-card-header">
             <div class="job-badges">
@@ -921,7 +1062,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior geologist"
+    data-company="golden cariboo resources ltd. (cse: gcc | otcqb: gccff | wkn: a0r2cq | fse: 3tz)"
+    data-location="vancouver, british columbia"
+    data-category="sci_geoscience"
+    data-search-text="junior geologist golden cariboo resources ltd. (cse: gcc | otcqb: gccff | wkn: a0r2cq | fse: 3tz) vancouver, british columbia assist core logging, field mapping, data management full-time · permanent · day rate $350/day · rotations tbd sci_geoscience">
     <a href="/jobs/junior-geologist-golden-cariboo-resources-ltd-cse-gcc-otcqb-gccff-wkn-a0r2cq-677090985/" class="job-link" data-job-title="Junior Geologist" data-job-company="Golden Cariboo Resources Ltd. (CSE: GCC | OTCQB: GCCFF | WKN: A0R2CQ | FSE: 3TZ)">
         <div class="job-card-header">
             <div class="job-badges">
@@ -953,7 +1099,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="exp26-05 junior exploration geologist"
+    data-company="canadian royalties inc"
+    data-location="salluit, qc"
+    data-category="sci_geoscience"
+    data-search-text="exp26-05 junior exploration geologist canadian royalties inc salluit, qc perform field exploration, core logging, data analysis temporary long term · n/a · competitive salary · n/a sci_geoscience">
     <a href="/jobs/exp26-05-junior-exploration-geologist-canadian-royalties-inc-674142107/" class="job-link" data-job-title="EXP26-05 Junior Exploration Geologist" data-job-company="Canadian Royalties inc">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1220,6 +1371,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

@@ -458,7 +458,12 @@ Leah McCallum</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior organic chemist"
+    data-company="oti lumionics inc."
+    data-location="mississauga, on"
+    data-category="sci_chemistry"
+    data-search-text="junior organic chemist oti lumionics inc. mississauga, on perform organic synthesis, purification, and analyses full-time · tbd · competitive salary · permanent sci_chemistry">
     <a href="/jobs/junior-organic-chemist-oti-lumionics-inc-673302836/" class="job-link" data-job-title="Junior Organic Chemist" data-job-company="OTI Lumionics Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -491,7 +496,12 @@ Leah McCallum</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior organic chemist"
+    data-company="oti lumionics"
+    data-location="mississauga, ontario"
+    data-category="sci_chemistry"
+    data-search-text="junior organic chemist oti lumionics mississauga, ontario synthesize organic compounds, analyze products, report results full-time · n/a · n/a · n/a sci_chemistry">
     <a href="/jobs/junior-organic-chemist-oti-lumionics-673275888/" class="job-link" data-job-title="Junior Organic Chemist" data-job-company="OTI Lumionics">
         <div class="job-card-header">
             <div class="job-badges">
@@ -524,7 +534,12 @@ Leah McCallum</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior construction materials lab technician"
+    data-company="wsp in canada"
+    data-location="mississauga, ontario hybrid"
+    data-category="sci_chemistry"
+    data-search-text="junior construction materials lab technician wsp in canada mississauga, ontario perform routine construction materials lab testing full-time · permanent · varied by region: 46,800–68,600 cad · permanent sci_chemistry">
     <a href="/jobs/junior-construction-materials-lab-technician-wsp-in-canada-669411891/" class="job-link" data-job-title="Junior Construction Materials Lab Technician" data-job-company="WSP in Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -557,7 +572,12 @@ Leah McCallum</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="medical lab technologist (opseu lab), chemistry"
+    data-company="lifelabs medical laboratory services"
+    data-location="etobicoke, ontario"
+    data-category="sci_chemistry"
+    data-search-text="medical lab technologist (opseu lab), chemistry lifelabs medical laboratory services etobicoke, ontario perform diagnostic tests; prepare samples; ensure qa permanent · full-time · not disclosed · permanent sci_chemistry">
     <a href="/jobs/medical-lab-technologist-opseu-lab-chemistry-lifelabs-medical-laboratory-services-668310948/" class="job-link" data-job-title="Medical Lab Technologist (OPSEU LAB), Chemistry" data-job-company="LifeLabs Medical Laboratory Services">
         <div class="job-card-header">
             <div class="job-badges">
@@ -590,7 +610,12 @@ Leah McCallum</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior construction material laboratory technician"
+    data-company="wsp in canada"
+    data-location="whitby, ontario hybrid"
+    data-category="sci_chemistry"
+    data-search-text="junior construction material laboratory technician wsp in canada whitby, ontario perform routine construction materials testing and logging results full-time · permanent · cad 41,400–60,200 · canada sci_chemistry">
     <a href="/jobs/junior-construction-material-laboratory-technician-wsp-in-canada-665958036/" class="job-link" data-job-title="Junior Construction Material Laboratory Technician" data-job-company="WSP in Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -722,6 +747,57 @@ Leah McCallum</p>
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

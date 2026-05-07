@@ -456,7 +456,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior buyer"
+    data-company="cementation americas"
+    data-location="north bay, ontario"
+    data-category="biz_supply_chain"
+    data-search-text="junior buyer cementation americas north bay, ontario source goods, issue pos, manage supplier relations full-time, permanent · 40 hours/week · $63,000-$73,000 · permanent biz_supply_chain">
     <a href="/jobs/junior-buyer-cementation-americas-677740660/" class="job-link" data-job-title="Junior Buyer" data-job-company="Cementation Americas">
         <div class="job-card-header">
             <div class="job-badges">
@@ -489,7 +494,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior buyer/purchaser"
+    data-company="imp aerospace &amp; defence"
+    data-location="hammonds plains, nova scotia"
+    data-category="biz_supply_chain"
+    data-search-text="junior buyer/purchaser imp aerospace &amp; defence hammonds plains, nova scotia source parts, issue pos, manage suppliers full-time · permanent · competitive pay · ongoing biz_supply_chain">
     <a href="/jobs/junior-buyer-purchaser-imp-aerospace-defence-677667322/" class="job-link" data-job-title="Junior Buyer/Purchaser" data-job-company="IMP Aerospace &amp; Defence">
         <div class="job-card-header">
             <div class="job-badges">
@@ -522,7 +532,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="jr. purchasing agent"
+    data-company="jatec"
+    data-location="edmonton, ab t6b 2j8"
+    data-category="biz_supply_chain"
+    data-search-text="jr. purchasing agent jatec edmonton, ab t6b 2j8 process pos, track orders, coordinate suppliers full-time · permanent · competitive wages · biz_supply_chain">
     <a href="/jobs/jr-purchasing-agent-jatec-677353555/" class="job-link" data-job-title="Jr. Purchasing Agent" data-job-company="JATEC">
         <div class="job-card-header">
             <div class="job-badges">
@@ -555,7 +570,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior buyer (1 year contract)"
+    data-company="hörmann north america"
+    data-location="oro-medonte, ontario"
+    data-category="biz_supply_chain"
+    data-search-text="junior buyer (1 year contract) hörmann north america oro-medonte, ontario procure materials, manage supplier relations in sap contract · 12 months · tbd · n/a biz_supply_chain">
     <a href="/jobs/junior-buyer-1-year-contract-hormann-north-america-675930757/" class="job-link" data-job-title="Junior Buyer (1 year contract)" data-job-company="Hörmann North America">
         <div class="job-card-header">
             <div class="job-badges">
@@ -588,7 +608,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior buyer"
+    data-company="calian group"
+    data-location="ottawa, ontario"
+    data-category="biz_supply_chain"
+    data-search-text="junior buyer calian group ottawa, ontario place pos in sap; manage supplier relations full-time · permanent · competitive salary · on-site biz_supply_chain">
     <a href="/jobs/junior-buyer-calian-group-675853628/" class="job-link" data-job-title="Junior Buyer" data-job-company="Calian Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -730,6 +755,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

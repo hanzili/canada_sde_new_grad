@@ -492,7 +492,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="data &amp; ai intern"
+    data-company="milestone technologies"
+    data-location="remote"
+    data-category="data_ml"
+    data-search-text="data &amp; ai intern milestone technologies remote assist ai development, data handling, and demos intern · $16-18 usd/hr data_ml">
     <a href="/jobs/data-ai-intern-milestone-technologies-673202246/" class="job-link" data-job-title="Data &amp; AI Intern" data-job-company="Milestone Technologies">
         <div class="job-card-header">
             <div class="job-badges">
@@ -535,7 +540,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior software developer - mobile"
+    data-company="autoverify"
+    data-location="remote"
+    data-category="mobile"
+    data-search-text="junior software developer - mobile autoverify remote build android features, test, review, document full-time · $55,000-75,000/year mobile">
     <a href="/jobs/junior-software-developer-mobile-autoverify-674893105/" class="job-link" data-job-title="Junior Software Developer - Mobile" data-job-company="AutoVerify">
         <div class="job-card-header">
             <div class="job-badges">
@@ -578,7 +588,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior financial analyst"
+    data-company="ratehub"
+    data-location="remote hybrid"
+    data-category="finance_acct"
+    data-search-text="junior financial analyst ratehub remote maintain journals, reconcile data, support month-end close full-time · permanent · $50,000-$65,000 · n/a finance_acct">
     <a href="/jobs/junior-financial-analyst-ratehub-677267136/" class="job-link" data-job-title="Junior Financial Analyst" data-job-company="RateHub">
         <div class="job-card-header">
             <div class="job-badges">
@@ -621,7 +636,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="marketing assistant intern (full-time, remote)"
+    data-company="stellargrade"
+    data-location="remote"
+    data-category="biz_marketing"
+    data-search-text="marketing assistant intern (full-time, remote) stellargrade remote create content, manage social media campaigns internship · 3–6 months biz_marketing">
     <a href="/jobs/marketing-assistant-intern-full-time-remote-stellargrade-669098738/" class="job-link" data-job-title="Marketing Assistant Intern (Full-Time, Remote)" data-job-company="StellarGrade">
         <div class="job-card-header">
             <div class="job-badges">
@@ -664,7 +684,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior (jr.) business analyst (canada summer jobs 2026)"
+    data-company="simplycast"
+    data-location="remote"
+    data-category="biz_analyst"
+    data-search-text="junior (jr.) business analyst (canada summer jobs 2026) simplycast remote assist in requirements gathering and documentation type: canada summer jobs 2026 · duration: jun 2–jul 28, 2026 · pay: n/a · term: summer 2026 biz_analyst">
     <a href="/jobs/junior-jr-business-analyst-canada-summer-jobs-2026-simplycast-670745673/" class="job-link" data-job-title="Junior (Jr.) Business Analyst (Canada Summer Jobs 2026)" data-job-company="SimplyCast">
         <div class="job-card-header">
             <div class="job-badges">
@@ -966,6 +991,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

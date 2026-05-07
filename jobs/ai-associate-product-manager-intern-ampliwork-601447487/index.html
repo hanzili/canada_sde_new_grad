@@ -442,7 +442,12 @@ Resume + Transcript + Product Portfolio</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="associate, ai &amp; innovation strategy"
+    data-company="push media"
+    data-location="toronto, ontario hybrid"
+    data-category="pm_tpm"
+    data-search-text="associate, ai &amp; innovation strategy push media toronto, ontario own end-to-end execution across ai, strategy, ops. full-time pm_tpm">
     <a href="/jobs/associate-ai-innovation-strategy-push-media-678015334/" class="job-link" data-job-title="Associate, AI &amp; Innovation Strategy" data-job-company="PUSH Media">
         <div class="job-card-header">
             <div class="job-badges">
@@ -475,7 +480,12 @@ Resume + Transcript + Product Portfolio</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="ai program enablement, fall 2026 - toronto (co-op/internship) - 4 months"
+    data-company="quadreal"
+    data-location="toronto, on"
+    data-category="pm_tpm"
+    data-search-text="ai program enablement, fall 2026 - toronto (co-op/internship) - 4 months quadreal toronto, on plan workshops, analyze needs, build small automation tools co-op · 4mo · $28/hr · fall 2026 pm_tpm">
     <a href="/jobs/ai-program-enablement-fall-2026-toronto-co-op-internship-4-quadreal-677394802/" class="job-link" data-job-title="AI Program Enablement, Fall 2026 - Toronto (Co-op/Internship) - 4 Months" data-job-company="QuadReal">
         <div class="job-card-header">
             <div class="job-badges">
@@ -508,7 +518,12 @@ Resume + Transcript + Product Portfolio</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="product manager intern– 4-month internship/co-op (fall 2026)"
+    data-company="intact"
+    data-location="montréal, qc"
+    data-category="pm_tpm"
+    data-search-text="product manager intern– 4-month internship/co-op (fall 2026) intact montréal, qc create product docs, onboarding guides, and training intern · 4mo · $57k-$71k/yr · fall 2026 pm_tpm">
     <a href="/jobs/product-manager-intern-4-month-internship-co-op-fall-2026-intact-677256028/" class="job-link" data-job-title="Product Manager Intern– 4-month Internship/Co-op (Fall 2026)" data-job-company="Intact">
         <div class="job-card-header">
             <div class="job-badges">
@@ -541,7 +556,12 @@ Resume + Transcript + Product Portfolio</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="associate product manager - co-op student"
+    data-company="loblaw digital"
+    data-location="toronto, ontario hybrid"
+    data-category="pm_tpm"
+    data-search-text="associate product manager - co-op student loblaw digital toronto, ontario assist backlog grooming, roadmap prioritization, and analytics decisions co-op · 4mo · $35,100.00 - $65,700.00 / yr · fall 2026 pm_tpm">
     <a href="/jobs/associate-product-manager-co-op-student-loblaw-digital-676863271/" class="job-link" data-job-title="Associate Product Manager - Co-op Student" data-job-company="Loblaw Digital">
         <div class="job-card-header">
             <div class="job-badges">
@@ -574,7 +594,12 @@ Resume + Transcript + Product Portfolio</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="associate product manager - co-op student"
+    data-company="loblaw"
+    data-location="toronto, on m5v 2v9 hybrid"
+    data-category="pm_tpm"
+    data-search-text="associate product manager - co-op student loblaw toronto, on m5v 2v9 assist pm, shape roadmap, write user stories, prioritize co-op · 4mo · $35,100 - $65,700/yr · fall 2026 pm_tpm">
     <a href="/jobs/associate-product-manager-co-op-student-loblaw-676821320/" class="job-link" data-job-title="Associate Product Manager - Co-op Student" data-job-company="Loblaw">
         <div class="job-card-header">
             <div class="job-badges">
@@ -705,6 +730,57 @@ Resume + Transcript + Product Portfolio</p>
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

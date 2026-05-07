@@ -429,7 +429,12 @@ We are seeking a motivated and detail-oriented Intern Project Coordinator to sup
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior program coordinator"
+    data-company="collabera"
+    data-location="mississauga, ontario hybrid"
+    data-category="biz_pm"
+    data-search-text="junior program coordinator collabera mississauga, ontario coordinate program logistics, materials, and admin tasks contract · hourly · $18–$19/hr ·  biz_pm">
     <a href="/jobs/junior-program-coordinator-collabera-677703793/" class="job-link" data-job-title="Junior Program Coordinator" data-job-company="Collabera">
         <div class="job-card-header">
             <div class="job-badges">
@@ -462,7 +467,12 @@ We are seeking a motivated and detail-oriented Intern Project Coordinator to sup
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="chargé(e) de projets - formation accélérée / trainee project coordinator"
+    data-company="guillevin"
+    data-location="gatineau, qc"
+    data-category="biz_pm"
+    data-search-text="chargé(e) de projets - formation accélérée / trainee project coordinator guillevin gatineau, qc coordinate projects, manage timelines, clients and suppliers full-time · permanent · competitive pay · ongoing biz_pm">
     <a href="/jobs/charge-e-de-projets-formation-acceleree-trainee-project-guillevin-675758870/" class="job-link" data-job-title="Chargé(e) de projets - Formation accélérée / Trainee Project Coordinator" data-job-company="Guillevin">
         <div class="job-card-header">
             <div class="job-badges">
@@ -495,7 +505,12 @@ We are seeking a motivated and detail-oriented Intern Project Coordinator to sup
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior estimator / project manager assistant"
+    data-company="paul davis restoration of the national capital region, va"
+    data-location="sudbury, ontario"
+    data-category="biz_pm"
+    data-search-text="junior estimator / project manager assistant paul davis restoration of the national capital region, va sudbury, ontario assist estimates, coordinate projects, support clients full-time · permanent · $50k-$65k per year · n/a biz_pm">
     <a href="/jobs/junior-estimator-project-manager-assistant-paul-davis-restoration-of-the-national-capital-region-va-674189103/" class="job-link" data-job-title="Junior Estimator / Project Manager Assistant" data-job-company="Paul Davis Restoration of the National Capital Region, VA">
         <div class="job-card-header">
             <div class="job-badges">
@@ -528,7 +543,12 @@ We are seeking a motivated and detail-oriented Intern Project Coordinator to sup
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior engineering project coordinator"
+    data-company="hydra dyne technology inc"
+    data-location="ingersoll, on"
+    data-category="biz_pm"
+    data-search-text="junior engineering project coordinator hydra dyne technology inc ingersoll, on coordinate projects, manage docs, track progress full-time biz_pm">
     <a href="/jobs/junior-engineering-project-coordinator-hydra-dyne-technology-inc-674144645/" class="job-link" data-job-title="Junior Engineering Project Coordinator" data-job-company="Hydra Dyne Technology Inc">
         <div class="job-card-header">
             <div class="job-badges">
@@ -561,7 +581,12 @@ We are seeking a motivated and detail-oriented Intern Project Coordinator to sup
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="project coordinator / junior quotes"
+    data-company="guillevin"
+    data-location="burnaby, bc v5c 5v1"
+    data-category="biz_pm"
+    data-search-text="project coordinator / junior quotes guillevin burnaby, bc v5c 5v1 coordinate projects and manage procurement to meet deliverables type: regular, full-time · duration: permanent · pay: competitive biz_pm">
     <a href="/jobs/project-coordinator-junior-quotes-guillevin-674080925/" class="job-link" data-job-title="Project Coordinator / Junior Quotes" data-job-company="Guillevin">
         <div class="job-card-header">
             <div class="job-badges">
@@ -692,6 +717,57 @@ We are seeking a motivated and detail-oriented Intern Project Coordinator to sup
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

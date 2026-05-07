@@ -274,19 +274,40 @@
     <header class="page-header landing-hero">
         <p class="hero-kicker">Daily-updated Canadian student jobs</p>
         <h1>2026 Canadian Business Jobs</h1>
-        <p class="page-subtitle">92 positions available for university students, new grads, interns, co-op candidates, and early-career job seekers.</p>
-        <div class="landing-hero-actions" aria-label="Start browsing jobs">
-            <a class="hero-cta hero-cta-primary" href="/new-grad/">Browse new grad jobs</a>
-            <a class="hero-cta hero-cta-primary" href="/internships/">Browse internships & co-ops</a>
+        <p class="page-subtitle">Search 92 positions from company career pages across internships, co-ops, new grad, junior, and entry-level roles.</p>
+        <form class="job-search-panel" role="search" aria-label="Filter visible Hanzilla jobs" data-job-search-form>
+            <label class="search-field search-field-keyword">
+                <span>Keyword</span>
+                <input type="search" name="keyword" placeholder="Title, company, skill…" autocomplete="off" data-job-search-input>
+            </label>
+            <label class="search-field">
+                <span>Location</span>
+                <input type="search" name="location" placeholder="Toronto, Vancouver, remote…" autocomplete="off" data-job-location-input>
+            </label>
+            <label class="search-field search-field-select">
+                <span>Role type</span>
+                <select name="role_type" data-job-type-input>
+                    <option value="">All roles</option>
+                    <option value="intern">Internships / co-ops</option>
+                    <option value="new grad junior entry-level">New grad / junior</option>
+                    <option value="remote">Remote</option>
+                </select>
+            </label>
+            <button class="hero-cta hero-cta-primary search-submit" type="submit">Search jobs</button>
+        </form>
+        <div class="search-feedback" data-job-search-feedback aria-live="polite"></div>
+        <div class="landing-hero-actions quick-filters" aria-label="Popular job searches">
+            <a class="hero-cta" href="/internships/">Internships & co-ops</a>
+            <a class="hero-cta" href="/new-grad/">New grad jobs</a>
             <a class="hero-cta" href="/locations/toronto/">Toronto</a>
             <a class="hero-cta" href="/locations/vancouver/">Vancouver</a>
             <a class="hero-cta" href="/finance/">Finance</a>
             <a class="hero-cta" href="/engineering/">Engineering</a>
         </div>
-        <div class="landing-proof-points">
-            <span>Across tech, finance, engineering, business, sciences + more</span>
-            <span>Fresh roles from company career pages</span>
-            <span>Built for Canadian university students</span>
+        <div class="landing-proof-points" aria-label="Why students use Hanzilla">
+            <span><strong>Updated daily</strong> fresh roles stay visible</span>
+            <span><strong>Direct apply</strong> links to company career pages</span>
+            <span><strong>Student-first</strong> Canada-specific filters</span>
         </div>
         
             
@@ -294,6 +315,46 @@
             
         
     </header>
+
+    
+    <section class="latest-jobs-strip" aria-labelledby="latest-jobs-title">
+        <div class="latest-jobs-header">
+            <div>
+                <p class="section-kicker">Hiring now</p>
+                <h2 id="latest-jobs-title">Fresh roles you can open today</h2>
+            </div>
+            <a href="#marketing-digital-marketing">Jump to all jobs</a>
+        </div>
+        <div class="latest-job-list">
+            
+            <a class="latest-job-row" href="/jobs/inside-sales-associate-sally-beauty-05537-sally-beauty-678293319/">
+                <span class="latest-job-main"><strong>Inside Sales Associate- Sally Beauty- 05537</strong><span>Sally Beauty</span></span>
+                <span class="latest-job-meta">Abbotsford, British Columbia · May 06, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/sales-associate-autocanada-678114896/">
+                <span class="latest-job-main"><strong>Sales Associate</strong><span>AutoCanada</span></span>
+                <span class="latest-job-meta">Spruce Grove, Alberta · May 06, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/sales-associate-mercedes-benz-thornhill-678110050/">
+                <span class="latest-job-main"><strong>Sales Associate</strong><span>Mercedes-Benz Thornhill</span></span>
+                <span class="latest-job-meta">Vaughan, Ontario · May 06, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/lumber-building-supply-sales-associate-united-lumber-home-hardware-building-ctr-678084780/">
+                <span class="latest-job-main"><strong>Lumber &amp; Building Supply Sales Associate</strong><span>United Lumber Home Hardware Building Ctr</span></span>
+                <span class="latest-job-meta">Georgetown, ON L7G 4B3 · May 06, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/sales-associate-english-russian-speaking-preferred-wirelesswave-678009191/">
+                <span class="latest-job-main"><strong>Sales Associate (English &amp; Russian Speaking preferred)</strong><span>WIRELESSWAVE</span></span>
+                <span class="latest-job-meta">Vaughan, ON · May 05, 2026</span>
+            </a>
+            
+        </div>
+    </section>
+    
 
     
 
@@ -408,7 +469,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="content creator – part-time / contract / entry level (4 hours / month)"
+    data-company="national social networking group"
+    data-location="ottawa, ontario"
+    data-category="biz_marketing"
+    data-search-text="content creator – part-time / contract / entry level (4 hours / month) national social networking group ottawa, ontario capture events, edit reels, post on socials part-time · 4-20 hours/month · not disclosed · contract biz_marketing">
     <a href="/jobs/content-creator-part-time-contract-entry-level-4-hours-month-national-social-networking-group-677985864/" class="job-link" data-job-title="Content Creator – Part-Time / Contract / Entry Level (4 Hours / Month)" data-job-company="National Social Networking Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -440,7 +506,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior content writer"
+    data-company="limelitt"
+    data-location="heart’s content, newfoundland and labrador"
+    data-category="biz_marketing"
+    data-search-text="junior content writer limelitt heart’s content, newfoundland and labrador create and optimize content across channels full-time biz_marketing">
     <a href="/jobs/junior-content-writer-limelitt-677387149/" class="job-link" data-job-title="JUNIOR CONTENT WRITER" data-job-company="LimeLitt">
         <div class="job-card-header">
             <div class="job-badges">
@@ -472,7 +543,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior in-house designer / content creator"
+    data-company="tridon communications"
+    data-location="edmonton, alberta hybrid"
+    data-category="biz_marketing"
+    data-search-text="junior in-house designer / content creator tridon communications edmonton, alberta support content creation, brand materials, digital assets full-time biz_marketing">
     <a href="/jobs/junior-in-house-designer-content-creator-tridon-communications-675777994/" class="job-link" data-job-title="Junior In-House Designer / Content Creator" data-job-company="Tridon Communications">
         <div class="job-card-header">
             <div class="job-badges">
@@ -504,7 +580,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="digital marketing associate (entry level)"
+    data-company="osim"
+    data-location="harriston, ontario"
+    data-category="biz_marketing"
+    data-search-text="digital marketing associate (entry level) osim harriston, ontario assist in seo, ads, content, analytics type: entry-level · duration: part-time to full-time potential · pay: $20-$23/hour · term: ongoing biz_marketing">
     <a href="/jobs/digital-marketing-associate-entry-level-osim-673742320/" class="job-link" data-job-title="Digital Marketing Associate (Entry Level)" data-job-company="OSiM">
         <div class="job-card-header">
             <div class="job-badges">
@@ -536,7 +617,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="marketing coordinator"
+    data-company="goodwork environmental jobs"
+    data-location="toronto, ontario"
+    data-category="biz_marketing"
+    data-search-text="marketing coordinator goodwork environmental jobs toronto, ontario support campaigns, create content, manage social channels weekly part-time/temporary · may 11, 2026 – oct 17, 2026 · $22/hour · 8 weeks (then part-time until oct 17) biz_marketing">
     <a href="/jobs/marketing-coordinator-goodwork-environmental-jobs-673367396/" class="job-link" data-job-title="Marketing Coordinator" data-job-company="GoodWork Environmental Jobs">
         <div class="job-card-header">
             <div class="job-badges">
@@ -568,7 +654,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior ppc &amp; social media manager"
+    data-company="zoomd"
+    data-location="ontario"
+    data-category="biz_marketing"
+    data-search-text="junior ppc &amp; social media manager zoomd ontario manage ppc campaigns, optimize social ads full-time biz_marketing">
     <a href="/jobs/junior-ppc-social-media-manager-zoomd-671778057/" class="job-link" data-job-title="Junior PPC &amp; Social Media Manager" data-job-company="Zoomd">
         <div class="job-card-header">
             <div class="job-badges">
@@ -600,7 +691,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior social content creator (tiktok &amp; instagram) – part-time"
+    data-company="bprotect inc."
+    data-location="none"
+    data-category="biz_marketing"
+    data-search-text="junior social content creator (tiktok &amp; instagram) – part-time bprotect inc. none create tiktok/instagram content; test trends; collaborate. part-time · flat monthly fee biz_marketing">
     <a href="/jobs/junior-social-content-creator-tiktok-instagram-part-time-bprotect-inc-670781713/" class="job-link" data-job-title="Junior Social Content Creator (TikTok &amp; Instagram) – Part-Time" data-job-company="Bprotect Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -632,7 +728,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior content creator"
+    data-company="foreshew design associates inc."
+    data-location="port carling, ontario"
+    data-category="biz_marketing"
+    data-search-text="junior content creator foreshew design associates inc. port carling, ontario capture, edit, and distribute on-brand content full-time · 40 hours/week biz_marketing">
     <a href="/jobs/junior-content-creator-foreshew-design-associates-inc-670085571/" class="job-link" data-job-title="Junior Content Creator" data-job-company="Foreshew Design Associates Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -664,7 +765,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior marketing content creator"
+    data-company="rb digital"
+    data-location="richmond hill, ontario"
+    data-category="biz_marketing"
+    data-search-text="junior marketing content creator rb digital richmond hill, ontario create social content, edit videos, manage calendars on-site · permanent · full-time biz_marketing">
     <a href="/jobs/junior-marketing-content-creator-rb-digital-668308484/" class="job-link" data-job-title="Junior Marketing Content Creator" data-job-company="RB Digital">
         <div class="job-card-header">
             <div class="job-badges">
@@ -707,7 +813,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior business analyst - weins corporate (co)"
+    data-company="weins auto group"
+    data-location="markham, on l3r 2m5"
+    data-category="biz_analyst"
+    data-search-text="junior business analyst - weins corporate (co) weins auto group markham, on l3r 2m5 support admin tasks, research, reporting, and coordination temporary full-time · 12 months · $55k-$62k · contract biz_analyst">
     <a href="/jobs/junior-business-analyst-weins-corporate-co-weins-auto-group-675895704/" class="job-link" data-job-title="Junior Business Analyst - Weins Corporate (CO)" data-job-company="WEINS Auto Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -739,7 +850,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior business analyst and workflow analyst"
+    data-company="zenatech inc."
+    data-location="toronto, ontario"
+    data-category="biz_analyst"
+    data-search-text="junior business analyst and workflow analyst zenatech inc. toronto, ontario analyze processes, map workflows, enable automation full-time · permanent · competitive salary · ongoing biz_analyst">
     <a href="/jobs/junior-business-analyst-and-workflow-analyst-zenatech-inc-674705641/" class="job-link" data-job-title="Junior Business Analyst and Workflow Analyst" data-job-company="ZenaTech Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -771,7 +887,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="rq10875 - business analyst - junior"
+    data-company="s m software solutions inc"
+    data-location="toronto, ontario"
+    data-category="biz_analyst"
+    data-search-text="rq10875 - business analyst - junior s m software solutions inc toronto, ontario lead requirements sessions, document use cases, analyze data. contract / consulting · apr 2026–oct 2026 biz_analyst">
     <a href="/jobs/rq10875-business-analyst-junior-s-m-software-solutions-inc-671077808/" class="job-link" data-job-title="RQ10875 - Business Analyst - Junior" data-job-company="S M Software Solutions Inc">
         <div class="job-card-header">
             <div class="job-badges">
@@ -803,7 +924,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="associate business analyst - entry level"
+    data-company="ibm"
+    data-location="bedford, nova scotia hybrid"
+    data-category="biz_analyst"
+    data-search-text="associate business analyst - entry level ibm bedford, nova scotia gather requirements, analyze data, coordinate stakeholders full-time · permanent · competitive pay · - biz_analyst">
     <a href="/jobs/associate-business-analyst-entry-level-ibm-669928091/" class="job-link" data-job-title="Associate Business Analyst - Entry Level" data-job-company="IBM">
         <div class="job-card-header">
             <div class="job-badges">
@@ -835,7 +961,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="business analyst - junior"
+    data-company="the code crackers inc."
+    data-location="toronto, on"
+    data-category="biz_analyst"
+    data-search-text="business analyst - junior the code crackers inc. toronto, on gather, analyze, document requirements; support stakeholders. contract · apr 2026–oct 2026 · $51-59/hr · on-site biz_analyst">
     <a href="/jobs/business-analyst-junior-the-code-crackers-inc-669505452/" class="job-link" data-job-title="Business Analyst - Junior" data-job-company="The Code Crackers Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -867,7 +998,12 @@
             
             <li class="job-card job-snooze"
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior business analyst (north york, on) - hybrid"
+    data-company="enbridge"
+    data-location="north york, on m2j 1p8 hybrid"
+    data-category="biz_analyst"
+    data-search-text="junior business analyst (north york, on) - hybrid enbridge north york, on m2j 1p8 support transition to operations for it applications contract · 4 months biz_analyst">
     <a href="/jobs/junior-business-analyst-north-york-on-hybrid-enbridge-669262020/" class="job-link" data-job-title="Junior Business Analyst (North York, ON) - Hybrid" data-job-company="Enbridge">
         <div class="job-card-header">
             <div class="job-badges">
@@ -899,7 +1035,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="jr. business analyst (bilingual)"
+    data-company="orion innovation"
+    data-location="montreal, quebec hybrid"
+    data-category="biz_analyst"
+    data-search-text="jr. business analyst (bilingual) orion innovation montreal, quebec elicit, analyze, and document business requirements full-time · permanent biz_analyst">
     <a href="/jobs/jr-business-analyst-bilingual-orion-innovation-668149972/" class="job-link" data-job-title="Jr. Business Analyst (Bilingual)" data-job-company="Orion Innovation">
         <div class="job-card-header">
             <div class="job-badges">
@@ -942,7 +1083,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources associate"
+    data-company="alberta igaming corporation (aigc)"
+    data-location="greater edmonton metropolitan area"
+    data-category="biz_hr"
+    data-search-text="human resources associate alberta igaming corporation (aigc) greater edmonton metropolitan area support hr ops: recruitment, onboarding, policies type: full-time biz_hr">
     <a href="/jobs/human-resources-associate-alberta-igaming-corporation-aigc-677751034/" class="job-link" data-job-title="Human Resources Associate" data-job-company="Alberta iGaming Corporation (AiGC)">
         <div class="job-card-header">
             <div class="job-badges">
@@ -974,7 +1120,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="craft recruiter - entry level"
+    data-company="golderado contracting corp"
+    data-location="fort saskatchewan, ab"
+    data-category="biz_hr"
+    data-search-text="craft recruiter - entry level golderado contracting corp fort saskatchewan, ab screen candidates, coordinate onboarding, admin tasks full-time · permanent · hourly (experience-based) · n/a biz_hr">
     <a href="/jobs/craft-recruiter-entry-level-golderado-contracting-corp-677141053/" class="job-link" data-job-title="Craft Recruiter - Entry Level" data-job-company="Golderado Contracting Corp">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1006,7 +1157,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior it recruiter"
+    data-company="ydc pro"
+    data-location="toronto, ontario hybrid"
+    data-category="biz_hr"
+    data-search-text="junior it recruiter ydc pro toronto, ontario end-to-end it recruiting: sourcing, interviewing, placement contract · 3 months biz_hr">
     <a href="/jobs/junior-it-recruiter-ydc-pro-677005836/" class="job-link" data-job-title="Junior IT recruiter" data-job-company="YDC Pro">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1038,7 +1194,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="student hr coordinator - kamloops, bc"
+    data-company="arrow transportation systems inc."
+    data-location="kamloops, british columbia"
+    data-category="biz_hr"
+    data-search-text="student hr coordinator - kamloops, bc arrow transportation systems inc. kamloops, british columbia support hr operations, recruitment; manage records temporary · 4 months · $24/hour · potential extension biz_hr">
     <a href="/jobs/student-hr-coordinator-kamloops-bc-arrow-transportation-systems-inc-676103446/" class="job-link" data-job-title="Student HR Coordinator - Kamloops, BC" data-job-company="Arrow Transportation Systems Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1070,7 +1231,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior recruiter"
+    data-company="r.w. tomlinson"
+    data-location="ottawa, on"
+    data-category="biz_hr"
+    data-search-text="junior recruiter r.w. tomlinson ottawa, on screen candidates, schedule interviews, support onboarding full-time · permanent · $45,000-$50,000 biz_hr">
     <a href="/jobs/junior-recruiter-r-w-tomlinson-668466355/" class="job-link" data-job-title="Junior Recruiter" data-job-company="R.W. Tomlinson">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1102,7 +1268,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior payroll &amp; human resources administrator"
+    data-company="magnus hrs"
+    data-location="toronto, on"
+    data-category="biz_hr"
+    data-search-text="junior payroll &amp; human resources administrator magnus hrs toronto, on support hr onboarding, payroll, and admin tasks type: not specified · duration: not specified · pay: not specified · term: not specified biz_hr">
     <a href="/jobs/junior-payroll-human-resources-administrator-magnus-hrs-667241587/" class="job-link" data-job-title="Junior Payroll &amp; Human Resources Administrator" data-job-company="MAGNUS HRS">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1134,7 +1305,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="human resources global trainee"
+    data-company="gabriella &amp; co"
+    data-location="sault ste. marie, ontario"
+    data-category="biz_hr"
+    data-search-text="human resources global trainee gabriella &amp; co sault ste. marie, ontario rotate hr functions; recruit, engage, analyze full-time · 2-year rotational program biz_hr">
     <a href="/jobs/human-resources-global-trainee-gabriella-co-666028753/" class="job-link" data-job-title="Human Resources Global Trainee" data-job-company="Gabriella &amp; Co">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1166,7 +1342,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="human resources rotational analyst – graduate"
+    data-company="bnp paribas"
+    data-location="montreal, quebec hybrid"
+    data-category="biz_hr"
+    data-search-text="human resources rotational analyst – graduate bnp paribas montreal, quebec onboard new hires; analyze hr data; manage projects graduate program · 24 months · competitive pay · permanent biz_hr">
     <a href="/jobs/human-resources-rotational-analyst-graduate-bnp-paribas-665721870/" class="job-link" data-job-title="Human Resources Rotational Analyst – Graduate" data-job-company="BNP Paribas">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1209,7 +1390,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior buyer"
+    data-company="cementation americas"
+    data-location="north bay, ontario"
+    data-category="biz_supply_chain"
+    data-search-text="junior buyer cementation americas north bay, ontario source goods, issue pos, manage supplier relations full-time, permanent · 40 hours/week · $63,000-$73,000 · permanent biz_supply_chain">
     <a href="/jobs/junior-buyer-cementation-americas-677740660/" class="job-link" data-job-title="Junior Buyer" data-job-company="Cementation Americas">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1241,7 +1427,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior buyer/purchaser"
+    data-company="imp aerospace &amp; defence"
+    data-location="hammonds plains, nova scotia"
+    data-category="biz_supply_chain"
+    data-search-text="junior buyer/purchaser imp aerospace &amp; defence hammonds plains, nova scotia source parts, issue pos, manage suppliers full-time · permanent · competitive pay · ongoing biz_supply_chain">
     <a href="/jobs/junior-buyer-purchaser-imp-aerospace-defence-677667322/" class="job-link" data-job-title="Junior Buyer/Purchaser" data-job-company="IMP Aerospace &amp; Defence">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1273,7 +1464,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="jr. purchasing agent"
+    data-company="jatec"
+    data-location="edmonton, ab t6b 2j8"
+    data-category="biz_supply_chain"
+    data-search-text="jr. purchasing agent jatec edmonton, ab t6b 2j8 process pos, track orders, coordinate suppliers full-time · permanent · competitive wages · biz_supply_chain">
     <a href="/jobs/jr-purchasing-agent-jatec-677353555/" class="job-link" data-job-title="Jr. Purchasing Agent" data-job-company="JATEC">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1305,7 +1501,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior buyer (1 year contract)"
+    data-company="hörmann north america"
+    data-location="oro-medonte, ontario"
+    data-category="biz_supply_chain"
+    data-search-text="junior buyer (1 year contract) hörmann north america oro-medonte, ontario procure materials, manage supplier relations in sap contract · 12 months · tbd · n/a biz_supply_chain">
     <a href="/jobs/junior-buyer-1-year-contract-hormann-north-america-675930757/" class="job-link" data-job-title="Junior Buyer (1 year contract)" data-job-company="Hörmann North America">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1337,7 +1538,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior buyer"
+    data-company="calian group"
+    data-location="ottawa, ontario"
+    data-category="biz_supply_chain"
+    data-search-text="junior buyer calian group ottawa, ontario place pos in sap; manage supplier relations full-time · permanent · competitive salary · on-site biz_supply_chain">
     <a href="/jobs/junior-buyer-calian-group-675853628/" class="job-link" data-job-title="Junior Buyer" data-job-company="Calian Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1369,7 +1575,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior buyer (1 year contract)"
+    data-company="hörmann"
+    data-location="oro-medonte, on"
+    data-category="biz_supply_chain"
+    data-search-text="junior buyer (1 year contract) hörmann oro-medonte, on process pos, manage supplier relations, cross-functional contract · 12 months · competitive salary · 1 year contract biz_supply_chain">
     <a href="/jobs/junior-buyer-1-year-contract-hormann-675541563/" class="job-link" data-job-title="Junior Buyer (1 year contract)" data-job-company="HÖRMANN">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1401,7 +1612,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior buyer"
+    data-company="calian"
+    data-location="ottawa, on"
+    data-category="biz_supply_chain"
+    data-search-text="junior buyer calian ottawa, on place pos in sap; manage supplier relations full time biz_supply_chain">
     <a href="/jobs/junior-buyer-calian-675971943/" class="job-link" data-job-title="Junior Buyer" data-job-company="Calian">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1433,7 +1649,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior purchasing coordinator"
+    data-company="echo power equipment (canada)"
+    data-location="london, ontario"
+    data-category="biz_supply_chain"
+    data-search-text="junior purchasing coordinator echo power equipment (canada) london, ontario coordinate purchasing, inventory, and vendor relations. in-office biz_supply_chain">
     <a href="/jobs/junior-purchasing-coordinator-echo-power-equipment-canada-674218285/" class="job-link" data-job-title="Junior Purchasing Coordinator" data-job-company="ECHO Power Equipment (Canada)">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1465,7 +1686,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="project coordinator / junior quotes-en"
+    data-company="guillevin"
+    data-location="burnaby, british columbia"
+    data-category="biz_supply_chain"
+    data-search-text="project coordinator / junior quotes-en guillevin burnaby, british columbia coordinate projects, quotes, and supplier orders regular · full-time · competitive pay · permanent biz_supply_chain">
     <a href="/jobs/project-coordinator-junior-quotes-en-guillevin-674190143/" class="job-link" data-job-title="Project Coordinator / Junior Quotes-EN" data-job-company="Guillevin">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1497,7 +1723,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="project coordinator / junior quotes-fr"
+    data-company="guillevin"
+    data-location="burnaby, british columbia"
+    data-category="biz_supply_chain"
+    data-search-text="project coordinator / junior quotes-fr guillevin burnaby, british columbia coordinate projects, prepare quotes, liaise with suppliers regular · full-time biz_supply_chain">
     <a href="/jobs/project-coordinator-junior-quotes-fr-guillevin-673998997/" class="job-link" data-job-title="Project Coordinator / Junior Quotes-FR" data-job-company="Guillevin">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1529,7 +1760,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior supply chain planner"
+    data-company="microart services, inc."
+    data-location="markham, on l6g 1b5"
+    data-category="biz_supply_chain"
+    data-search-text="junior supply chain planner microart services, inc. markham, on l6g 1b5 build production plans; manage orders and inventory full-time · permanent · $52k-$55k/yr biz_supply_chain">
     <a href="/jobs/junior-supply-chain-planner-microart-services-inc-672375273/" class="job-link" data-job-title="Junior Supply Chain Planner" data-job-company="Microart Services, Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1561,7 +1797,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="acheteur.se junior | junior buyer"
+    data-company="altitude sports"
+    data-location="montréal, qc h2s 1v6"
+    data-category="biz_supply_chain"
+    data-search-text="acheteur.se junior | junior buyer altitude sports montréal, qc h2s 1v6 manage portfolio, optimize inventory, strengthen supplier relations permanent · full-time · competitive pay · n/a biz_supply_chain">
     <a href="/jobs/acheteur-se-junior-junior-buyer-altitude-sports-665419664/" class="job-link" data-job-title="Acheteur.se junior | Junior buyer" data-job-company="Altitude Sports">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1593,7 +1834,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior buyer"
+    data-company="renaissance repair and supply"
+    data-location="kanata, on k2k 2w2 hybrid"
+    data-category="biz_supply_chain"
+    data-search-text="junior buyer renaissance repair and supply kanata, on k2k 2w2 support procurement, manage suppliers, optimize contracts type: full-time biz_supply_chain">
     <a href="/jobs/junior-buyer-renaissance-repair-and-supply-665160004/" class="job-link" data-job-title="Junior Buyer" data-job-company="Renaissance Repair and Supply">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1625,7 +1871,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="acheteur.se junior | junior buyer"
+    data-company="altitude-sports.com"
+    data-location="montreal, quebec hybrid"
+    data-category="biz_supply_chain"
+    data-search-text="acheteur.se junior | junior buyer altitude-sports.com montreal, quebec drive portfolio growth; manage assortments and suppliers type · duration · pay · term biz_supply_chain">
     <a href="/jobs/acheteur-se-junior-junior-buyer-altitude-sports-com-665134753/" class="job-link" data-job-title="Acheteur.se junior | Junior buyer" data-job-company="Altitude-sports.com">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1668,7 +1919,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="inside sales associate- sally beauty- 05537"
+    data-company="sally beauty"
+    data-location="abbotsford, british columbia"
+    data-category="biz_sales"
+    data-search-text="inside sales associate- sally beauty- 05537 sally beauty abbotsford, british columbia build relationships, drive sales, merchandise displays full-time · permanent · competitive pay · n/a biz_sales">
     <a href="/jobs/inside-sales-associate-sally-beauty-05537-sally-beauty-678293319/" class="job-link" data-job-title="Inside Sales Associate- Sally Beauty- 05537" data-job-company="Sally Beauty">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1700,7 +1956,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sales associate"
+    data-company="autocanada"
+    data-location="spruce grove, alberta"
+    data-category="biz_sales"
+    data-search-text="sales associate autocanada spruce grove, alberta drive sales through customer engagements and consultations full-time · immediate hire biz_sales">
     <a href="/jobs/sales-associate-autocanada-678114896/" class="job-link" data-job-title="Sales Associate" data-job-company="AutoCanada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1732,7 +1993,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sales associate"
+    data-company="mercedes-benz thornhill"
+    data-location="vaughan, ontario"
+    data-category="biz_sales"
+    data-search-text="sales associate mercedes-benz thornhill vaughan, ontario build client relationships, demonstrate vehicles, close sales full-time · permanent · competitive pay · on-site biz_sales">
     <a href="/jobs/sales-associate-mercedes-benz-thornhill-678110050/" class="job-link" data-job-title="Sales Associate" data-job-company="Mercedes-Benz Thornhill">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1764,7 +2030,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="lumber &amp; building supply sales associate"
+    data-company="united lumber home hardware building ctr"
+    data-location="georgetown, on l7g 4b3"
+    data-category="biz_sales"
+    data-search-text="lumber &amp; building supply sales associate united lumber home hardware building ctr georgetown, on l7g 4b3 assist customers, process orders, manage inventory type: full-time biz_sales">
     <a href="/jobs/lumber-building-supply-sales-associate-united-lumber-home-hardware-building-ctr-678084780/" class="job-link" data-job-title="Lumber &amp; Building Supply Sales Associate" data-job-company="United Lumber Home Hardware Building Ctr">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1796,7 +2067,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sales associate (english &amp; russian speaking preferred)"
+    data-company="wirelesswave"
+    data-location="vaughan, on"
+    data-category="biz_sales"
+    data-search-text="sales associate (english &amp; russian speaking preferred) wirelesswave vaughan, on deliver wireless solutions, build relationships, meet sales targets full-time · permanent · $45,000-$70,000+ (base + uncapped commissions) · permanent biz_sales">
     <a href="/jobs/sales-associate-english-russian-speaking-preferred-wirelesswave-678009191/" class="job-link" data-job-title="Sales Associate (English &amp; Russian Speaking preferred)" data-job-company="WIRELESSWAVE">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1828,7 +2104,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sales associate (english &amp; spanish/ portuguese speaking preferred)"
+    data-company="tbooth wireless"
+    data-location="toronto, on"
+    data-category="biz_sales"
+    data-search-text="sales associate (english &amp; spanish/ portuguese speaking preferred) tbooth wireless toronto, on sell wireless products, advise customers, drive sales full-time · permanent · $45k-$70k+ (base + commissions) · ongoing biz_sales">
     <a href="/jobs/sales-associate-english-spanish-portuguese-speaking-tbooth-wireless-678009189/" class="job-link" data-job-title="Sales Associate (English &amp; Spanish/ Portuguese speaking preferred)" data-job-company="Tbooth wireless">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1860,7 +2141,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sales associate"
+    data-company="ardene"
+    data-location="surrey, british columbia"
+    data-category="biz_sales"
+    data-search-text="sales associate ardene surrey, british columbia assist customers, process sales, merchandise displays type: retail sales associate · pay: $17.85/hr biz_sales">
     <a href="/jobs/sales-associate-ardene-677991517/" class="job-link" data-job-title="Sales Associate" data-job-company="Ardene">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1892,7 +2178,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sales associate (english &amp; russian speaking preferred)"
+    data-company="wirelesswave / wave sans fil"
+    data-location="vaughan, ontario"
+    data-category="biz_sales"
+    data-search-text="sales associate (english &amp; russian speaking preferred) wirelesswave / wave sans fil vaughan, ontario drive wireless sales, assist customers, meet targets full-time · pay: base + commissions biz_sales">
     <a href="/jobs/sales-associate-english-russian-speaking-preferred-wirelesswave-wave-sans-fil-677938083/" class="job-link" data-job-title="Sales Associate (English &amp; Russian Speaking preferred)" data-job-company="WIRELESSWAVE / WAVE SANS FIL">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1924,7 +2215,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="retail sales associate, aberdeen mall"
+    data-company="bell"
+    data-location="kamloops, british columbia"
+    data-category="biz_sales"
+    data-search-text="retail sales associate, aberdeen mall bell kamloops, british columbia engage customers, meet sales targets, upsell effectively retail stores · part-time · hourly + commission · ongoing biz_sales">
     <a href="/jobs/retail-sales-associate-aberdeen-mall-bell-677792129/" class="job-link" data-job-title="Retail Sales Associate, Aberdeen Mall" data-job-company="Bell">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1956,7 +2252,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="full or part-time sales associate - fran 2381"
+    data-company="pet valu"
+    data-location="brampton, ontario"
+    data-category="biz_sales"
+    data-search-text="full or part-time sales associate - fran 2381 pet valu brampton, ontario assist customers, process sales, stock and maintain full/part-time biz_sales">
     <a href="/jobs/full-or-part-time-sales-associate-fran-2381-pet-valu-677751397/" class="job-link" data-job-title="Full or Part-time Sales Associate - Fran 2381" data-job-company="Pet Valu">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1988,7 +2289,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="full time - sales associate - fran 2399"
+    data-company="pet valu"
+    data-location="kanata, ontario"
+    data-category="biz_sales"
+    data-search-text="full time - sales associate - fran 2399 pet valu kanata, ontario assist customers, drive sales, stock merchandise full-time · permanent · competitive wages · permanent biz_sales">
     <a href="/jobs/full-time-sales-associate-fran-2399-pet-valu-677722203/" class="job-link" data-job-title="Full Time - Sales Associate - Fran 2399" data-job-company="Pet Valu">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2020,7 +2326,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="full time sales associate - fran 2411"
+    data-company="pet valu"
+    data-location="toronto, ontario"
+    data-category="biz_sales"
+    data-search-text="full time sales associate - fran 2411 pet valu toronto, ontario assist customers, process sales, stock store full time · n/a · competitive wages · n/a biz_sales">
     <a href="/jobs/full-time-sales-associate-fran-2411-pet-valu-677717100/" class="job-link" data-job-title="Full Time Sales Associate - Fran 2411" data-job-company="Pet Valu">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2052,7 +2363,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="hardware sales associate: full time - abbotsford"
+    data-company="the home depot canada"
+    data-location="abbotsford, british columbia"
+    data-category="biz_sales"
+    data-search-text="hardware sales associate: full time - abbotsford the home depot canada abbotsford, british columbia assist customers, upsell products, maintain shelves full-time · n/a · $18.90-$19.90/hr · n/a biz_sales">
     <a href="/jobs/hardware-sales-associate-full-time-abbotsford-the-home-depot-canada-677540991/" class="job-link" data-job-title="Hardware Sales Associate: Full Time - ABBOTSFORD" data-job-company="The Home Depot Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2084,7 +2400,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior buyer"
+    data-company="secure"
+    data-location="saskatoon, saskatchewan"
+    data-category="biz_sales"
+    data-search-text="junior buyer secure saskatoon, saskatchewan present products, negotiate bids, build customer relationships full-time biz_sales">
     <a href="/jobs/junior-buyer-secure-677090406/" class="job-link" data-job-title="Junior Buyer" data-job-company="SECURE">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2116,7 +2437,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior sales representative"
+    data-company="pcl graphics"
+    data-location="markham, on l6g 1b9"
+    data-category="biz_sales"
+    data-search-text="junior sales representative pcl graphics markham, on l6g 1b9 assist sales, coordinate projects, engage clients full-time biz_sales">
     <a href="/jobs/junior-sales-representative-pcl-graphics-675927046/" class="job-link" data-job-title="Junior Sales Representative" data-job-company="PCL graphics">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2148,7 +2474,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="sales representative - jr &amp; trauma - winnipeg"
+    data-company="stryker"
+    data-location="vancouver, british columbia hybrid"
+    data-category="biz_sales"
+    data-search-text="sales representative - jr &amp; trauma - winnipeg stryker vancouver, british columbia promote and sell medical devices to physicians full-time · permanent · $120k-$140k base + commission · permanent biz_sales">
     <a href="/jobs/sales-representative-jr-trauma-winnipeg-stryker-675878667/" class="job-link" data-job-title="Sales Representative - JR &amp; Trauma - Winnipeg" data-job-company="Stryker">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2180,7 +2511,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="territory sales associate - annapolis valley/yarmouth area, nova scotia"
+    data-company="pretzels, inc"
+    data-location="halifax, nova scotia"
+    data-category="biz_sales"
+    data-search-text="territory sales associate - annapolis valley/yarmouth area, nova scotia pretzels, inc halifax, nova scotia sell and merch in territory; report weekly part-time · 28 hrs/wk · $17.00-$21.25/hr · n/a biz_sales">
     <a href="/jobs/territory-sales-associate-annapolis-valley-yarmouth-area-pretzels-inc-675786988/" class="job-link" data-job-title="Territory Sales Associate - Annapolis Valley/Yarmouth Area, Nova Scotia" data-job-company="Pretzels, Inc">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2212,7 +2548,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior account manager"
+    data-company="crystal int&#39;l (group) inc. &amp; crystal claire cosmetics inc."
+    data-location="scarborough, ontario"
+    data-category="biz_sales"
+    data-search-text="junior account manager crystal int&#39;l (group) inc. &amp; crystal claire cosmetics inc. scarborough, ontario manage customer relationships; coordinate orders and inventory full-time · permanent · $48,000-$50,000 per year · ontario biz_sales">
     <a href="/jobs/junior-account-manager-crystal-int-l-group-inc-crystal-claire-cosmetics-inc-675782056/" class="job-link" data-job-title="Junior Account Manager" data-job-company="Crystal Int&#39;l (Group) Inc. &amp; Crystal Claire Cosmetics Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2244,7 +2585,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sales representative trainee"
+    data-company="herc rentals"
+    data-location="north york, ontario"
+    data-category="biz_sales"
+    data-search-text="sales representative trainee herc rentals north york, ontario shadow reps; assist lead generation; train in sales replacement · 12 months program · $25-$27/hour · full-time biz_sales">
     <a href="/jobs/sales-representative-trainee-herc-rentals-675089015/" class="job-link" data-job-title="Sales Representative Trainee" data-job-company="Herc Rentals">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2276,7 +2622,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="retail sales associate, devonshire mall"
+    data-company="virgin plus"
+    data-location="windsor, ontario"
+    data-category="biz_sales"
+    data-search-text="retail sales associate, devonshire mall virgin plus windsor, ontario drive sales, assist customers, meet targets retail stores · part-time (regular) · $20-28/hr · regular biz_sales">
     <a href="/jobs/retail-sales-associate-devonshire-mall-virgin-plus-675052804/" class="job-link" data-job-title="Retail Sales Associate, Devonshire Mall" data-job-company="Virgin Plus">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2308,7 +2659,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="trailer sales representative (entry level)"
+    data-company="flaman group of companies"
+    data-location="saskatoon, sk s7k 3j7"
+    data-category="biz_sales"
+    data-search-text="trailer sales representative (entry level) flaman group of companies saskatoon, sk s7k 3j7 learn inventory, shadow pros, close deals full-time · permanent · base + commission (not disclosed) · permanent biz_sales">
     <a href="/jobs/trailer-sales-representative-entry-level-flaman-group-of-companies-673993610/" class="job-link" data-job-title="Trailer Sales Representative (Entry Level)" data-job-company="Flaman Group Of Companies">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2340,7 +2696,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="retail sales associate, richmond centre"
+    data-company="virgin plus"
+    data-location="richmond, british columbia"
+    data-category="biz_sales"
+    data-search-text="retail sales associate, richmond centre virgin plus richmond, british columbia engage customers, meet targets, upsell solutions part-time · regular · $20-$29/hr biz_sales">
     <a href="/jobs/retail-sales-associate-richmond-centre-virgin-plus-673253197/" class="job-link" data-job-title="Retail Sales Associate, Richmond Centre" data-job-company="Virgin Plus">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2372,7 +2733,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="leaffilter - entry level sales representative - canada (winnipeg)"
+    data-company="leaf home"
+    data-location="winnipeg, manitoba"
+    data-category="biz_sales"
+    data-search-text="leaffilter - entry level sales representative - canada (winnipeg) leaf home winnipeg, manitoba generate leads via field visits, schedule product demos full-time · permanent biz_sales">
     <a href="/jobs/leaffilter-entry-level-sales-representative-canada-winnipeg-leaf-home-672189808/" class="job-link" data-job-title="LeafFilter - Entry Level Sales Representative - Canada (Winnipeg)" data-job-company="Leaf Home">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2404,7 +2770,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior inside sales person"
+    data-company="electro-federation canada"
+    data-location="richmond hill, on l4b 1g5"
+    data-category="biz_sales"
+    data-search-text="junior inside sales person electro-federation canada richmond hill, on l4b 1g5 assist inside sales; process orders; support quotations full-time · n/a · n/a · n/a biz_sales">
     <a href="/jobs/junior-inside-sales-person-electro-federation-canada-672184548/" class="job-link" data-job-title="Junior Inside Sales Person" data-job-company="Electro-Federation Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2436,7 +2807,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="leaffilter - entry level sales representative - canada (vancouver-abbotsford)"
+    data-company="leaf home"
+    data-location="port coquitlam, british columbia"
+    data-category="biz_sales"
+    data-search-text="leaffilter - entry level sales representative - canada (vancouver-abbotsford) leaf home port coquitlam, british columbia door-to-door lead gen, educate homeowners, close sales full-time biz_sales">
     <a href="/jobs/leaffilter-entry-level-sales-representative-canada-leaf-home-671832293/" class="job-link" data-job-title="LeafFilter - Entry Level Sales Representative - Canada (Vancouver-Abbotsford)" data-job-company="Leaf Home">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2468,7 +2844,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior account executive"
+    data-company="incture"
+    data-location="calgary, alberta"
+    data-category="biz_sales"
+    data-search-text="junior account executive incture calgary, alberta lead generation, run demos, support accounts full-time biz_sales">
     <a href="/jobs/junior-account-executive-incture-671220948/" class="job-link" data-job-title="Junior Account Executive" data-job-company="Incture">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2500,7 +2881,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="kobo sales representative – mother’s day event"
+    data-company="acosta group"
+    data-location="east york, ontario"
+    data-category="biz_sales"
+    data-search-text="kobo sales representative – mother’s day event acosta group east york, ontario drive in-store kobo sales and engagement part-time · may 8-9 (2 days) · $21.00-$23.00/hour · temporary event biz_sales">
     <a href="/jobs/kobo-sales-representative-mothers-day-event-acosta-group-671078791/" class="job-link" data-job-title="Kobo Sales Representative – Mother’s Day Event" data-job-company="Acosta Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2532,7 +2918,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior inside sales representative"
+    data-company="arxium"
+    data-location="winnipeg, manitoba"
+    data-category="biz_sales"
+    data-search-text="junior inside sales representative arxium winnipeg, manitoba prospect customers, deliver quotes, close deals type: full-time · pay: competitive salary biz_sales">
     <a href="/jobs/junior-inside-sales-representative-arxium-670219588/" class="job-link" data-job-title="Junior Inside Sales Representative" data-job-company="ARxIUM">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2564,7 +2955,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="gestionnaire de comptes junior / junior account manager"
+    data-company="rocket de laval"
+    data-location="montreal, quebec"
+    data-category="biz_sales"
+    data-search-text="gestionnaire de comptes junior / junior account manager rocket de laval montreal, quebec prospect clients, close tickets, manage accounts daily crm full-time · permanent · salary tbd · permanent biz_sales">
     <a href="/jobs/gestionnaire-de-comptes-junior-junior-account-manager-rocket-de-laval-669832184/" class="job-link" data-job-title="Gestionnaire de comptes junior / Junior Account Manager" data-job-company="Rocket de Laval">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2596,7 +2992,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="field sales representative – rogers (entry level)"
+    data-company="rogers communications"
+    data-location="fredericton, new brunswick"
+    data-category="biz_sales"
+    data-search-text="field sales representative – rogers (entry level) rogers communications fredericton, new brunswick engage customers, educate on products, close sales full-time · permanent · competitive pay · n/a biz_sales">
     <a href="/jobs/field-sales-representative-rogers-entry-level-rogers-communications-669018369/" class="job-link" data-job-title="Field Sales Representative – Rogers (Entry Level)" data-job-company="Rogers Communications">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2628,7 +3029,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="entry level sales representative"
+    data-company="the acquisition group"
+    data-location="abbotsford, british columbia"
+    data-category="biz_sales"
+    data-search-text="entry level sales representative the acquisition group abbotsford, british columbia represent telus, engage customers, drive sales results full-time · permanent · uncapped commissions · n/a biz_sales">
     <a href="/jobs/entry-level-sales-representative-the-acquisition-group-668621165/" class="job-link" data-job-title="Entry Level Sales Representative" data-job-company="The Acquisition Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2660,7 +3066,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sdr/junior account manager"
+    data-company="high tech genesis"
+    data-location="ottawa, ontario hybrid"
+    data-category="biz_sales"
+    data-search-text="sdr/junior account manager high tech genesis ottawa, ontario generate pipeline, qualify leads, drive revenue full-time biz_sales">
     <a href="/jobs/sdr-junior-account-manager-high-tech-genesis-668327021/" class="job-link" data-job-title="SDR/Junior Account Manager" data-job-company="High Tech Genesis">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2692,7 +3103,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="sales representative trainee"
+    data-company="herc rentals"
+    data-location="north york, on m3j 1y9"
+    data-category="biz_sales"
+    data-search-text="sales representative trainee herc rentals north york, on m3j 1y9 learn sales fundamentals, generate leads, support customers replacement · 12 months program · $25-$27 per hour · potential for full-time territory sales rep role biz_sales">
     <a href="/jobs/sales-representative-trainee-herc-rentals-668298034/" class="job-link" data-job-title="Sales Representative Trainee" data-job-company="Herc Rentals">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2724,7 +3140,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sales representative (entry level)"
+    data-company="avantier inc."
+    data-location="vancouver, british columbia hybrid"
+    data-category="biz_sales"
+    data-search-text="sales representative (entry level) avantier inc. vancouver, british columbia own full sales cycle from prospecting to closing. full-time · unknown duration · $65,000–$80,000 base + commissions · permanent biz_sales">
     <a href="/jobs/sales-representative-entry-level-avantier-inc-667729389/" class="job-link" data-job-title="Sales Representative (Entry Level)" data-job-company="Avantier Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2756,7 +3177,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior sales representative"
+    data-company="walker lovell"
+    data-location="quebec"
+    data-category="biz_sales"
+    data-search-text="junior sales representative walker lovell quebec own territory, build relationships, drive revenue full-time · permanent · strong base + substantial commissions · biz_sales">
     <a href="/jobs/junior-sales-representative-walker-lovell-667251980/" class="job-link" data-job-title="Junior Sales Representative" data-job-company="Walker Lovell">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2788,7 +3214,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="sales representative (entry level)"
+    data-company="avantier"
+    data-location="vancouver, bc v6b 1n2 hybrid"
+    data-category="biz_sales"
+    data-search-text="sales representative (entry level) avantier vancouver, bc v6b 1n2 own full sales cycle, prospect to close full-time · permanent · $65,000-$80,000 base + commission · permanent biz_sales">
     <a href="/jobs/sales-representative-entry-level-avantier-666955726/" class="job-link" data-job-title="Sales Representative (Entry Level)" data-job-company="Avantier">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2820,7 +3251,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="sales representative (entry level)"
+    data-company="avantier"
+    data-location="toronto, on m2n 5p6 hybrid"
+    data-category="biz_sales"
+    data-search-text="sales representative (entry level) avantier toronto, on m2n 5p6 own full sales cycle from prospecting to closing full-time · not specified · $65,000–$80,000 base · permanent biz_sales">
     <a href="/jobs/sales-representative-entry-level-avantier-666955725/" class="job-link" data-job-title="Sales Representative (Entry Level)" data-job-company="Avantier">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2863,7 +3299,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior program coordinator"
+    data-company="collabera"
+    data-location="mississauga, ontario hybrid"
+    data-category="biz_pm"
+    data-search-text="junior program coordinator collabera mississauga, ontario coordinate program logistics, materials, and admin tasks contract · hourly · $18–$19/hr ·  biz_pm">
     <a href="/jobs/junior-program-coordinator-collabera-677703793/" class="job-link" data-job-title="Junior Program Coordinator" data-job-company="Collabera">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2895,7 +3336,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="chargé(e) de projets - formation accélérée / trainee project coordinator"
+    data-company="guillevin"
+    data-location="gatineau, qc"
+    data-category="biz_pm"
+    data-search-text="chargé(e) de projets - formation accélérée / trainee project coordinator guillevin gatineau, qc coordinate projects, manage timelines, clients and suppliers full-time · permanent · competitive pay · ongoing biz_pm">
     <a href="/jobs/charge-e-de-projets-formation-acceleree-trainee-project-guillevin-675758870/" class="job-link" data-job-title="Chargé(e) de projets - Formation accélérée / Trainee Project Coordinator" data-job-company="Guillevin">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2927,7 +3373,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior estimator / project manager assistant"
+    data-company="paul davis restoration of the national capital region, va"
+    data-location="sudbury, ontario"
+    data-category="biz_pm"
+    data-search-text="junior estimator / project manager assistant paul davis restoration of the national capital region, va sudbury, ontario assist estimates, coordinate projects, support clients full-time · permanent · $50k-$65k per year · n/a biz_pm">
     <a href="/jobs/junior-estimator-project-manager-assistant-paul-davis-restoration-of-the-national-capital-region-va-674189103/" class="job-link" data-job-title="Junior Estimator / Project Manager Assistant" data-job-company="Paul Davis Restoration of the National Capital Region, VA">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2959,7 +3410,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior engineering project coordinator"
+    data-company="hydra dyne technology inc"
+    data-location="ingersoll, on"
+    data-category="biz_pm"
+    data-search-text="junior engineering project coordinator hydra dyne technology inc ingersoll, on coordinate projects, manage docs, track progress full-time biz_pm">
     <a href="/jobs/junior-engineering-project-coordinator-hydra-dyne-technology-inc-674144645/" class="job-link" data-job-title="Junior Engineering Project Coordinator" data-job-company="Hydra Dyne Technology Inc">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2991,7 +3447,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="project coordinator / junior quotes"
+    data-company="guillevin"
+    data-location="burnaby, bc v5c 5v1"
+    data-category="biz_pm"
+    data-search-text="project coordinator / junior quotes guillevin burnaby, bc v5c 5v1 coordinate projects and manage procurement to meet deliverables type: regular, full-time · duration: permanent · pay: competitive biz_pm">
     <a href="/jobs/project-coordinator-junior-quotes-guillevin-674080925/" class="job-link" data-job-title="Project Coordinator / Junior Quotes" data-job-company="Guillevin">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3023,7 +3484,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="jr. project coordinator"
+    data-company="aecon group inc."
+    data-location="bowmanville, ontario"
+    data-category="biz_pm"
+    data-search-text="jr. project coordinator aecon group inc. bowmanville, ontario coordinate projects, draft work plans, liaise teams full-time · permanent · not disclosed · n/a biz_pm">
     <a href="/jobs/jr-project-coordinator-aecon-group-inc-673863272/" class="job-link" data-job-title="Jr. Project Coordinator" data-job-company="Aecon Group Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3055,7 +3521,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior estimator/project manager"
+    data-company="bruno&#39;s contracting"
+    data-location="thunder bay, on p7b 5v5"
+    data-category="biz_pm"
+    data-search-text="junior estimator/project manager bruno&#39;s contracting thunder bay, on p7b 5v5 prepare estimates; coordinate project schedules and costs type: full-time · duration: permanent · pay: negotiable · term: permanent biz_pm">
     <a href="/jobs/junior-estimator-project-manager-bruno-s-contracting-673861464/" class="job-link" data-job-title="Junior Estimator/Project Manager" data-job-company="Bruno&#39;s Contracting">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3087,7 +3558,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior quality program manager"
+    data-company="ciena"
+    data-location="greater ottawa metropolitan area"
+    data-category="biz_pm"
+    data-search-text="junior quality program manager ciena greater ottawa metropolitan area lead cross-functional quality programs and projects full-time · permanent · canada: $66,200-$105,800; usa: $69,300-$110,700 · permanent biz_pm">
     <a href="/jobs/junior-quality-program-manager-ciena-673245749/" class="job-link" data-job-title="Junior Quality Program Manager" data-job-company="Ciena">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3119,7 +3595,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior estimator / project manager assistant"
+    data-company="paul davis sudbury manitoulin"
+    data-location="greater sudbury, on"
+    data-category="biz_pm"
+    data-search-text="junior estimator / project manager assistant paul davis sudbury manitoulin greater sudbury, on assist estimations, scheduling, and client coordination type: entry-level/junior · duration: full-time · pay: competitive salary · term: ongoing biz_pm">
     <a href="/jobs/junior-estimator-project-manager-assistant-paul-davis-sudbury-manitoulin-672472095/" class="job-link" data-job-title="Junior Estimator / Project Manager Assistant" data-job-company="Paul Davis Sudbury Manitoulin">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3151,7 +3632,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior project coordinator"
+    data-company="casman group of companies"
+    data-location="edmonton, alberta"
+    data-category="biz_pm"
+    data-search-text="junior project coordinator casman group of companies edmonton, alberta coordinate projects, schedules, documentation, and rfis full time in office biz_pm">
     <a href="/jobs/junior-project-coordinator-casman-group-of-companies-670994555/" class="job-link" data-job-title="Junior Project Coordinator" data-job-company="Casman Group of Companies">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3183,7 +3669,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior project coordinator"
+    data-company="casman inc"
+    data-location="edmonton, ab t6e 5a6"
+    data-category="biz_pm"
+    data-search-text="junior project coordinator casman inc edmonton, ab t6e 5a6 coordinate project scope, schedules, and documentation full-time · permanent biz_pm">
     <a href="/jobs/junior-project-coordinator-casman-inc-670933025/" class="job-link" data-job-title="Junior Project Coordinator" data-job-company="Casman Inc">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3215,7 +3706,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="project coordinator / junior project support"
+    data-company="raise"
+    data-location="ontario"
+    data-category="biz_pm"
+    data-search-text="project coordinator / junior project support raise ontario coordinate projects, track progress, and facilitate communications contract · 6–24 months · not disclosed · potential extension biz_pm">
     <a href="/jobs/project-coordinator-junior-project-support-raise-670889510/" class="job-link" data-job-title="Project Coordinator / Junior Project Support" data-job-company="Raise">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3247,7 +3743,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior construction after-disaster project manager"
+    data-company="paul davis restoration of the national capital region, va"
+    data-location="saint-rémi-d’amherst, quebec"
+    data-category="biz_pm"
+    data-search-text="junior construction after-disaster project manager paul davis restoration of the national capital region, va saint-rémi-d’amherst, quebec coordinate post-disaster projects, support pm duties full-time · $55k-$75k/year biz_pm">
     <a href="/jobs/junior-construction-after-disaster-project-manager-paul-davis-restoration-of-the-national-capital-region-va-670643454/" class="job-link" data-job-title="Junior Construction after-disaster Project Manager" data-job-company="Paul Davis Restoration of the National Capital Region, VA">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3279,7 +3780,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior project manager"
+    data-company="trench group"
+    data-location="scarborough, ontario"
+    data-category="biz_pm"
+    data-search-text="junior project manager trench group scarborough, ontario assist in project planning and execute site projects contract · 12 months · $30-40/hr · on-site biz_pm">
     <a href="/jobs/junior-project-manager-trench-group-669712279/" class="job-link" data-job-title="Junior Project Manager" data-job-company="Trench Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3311,7 +3817,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior project coordinator"
+    data-company="fortran steel contracting ltd"
+    data-location="ottawa, ontario"
+    data-category="biz_pm"
+    data-search-text="junior project coordinator fortran steel contracting ltd ottawa, ontario support project planning, scheduling, and coordination activities. full-time · permanent biz_pm">
     <a href="/jobs/junior-project-coordinator-fortran-steel-contracting-ltd-668940892/" class="job-link" data-job-title="Junior Project Coordinator" data-job-company="Fortran Steel Contracting Ltd">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3343,7 +3854,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior scrum master"
+    data-company="bison transport"
+    data-location="winnipeg, mb r3h 0t8"
+    data-category="biz_pm"
+    data-search-text="junior scrum master bison transport winnipeg, mb r3h 0t8 facilitate scrum ceremonies and team delivery full-time biz_pm">
     <a href="/jobs/junior-scrum-master-bison-transport-666091489/" class="job-link" data-job-title="Junior Scrum Master" data-job-company="Bison Transport">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3375,7 +3891,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior scrum master"
+    data-company="bison transport inc."
+    data-location="winnipeg, manitoba"
+    data-category="biz_pm"
+    data-search-text="junior scrum master bison transport inc. winnipeg, manitoba facilitate scrum ceremonies, manage agile backlog full-time biz_pm">
     <a href="/jobs/junior-scrum-master-bison-transport-inc-666016533/" class="job-link" data-job-title="Junior Scrum Master" data-job-company="Bison Transport Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3834,6 +4355,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

@@ -465,7 +465,12 @@ spreads social good via our giving strategy.</p>
             
             <li class="job-card job-snooze"
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior systems engineer"
+    data-company="fdm group"
+    data-location="toronto, ontario"
+    data-category="devops_sre"
+    data-search-text="junior systems engineer fdm group toronto, ontario monitor and troubleshoot live systems, resolve incidents. full-time · $50k/yr devops_sre">
     <a href="/jobs/junior-systems-engineer-fdm-group-667625772/" class="job-link" data-job-title="Junior Systems Engineer" data-job-company="FDM Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -498,7 +503,12 @@ spreads social good via our giving strategy.</p>
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="développeur devops junior et support applicatif"
+    data-company="nanoxplore inc."
+    data-location="none"
+    data-category="devops_sre"
+    data-search-text="développeur devops junior et support applicatif nanoxplore inc. none support apps, test, deploy, and minor coding full-time devops_sre">
     <a href="/jobs/developpeur-devops-junior-et-support-applicatif-nanoxplore-inc-665063779/" class="job-link" data-job-title="Développeur DevOps junior et support applicatif" data-job-company="NanoXplore Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -531,7 +541,12 @@ spreads social good via our giving strategy.</p>
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="co-op/intern developer, devops"
+    data-company="kinaxis"
+    data-location="ottawa, ontario"
+    data-category="devops_sre"
+    data-search-text="co-op/intern developer, devops kinaxis ottawa, ontario build ci/cd pipelines, deploy features, automate tests co-op · 8mo · $25.24-$37.02/hr · fall 2026 devops_sre">
     <a href="/jobs/co-op-intern-developer-devops-kinaxis-677919555/" class="job-link" data-job-title="Co-op/Intern Developer, DevOps" data-job-company="Kinaxis">
         <div class="job-card-header">
             <div class="job-badges">
@@ -564,7 +579,12 @@ spreads social good via our giving strategy.</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="embedded software devsecops engineer (co-op student)"
+    data-company="lumentum"
+    data-location="ottawa, ontario"
+    data-category="devops_sre"
+    data-search-text="embedded software devsecops engineer (co-op student) lumentum ottawa, ontario develop embedded software, automate tests and tooling co-op · 8mo · $24-35/hr · sept 2026–apr 2027 devops_sre">
     <a href="/jobs/embedded-software-devsecops-engineer-co-op-student-lumentum-675275689/" class="job-link" data-job-title="Embedded Software DevSecOps Engineer (Co-op Student)" data-job-company="Lumentum">
         <div class="job-card-header">
             <div class="job-badges">
@@ -597,7 +617,12 @@ spreads social good via our giving strategy.</p>
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="velocity - cloud engineer internship/co-op - fall 2026"
+    data-company="scotiabank"
+    data-location="toronto, on"
+    data-category="devops_sre"
+    data-search-text="velocity - cloud engineer internship/co-op - fall 2026 scotiabank toronto, on develop and maintain cloud infra, assist deployments co-op · 4mo · fall 2026 devops_sre">
     <a href="/jobs/velocity-cloud-engineer-internship-co-op-fall-2026-scotiabank-676845324/" class="job-link" data-job-title="Velocity - Cloud Engineer Internship/Co-op - Fall 2026" data-job-company="Scotiabank">
         <div class="job-card-header">
             <div class="job-badges">
@@ -738,6 +763,57 @@ spreads social good via our giving strategy.</p>
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

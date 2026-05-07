@@ -451,7 +451,12 @@ Is this the right position to help you achieve your professional goals? Some of 
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="graduate environmental engineer"
+    data-company="ghd"
+    data-location="waterloo, ontario hybrid"
+    data-category="eng_environmental"
+    data-search-text="graduate environmental engineer ghd waterloo, ontario perform environmental fieldwork, sampling, and reporting full-time · permanent · $62k-$67.5k cad · ontario eng_environmental">
     <a href="/jobs/graduate-environmental-engineer-ghd-677926526/" class="job-link" data-job-title="Graduate Environmental Engineer" data-job-company="GHD">
         <div class="job-card-header">
             <div class="job-badges">
@@ -484,7 +489,12 @@ Is this the right position to help you achieve your professional goals? Some of 
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="water treatment engineer/eit"
+    data-company="aecom"
+    data-location="kelowna, british columbia hybrid"
+    data-category="eng_environmental"
+    data-search-text="water treatment engineer/eit aecom kelowna, british columbia assist water treatment design under senior supervision full-time · permanent · not disclosed · n/a eng_environmental">
     <a href="/jobs/water-treatment-engineer-eit-aecom-675748177/" class="job-link" data-job-title="Water Treatment Engineer/EIT" data-job-company="AECOM">
         <div class="job-card-header">
             <div class="job-badges">
@@ -517,7 +527,12 @@ Is this the right position to help you achieve your professional goals? Some of 
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior environmental technician / scientist / engineer-in-training"
+    data-company="arcadis"
+    data-location="ottawa, ontario hybrid"
+    data-category="eng_environmental"
+    data-search-text="junior environmental technician / scientist / engineer-in-training arcadis ottawa, ontario coordinate field sampling, site assessments, reports full-time · permanent · $55,100-$82,650 · permanent eng_environmental">
     <a href="/jobs/junior-environmental-technician-scientist-engineer-in-arcadis-675596015/" class="job-link" data-job-title="Junior Environmental Technician / Scientist / Engineer-in-Training" data-job-company="Arcadis">
         <div class="job-card-header">
             <div class="job-badges">
@@ -550,7 +565,12 @@ Is this the right position to help you achieve your professional goals? Some of 
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="junior air quality monitoring / instrumentation technician"
+    data-company="wsp in canada"
+    data-location="grande prairie, alberta hybrid"
+    data-category="eng_environmental"
+    data-search-text="junior air quality monitoring / instrumentation technician wsp in canada grande prairie, alberta calibrate and maintain ambient air monitors in field full-time · permanent · $25.00–$33.60/hour eng_environmental">
     <a href="/jobs/junior-air-quality-monitoring-instrumentation-technician-wsp-in-canada-673368877/" class="job-link" data-job-title="Junior Air Quality Monitoring / Instrumentation Technician" data-job-company="WSP in Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -583,7 +603,12 @@ Is this the right position to help you achieve your professional goals? Some of 
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="environmental engineer-in-training (eit)"
+    data-company="tbt engineering"
+    data-location="collingwood, on"
+    data-category="eng_environmental"
+    data-search-text="environmental engineer-in-training (eit) tbt engineering collingwood, on support environmental site assessments and remediation tasks full-time · n/a · $62,400/year + benefits · permanent eng_environmental">
     <a href="/jobs/environmental-engineer-in-training-eit-tbt-engineering-673358685/" class="job-link" data-job-title="Environmental Engineer-In-Training (EIT)" data-job-company="TBT Engineering">
         <div class="job-card-header">
             <div class="job-badges">
@@ -724,6 +749,57 @@ Is this the right position to help you achieve your professional goals? Some of 
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

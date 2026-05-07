@@ -491,7 +491,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources associate"
+    data-company="alberta igaming corporation (aigc)"
+    data-location="greater edmonton metropolitan area"
+    data-category="biz_hr"
+    data-search-text="human resources associate alberta igaming corporation (aigc) greater edmonton metropolitan area support hr ops: recruitment, onboarding, policies type: full-time biz_hr">
     <a href="/jobs/human-resources-associate-alberta-igaming-corporation-aigc-677751034/" class="job-link" data-job-title="Human Resources Associate" data-job-company="Alberta iGaming Corporation (AiGC)">
         <div class="job-card-header">
             <div class="job-badges">
@@ -524,7 +529,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="craft recruiter - entry level"
+    data-company="golderado contracting corp"
+    data-location="fort saskatchewan, ab"
+    data-category="biz_hr"
+    data-search-text="craft recruiter - entry level golderado contracting corp fort saskatchewan, ab screen candidates, coordinate onboarding, admin tasks full-time · permanent · hourly (experience-based) · n/a biz_hr">
     <a href="/jobs/craft-recruiter-entry-level-golderado-contracting-corp-677141053/" class="job-link" data-job-title="Craft Recruiter - Entry Level" data-job-company="Golderado Contracting Corp">
         <div class="job-card-header">
             <div class="job-badges">
@@ -557,7 +567,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior it recruiter"
+    data-company="ydc pro"
+    data-location="toronto, ontario hybrid"
+    data-category="biz_hr"
+    data-search-text="junior it recruiter ydc pro toronto, ontario end-to-end it recruiting: sourcing, interviewing, placement contract · 3 months biz_hr">
     <a href="/jobs/junior-it-recruiter-ydc-pro-677005836/" class="job-link" data-job-title="Junior IT recruiter" data-job-company="YDC Pro">
         <div class="job-card-header">
             <div class="job-badges">
@@ -590,7 +605,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="student hr coordinator - kamloops, bc"
+    data-company="arrow transportation systems inc."
+    data-location="kamloops, british columbia"
+    data-category="biz_hr"
+    data-search-text="student hr coordinator - kamloops, bc arrow transportation systems inc. kamloops, british columbia support hr operations, recruitment; manage records temporary · 4 months · $24/hour · potential extension biz_hr">
     <a href="/jobs/student-hr-coordinator-kamloops-bc-arrow-transportation-systems-inc-676103446/" class="job-link" data-job-title="Student HR Coordinator - Kamloops, BC" data-job-company="Arrow Transportation Systems Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -623,7 +643,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior recruiter"
+    data-company="r.w. tomlinson"
+    data-location="ottawa, on"
+    data-category="biz_hr"
+    data-search-text="junior recruiter r.w. tomlinson ottawa, on screen candidates, schedule interviews, support onboarding full-time · permanent · $45,000-$50,000 biz_hr">
     <a href="/jobs/junior-recruiter-r-w-tomlinson-668466355/" class="job-link" data-job-title="Junior Recruiter" data-job-company="R.W. Tomlinson">
         <div class="job-card-header">
             <div class="job-badges">
@@ -763,6 +788,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

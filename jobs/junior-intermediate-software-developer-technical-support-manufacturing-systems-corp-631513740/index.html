@@ -461,7 +461,12 @@ Contract length: 12 months</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior full stack developer"
+    data-company="the citco group limited"
+    data-location="toronto, ontario hybrid"
+    data-category="swe"
+    data-search-text="junior full stack developer the citco group limited toronto, ontario build features in react/node, fix bugs, test full-time · cad $70,000-$94,000 swe">
     <a href="/jobs/junior-full-stack-developer-the-citco-group-limited-678015336/" class="job-link" data-job-title="Junior Full Stack Developer" data-job-company="The Citco Group Limited">
         <div class="job-card-header">
             <div class="job-badges">
@@ -494,7 +499,12 @@ Contract length: 12 months</p>
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="applied ai junior front-end developer - ottawa, on"
+    data-company="trendai"
+    data-location="ottawa, ontario hybrid"
+    data-category="swe"
+    data-search-text="applied ai junior front-end developer - ottawa, on trendai ottawa, ontario build react ui components; integrate ai tooling full-time · $76k-$105k cad/yr swe">
     <a href="/jobs/applied-ai-junior-front-end-developer-ottawa-on-trendai-677704590/" class="job-link" data-job-title="Applied AI Junior Front-End Developer - Ottawa, ON" data-job-company="TrendAI">
         <div class="job-card-header">
             <div class="job-badges">
@@ -527,7 +537,12 @@ Contract length: 12 months</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior software engineer - demonware (vancouver)"
+    data-company="activision"
+    data-location="vancouver, british columbia"
+    data-category="swe"
+    data-search-text="junior software engineer - demonware (vancouver) activision vancouver, british columbia develop backend services for online gameplay contract · 9mo · $54,337.50-$114,885 cad swe">
     <a href="/jobs/junior-software-engineer-demonware-vancouver-activision-677454825/" class="job-link" data-job-title="Junior Software Engineer - Demonware (Vancouver)" data-job-company="Activision">
         <div class="job-card-header">
             <div class="job-badges">
@@ -560,7 +575,12 @@ Contract length: 12 months</p>
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="junior software engineer-global payments engineering"
+    data-company="scotiabank"
+    data-location="toronto, ontario"
+    data-category="swe"
+    data-search-text="junior software engineer-global payments engineering scotiabank toronto, ontario develop payments features, debug issues, collaborate in agile full-time swe">
     <a href="/jobs/junior-software-engineer-global-payments-engineering-scotiabank-675845092/" class="job-link" data-job-title="Junior Software Engineer-Global Payments Engineering" data-job-company="Scotiabank">
         <div class="job-card-header">
             <div class="job-badges">
@@ -593,7 +613,12 @@ Contract length: 12 months</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior software engineer"
+    data-company="fdm group"
+    data-location="greater toronto area hybrid"
+    data-category="swe"
+    data-search-text="junior software engineer fdm group greater toronto area develop software, test, and deploy client projects full-time · $50k/yr swe">
     <a href="/jobs/junior-software-engineer-fdm-group-675822098/" class="job-link" data-job-title="Junior Software Engineer" data-job-company="FDM Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -739,6 +764,57 @@ Contract length: 12 months</p>
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

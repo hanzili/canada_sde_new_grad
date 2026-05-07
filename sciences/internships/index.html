@@ -274,19 +274,40 @@
     <header class="page-header landing-hero">
         <p class="hero-kicker">Daily-updated Canadian student jobs</p>
         <h1>2026 Canadian Sciences Internships</h1>
-        <p class="page-subtitle">34 positions available for university students, new grads, interns, co-op candidates, and early-career job seekers.</p>
-        <div class="landing-hero-actions" aria-label="Start browsing jobs">
-            <a class="hero-cta hero-cta-primary" href="/new-grad/">Browse new grad jobs</a>
-            <a class="hero-cta hero-cta-primary" href="/internships/">Browse internships & co-ops</a>
+        <p class="page-subtitle">Search 34 positions from company career pages across internships, co-ops, new grad, junior, and entry-level roles.</p>
+        <form class="job-search-panel" role="search" aria-label="Filter visible Hanzilla jobs" data-job-search-form>
+            <label class="search-field search-field-keyword">
+                <span>Keyword</span>
+                <input type="search" name="keyword" placeholder="Title, company, skill…" autocomplete="off" data-job-search-input>
+            </label>
+            <label class="search-field">
+                <span>Location</span>
+                <input type="search" name="location" placeholder="Toronto, Vancouver, remote…" autocomplete="off" data-job-location-input>
+            </label>
+            <label class="search-field search-field-select">
+                <span>Role type</span>
+                <select name="role_type" data-job-type-input>
+                    <option value="">All roles</option>
+                    <option value="intern">Internships / co-ops</option>
+                    <option value="new grad junior entry-level">New grad / junior</option>
+                    <option value="remote">Remote</option>
+                </select>
+            </label>
+            <button class="hero-cta hero-cta-primary search-submit" type="submit">Search jobs</button>
+        </form>
+        <div class="search-feedback" data-job-search-feedback aria-live="polite"></div>
+        <div class="landing-hero-actions quick-filters" aria-label="Popular job searches">
+            <a class="hero-cta" href="/internships/">Internships & co-ops</a>
+            <a class="hero-cta" href="/new-grad/">New grad jobs</a>
             <a class="hero-cta" href="/locations/toronto/">Toronto</a>
             <a class="hero-cta" href="/locations/vancouver/">Vancouver</a>
             <a class="hero-cta" href="/finance/">Finance</a>
             <a class="hero-cta" href="/engineering/">Engineering</a>
         </div>
-        <div class="landing-proof-points">
-            <span>Across tech, finance, engineering, business, sciences + more</span>
-            <span>Fresh roles from company career pages</span>
-            <span>Built for Canadian university students</span>
+        <div class="landing-proof-points" aria-label="Why students use Hanzilla">
+            <span><strong>Updated daily</strong> fresh roles stay visible</span>
+            <span><strong>Direct apply</strong> links to company career pages</span>
+            <span><strong>Student-first</strong> Canada-specific filters</span>
         </div>
         
             
@@ -294,6 +315,46 @@
             
         
     </header>
+
+    
+    <section class="latest-jobs-strip" aria-labelledby="latest-jobs-title">
+        <div class="latest-jobs-header">
+            <div>
+                <p class="section-kicker">Hiring now</p>
+                <h2 id="latest-jobs-title">Fresh roles you can open today</h2>
+            </div>
+            <a href="#biology-biotech">Jump to all jobs</a>
+        </div>
+        <div class="latest-job-list">
+            
+            <a class="latest-job-row" href="/jobs/structural-geology-co-op-teck-resources-limited-677879231/">
+                <span class="latest-job-main"><strong>Structural Geology Co-Op</strong><span>Teck Resources Limited</span></span>
+                <span class="latest-job-meta">Vancouver, BC · May 05, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/lab-technician-summer-student-finning-677760142/">
+                <span class="latest-job-main"><strong>Lab Technician - Summer Student</strong><span>Finning</span></span>
+                <span class="latest-job-meta">Edmonton, Alberta · May 05, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/geology-mining-engineering-student-september-2026-suncor-677682023/">
+                <span class="latest-job-main"><strong>Geology &amp; Mining Engineering Student - September 2026</strong><span>Suncor</span></span>
+                <span class="latest-job-meta">Fort McMurray, Alberta · May 05, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/fall-2026-co-op-development-environmental-science-ecology-ontario-power-generation-677176061/">
+                <span class="latest-job-main"><strong>Fall 2026 - Co-Op/Development - Environmental Science, Ecology &amp; Wildlife Programs - Renfrew</strong><span>Ontario Power Generation</span></span>
+                <span class="latest-job-meta">Renfrew, Ontario · May 04, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/microbiology-laboratory-technician-student-placement-targetjobs-uk-677004008/">
+                <span class="latest-job-main"><strong>Microbiology Laboratory Technician (Student Placement)</strong><span>targetjobs UK</span></span>
+                <span class="latest-job-meta">Halifax, Nova Scotia · May 04, 2026</span>
+            </a>
+            
+        </div>
+    </section>
+    
 
     
 
@@ -399,7 +460,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="microbiology laboratory technician (student placement)"
+    data-company="targetjobs uk"
+    data-location="halifax, nova scotia"
+    data-category="sci_biology"
+    data-search-text="microbiology laboratory technician (student placement) targetjobs uk halifax, nova scotia assist microbiology testing and data collection student placement · 13 months · competitive salary · 13-month contract sci_biology">
     <a href="/jobs/microbiology-laboratory-technician-student-placement-targetjobs-uk-677004008/" class="job-link" data-job-title="Microbiology Laboratory Technician (Student Placement)" data-job-company="targetjobs UK">
         <div class="job-card-header">
             <div class="job-badges">
@@ -431,7 +497,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer student - biochemistry"
+    data-company="western university"
+    data-location="london, on"
+    data-category="sci_biology"
+    data-search-text="summer student - biochemistry western university london, on support biochemistry research operations and administration temporary · summer · competitive · seasonal sci_biology">
     <a href="/jobs/summer-student-biochemistry-western-university-675848144/" class="job-link" data-job-title="Summer Student - Biochemistry" data-job-company="Western University">
         <div class="job-card-header">
             <div class="job-badges">
@@ -463,7 +534,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="co-op student, molecular biology"
+    data-company="zymeworks inc."
+    data-location="vancouver, british columbia"
+    data-category="sci_biology"
+    data-search-text="co-op student, molecular biology zymeworks inc. vancouver, british columbia support molecular biology experiments; analyze data; present findings co-op · 8 months · cad 21.00/hour · on-site sci_biology">
     <a href="/jobs/co-op-student-molecular-biology-zymeworks-inc-675817852/" class="job-link" data-job-title="Co-op Student, Molecular Biology" data-job-company="Zymeworks Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -495,7 +571,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="co-op student, molecular biology"
+    data-company="zymeworks inc"
+    data-location="vancouver, bc v5t 1g4"
+    data-category="sci_biology"
+    data-search-text="co-op student, molecular biology zymeworks inc vancouver, bc v5t 1g4 support antibody discovery experiments and data analysis co-op · 8 months · $21 cad/hour · onsite, vancouver, bc sci_biology">
     <a href="/jobs/co-op-student-molecular-biology-zymeworks-inc-675659863/" class="job-link" data-job-title="Co-op Student, Molecular Biology" data-job-company="Zymeworks Inc">
         <div class="job-card-header">
             <div class="job-badges">
@@ -527,7 +608,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="intern, life sciences business development"
+    data-company="shadow lake group inc."
+    data-location="ontario"
+    data-category="sci_biology"
+    data-search-text="intern, life sciences business development shadow lake group inc. ontario perform market research, assist client deliverables internship sci_biology">
     <a href="/jobs/intern-life-sciences-business-development-shadow-lake-group-inc-675047035/" class="job-link" data-job-title="Intern, Life Sciences Business Development" data-job-company="Shadow Lake Group Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -559,7 +645,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="graduate student research associate, forage quantitative genetics"
+    data-company="agriculture and agri-food canada"
+    data-location="lethbridge, ab"
+    data-category="sci_biology"
+    data-search-text="graduate student research associate, forage quantitative genetics agriculture and agri-food canada lethbridge, ab develop field genetics experiments and analyze data rap · 20 h/wk · $29.64-$38.38/hr · 2026-07-02 to 2029-03-30 sci_biology">
     <a href="/jobs/graduate-student-research-associate-forage-quantitative-agriculture-and-agri-food-canada-672484136/" class="job-link" data-job-title="Graduate Student Research Associate, Forage Quantitative Genetics" data-job-company="Agriculture and Agri-Food Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -602,7 +693,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="lab technician - summer student"
+    data-company="finning"
+    data-location="edmonton, alberta"
+    data-category="sci_chemistry"
+    data-search-text="lab technician - summer student finning edmonton, alberta perform lab tests, data entry, and reporting type · temporary (fixed term) · pay: unspecified · duration: summer · term: temporary sci_chemistry">
     <a href="/jobs/lab-technician-summer-student-finning-677760142/" class="job-link" data-job-title="Lab Technician - Summer Student" data-job-company="Finning">
         <div class="job-card-header">
             <div class="job-badges">
@@ -634,7 +730,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer student - quality control technician (4-month contract)"
+    data-company="crh"
+    data-location="etobicoke, on"
+    data-category="sci_chemistry"
+    data-search-text="summer student - quality control technician (4-month contract) crh etobicoke, on sampling and testing concrete; analyze qc data contract · 4 months · $19.00-$21.85/hr · 4 months sci_chemistry">
     <a href="/jobs/summer-student-quality-control-technician-4-month-contract-crh-677056766/" class="job-link" data-job-title="Summer Student - Quality Control Technician (4-Month Contract)" data-job-company="CRH">
         <div class="job-card-header">
             <div class="job-badges">
@@ -666,7 +767,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="student research assistant - department of chemistry - faculty of science"
+    data-company="university of prince edward island"
+    data-location="charlottetown, pe c1a 4p3"
+    data-category="sci_chemistry"
+    data-search-text="student research assistant - department of chemistry - faculty of science university of prince edward island charlottetown, pe c1a 4p3 synthesize compounds, characterize materials, report results student research assistant · tbd · tbd · tbd sci_chemistry">
     <a href="/jobs/student-research-assistant-department-of-chemistry-faculty-university-of-prince-edward-island-674952303/" class="job-link" data-job-title="Student Research Assistant - Department of Chemistry - Faculty of Science" data-job-company="University of Prince Edward Island">
         <div class="job-card-header">
             <div class="job-badges">
@@ -698,7 +804,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="student research assistant (up to 2 positions) - department of chemistry - faculty of science"
+    data-company="university of prince edward island"
+    data-location="charlottetown, pe c1a 4p3"
+    data-category="sci_chemistry"
+    data-search-text="student research assistant (up to 2 positions) - department of chemistry - faculty of science university of prince edward island charlottetown, pe c1a 4p3 synthesize substrates; characterize products; analyze data student research assistant · not specified · not disclosed · not specified sci_chemistry">
     <a href="/jobs/student-research-assistant-up-to-2-positions-department-of-university-of-prince-edward-island-674950219/" class="job-link" data-job-title="Student Research Assistant (Up to 2 Positions) - Department of Chemistry - Faculty of Science" data-job-company="University of Prince Edward Island">
         <div class="job-card-header">
             <div class="job-badges">
@@ -730,7 +841,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="chemistry student placement"
+    data-company="targetjobs uk"
+    data-location="halifax, nova scotia"
+    data-category="sci_chemistry"
+    data-search-text="chemistry student placement targetjobs uk halifax, nova scotia conduct testing, record data, support qa processes contract · 13 months · competitive salary · starting late july 2026 sci_chemistry">
     <a href="/jobs/chemistry-student-placement-targetjobs-uk-674662729/" class="job-link" data-job-title="Chemistry Student placement" data-job-company="targetjobs UK">
         <div class="job-card-header">
             <div class="job-badges">
@@ -762,7 +878,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="quality control technician - student"
+    data-company="crh canada"
+    data-location="oakville, ontario"
+    data-category="sci_chemistry"
+    data-search-text="quality control technician - student crh canada oakville, ontario sample and test asphalt materials in lab intern · 4 months · $19/hour · contract sci_chemistry">
     <a href="/jobs/quality-control-technician-student-crh-canada-672541711/" class="job-link" data-job-title="Quality Control Technician - Student" data-job-company="CRH Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -794,7 +915,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="quality control technician - student"
+    data-company="crh canada"
+    data-location="concord, ontario"
+    data-category="sci_chemistry"
+    data-search-text="quality control technician - student crh canada concord, ontario perform asphalt material tests and report results intern · 4 months · 19.00 per year · 4-month contract sci_chemistry">
     <a href="/jobs/quality-control-technician-student-crh-canada-672541089/" class="job-link" data-job-title="Quality Control Technician - Student" data-job-company="CRH Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -826,7 +952,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="quality control technician - student"
+    data-company="dufferin asphalt - a crh company"
+    data-location="oakville, on"
+    data-category="sci_chemistry"
+    data-search-text="quality control technician - student dufferin asphalt - a crh company oakville, on perform asphalt qc testing and data recording internship · 4 months · $19/hr · 4-month contract sci_chemistry">
     <a href="/jobs/quality-control-technician-student-dufferin-asphalt-a-crh-company-672499026/" class="job-link" data-job-title="Quality Control Technician - Student" data-job-company="Dufferin Asphalt - A CRH Company">
         <div class="job-card-header">
             <div class="job-badges">
@@ -858,7 +989,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="student construction material lab technician"
+    data-company="wsp in canada"
+    data-location="whitby, ontario hybrid"
+    data-category="sci_chemistry"
+    data-search-text="student construction material lab technician wsp in canada whitby, ontario support routine lab testing and sample preparation activities internship sci_chemistry">
     <a href="/jobs/student-construction-material-lab-technician-wsp-in-canada-670004503/" class="job-link" data-job-title="Student Construction Material Lab Technician" data-job-company="WSP in Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -890,7 +1026,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="laboratory technician (summer student)"
+    data-company="mcasphalt industries limited"
+    data-location="regina, saskatchewan"
+    data-category="sci_chemistry"
+    data-search-text="laboratory technician (summer student) mcasphalt industries limited regina, saskatchewan perform qa/qc testing on asphalt emulsions temporary · summer 2026 · competitive student wage · may 2026–aug 2026 sci_chemistry">
     <a href="/jobs/laboratory-technician-summer-student-mcasphalt-industries-limited-668377325/" class="job-link" data-job-title="Laboratory Technician (Summer Student)" data-job-company="McAsphalt Industries Limited">
         <div class="job-card-header">
             <div class="job-badges">
@@ -922,7 +1063,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="laboratory technician, student"
+    data-company="redpath sugar ltd"
+    data-location="belleville, ontario"
+    data-category="sci_chemistry"
+    data-search-text="laboratory technician, student redpath sugar ltd belleville, ontario perform laboratory testing on sugar products seasonal contract · may 2026–aug 2026 · $22.88/hour · seasonal sci_chemistry">
     <a href="/jobs/laboratory-technician-student-redpath-sugar-ltd-666568948/" class="job-link" data-job-title="Laboratory Technician, Student" data-job-company="Redpath Sugar Ltd">
         <div class="job-card-header">
             <div class="job-badges">
@@ -965,7 +1111,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="fall 2026 - co-op/development - environmental science, ecology &amp; wildlife programs - renfrew"
+    data-company="ontario power generation"
+    data-location="renfrew, ontario"
+    data-category="sci_environmental"
+    data-search-text="fall 2026 - co-op/development - environmental science, ecology &amp; wildlife programs - renfrew ontario power generation renfrew, ontario assist environmental projects; field sampling; data collection contract · 4 months · $33.59-$44.77/hr · co-op sci_environmental">
     <a href="/jobs/fall-2026-co-op-development-environmental-science-ecology-ontario-power-generation-677176061/" class="job-link" data-job-title="Fall 2026 - Co-Op/Development - Environmental Science, Ecology &amp; Wildlife Programs - Renfrew" data-job-company="Ontario Power Generation">
         <div class="job-card-header">
             <div class="job-badges">
@@ -997,7 +1148,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="laboratory technician (co-op)"
+    data-company="alliance technical group north, inc"
+    data-location="mississauga, on"
+    data-category="sci_environmental"
+    data-search-text="laboratory technician (co-op) alliance technical group north, inc mississauga, on perform gas analyses and calibrations; field sampling co-op sci_environmental">
     <a href="/jobs/laboratory-technician-co-op-alliance-technical-group-north-inc-675601274/" class="job-link" data-job-title="Laboratory Technician (Co-Op)" data-job-company="Alliance Technical Group North, Inc">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1029,7 +1185,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="laboratory technician (co-op)"
+    data-company="alliance technical group"
+    data-location="mississauga, ontario"
+    data-category="sci_environmental"
+    data-search-text="laboratory technician (co-op) alliance technical group mississauga, ontario perform lab analyses and field sampling with gc co-op · 0-12 months · competitive pay · internship sci_environmental">
     <a href="/jobs/laboratory-technician-co-op-alliance-technical-group-675595387/" class="job-link" data-job-title="Laboratory Technician (Co-Op)" data-job-company="Alliance Technical Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1072,7 +1233,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="actuarial student"
+    data-company="canada life"
+    data-location="london, ontario hybrid"
+    data-category="sci_actuarial"
+    data-search-text="actuarial student canada life london, ontario assist actuarial tasks, data analysis, and exam prep temporary full time  b7 4 months  b7 $49,020-$88,350 annually  b7 temporary sci_actuarial">
     <a href="/jobs/actuarial-student-canada-life-676883659/" class="job-link" data-job-title="Actuarial Student" data-job-company="Canada Life">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1104,7 +1270,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="actuarial post-graduation intern"
+    data-company="canada life"
+    data-location="london, ontario hybrid"
+    data-category="sci_actuarial"
+    data-search-text="actuarial post-graduation intern canada life london, ontario execute entry-level actuarial tasks across domains temporary full time · 8-12 months · $49,020 - $88,350 · aug 31, 2026 sci_actuarial">
     <a href="/jobs/actuarial-post-graduation-intern-canada-life-676883658/" class="job-link" data-job-title="Actuarial Post-Graduation Intern" data-job-company="Canada Life">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1136,7 +1307,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="actuarial intern (ech-on)"
+    data-company="caa club group"
+    data-location="vaughan, ontario"
+    data-category="sci_actuarial"
+    data-search-text="actuarial intern (ech-on) caa club group vaughan, ontario perform actuarial trend analysis and forecasting type: internship sci_actuarial">
     <a href="/jobs/actuarial-intern-ech-on-caa-club-group-676258270/" class="job-link" data-job-title="Actuarial Intern (ECH-ON)" data-job-company="CAA Club Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1168,7 +1344,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="actuarial analyst co-op (atlantic region)"
+    data-company="telus health"
+    data-location="halifax, nova scotia"
+    data-category="sci_actuarial"
+    data-search-text="actuarial analyst co-op (atlantic region) telus health halifax, nova scotia support actuarial analysis and valuation reporting internship/co-op · may 4 - aug 21, 2026 · in-person sci_actuarial">
     <a href="/jobs/actuarial-analyst-co-op-atlantic-region-telus-health-673909084/" class="job-link" data-job-title="Actuarial Analyst Co-op (Atlantic Region)" data-job-company="TELUS Health">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1200,7 +1381,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="actuarial student co-op program fall 2026 - life &amp; health"
+    data-company="partnerre"
+    data-location="toronto, ontario hybrid"
+    data-category="sci_actuarial"
+    data-search-text="actuarial student co-op program fall 2026 - life &amp; health partnerre toronto, ontario build actuarial models, analyze experience data internship · 4 months (extendable to 8) · cad 1125-1375/week · fall 2026 sci_actuarial">
     <a href="/jobs/actuarial-student-co-op-program-fall-2026-life-health-partnerre-671799825/" class="job-link" data-job-title="Actuarial Student Co-op Program Fall 2026 - Life &amp; Health" data-job-company="PartnerRe">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1232,7 +1418,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="quantitative analyst, fall 2026 (co-op/internship) - 4 months"
+    data-company="bmo"
+    data-location="toronto, ontario"
+    data-category="sci_actuarial"
+    data-search-text="quantitative analyst, fall 2026 (co-op/internship) - 4 months bmo toronto, ontario develop ml models, analyze data, automate workflows co-op/internship · 4 months · not specified · fall 2026 sci_actuarial">
     <a href="/jobs/quantitative-analyst-fall-2026-co-op-internship-4-months-bmo-669248112/" class="job-link" data-job-title="Quantitative Analyst, Fall 2026 (Co-op/Internship) - 4 Months" data-job-company="BMO">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1264,7 +1455,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="2026 insurance – fall, pricing, actuarial intern (4-16 months)"
+    data-company="rbc"
+    data-location="mississauga, on l5c 1e4"
+    data-category="sci_actuarial"
+    data-search-text="2026 insurance – fall, pricing, actuarial intern (4-16 months) rbc mississauga, on l5c 1e4 develop pricing models, validate assumptions, analyze results co-op/internship · 4-16 months · salaried · fixed term sci_actuarial">
     <a href="/jobs/2026-insurance-fall-pricing-actuarial-intern-4-16-months-rbc-667819218/" class="job-link" data-job-title="2026 Insurance – Fall, Pricing, Actuarial Intern (4-16 months)" data-job-company="RBC">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1296,7 +1492,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="2026 insurance – fall, pricing, actuarial intern (4-16 months)"
+    data-company="rbc"
+    data-location="toronto, on m9w 0a4"
+    data-category="sci_actuarial"
+    data-search-text="2026 insurance – fall, pricing, actuarial intern (4-16 months) rbc toronto, on m9w 0a4 learn pricing models, run valuation analyses, analyze data co-op · 4-16 months · salary · fixed term sci_actuarial">
     <a href="/jobs/2026-insurance-fall-pricing-actuarial-intern-4-16-months-rbc-667819217/" class="job-link" data-job-title="2026 Insurance – Fall, Pricing, Actuarial Intern (4-16 months)" data-job-company="RBC">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1328,7 +1529,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="2026 insurance – summer, pricing, actuarial intern (4-16 months)"
+    data-company="rbc"
+    data-location="mississauga, ontario"
+    data-category="sci_actuarial"
+    data-search-text="2026 insurance – summer, pricing, actuarial intern (4-16 months) rbc mississauga, ontario develop pricing models, perform actuarial analyses co-op · 4-16 months · salaried · fixed-term sci_actuarial">
     <a href="/jobs/2026-insurance-summer-pricing-actuarial-intern-4-16-months-rbc-667229392/" class="job-link" data-job-title="2026 Insurance – Summer, Pricing, Actuarial Intern (4-16 months)" data-job-company="RBC">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1371,7 +1577,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="structural geology co-op"
+    data-company="teck resources limited"
+    data-location="vancouver, bc hybrid"
+    data-category="sci_geoscience"
+    data-search-text="structural geology co-op teck resources limited vancouver, bc test and validate automated televiewer data temporary full time · 4 months · cad 4,833 - 6,125 · co-op sci_geoscience">
     <a href="/jobs/structural-geology-co-op-teck-resources-limited-677879231/" class="job-link" data-job-title="Structural Geology Co-Op" data-job-company="Teck Resources Limited">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1403,7 +1614,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="geology &amp; mining engineering student - september 2026"
+    data-company="suncor"
+    data-location="fort mcmurray, alberta"
+    data-category="sci_geoscience"
+    data-search-text="geology &amp; mining engineering student - september 2026 suncor fort mcmurray, alberta assist geology projects; collect samples, analyze data student internship · 4–16 months · competitive pay · sep 2026 start sci_geoscience">
     <a href="/jobs/geology-mining-engineering-student-september-2026-suncor-677682023/" class="job-link" data-job-title="Geology &amp; Mining Engineering Student - September 2026" data-job-company="Suncor">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1435,7 +1651,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="geology &amp; mining engineering student - january 2027"
+    data-company="suncor"
+    data-location="fort mcmurray, alberta"
+    data-category="sci_geoscience"
+    data-search-text="geology &amp; mining engineering student - january 2027 suncor fort mcmurray, alberta assist geology/mining projects; field and lab tasks student · 4-16 months · competitive pay · january 2027 start sci_geoscience">
     <a href="/jobs/geology-mining-engineering-student-january-2027-suncor-674934853/" class="job-link" data-job-title="Geology &amp; Mining Engineering Student - January 2027" data-job-company="Suncor">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1467,7 +1688,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="geology summer student"
+    data-company="kinross gold corporation"
+    data-location="red lake, ontario"
+    data-category="sci_geoscience"
+    data-search-text="geology summer student kinross gold corporation red lake, ontario assist geology team; sampling, fieldwork, data support internship · summer · $23.92/hour · seasonal sci_geoscience">
     <a href="/jobs/geology-summer-student-kinross-gold-corporation-669984225/" class="job-link" data-job-title="Geology Summer Student" data-job-company="Kinross Gold Corporation">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1499,7 +1725,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="september 2026 geology co-op"
+    data-company="elk valley resources"
+    data-location="sparwood, british columbia"
+    data-category="sci_geoscience"
+    data-search-text="september 2026 geology co-op elk valley resources sparwood, british columbia assist geological logging, sampling, modelling, and drone surveys co-op · 8 or 12 months · salary commensurate with experience · sep 2026 start sci_geoscience">
     <a href="/jobs/september-2026-geology-co-op-elk-valley-resources-669253065/" class="job-link" data-job-title="September 2026 Geology Co-op" data-job-company="Elk Valley Resources">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1868,6 +2099,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

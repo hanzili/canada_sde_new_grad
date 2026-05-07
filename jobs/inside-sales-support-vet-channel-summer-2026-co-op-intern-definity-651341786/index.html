@@ -454,7 +454,12 @@ Determined to create positive change for our environment, our people, and our co
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior business analyst - weins corporate (co)"
+    data-company="weins auto group"
+    data-location="markham, on l3r 2m5"
+    data-category="biz_analyst"
+    data-search-text="junior business analyst - weins corporate (co) weins auto group markham, on l3r 2m5 support admin tasks, research, reporting, and coordination temporary full-time · 12 months · $55k-$62k · contract biz_analyst">
     <a href="/jobs/junior-business-analyst-weins-corporate-co-weins-auto-group-675895704/" class="job-link" data-job-title="Junior Business Analyst - Weins Corporate (CO)" data-job-company="WEINS Auto Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -487,7 +492,12 @@ Determined to create positive change for our environment, our people, and our co
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior business analyst and workflow analyst"
+    data-company="zenatech inc."
+    data-location="toronto, ontario"
+    data-category="biz_analyst"
+    data-search-text="junior business analyst and workflow analyst zenatech inc. toronto, ontario analyze processes, map workflows, enable automation full-time · permanent · competitive salary · ongoing biz_analyst">
     <a href="/jobs/junior-business-analyst-and-workflow-analyst-zenatech-inc-674705641/" class="job-link" data-job-title="Junior Business Analyst and Workflow Analyst" data-job-company="ZenaTech Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -520,7 +530,12 @@ Determined to create positive change for our environment, our people, and our co
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="rq10875 - business analyst - junior"
+    data-company="s m software solutions inc"
+    data-location="toronto, ontario"
+    data-category="biz_analyst"
+    data-search-text="rq10875 - business analyst - junior s m software solutions inc toronto, ontario lead requirements sessions, document use cases, analyze data. contract / consulting · apr 2026–oct 2026 biz_analyst">
     <a href="/jobs/rq10875-business-analyst-junior-s-m-software-solutions-inc-671077808/" class="job-link" data-job-title="RQ10875 - Business Analyst - Junior" data-job-company="S M Software Solutions Inc">
         <div class="job-card-header">
             <div class="job-badges">
@@ -553,7 +568,12 @@ Determined to create positive change for our environment, our people, and our co
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="associate business analyst - entry level"
+    data-company="ibm"
+    data-location="bedford, nova scotia hybrid"
+    data-category="biz_analyst"
+    data-search-text="associate business analyst - entry level ibm bedford, nova scotia gather requirements, analyze data, coordinate stakeholders full-time · permanent · competitive pay · - biz_analyst">
     <a href="/jobs/associate-business-analyst-entry-level-ibm-669928091/" class="job-link" data-job-title="Associate Business Analyst - Entry Level" data-job-company="IBM">
         <div class="job-card-header">
             <div class="job-badges">
@@ -586,7 +606,12 @@ Determined to create positive change for our environment, our people, and our co
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="business analyst - junior"
+    data-company="the code crackers inc."
+    data-location="toronto, on"
+    data-category="biz_analyst"
+    data-search-text="business analyst - junior the code crackers inc. toronto, on gather, analyze, document requirements; support stakeholders. contract · apr 2026–oct 2026 · $51-59/hr · on-site biz_analyst">
     <a href="/jobs/business-analyst-junior-the-code-crackers-inc-669505452/" class="job-link" data-job-title="Business Analyst - Junior" data-job-company="The Code Crackers Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -726,6 +751,57 @@ Determined to create positive change for our environment, our people, and our co
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

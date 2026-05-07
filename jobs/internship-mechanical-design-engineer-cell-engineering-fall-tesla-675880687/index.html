@@ -412,7 +412,12 @@ Tesla is looking to hire a Mechanical Design Intern to design and deploy special
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior process engineer - operations &amp; scale up"
+    data-company="carbonet"
+    data-location="vancouver, british columbia"
+    data-category="eng_mechanical"
+    data-search-text="junior process engineer - operations &amp; scale up carbonet vancouver, british columbia assemble, operate, and optimize scale-up equipment full-time eng_mechanical">
     <a href="/jobs/junior-process-engineer-operations-scale-up-carbonet-675668903/" class="job-link" data-job-title="Junior Process Engineer - Operations &amp; Scale Up" data-job-company="CarboNet">
         <div class="job-card-header">
             <div class="job-badges">
@@ -445,7 +450,12 @@ Tesla is looking to hire a Mechanical Design Intern to design and deploy special
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior manufacturing engineer"
+    data-company="renaissance repair and supply"
+    data-location="kanata, on k2k 2w2"
+    data-category="eng_mechanical"
+    data-search-text="junior manufacturing engineer renaissance repair and supply kanata, on k2k 2w2 develop harness manufacturing processes and cost estimates new product evaluation · npi · bom management · labor costing eng_mechanical">
     <a href="/jobs/junior-manufacturing-engineer-renaissance-repair-and-supply-675227247/" class="job-link" data-job-title="Junior Manufacturing Engineer" data-job-company="Renaissance Repair and Supply">
         <div class="job-card-header">
             <div class="job-badges">
@@ -478,7 +488,12 @@ Tesla is looking to hire a Mechanical Design Intern to design and deploy special
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior process engineer – operations &amp; scale-up"
+    data-company="carbonet nanotechnologies inc"
+    data-location="delta, bc v3m 6k8"
+    data-category="eng_mechanical"
+    data-search-text="junior process engineer – operations &amp; scale-up carbonet nanotechnologies inc delta, bc v3m 6k8 assemble, operate, and optimize scale-up equipment full-time · n/a · n/a · n/a eng_mechanical">
     <a href="/jobs/junior-process-engineer-operations-scale-up-carbonet-nanotechnologies-inc-675227091/" class="job-link" data-job-title="Junior Process Engineer – Operations &amp; Scale-Up" data-job-company="Carbonet Nanotechnologies Inc">
         <div class="job-card-header">
             <div class="job-badges">
@@ -511,7 +526,12 @@ Tesla is looking to hire a Mechanical Design Intern to design and deploy special
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="candidat(e) à la profession d&#39;ingénieur mécanique, fiabilité et opérations / eit mechanical engineer, reliability and operations"
+    data-company="ge vernova"
+    data-location="brossard, quebec"
+    data-category="eng_mechanical"
+    data-search-text="candidat(e) à la profession d&#39;ingénieur mécanique, fiabilité et opérations / eit mechanical engineer, reliability and operations ge vernova brossard, quebec assist turbine and alternator service projects type: full-time eng_mechanical">
     <a href="/jobs/candidat-e-a-la-profession-d-ingenieur-mecanique-fiabilite-ge-vernova-671360168/" class="job-link" data-job-title="Candidat(e) à la profession d&#39;ingénieur mécanique, Fiabilité et Opérations / EIT mechanical engineer, Reliability and Operations" data-job-company="GE Vernova">
         <div class="job-card-header">
             <div class="job-badges">
@@ -544,7 +564,12 @@ Tesla is looking to hire a Mechanical Design Intern to design and deploy special
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior mechanical design engineer"
+    data-company="agilus work solutions"
+    data-location="sarnia, ontario"
+    data-category="eng_mechanical"
+    data-search-text="junior mechanical design engineer agilus work solutions sarnia, ontario assist mechanical design deliverables for capex project contract · 1 year · $40-65/hr · mon-fri eng_mechanical">
     <a href="/jobs/junior-mechanical-design-engineer-agilus-work-solutions-669289214/" class="job-link" data-job-title="Junior Mechanical Design Engineer" data-job-company="Agilus Work Solutions">
         <div class="job-card-header">
             <div class="job-badges">
@@ -675,6 +700,57 @@ Tesla is looking to hire a Mechanical Design Intern to design and deploy special
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

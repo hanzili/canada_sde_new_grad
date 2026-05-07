@@ -464,7 +464,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior process engineer"
+    data-company="fgf brands"
+    data-location="greater toronto area"
+    data-category="eng_industrial"
+    data-search-text="junior process engineer fgf brands greater toronto area develop and optimize production processes and equipment full-time · permanent · not disclosed · not disclosed eng_industrial">
     <a href="/jobs/junior-process-engineer-fgf-brands-670123918/" class="job-link" data-job-title="Junior Process Engineer" data-job-company="FGF Brands">
         <div class="job-card-header">
             <div class="job-badges">
@@ -497,7 +502,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior manufacturing engineer"
+    data-company="jacobs &amp; thompson inc"
+    data-location="toronto, on m9l 2r3"
+    data-category="eng_industrial"
+    data-search-text="junior manufacturing engineer jacobs &amp; thompson inc toronto, on m9l 2r3 assist manufacturing process design and continuous improvement type: full-time eng_industrial">
     <a href="/jobs/junior-manufacturing-engineer-jacobs-thompson-inc-668263823/" class="job-link" data-job-title="Junior Manufacturing Engineer" data-job-company="Jacobs &amp; Thompson Inc">
         <div class="job-card-header">
             <div class="job-badges">
@@ -530,7 +540,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer student - continuous improvement"
+    data-company="worksafenb"
+    data-location="new brunswick"
+    data-category="eng_industrial"
+    data-search-text="summer student - continuous improvement worksafenb new brunswick analyze data to drive process improvements internship · summer · paid (hourly rates listed) · summer eng_industrial">
     <a href="/jobs/summer-student-continuous-improvement-worksafenb-672445079/" class="job-link" data-job-title="Summer Student - Continuous Improvement" data-job-company="WorkSafeNB">
         <div class="job-card-header">
             <div class="job-badges">
@@ -563,7 +578,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer student – continuous improvement"
+    data-company="worksafenb/travail sécuritaire nb"
+    data-location="new brunswick"
+    data-category="eng_industrial"
+    data-search-text="summer student – continuous improvement worksafenb/travail sécuritaire nb new brunswick support ci team with data analysis and mapping internship · summer 2026 · $16.40-$18.40/hr · summer term eng_industrial">
     <a href="/jobs/summer-student-continuous-improvement-worksafenb-travail-securitaire-nb-672421056/" class="job-link" data-job-title="Summer Student – Continuous Improvement" data-job-company="WorkSafeNB/Travail sécuritaire NB">
         <div class="job-card-header">
             <div class="job-badges">
@@ -596,7 +616,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="manufacturing engineer intern (canada)"
+    data-company="leggett &amp; platt"
+    data-location="lakeshore, on"
+    data-category="eng_industrial"
+    data-search-text="manufacturing engineer intern (canada) leggett &amp; platt lakeshore, on assist manufacturing processes; drive continuous improvements internship · not specified · paid · not specified eng_industrial">
     <a href="/jobs/manufacturing-engineer-intern-canada-leggett-platt-670185898/" class="job-link" data-job-title="Manufacturing Engineer Intern (Canada)" data-job-company="Leggett &amp; Platt">
         <div class="job-card-header">
             <div class="job-badges">
@@ -738,6 +763,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

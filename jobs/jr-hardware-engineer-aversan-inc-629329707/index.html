@@ -440,7 +440,12 @@ The subject of the email should be “Junior Hardware Engineer Application”. T
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="automation engineer – junior or intermediate | ingénieur en automatisation – junior ou intermédiaire"
+    data-company="efficient plant inc."
+    data-location="pointe-claire, quebec hybrid"
+    data-category="hw_fw"
+    data-search-text="automation engineer – junior or intermediate | ingénieur en automatisation – junior ou intermédiaire efficient plant inc. pointe-claire, quebec develop, configure, and support scada systems full-time hw_fw">
     <a href="/jobs/automation-engineer-junior-or-intermediate-ingenieur-en-efficient-plant-inc-675877564/" class="job-link" data-job-title="Automation Engineer – Junior or Intermediate | Ingénieur en automatisation – Junior ou Intermédiaire" data-job-company="Efficient Plant Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -473,7 +478,12 @@ The subject of the email should be “Junior Hardware Engineer Application”. T
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="jr. fpga engineer (new grad)"
+    data-company="wolf advanced technology"
+    data-location="aurora, on l4g 7a9"
+    data-category="hw_fw"
+    data-search-text="jr. fpga engineer (new grad) wolf advanced technology aurora, on l4g 7a9 develop firmware and fpga code for embedded systems contract · 12mo · $80k/yr hw_fw">
     <a href="/jobs/jr-fpga-engineer-new-grad-wolf-advanced-technology-674894605/" class="job-link" data-job-title="Jr. FPGA Engineer (New Grad)" data-job-company="Wolf Advanced Technology">
         <div class="job-card-header">
             <div class="job-badges">
@@ -506,7 +516,12 @@ The subject of the email should be “Junior Hardware Engineer Application”. T
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="jr. software engineer (new grad)"
+    data-company="wolf advanced technology"
+    data-location="aurora, on l4g 7a9"
+    data-category="hw_fw"
+    data-search-text="jr. software engineer (new grad) wolf advanced technology aurora, on l4g 7a9 develop software, drivers, and ai features end-to-end contract · 12mo · $80,000/yr hw_fw">
     <a href="/jobs/jr-software-engineer-new-grad-wolf-advanced-technology-674868749/" class="job-link" data-job-title="Jr. Software Engineer (New Grad)" data-job-company="Wolf Advanced Technology">
         <div class="job-card-header">
             <div class="job-badges">
@@ -539,7 +554,12 @@ The subject of the email should be “Junior Hardware Engineer Application”. T
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="jr. hardware engineer (new grad)"
+    data-company="wolf advanced technology"
+    data-location="aurora, on l4g 7a9"
+    data-category="hw_fw"
+    data-search-text="jr. hardware engineer (new grad) wolf advanced technology aurora, on l4g 7a9 assist pcb layout, prototype hardware bring-up, debugging contract · 12mo · $80,000/yr hw_fw">
     <a href="/jobs/jr-hardware-engineer-new-grad-wolf-advanced-technology-674685456/" class="job-link" data-job-title="Jr. Hardware Engineer (New Grad)" data-job-company="Wolf Advanced Technology">
         <div class="job-card-header">
             <div class="job-badges">
@@ -572,7 +592,12 @@ The subject of the email should be “Junior Hardware Engineer Application”. T
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior hardware designer – guelph, on canada"
+    data-company="connect tech inc."
+    data-location="guelph, ontario"
+    data-category="hw_fw"
+    data-search-text="junior hardware designer – guelph, on canada connect tech inc. guelph, ontario design and test pcbas; debug and integrate hardware. full-time · $70k-$80k/yr hw_fw">
     <a href="/jobs/junior-hardware-designer-guelph-on-canada-connect-tech-inc-673782673/" class="job-link" data-job-title="Junior Hardware Designer – Guelph, ON Canada" data-job-company="Connect Tech Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -703,6 +728,57 @@ The subject of the email should be “Junior Hardware Engineer Application”. T
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

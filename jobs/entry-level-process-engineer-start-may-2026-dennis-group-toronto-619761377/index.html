@@ -455,7 +455,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="junior metallurgist"
+    data-company="b2gold corp."
+    data-location="nunavut"
+    data-category="eng_chemical"
+    data-search-text="junior metallurgist b2gold corp. nunavut assist metallurgical testing and process optimization full-time · 3x3 rotation · $127,465/year eng_chemical">
     <a href="/jobs/junior-metallurgist-b2gold-corp-672650814/" class="job-link" data-job-title="Junior Metallurgist" data-job-company="B2Gold Corp.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -488,7 +493,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="metallurgy eit"
+    data-company="equinox gold"
+    data-location="geraldton, on"
+    data-category="eng_chemical"
+    data-search-text="metallurgy eit equinox gold geraldton, on provide metallurgical support and optimize plant performance full-time · 7/7 or 14/14 rotation eng_chemical">
     <a href="/jobs/metallurgy-eit-equinox-gold-668441071/" class="job-link" data-job-title="Metallurgy EIT" data-job-company="EQUINOX GOLD">
         <div class="job-card-header">
             <div class="job-badges">
@@ -521,7 +531,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior chemical process engineer"
+    data-company="saltworks technologies"
+    data-location="richmond, bc v6w 1a8"
+    data-category="eng_chemical"
+    data-search-text="junior chemical process engineer saltworks technologies richmond, bc v6w 1a8 contribute to process design and optimization tasks full-time eng_chemical">
     <a href="/jobs/junior-chemical-process-engineer-saltworks-technologies-665433791/" class="job-link" data-job-title="Junior Chemical Process Engineer" data-job-company="Saltworks Technologies">
         <div class="job-card-header">
             <div class="job-badges">
@@ -554,7 +569,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="process engineer co-op (ops)"
+    data-company="oxy"
+    data-location="squamish, british columbia"
+    data-category="eng_chemical"
+    data-search-text="process engineer co-op (ops) oxy squamish, british columbia support process engineering and test campaigns co-op · 8-12 months · $22-26/hour · sept 2026 start eng_chemical">
     <a href="/jobs/process-engineer-co-op-ops-oxy-677279275/" class="job-link" data-job-title="Process Engineer Co-op (OPS)" data-job-company="Oxy">
         <div class="job-card-header">
             <div class="job-badges">
@@ -587,7 +607,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="process engineer co-op (ops)"
+    data-company="occidental"
+    data-location="squamish, bc"
+    data-category="eng_chemical"
+    data-search-text="process engineer co-op (ops) occidental squamish, bc support process trials, data analysis, and reporting co-op · 8-12 months · $22-26/hour · on-site (squamish, bc) eng_chemical">
     <a href="/jobs/process-engineer-co-op-ops-occidental-677404615/" class="job-link" data-job-title="Process Engineer Co-op (OPS)" data-job-company="Occidental">
         <div class="job-card-header">
             <div class="job-badges">
@@ -718,6 +743,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

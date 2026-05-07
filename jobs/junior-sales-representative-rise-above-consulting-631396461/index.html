@@ -446,7 +446,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="inside sales associate- sally beauty- 05537"
+    data-company="sally beauty"
+    data-location="abbotsford, british columbia"
+    data-category="biz_sales"
+    data-search-text="inside sales associate- sally beauty- 05537 sally beauty abbotsford, british columbia build relationships, drive sales, merchandise displays full-time · permanent · competitive pay · n/a biz_sales">
     <a href="/jobs/inside-sales-associate-sally-beauty-05537-sally-beauty-678293319/" class="job-link" data-job-title="Inside Sales Associate- Sally Beauty- 05537" data-job-company="Sally Beauty">
         <div class="job-card-header">
             <div class="job-badges">
@@ -479,7 +484,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sales associate"
+    data-company="autocanada"
+    data-location="spruce grove, alberta"
+    data-category="biz_sales"
+    data-search-text="sales associate autocanada spruce grove, alberta drive sales through customer engagements and consultations full-time · immediate hire biz_sales">
     <a href="/jobs/sales-associate-autocanada-678114896/" class="job-link" data-job-title="Sales Associate" data-job-company="AutoCanada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -512,7 +522,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sales associate"
+    data-company="mercedes-benz thornhill"
+    data-location="vaughan, ontario"
+    data-category="biz_sales"
+    data-search-text="sales associate mercedes-benz thornhill vaughan, ontario build client relationships, demonstrate vehicles, close sales full-time · permanent · competitive pay · on-site biz_sales">
     <a href="/jobs/sales-associate-mercedes-benz-thornhill-678110050/" class="job-link" data-job-title="Sales Associate" data-job-company="Mercedes-Benz Thornhill">
         <div class="job-card-header">
             <div class="job-badges">
@@ -545,7 +560,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="lumber &amp; building supply sales associate"
+    data-company="united lumber home hardware building ctr"
+    data-location="georgetown, on l7g 4b3"
+    data-category="biz_sales"
+    data-search-text="lumber &amp; building supply sales associate united lumber home hardware building ctr georgetown, on l7g 4b3 assist customers, process orders, manage inventory type: full-time biz_sales">
     <a href="/jobs/lumber-building-supply-sales-associate-united-lumber-home-hardware-building-ctr-678084780/" class="job-link" data-job-title="Lumber &amp; Building Supply Sales Associate" data-job-company="United Lumber Home Hardware Building Ctr">
         <div class="job-card-header">
             <div class="job-badges">
@@ -578,7 +598,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sales associate (english &amp; russian speaking preferred)"
+    data-company="wirelesswave"
+    data-location="vaughan, on"
+    data-category="biz_sales"
+    data-search-text="sales associate (english &amp; russian speaking preferred) wirelesswave vaughan, on deliver wireless solutions, build relationships, meet sales targets full-time · permanent · $45,000-$70,000+ (base + uncapped commissions) · permanent biz_sales">
     <a href="/jobs/sales-associate-english-russian-speaking-preferred-wirelesswave-678009191/" class="job-link" data-job-title="Sales Associate (English &amp; Russian Speaking preferred)" data-job-company="WIRELESSWAVE">
         <div class="job-card-header">
             <div class="job-badges">
@@ -719,6 +744,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

@@ -486,7 +486,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="victoria office – cpa opportunities in private enterprise audit – summer internship – summer 2027 start"
+    data-company="kpmg canada"
+    data-location="victoria, british columbia"
+    data-category="finance_audit"
+    data-search-text="victoria office – cpa opportunities in private enterprise audit – summer internship – summer 2027 start kpmg canada victoria, british columbia assist audit engagements, support client projects, learn cpa internship · summer 2027 · $49k-$60k · summer term finance_audit">
     <a href="/jobs/victoria-office-cpa-opportunities-in-private-enterprise-kpmg-canada-671334414/" class="job-link" data-job-title="Victoria Office – CPA Opportunities in Private Enterprise Audit – Summer Internship – Summer 2027 Start" data-job-company="KPMG Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -518,7 +523,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="intern or co-op student, assurance and accounting (winter 2027)"
+    data-company="mnp"
+    data-location="victoria, british columbia"
+    data-category="finance_audit"
+    data-search-text="intern or co-op student, assurance and accounting (winter 2027) mnp victoria, british columbia assist audits, compilations, reviews, and tax work internship/co-op · winter 2027 · cad 46,000/year · winter 2027 finance_audit">
     <a href="/jobs/intern-or-co-op-student-assurance-and-accounting-winter-2027-mnp-668213716/" class="job-link" data-job-title="Intern or Co-op Student, Assurance and Accounting (Winter 2027)" data-job-company="MNP">
         <div class="job-card-header">
             <div class="job-badges">
@@ -561,7 +571,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="event marketing specialist - internship"
+    data-company="techtronic industries canada inc."
+    data-location="victoria, british columbia"
+    data-category="biz_marketing"
+    data-search-text="event marketing specialist - internship techtronic industries canada inc. victoria, british columbia coordinate event marketing and in-store promotions internship · 4 months · $22/hour · 4-month term biz_marketing">
     <a href="/jobs/event-marketing-specialist-internship-techtronic-industries-canada-inc-676864167/" class="job-link" data-job-title="Event Marketing Specialist - Internship" data-job-company="Techtronic Industries Canada Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -809,6 +824,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

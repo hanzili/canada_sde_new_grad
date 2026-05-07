@@ -450,7 +450,12 @@
             
             <li class="job-card job-snooze"
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior security engineer (ai-focused)"
+    data-company="collabera"
+    data-location="toronto, ontario"
+    data-category="security"
+    data-search-text="junior security engineer (ai-focused) collabera toronto, ontario assist security architecture, analyze systems, produce diagrams contract · $30-$34/hour security">
     <a href="/jobs/junior-security-engineer-ai-focused-collabera-677885892/" class="job-link" data-job-title="Junior Security Engineer (AI-Focused)" data-job-company="Collabera">
         <div class="job-card-header">
             <div class="job-badges">
@@ -483,7 +488,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sap ixp intern - security engineer analytics cloud"
+    data-company="sap"
+    data-location="vancouver, british columbia hybrid"
+    data-category="security"
+    data-search-text="sap ixp intern - security engineer analytics cloud sap vancouver, british columbia assist security analytics, code, test in cloud. intern · 8mo · may 2026 - dec 2026 security">
     <a href="/jobs/sap-ixp-intern-security-engineer-analytics-cloud-sap-665145645/" class="job-link" data-job-title="SAP iXp Intern - Security Engineer Analytics Cloud" data-job-company="SAP">
         <div class="job-card-header">
             <div class="job-badges">
@@ -614,6 +624,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

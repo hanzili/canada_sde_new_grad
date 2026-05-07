@@ -502,7 +502,12 @@ Your accessibility is important to us. Please let us know if you’d like accomm
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="associate, commercial banking"
+    data-company="td"
+    data-location="brossard, quebec"
+    data-category="finance_banking"
+    data-search-text="associate, commercial banking td brossard, quebec learn credit approvals; support client banking needs full-time · 8-10 months training · cad 69,700–98,400 · permanent after training finance_banking">
     <a href="/jobs/associate-commercial-banking-td-678140198/" class="job-link" data-job-title="Associate, Commercial Banking" data-job-company="TD">
         <div class="job-card-header">
             <div class="job-badges">
@@ -535,7 +540,12 @@ Your accessibility is important to us. Please let us know if you’d like accomm
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="associate, securities services"
+    data-company="canaccord genuity group inc."
+    data-location="vancouver, british columbia"
+    data-category="finance_banking"
+    data-search-text="associate, securities services canaccord genuity group inc. vancouver, british columbia process securities operations; support warrants and wire transfers full-time · permanent · $50,000-$56,000 · vancouver, bc finance_banking">
     <a href="/jobs/associate-securities-services-canaccord-genuity-group-inc-677996591/" class="job-link" data-job-title="Associate, Securities Services" data-job-company="Canaccord Genuity Group Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -568,7 +578,12 @@ Your accessibility is important to us. Please let us know if you’d like accomm
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="personal banking associate trainee - boucherville"
+    data-company="td"
+    data-location="boucherville, quebec"
+    data-category="finance_banking"
+    data-search-text="personal banking associate trainee - boucherville td boucherville, quebec guide customers, process transactions, promote banking solutions full-time · permanent · cad 45,700–cad 61,000 · not specified finance_banking">
     <a href="/jobs/personal-banking-associate-trainee-boucherville-td-677937825/" class="job-link" data-job-title="Personal Banking Associate Trainee - Boucherville" data-job-company="TD">
         <div class="job-card-header">
             <div class="job-badges">
@@ -601,7 +616,12 @@ Your accessibility is important to us. Please let us know if you’d like accomm
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="personal banking associate (hybrid)"
+    data-company="alterna savings"
+    data-location="fort frances, ontario hybrid"
+    data-category="finance_banking"
+    data-search-text="personal banking associate (hybrid) alterna savings fort frances, ontario cross-sell banking products; service members; handle transactions. full time · permanent · market-based pay · permanent finance_banking">
     <a href="/jobs/personal-banking-associate-hybrid-alterna-savings-677688136/" class="job-link" data-job-title="Personal Banking Associate (Hybrid)" data-job-company="Alterna Savings">
         <div class="job-card-header">
             <div class="job-badges">
@@ -634,7 +654,12 @@ Your accessibility is important to us. Please let us know if you’d like accomm
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="personal banking associate (hybrid)"
+    data-company="alterna"
+    data-location="fort frances, on p9a 1z2"
+    data-category="finance_banking"
+    data-search-text="personal banking associate (hybrid) alterna fort frances, on p9a 1z2 cross-sell products, educate clients, process transactions, service customers full time · permanent · n/a · n/a finance_banking">
     <a href="/jobs/personal-banking-associate-hybrid-alterna-677660839/" class="job-link" data-job-title="Personal Banking Associate (Hybrid)" data-job-company="Alterna">
         <div class="job-card-header">
             <div class="job-badges">
@@ -782,6 +807,57 @@ Your accessibility is important to us. Please let us know if you’d like accomm
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

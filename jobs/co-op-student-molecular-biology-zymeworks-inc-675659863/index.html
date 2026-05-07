@@ -436,7 +436,12 @@ Zymeworks is a global biotechnology company managing a portfolio of licensed hea
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="microbiology laboratory technician (student placement)"
+    data-company="targetjobs uk"
+    data-location="halifax, nova scotia"
+    data-category="sci_biology"
+    data-search-text="microbiology laboratory technician (student placement) targetjobs uk halifax, nova scotia assist microbiology testing and data collection student placement · 13 months · competitive salary · 13-month contract sci_biology">
     <a href="/jobs/microbiology-laboratory-technician-student-placement-targetjobs-uk-677004008/" class="job-link" data-job-title="Microbiology Laboratory Technician (Student Placement)" data-job-company="targetjobs UK">
         <div class="job-card-header">
             <div class="job-badges">
@@ -469,7 +474,12 @@ Zymeworks is a global biotechnology company managing a portfolio of licensed hea
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer student - biochemistry"
+    data-company="western university"
+    data-location="london, on"
+    data-category="sci_biology"
+    data-search-text="summer student - biochemistry western university london, on support biochemistry research operations and administration temporary · summer · competitive · seasonal sci_biology">
     <a href="/jobs/summer-student-biochemistry-western-university-675848144/" class="job-link" data-job-title="Summer Student - Biochemistry" data-job-company="Western University">
         <div class="job-card-header">
             <div class="job-badges">
@@ -502,7 +512,12 @@ Zymeworks is a global biotechnology company managing a portfolio of licensed hea
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="co-op student, molecular biology"
+    data-company="zymeworks inc."
+    data-location="vancouver, british columbia"
+    data-category="sci_biology"
+    data-search-text="co-op student, molecular biology zymeworks inc. vancouver, british columbia support molecular biology experiments; analyze data; present findings co-op · 8 months · cad 21.00/hour · on-site sci_biology">
     <a href="/jobs/co-op-student-molecular-biology-zymeworks-inc-675817852/" class="job-link" data-job-title="Co-op Student, Molecular Biology" data-job-company="Zymeworks Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -535,7 +550,12 @@ Zymeworks is a global biotechnology company managing a portfolio of licensed hea
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="intern, life sciences business development"
+    data-company="shadow lake group inc."
+    data-location="ontario"
+    data-category="sci_biology"
+    data-search-text="intern, life sciences business development shadow lake group inc. ontario perform market research, assist client deliverables internship sci_biology">
     <a href="/jobs/intern-life-sciences-business-development-shadow-lake-group-inc-675047035/" class="job-link" data-job-title="Intern, Life Sciences Business Development" data-job-company="Shadow Lake Group Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -568,7 +588,12 @@ Zymeworks is a global biotechnology company managing a portfolio of licensed hea
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="graduate student research associate, forage quantitative genetics"
+    data-company="agriculture and agri-food canada"
+    data-location="lethbridge, ab"
+    data-category="sci_biology"
+    data-search-text="graduate student research associate, forage quantitative genetics agriculture and agri-food canada lethbridge, ab develop field genetics experiments and analyze data rap · 20 h/wk · $29.64-$38.38/hr · 2026-07-02 to 2029-03-30 sci_biology">
     <a href="/jobs/graduate-student-research-associate-forage-quantitative-agriculture-and-agri-food-canada-672484136/" class="job-link" data-job-title="Graduate Student Research Associate, Forage Quantitative Genetics" data-job-company="Agriculture and Agri-Food Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -709,6 +734,57 @@ Zymeworks is a global biotechnology company managing a portfolio of licensed hea
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

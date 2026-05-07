@@ -466,7 +466,12 @@ As a P&amp;C Actuarial Co-op on the Risk Modelling Services team, you'll work as
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="credit solutions associate, canadian commercial banking (various locations in ontario)"
+    data-company="scotiabank"
+    data-location="mississauga, ontario"
+    data-category="finance_risk"
+    data-search-text="credit solutions associate, canadian commercial banking (various locations in ontario) scotiabank mississauga, ontario underwrite loans, analyze financials, support credit decisions  finance_risk">
     <a href="/jobs/credit-solutions-associate-canadian-commercial-banking-scotiabank-677921682/" class="job-link" data-job-title="Credit Solutions Associate, Canadian Commercial Banking (Various locations in Ontario)" data-job-company="Scotiabank">
         <div class="job-card-header">
             <div class="job-badges">
@@ -497,7 +502,12 @@ As a P&amp;C Actuarial Co-op on the Risk Modelling Services team, you'll work as
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior underwriter - insurance"
+    data-company="lions gate underwriting agency"
+    data-location="ottawa, on k1s 5k5"
+    data-category="finance_risk"
+    data-search-text="junior underwriter - insurance lions gate underwriting agency ottawa, on k1s 5k5 review applications, assess risks, prepare underwriting reports permanent · full-time finance_risk">
     <a href="/jobs/junior-underwriter-insurance-lions-gate-underwriting-agency-675759789/" class="job-link" data-job-title="junior underwriter - insurance" data-job-company="Lions Gate Underwriting Agency">
         <div class="job-card-header">
             <div class="job-badges">
@@ -530,7 +540,12 @@ As a P&amp;C Actuarial Co-op on the Risk Modelling Services team, you'll work as
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior bilingual aml analyst (english/french) – contract"
+    data-company="toronto test consultants"
+    data-location="vaughan, ontario hybrid"
+    data-category="finance_risk"
+    data-search-text="junior bilingual aml analyst (english/french) – contract toronto test consultants vaughan, ontario review aml alerts, perform kyc, investigate cases contract finance_risk">
     <a href="/jobs/junior-bilingual-aml-analyst-english-french-contract-toronto-test-consultants-674253224/" class="job-link" data-job-title="Junior Bilingual AML Analyst (English/French) – CONTRACT" data-job-company="Toronto Test Consultants">
         <div class="job-card-header">
             <div class="job-badges">
@@ -563,7 +578,12 @@ As a P&amp;C Actuarial Co-op on the Risk Modelling Services team, you'll work as
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior underwriter"
+    data-company="msh international canada"
+    data-location="calgary, ab t2p 3h5 hybrid"
+    data-category="finance_risk"
+    data-search-text="junior underwriter msh international canada calgary, ab t2p 3h5 assist pricing, renewals, and underwriting analyses contract · 12 months · cad 45-50k annually · hybrid finance_risk">
     <a href="/jobs/junior-underwriter-msh-international-canada-674145715/" class="job-link" data-job-title="Junior Underwriter" data-job-company="MSH International Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -596,7 +616,12 @@ As a P&amp;C Actuarial Co-op on the Risk Modelling Services team, you'll work as
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior risk &amp; compliance officer"
+    data-company="cuso international"
+    data-location="ottawa, ontario hybrid"
+    data-category="finance_risk"
+    data-search-text="junior risk &amp; compliance officer cuso international ottawa, ontario support audits, review financials, strengthen compliance full-time finance_risk">
     <a href="/jobs/junior-risk-compliance-officer-cuso-international-672937166/" class="job-link" data-job-title="Junior Risk &amp; Compliance Officer" data-job-company="Cuso International">
         <div class="job-card-header">
             <div class="job-badges">
@@ -733,6 +758,57 @@ As a P&amp;C Actuarial Co-op on the Risk Modelling Services team, you'll work as
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

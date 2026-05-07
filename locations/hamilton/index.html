@@ -486,7 +486,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="bookkeeper/junior accountant"
+    data-company="powergroup resources"
+    data-location="hamilton, on"
+    data-category="finance_acct"
+    data-search-text="bookkeeper/junior accountant powergroup resources hamilton, on process p2p, close books, prepare financial reports full-time · permanent · $50,000–$65,000/year · n/a finance_acct">
     <a href="/jobs/bookkeeper-junior-accountant-powergroup-resources-675542742/" class="job-link" data-job-title="Bookkeeper/Junior Accountant" data-job-company="POWERGROUP Resources">
         <div class="job-card-header">
             <div class="job-badges">
@@ -518,7 +523,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior accountant | full-time | td coliseum"
+    data-company="oak view group"
+    data-location="hamilton, ontario"
+    data-category="finance_acct"
+    data-search-text="junior accountant | full-time | td coliseum oak view group hamilton, ontario process ap/ar, journal entries, gl, reconciliations. full-time · permanent · cad 52,000-62,000 · open until june 5, 2026 finance_acct">
     <a href="/jobs/junior-accountant-full-time-td-coliseum-oak-view-group-672269896/" class="job-link" data-job-title="Junior Accountant | Full-Time | TD Coliseum" data-job-company="Oak View Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -550,7 +560,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="jr. accounts receivable coordinator"
+    data-company="evertz"
+    data-location="burlington, ontario"
+    data-category="finance_acct"
+    data-search-text="jr. accounts receivable coordinator evertz burlington, ontario process ar invoices, apply payments, resolve discrepancies accounts receivable · permanent · cad 40k-45k · full-time finance_acct">
     <a href="/jobs/jr-accounts-receivable-coordinator-evertz-667701104/" class="job-link" data-job-title="Jr. Accounts Receivable Coordinator" data-job-company="Evertz">
         <div class="job-card-header">
             <div class="job-badges">
@@ -593,7 +608,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="canadian banking - accounting automotive finance internship/co-op - fall 2026"
+    data-company="scotiabank"
+    data-location="hamilton, on"
+    data-category="finance_risk"
+    data-search-text="canadian banking - accounting automotive finance internship/co-op - fall 2026 scotiabank hamilton, on spread interim statements, analyze risk, support credit team internship/co-op · sep-dec 2026 · n/a · fall 2026 finance_risk">
     <a href="/jobs/canadian-banking-accounting-automotive-finance-internship-scotiabank-667234467/" class="job-link" data-job-title="Canadian Banking - Accounting Automotive Finance Internship/Co-op - Fall 2026" data-job-company="Scotiabank">
         <div class="job-card-header">
             <div class="job-badges">
@@ -847,6 +867,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

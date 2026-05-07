@@ -274,19 +274,40 @@
     <header class="page-header landing-hero">
         <p class="hero-kicker">Daily-updated Canadian student jobs</p>
         <h1>2026 Canadian Engineering Internships</h1>
-        <p class="page-subtitle">34 positions available for university students, new grads, interns, co-op candidates, and early-career job seekers.</p>
-        <div class="landing-hero-actions" aria-label="Start browsing jobs">
-            <a class="hero-cta hero-cta-primary" href="/new-grad/">Browse new grad jobs</a>
-            <a class="hero-cta hero-cta-primary" href="/internships/">Browse internships & co-ops</a>
+        <p class="page-subtitle">Search 34 positions from company career pages across internships, co-ops, new grad, junior, and entry-level roles.</p>
+        <form class="job-search-panel" role="search" aria-label="Filter visible Hanzilla jobs" data-job-search-form>
+            <label class="search-field search-field-keyword">
+                <span>Keyword</span>
+                <input type="search" name="keyword" placeholder="Title, company, skill…" autocomplete="off" data-job-search-input>
+            </label>
+            <label class="search-field">
+                <span>Location</span>
+                <input type="search" name="location" placeholder="Toronto, Vancouver, remote…" autocomplete="off" data-job-location-input>
+            </label>
+            <label class="search-field search-field-select">
+                <span>Role type</span>
+                <select name="role_type" data-job-type-input>
+                    <option value="">All roles</option>
+                    <option value="intern">Internships / co-ops</option>
+                    <option value="new grad junior entry-level">New grad / junior</option>
+                    <option value="remote">Remote</option>
+                </select>
+            </label>
+            <button class="hero-cta hero-cta-primary search-submit" type="submit">Search jobs</button>
+        </form>
+        <div class="search-feedback" data-job-search-feedback aria-live="polite"></div>
+        <div class="landing-hero-actions quick-filters" aria-label="Popular job searches">
+            <a class="hero-cta" href="/internships/">Internships & co-ops</a>
+            <a class="hero-cta" href="/new-grad/">New grad jobs</a>
             <a class="hero-cta" href="/locations/toronto/">Toronto</a>
             <a class="hero-cta" href="/locations/vancouver/">Vancouver</a>
             <a class="hero-cta" href="/finance/">Finance</a>
             <a class="hero-cta" href="/engineering/">Engineering</a>
         </div>
-        <div class="landing-proof-points">
-            <span>Across tech, finance, engineering, business, sciences + more</span>
-            <span>Fresh roles from company career pages</span>
-            <span>Built for Canadian university students</span>
+        <div class="landing-proof-points" aria-label="Why students use Hanzilla">
+            <span><strong>Updated daily</strong> fresh roles stay visible</span>
+            <span><strong>Direct apply</strong> links to company career pages</span>
+            <span><strong>Student-first</strong> Canada-specific filters</span>
         </div>
         
             
@@ -294,6 +315,46 @@
             
         
     </header>
+
+    
+    <section class="latest-jobs-strip" aria-labelledby="latest-jobs-title">
+        <div class="latest-jobs-header">
+            <div>
+                <p class="section-kicker">Hiring now</p>
+                <h2 id="latest-jobs-title">Fresh roles you can open today</h2>
+            </div>
+            <a href="#mechanical-manufacturing">Jump to all jobs</a>
+        </div>
+        <div class="latest-job-list">
+            
+            <a class="latest-job-row" href="/jobs/geotechnical-co-op-teck-resources-limited-677879230/">
+                <span class="latest-job-main"><strong>Geotechnical Co-op</strong><span>Teck Resources Limited</span></span>
+                <span class="latest-job-meta">Calgary, AB · May 05, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/geotechnical-engineering-intern-summer-2026-3-or-7-month-stantec-677854052/">
+                <span class="latest-job-main"><strong>Geotechnical Engineering Intern (Summer 2026) – 3 or 7 Month Term</strong><span>Stantec</span></span>
+                <span class="latest-job-meta">Burnaby, BC · May 05, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/co-op-student-electrical-or-mechanical-engineer-site-c-fort-bc-hydro-677814777/">
+                <span class="latest-job-main"><strong>Co-op Student - Electrical or Mechanical Engineer - Site C (Fort St. John) - Fall September 2026</strong><span>BC Hydro</span></span>
+                <span class="latest-job-meta">Fort St. John, BC · May 05, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/civil-geotechnical-geomatic-engineering-student-september-suncor-677801222/">
+                <span class="latest-job-main"><strong>Civil, Geotechnical &amp; Geomatic Engineering Student - September 2026</strong><span>Suncor</span></span>
+                <span class="latest-job-meta">Fort McMurray, Alberta · May 05, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/september-2026-geotechnical-geological-engineering-co-op-elk-valley-resources-677674711/">
+                <span class="latest-job-main"><strong>September 2026 Geotechnical/Geological Engineering Co-op (Elkford, BC)</strong><span>Elk Valley Resources</span></span>
+                <span class="latest-job-meta">Elkford, British Columbia · May 05, 2026</span>
+            </a>
+            
+        </div>
+    </section>
+    
 
     
 
@@ -408,7 +469,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="co-op student - electrical or mechanical engineer - site c (fort st. john) - fall september 2026"
+    data-company="bc hydro"
+    data-location="fort st. john, bc hybrid"
+    data-category="eng_mechanical"
+    data-search-text="co-op student - electrical or mechanical engineer - site c (fort st. john) - fall september 2026 bc hydro fort st. john, bc support field maintenance, deficiency tracking, and reports co-op · 4-8 months · cad 1,792.24–2,257.45 biweekly · fall 2026 eng_mechanical">
     <a href="/jobs/co-op-student-electrical-or-mechanical-engineer-site-c-fort-bc-hydro-677814777/" class="job-link" data-job-title="Co-op Student - Electrical or Mechanical Engineer - Site C (Fort St. John) - Fall September 2026" data-job-company="BC Hydro">
         <div class="job-card-header">
             <div class="job-badges">
@@ -440,7 +506,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="internship, mechanical design engineer, cell engineering (fall 2026)"
+    data-company="tesla"
+    data-location="richmond hill, ontario"
+    data-category="eng_mechanical"
+    data-search-text="internship, mechanical design engineer, cell engineering (fall 2026) tesla richmond hill, ontario design mechanical parts and fixtures in cad type: internship · duration: 12+ weeks · term: fall 2026–spring 2027 eng_mechanical">
     <a href="/jobs/internship-mechanical-design-engineer-cell-engineering-fall-tesla-675880687/" class="job-link" data-job-title="Internship, Mechanical Design Engineer, Cell Engineering (Fall 2026)" data-job-company="Tesla">
         <div class="job-card-header">
             <div class="job-badges">
@@ -472,7 +543,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="internship fall 2026 - continuous improvement transformational projects, industrial or mechanical engineering"
+    data-company="pratt &amp; whitney"
+    data-location="halifax, nova scotia"
+    data-category="eng_mechanical"
+    data-search-text="internship fall 2026 - continuous improvement transformational projects, industrial or mechanical engineering pratt &amp; whitney halifax, nova scotia assist ci projects on the manufacturing floor internship · aug 31 – dec 18, 2026 · not disclosed · fall 2026 eng_mechanical">
     <a href="/jobs/internship-fall-2026-continuous-improvement-pratt-whitney-675858280/" class="job-link" data-job-title="Internship Fall 2026 - Continuous Improvement Transformational Projects, Industrial or Mechanical Engineering" data-job-company="Pratt &amp; Whitney">
         <div class="job-card-header">
             <div class="job-badges">
@@ -504,7 +580,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="internship, mechanical engineer, cell engineering (fall 2026)"
+    data-company="tesla"
+    data-location="markham, ontario"
+    data-category="eng_mechanical"
+    data-search-text="internship, mechanical engineer, cell engineering (fall 2026) tesla markham, ontario prepare 3d cad models; support mechanical builds internship · 12+ weeks · n/a · fall 2026 eng_mechanical">
     <a href="/jobs/internship-mechanical-engineer-cell-engineering-fall-2026-tesla-675856310/" class="job-link" data-job-title="Internship, Mechanical Engineer, Cell Engineering (Fall 2026)" data-job-company="Tesla">
         <div class="job-card-header">
             <div class="job-badges">
@@ -536,7 +617,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="mechanical design co-op student (8-months - fall term)"
+    data-company="johnson electric"
+    data-location="ancaster, ontario"
+    data-category="eng_mechanical"
+    data-search-text="mechanical design co-op student (8-months - fall term) johnson electric ancaster, ontario create solidworks drawings; support assembly line documentation co-op · 8 months · $22-24/hr · fall term eng_mechanical">
     <a href="/jobs/mechanical-design-co-op-student-8-months-fall-term-johnson-electric-675786987/" class="job-link" data-job-title="Mechanical Design Co-op Student (8-months - Fall Term)" data-job-company="Johnson Electric">
         <div class="job-card-header">
             <div class="job-badges">
@@ -568,7 +654,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="mechanical engineer co-op"
+    data-company="procor limited"
+    data-location="oakville, ontario"
+    data-category="eng_mechanical"
+    data-search-text="mechanical engineer co-op procor limited oakville, ontario assist fabrication, installation, operation, maintenance tasks co-op · 1-2 years eng_mechanical">
     <a href="/jobs/mechanical-engineer-co-op-procor-limited-672423311/" class="job-link" data-job-title="Mechanical Engineer Co-op" data-job-company="Procor Limited">
         <div class="job-card-header">
             <div class="job-badges">
@@ -600,7 +691,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="ocs cad designer intern (summer 2026)"
+    data-company="alstom"
+    data-location="toronto, ontario"
+    data-category="eng_mechanical"
+    data-search-text="ocs cad designer intern (summer 2026) alstom toronto, ontario assist ocs design with cad modeling and docs internship/apprenticeship · summer 2026 · cad 23-27/hour · internship eng_mechanical">
     <a href="/jobs/ocs-cad-designer-intern-summer-2026-alstom-669834278/" class="job-link" data-job-title="OCS CAD Designer intern (Summer 2026)" data-job-company="Alstom">
         <div class="job-card-header">
             <div class="job-badges">
@@ -632,7 +728,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="stage - automne 2026 - conception mécanique – support aux opérations / internship - fall 2026 - mechanical design – support to operations"
+    data-company="pratt &amp; whitney"
+    data-location="longueuil, quebec"
+    data-category="eng_mechanical"
+    data-search-text="stage - automne 2026 - conception mécanique – support aux opérations / internship - fall 2026 - mechanical design – support to operations pratt &amp; whitney longueuil, quebec modify designs for producibility; support operations internship · aug 31–dec 18, 2026 eng_mechanical">
     <a href="/jobs/stage-automne-2026-conception-mecanique-support-aux-pratt-whitney-666224051/" class="job-link" data-job-title="Stage - Automne 2026 - Conception mécanique – Support aux opérations / Internship - Fall 2026 - Mechanical Design – Support to operations" data-job-company="Pratt &amp; Whitney">
         <div class="job-card-header">
             <div class="job-badges">
@@ -675,7 +776,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="power systems co-op student"
+    data-company="ainsworth inc"
+    data-location="mississauga, ontario hybrid"
+    data-category="eng_electrical"
+    data-search-text="power systems co-op student ainsworth inc mississauga, ontario assist power systems field construction and maintenance co-op · $18.50-$21.00/hr eng_electrical">
     <a href="/jobs/power-systems-co-op-student-ainsworth-inc-674804000/" class="job-link" data-job-title="Power Systems Co-op Student" data-job-company="Ainsworth Inc">
         <div class="job-card-header">
             <div class="job-badges">
@@ -707,7 +813,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="power systems co-op student"
+    data-company="ainsworth"
+    data-location="mississauga, on hybrid"
+    data-category="eng_electrical"
+    data-search-text="power systems co-op student ainsworth mississauga, on assist field electrical power systems projects co-op · duration varies · $18.50-$21.00/hr · internship eng_electrical">
     <a href="/jobs/power-systems-co-op-student-ainsworth-674614261/" class="job-link" data-job-title="Power Systems Co-op Student" data-job-company="Ainsworth">
         <div class="job-card-header">
             <div class="job-badges">
@@ -750,7 +861,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="geotechnical co-op"
+    data-company="teck resources limited"
+    data-location="calgary, ab hybrid"
+    data-category="eng_civil"
+    data-search-text="geotechnical co-op teck resources limited calgary, ab support geotechnical data collection and field work temporary full time · 8 months · cad $4,833 - $6,125/mo · 8 months eng_civil">
     <a href="/jobs/geotechnical-co-op-teck-resources-limited-677879230/" class="job-link" data-job-title="Geotechnical Co-op" data-job-company="Teck Resources Limited">
         <div class="job-card-header">
             <div class="job-badges">
@@ -782,7 +898,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="geotechnical engineering intern (summer 2026) – 3 or 7 month term"
+    data-company="stantec"
+    data-location="burnaby, bc"
+    data-category="eng_civil"
+    data-search-text="geotechnical engineering intern (summer 2026) – 3 or 7 month term stantec burnaby, bc conduct geotechnical field tests and lab analyses internship · 3-7 months · $21.56-$29.59 hourly · temporary eng_civil">
     <a href="/jobs/geotechnical-engineering-intern-summer-2026-3-or-7-month-stantec-677854052/" class="job-link" data-job-title="Geotechnical Engineering Intern (Summer 2026) – 3 or 7 Month Term" data-job-company="Stantec">
         <div class="job-card-header">
             <div class="job-badges">
@@ -814,7 +935,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="civil, geotechnical &amp; geomatic engineering student - september 2026"
+    data-company="suncor"
+    data-location="fort mcmurray, alberta"
+    data-category="eng_civil"
+    data-search-text="civil, geotechnical &amp; geomatic engineering student - september 2026 suncor fort mcmurray, alberta assist fieldwork, data collection, and design tasks student internship/co-op · 4/8/12/16 months · competitive pay · sep 2026 start eng_civil">
     <a href="/jobs/civil-geotechnical-geomatic-engineering-student-september-suncor-677801222/" class="job-link" data-job-title="Civil, Geotechnical &amp; Geomatic Engineering Student - September 2026" data-job-company="Suncor">
         <div class="job-card-header">
             <div class="job-badges">
@@ -846,7 +972,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="september 2026 geotechnical/geological engineering co-op (elkford, bc)"
+    data-company="elk valley resources"
+    data-location="elkford, british columbia"
+    data-category="eng_civil"
+    data-search-text="september 2026 geotechnical/geological engineering co-op (elkford, bc) elk valley resources elkford, british columbia support geotechnical design and field investigations co-op · 8 or 12 months · competitive pay · start sep 2026 eng_civil">
     <a href="/jobs/september-2026-geotechnical-geological-engineering-co-op-elk-valley-resources-677674711/" class="job-link" data-job-title="September 2026 Geotechnical/Geological Engineering Co-op (Elkford, BC)" data-job-company="Elk Valley Resources">
         <div class="job-card-header">
             <div class="job-badges">
@@ -878,7 +1009,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="stagiaire en génie géotechnique (août - décembre 2026) | geotechnical engineering intern (august - december 2026)"
+    data-company="arup"
+    data-location="montréal, qc h3b 3y2 hybrid"
+    data-category="eng_civil"
+    data-search-text="stagiaire en génie géotechnique (août - décembre 2026) | geotechnical engineering intern (august - december 2026) arup montréal, qc h3b 3y2 interpret soil conditions; assist foundations and tunnel design internship · aug-dec 2026 · 21-38 cad/hour · montréal, qc eng_civil">
     <a href="/jobs/stagiaire-en-genie-geotechnique-aout-decembre-2026-arup-677289956/" class="job-link" data-job-title="Stagiaire en génie géotechnique (août - décembre 2026) | Geotechnical Engineering Intern (August - December 2026)" data-job-company="Arup">
         <div class="job-card-header">
             <div class="job-badges">
@@ -910,7 +1046,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="stagiaire en génie géotechnique (septembre - décembre 2026) | geotechnical engineering intern (september - december 2026)"
+    data-company="arup"
+    data-location="montréal, qc h3b 3y2 hybrid"
+    data-category="eng_civil"
+    data-search-text="stagiaire en génie géotechnique (septembre - décembre 2026) | geotechnical engineering intern (september - december 2026) arup montréal, qc h3b 3y2 assist geotechnical design and field investigations internship · sep–dec 2026 · not disclosed · temporary eng_civil">
     <a href="/jobs/stagiaire-en-genie-geotechnique-septembre-decembre-2026-arup-676845997/" class="job-link" data-job-title="Stagiaire en génie géotechnique (septembre - décembre 2026) | Geotechnical Engineering Intern (September - December 2026)" data-job-company="Arup">
         <div class="job-card-header">
             <div class="job-badges">
@@ -942,7 +1083,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="geotechnical engineering intern (august - december 2026)"
+    data-company="arup"
+    data-location="toronto, on m4w 3m5 hybrid"
+    data-category="eng_civil"
+    data-search-text="geotechnical engineering intern (august - december 2026) arup toronto, on m4w 3m5 assist geotechnical design, analysis, and site testing internship · aug 2026 - dec 2026 · $21-$38/hr · 4 months eng_civil">
     <a href="/jobs/geotechnical-engineering-intern-august-december-2026-arup-676832131/" class="job-link" data-job-title="Geotechnical Engineering Intern (August - December 2026)" data-job-company="Arup">
         <div class="job-card-header">
             <div class="job-badges">
@@ -974,7 +1120,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="student digital construction coordinator"
+    data-company="bird construction"
+    data-location="mississauga, ontario"
+    data-category="eng_civil"
+    data-search-text="student digital construction coordinator bird construction mississauga, ontario coordinate digital construction models and field layout co-op · 4 months eng_civil">
     <a href="/jobs/student-digital-construction-coordinator-bird-construction-675760500/" class="job-link" data-job-title="Student Digital Construction Coordinator" data-job-company="Bird Construction">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1017,7 +1168,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="process engineer co-op (ops)"
+    data-company="oxy"
+    data-location="squamish, british columbia"
+    data-category="eng_chemical"
+    data-search-text="process engineer co-op (ops) oxy squamish, british columbia support process engineering and test campaigns co-op · 8-12 months · $22-26/hour · sept 2026 start eng_chemical">
     <a href="/jobs/process-engineer-co-op-ops-oxy-677279275/" class="job-link" data-job-title="Process Engineer Co-op (OPS)" data-job-company="Oxy">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1049,7 +1205,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="process engineer co-op (ops)"
+    data-company="occidental"
+    data-location="squamish, bc"
+    data-category="eng_chemical"
+    data-search-text="process engineer co-op (ops) occidental squamish, bc support process trials, data analysis, and reporting co-op · 8-12 months · $22-26/hour · on-site (squamish, bc) eng_chemical">
     <a href="/jobs/process-engineer-co-op-ops-occidental-677404615/" class="job-link" data-job-title="Process Engineer Co-op (OPS)" data-job-company="Occidental">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1081,7 +1242,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="process engineer co-op (ops)"
+    data-company="carbon engineering"
+    data-location="squamish, bc"
+    data-category="eng_chemical"
+    data-search-text="process engineer co-op (ops) carbon engineering squamish, bc support process improvements and data analysis in plant co-op · 8-12 months · $22-26/hour · on-site squamish, bc eng_chemical">
     <a href="/jobs/process-engineer-co-op-ops-carbon-engineering-675318768/" class="job-link" data-job-title="Process Engineer Co-op (OPS)" data-job-company="Carbon Engineering">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1113,7 +1279,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="process engineer co-op"
+    data-company="carbon engineering"
+    data-location="squamish, bc"
+    data-category="eng_chemical"
+    data-search-text="process engineer co-op carbon engineering squamish, bc support process design and field verification co-op · 8-12 months · $22-26/hour · sep 2026 start eng_chemical">
     <a href="/jobs/process-engineer-co-op-carbon-engineering-675318766/" class="job-link" data-job-title="Process Engineer Co-op" data-job-company="Carbon Engineering">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1145,7 +1316,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="engineering student - materials and metallurgical - september 2026"
+    data-company="suncor"
+    data-location="fort mcmurray, alberta"
+    data-category="eng_chemical"
+    data-search-text="engineering student - materials and metallurgical - september 2026 suncor fort mcmurray, alberta assist materials/metallurgical projects; perform tests and analyses student internship · 4-16 months · competitive pay · sept 2026 start eng_chemical">
     <a href="/jobs/engineering-student-materials-and-metallurgical-september-suncor-670877569/" class="job-link" data-job-title="Engineering Student - Materials and Metallurgical - September 2026" data-job-company="Suncor">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1177,7 +1353,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="cold lake plant operations indigenous internship program - power engineer"
+    data-company="imperial oil"
+    data-location="cold lake, alberta"
+    data-category="eng_chemical"
+    data-search-text="cold lake plant operations indigenous internship program - power engineer imperial oil cold lake, alberta assist plant operations and monitoring; learn processes internship · 1 year · paid · 12 months eng_chemical">
     <a href="/jobs/cold-lake-plant-operations-indigenous-internship-program-imperial-oil-666542966/" class="job-link" data-job-title="Cold Lake Plant Operations Indigenous Internship Program - Power Engineer" data-job-company="Imperial Oil">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1220,7 +1401,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer student - continuous improvement"
+    data-company="worksafenb"
+    data-location="new brunswick"
+    data-category="eng_industrial"
+    data-search-text="summer student - continuous improvement worksafenb new brunswick analyze data to drive process improvements internship · summer · paid (hourly rates listed) · summer eng_industrial">
     <a href="/jobs/summer-student-continuous-improvement-worksafenb-672445079/" class="job-link" data-job-title="Summer Student - Continuous Improvement" data-job-company="WorkSafeNB">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1252,7 +1438,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer student – continuous improvement"
+    data-company="worksafenb/travail sécuritaire nb"
+    data-location="new brunswick"
+    data-category="eng_industrial"
+    data-search-text="summer student – continuous improvement worksafenb/travail sécuritaire nb new brunswick support ci team with data analysis and mapping internship · summer 2026 · $16.40-$18.40/hr · summer term eng_industrial">
     <a href="/jobs/summer-student-continuous-improvement-worksafenb-travail-securitaire-nb-672421056/" class="job-link" data-job-title="Summer Student – Continuous Improvement" data-job-company="WorkSafeNB/Travail sécuritaire NB">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1284,7 +1475,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="manufacturing engineer intern (canada)"
+    data-company="leggett &amp; platt"
+    data-location="lakeshore, on"
+    data-category="eng_industrial"
+    data-search-text="manufacturing engineer intern (canada) leggett &amp; platt lakeshore, on assist manufacturing processes; drive continuous improvements internship · not specified · paid · not specified eng_industrial">
     <a href="/jobs/manufacturing-engineer-intern-canada-leggett-platt-670185898/" class="job-link" data-job-title="Manufacturing Engineer Intern (Canada)" data-job-company="Leggett &amp; Platt">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1316,7 +1512,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="quality engineer intern (canada)"
+    data-company="leggett &amp; platt"
+    data-location="london, on"
+    data-category="eng_industrial"
+    data-search-text="quality engineer intern (canada) leggett &amp; platt london, on support quality engineering tasks in manufacturing internship · paid · not disclosed · n/a eng_industrial">
     <a href="/jobs/quality-engineer-intern-canada-leggett-platt-670174274/" class="job-link" data-job-title="Quality Engineer Intern (Canada)" data-job-company="Leggett &amp; Platt">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1359,7 +1560,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="environmental technician summer intern, golden giant"
+    data-company="newmont mining"
+    data-location="ontario"
+    data-category="eng_environmental"
+    data-search-text="environmental technician summer intern, golden giant newmont mining ontario assist wastewater plant operations and environmental tasks seasonal internship · may–aug · cad$21-25/hour · summer eng_environmental">
     <a href="/jobs/environmental-technician-summer-intern-golden-giant-newmont-mining-667649531/" class="job-link" data-job-title="Environmental Technician Summer Intern, Golden Giant" data-job-company="Newmont Mining">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1391,7 +1597,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="environmental technician summer intern, golden giant"
+    data-company="newmont corporation"
+    data-location="ontario"
+    data-category="eng_environmental"
+    data-search-text="environmental technician summer intern, golden giant newmont corporation ontario support wastewater plant operations, sampling, compliance seasonal · may–aug · cad 21-25/hr · internship eng_environmental">
     <a href="/jobs/environmental-technician-summer-intern-golden-giant-newmont-corporation-667622718/" class="job-link" data-job-title="Environmental Technician Summer Intern, Golden Giant" data-job-company="Newmont Corporation">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1423,7 +1634,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="environmental technician summer intern, con mine"
+    data-company="newmont corporation"
+    data-location="yukon territory"
+    data-category="eng_environmental"
+    data-search-text="environmental technician summer intern, con mine newmont corporation yukon territory support wastewater plant operations and environmental monitoring onsite · may–aug · cad$31.00 / hour · summer internship eng_environmental">
     <a href="/jobs/environmental-technician-summer-intern-con-mine-newmont-corporation-665314012/" class="job-link" data-job-title="Environmental Technician Summer Intern, Con Mine" data-job-company="Newmont Corporation">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1455,7 +1671,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="environmental technician summer intern, equity silver"
+    data-company="newmont corporation"
+    data-location="vancouver, british columbia"
+    data-category="eng_environmental"
+    data-search-text="environmental technician summer intern, equity silver newmont corporation vancouver, british columbia support environmental monitoring and site operations seasonal internship · may-aug · cad$31.00/hour · summer eng_environmental">
     <a href="/jobs/environmental-technician-summer-intern-equity-silver-newmont-corporation-665309965/" class="job-link" data-job-title="Environmental Technician Summer Intern, Equity Silver" data-job-company="Newmont Corporation">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1487,7 +1708,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="environmental technician summer intern, equity silver"
+    data-company="newmont mining"
+    data-location="vancouver, bc"
+    data-category="eng_environmental"
+    data-search-text="environmental technician summer intern, equity silver newmont mining vancouver, bc assist environmental monitoring; collect samples; support operations seasonal internship · may–aug · cad$31/hour · summer eng_environmental">
     <a href="/jobs/environmental-technician-summer-intern-equity-silver-newmont-mining-665341427/" class="job-link" data-job-title="Environmental Technician Summer Intern, Equity Silver" data-job-company="Newmont Mining">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1519,7 +1745,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="environmental technician summer intern, con mine"
+    data-company="newmont mining"
+    data-location="northwest territories"
+    data-category="eng_environmental"
+    data-search-text="environmental technician summer intern, con mine newmont mining northwest territories assist environmental operations and field sampling tasks internship · may–aug · cad$31.00/hour · summer eng_environmental">
     <a href="/jobs/environmental-technician-summer-intern-con-mine-newmont-mining-665341268/" class="job-link" data-job-title="Environmental Technician Summer Intern, Con Mine" data-job-company="Newmont Mining">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1888,6 +2119,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

@@ -448,7 +448,12 @@
             
             <li class="job-card job-hot"
     data-remote="true"
-    data-hot="true">
+    data-hot="true"
+    data-title="junior financial analyst"
+    data-company="mercor"
+    data-location="toronto, ontario"
+    data-category="finance_ib"
+    data-search-text="junior financial analyst mercor toronto, ontario build financial models, research equities for ai contract · 10–20 hours/week · $105/hour finance_ib">
     <a href="/jobs/junior-financial-analyst-mercor-676780085/" class="job-link" data-job-title="Junior Financial Analyst" data-job-company="Mercor">
         <div class="job-card-header">
             <div class="job-badges">
@@ -481,7 +486,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior securities lending trader, north american equities"
+    data-company="bny"
+    data-location="toronto, ontario"
+    data-category="finance_ib"
+    data-search-text="junior securities lending trader, north american equities bny toronto, ontario execute securities lending trades; monitor risk and pricing full-time · permanent · competitive pay · n/a finance_ib">
     <a href="/jobs/junior-securities-lending-trader-north-american-equities-bny-675777975/" class="job-link" data-job-title="Junior Securities Lending Trader, North American Equities" data-job-company="BNY">
         <div class="job-card-header">
             <div class="job-badges">
@@ -514,7 +524,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="investment banking program junior associate"
+    data-company="wells fargo"
+    data-location="toronto, ontario"
+    data-category="finance_ib"
+    data-search-text="investment banking program junior associate wells fargo toronto, ontario analyze companies, build models, advise clients, present findings full-time · permanent · cad 140000-250000 finance_ib">
     <a href="/jobs/investment-banking-program-junior-associate-wells-fargo-670642718/" class="job-link" data-job-title="Investment Banking Program Junior Associate" data-job-company="Wells Fargo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -547,7 +562,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="investment banking analyst intern (diversified) - fall 2026"
+    data-company="stifel financial corp."
+    data-location="toronto, ontario"
+    data-category="finance_ib"
+    data-search-text="investment banking analyst intern (diversified) - fall 2026 stifel financial corp. toronto, ontario build financial models, prepare pitch materials, assist deals internship · sep 2026–dec 2026 · 75,000–90,000 annually · fall 2026 finance_ib">
     <a href="/jobs/investment-banking-analyst-intern-diversified-fall-2026-stifel-financial-corp-677917346/" class="job-link" data-job-title="Investment Banking Analyst Intern (Diversified) - Fall 2026" data-job-company="Stifel Financial Corp.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -580,7 +600,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="global markets equity research, fall 2026 associate"
+    data-company="cibc"
+    data-location="toronto, ontario"
+    data-category="finance_ib"
+    data-search-text="global markets equity research, fall 2026 associate cibc toronto, ontario support equity research, analyze sectors, draft reports temporary (fixed term) · 4 months · $125,000 annualized · fall 2026 finance_ib">
     <a href="/jobs/global-markets-equity-research-fall-2026-associate-cibc-677885064/" class="job-link" data-job-title="Global Markets Equity Research, Fall 2026 Associate" data-job-company="CIBC">
         <div class="job-card-header">
             <div class="job-badges">
@@ -728,6 +753,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

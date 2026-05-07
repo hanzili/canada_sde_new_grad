@@ -476,7 +476,12 @@
             
             <li class="job-card job-snooze"
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="back-end associate /night shift"
+    data-company="rona"
+    data-location="gatineau, quebec"
+    data-category="other"
+    data-search-text="back-end associate /night shift rona gatineau, quebec stock displays, assist customers, operate basic computer tools full-time other">
     <a href="/jobs/back-end-associate-night-shift-rona-677898347/" class="job-link" data-job-title="Back-end Associate /Night shift" data-job-company="RONA">
         <div class="job-card-header">
             <div class="job-badges">
@@ -509,7 +514,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="mining engineer in training (eit)"
+    data-company="equinox gold corp."
+    data-location="geraldton, ontario"
+    data-category="other"
+    data-search-text="mining engineer in training (eit) equinox gold corp. geraldton, ontario design drill patterns and blast sequences in field full-time · fifo rotation · $100,966–$123,403 · permanent other">
     <a href="/jobs/mining-engineer-in-training-eit-equinox-gold-corp-673160444/" class="job-link" data-job-title="Mining Engineer in Training (EIT)" data-job-company="Equinox Gold Corp.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -542,7 +552,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="mining engineer in training (eit)"
+    data-company="equinox gold"
+    data-location="geraldton, on"
+    data-category="other"
+    data-search-text="mining engineer in training (eit) equinox gold geraldton, on design drill patterns; supervise blasting operations in field full-time · 14 days on/14 days off fifo · $100,966.00–$123,403.10 per year · fifo other">
     <a href="/jobs/mining-engineer-in-training-eit-equinox-gold-673104792/" class="job-link" data-job-title="Mining Engineer in Training (EIT)" data-job-company="EQUINOX GOLD">
         <div class="job-card-header">
             <div class="job-badges">
@@ -575,7 +590,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior quality engineer (developer)"
+    data-company="ontario power generation"
+    data-location="oshawa, ontario hybrid"
+    data-category="other"
+    data-search-text="junior quality engineer (developer) ontario power generation oshawa, ontario develop and maintain automated ui/api tests permanent full-time · n/a · $1,664.34-$2,583.30 per week · permanent other">
     <a href="/jobs/junior-quality-engineer-developer-ontario-power-generation-670646447/" class="job-link" data-job-title="Junior Quality Engineer (Developer)" data-job-company="Ontario Power Generation">
         <div class="job-card-header">
             <div class="job-badges">
@@ -608,7 +628,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="intern - learning content &amp; ai enablement"
+    data-company="bel"
+    data-location="montreal, quebec"
+    data-category="other"
+    data-search-text="intern - learning content &amp; ai enablement bel montreal, quebec create learning content; support ai-enabled learning intern other">
     <a href="/jobs/intern-learning-content-ai-enablement-bel-677044809/" class="job-link" data-job-title="Intern - Learning Content &amp; AI Enablement" data-job-company="Bel">
         <div class="job-card-header">
             <div class="job-badges">
@@ -739,6 +764,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

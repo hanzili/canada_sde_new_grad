@@ -449,7 +449,12 @@ Let’s connect!</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="system integration/test engineer associate"
+    data-company="lockheed martin"
+    data-location="halifax, ns"
+    data-category="qa_test"
+    data-search-text="system integration/test engineer associate lockheed martin halifax, ns develop tests and integration plans; document results full-time · $62,000 - $81,500 qa_test">
     <a href="/jobs/system-integration-test-engineer-associate-lockheed-martin-677901717/" class="job-link" data-job-title="System Integration/Test Engineer Associate" data-job-company="Lockheed Martin">
         <div class="job-card-header">
             <div class="job-badges">
@@ -482,7 +487,12 @@ Let’s connect!</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="distribution centre team associate - quality assurance dc7103 afternoon shift cycler monday to friday"
+    data-company="walmart canada"
+    data-location="cornwall, ontario"
+    data-category="qa_test"
+    data-search-text="distribution centre team associate - quality assurance dc7103 afternoon shift cycler monday to friday walmart canada cornwall, ontario perform quality audits, manage wms, ensure accuracy full-time · $25.34/hr qa_test">
     <a href="/jobs/distribution-centre-team-associate-quality-assurance-dc7103-walmart-canada-677798274/" class="job-link" data-job-title="Distribution Centre Team Associate - Quality Assurance DC7103 Afternoon Shift cycler Monday to Friday" data-job-company="Walmart Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -515,7 +525,12 @@ Let’s connect!</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="jr emc/rf test engineer"
+    data-company="tüv süd"
+    data-location="gormley, ontario"
+    data-category="qa_test"
+    data-search-text="jr emc/rf test engineer tüv süd gormley, ontario perform rf/emc testing, write test plans and reports full-time qa_test">
     <a href="/jobs/jr-emc-rf-test-engineer-tuv-sud-674802044/" class="job-link" data-job-title="Jr EMC/RF Test Engineer" data-job-company="TÜV SÜD">
         <div class="job-card-header">
             <div class="job-badges">
@@ -548,7 +563,12 @@ Let’s connect!</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior test engineer"
+    data-company="kraken robotics"
+    data-location="mount pearl, nl a1n 4s8"
+    data-category="qa_test"
+    data-search-text="junior test engineer kraken robotics mount pearl, nl a1n 4s8 design for test, build fixtures, support production. full-time qa_test">
     <a href="/jobs/junior-test-engineer-kraken-robotics-672253847/" class="job-link" data-job-title="Junior Test Engineer" data-job-company="Kraken Robotics">
         <div class="job-card-header">
             <div class="job-badges">
@@ -581,7 +601,12 @@ Let’s connect!</p>
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="quality assurance auditor"
+    data-company="aurora cannabis inc."
+    data-location="brampton, ontario"
+    data-category="qa_test"
+    data-search-text="quality assurance auditor aurora cannabis inc. brampton, ontario audit quality, review docs, investigate issues, report findings full-time · $45,000-52,000 cad qa_test">
     <a href="/jobs/quality-assurance-auditor-aurora-cannabis-inc-670067916/" class="job-link" data-job-title="Quality Assurance Auditor" data-job-company="Aurora Cannabis Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -712,6 +737,57 @@ Let’s connect!</p>
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

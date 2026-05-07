@@ -455,7 +455,12 @@ To learn more about us we encourage all applicants to visit our website at www.f
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior it helpdesk technician"
+    data-company="spectrum health care (shc)"
+    data-location="markham, ontario"
+    data-category="it_support"
+    data-search-text="junior it helpdesk technician spectrum health care (shc) markham, ontario provide level 1 it support to end-users full-time it_support">
     <a href="/jobs/junior-it-helpdesk-technician-spectrum-health-care-shc-672535532/" class="job-link" data-job-title="Junior IT Helpdesk Technician" data-job-company="Spectrum Health Care (SHC)">
         <div class="job-card-header">
             <div class="job-badges">
@@ -488,7 +493,12 @@ To learn more about us we encourage all applicants to visit our website at www.f
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior it helpdesk technician"
+    data-company="spectrum health care"
+    data-location="markham, on"
+    data-category="it_support"
+    data-search-text="junior it helpdesk technician spectrum health care markham, on provide level 1 it support to end users full-time it_support">
     <a href="/jobs/junior-it-helpdesk-technician-spectrum-health-care-672472076/" class="job-link" data-job-title="Junior IT Helpdesk Technician" data-job-company="Spectrum Health Care">
         <div class="job-card-header">
             <div class="job-badges">
@@ -521,7 +531,12 @@ To learn more about us we encourage all applicants to visit our website at www.f
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="jr. it support technician"
+    data-company="amico affiliates"
+    data-location="mississauga, ontario"
+    data-category="it_support"
+    data-search-text="jr. it support technician amico affiliates mississauga, ontario provide level 1 it support to end users full-time it_support">
     <a href="/jobs/jr-it-support-technician-amico-affiliates-669056768/" class="job-link" data-job-title="Jr. IT Support Technician" data-job-company="Amico Affiliates">
         <div class="job-card-header">
             <div class="job-badges">
@@ -554,7 +569,12 @@ To learn more about us we encourage all applicants to visit our website at www.f
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior it support engineer"
+    data-company="pointsbet canada"
+    data-location="toronto, ontario"
+    data-category="it_support"
+    data-search-text="junior it support engineer pointsbet canada toronto, ontario provide level 1 it support and incident resolution full-time · $50k-$60k cad it_support">
     <a href="/jobs/junior-it-support-engineer-pointsbet-canada-667558469/" class="job-link" data-job-title="JUNIOR IT SUPPORT ENGINEER" data-job-company="PointsBet Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -587,7 +607,12 @@ To learn more about us we encourage all applicants to visit our website at www.f
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="programmer analyst 1 - intern (desktop support)"
+    data-company="city of winnipeg"
+    data-location="winnipeg, manitoba"
+    data-category="it_support"
+    data-search-text="programmer analyst 1 - intern (desktop support) city of winnipeg winnipeg, manitoba assist desktop support; manage ad and deployments intern · $22.67/hr it_support">
     <a href="/jobs/programmer-analyst-1-intern-desktop-support-city-of-winnipeg-677952383/" class="job-link" data-job-title="Programmer Analyst 1 - Intern (Desktop Support)" data-job-company="City of Winnipeg">
         <div class="job-card-header">
             <div class="job-badges">
@@ -718,6 +743,57 @@ To learn more about us we encourage all applicants to visit our website at www.f
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

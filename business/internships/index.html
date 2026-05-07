@@ -274,19 +274,40 @@
     <header class="page-header landing-hero">
         <p class="hero-kicker">Daily-updated Canadian student jobs</p>
         <h1>2026 Canadian Business Internships</h1>
-        <p class="page-subtitle">147 positions available for university students, new grads, interns, co-op candidates, and early-career job seekers.</p>
-        <div class="landing-hero-actions" aria-label="Start browsing jobs">
-            <a class="hero-cta hero-cta-primary" href="/new-grad/">Browse new grad jobs</a>
-            <a class="hero-cta hero-cta-primary" href="/internships/">Browse internships & co-ops</a>
+        <p class="page-subtitle">Search 147 positions from company career pages across internships, co-ops, new grad, junior, and entry-level roles.</p>
+        <form class="job-search-panel" role="search" aria-label="Filter visible Hanzilla jobs" data-job-search-form>
+            <label class="search-field search-field-keyword">
+                <span>Keyword</span>
+                <input type="search" name="keyword" placeholder="Title, company, skill…" autocomplete="off" data-job-search-input>
+            </label>
+            <label class="search-field">
+                <span>Location</span>
+                <input type="search" name="location" placeholder="Toronto, Vancouver, remote…" autocomplete="off" data-job-location-input>
+            </label>
+            <label class="search-field search-field-select">
+                <span>Role type</span>
+                <select name="role_type" data-job-type-input>
+                    <option value="">All roles</option>
+                    <option value="intern">Internships / co-ops</option>
+                    <option value="new grad junior entry-level">New grad / junior</option>
+                    <option value="remote">Remote</option>
+                </select>
+            </label>
+            <button class="hero-cta hero-cta-primary search-submit" type="submit">Search jobs</button>
+        </form>
+        <div class="search-feedback" data-job-search-feedback aria-live="polite"></div>
+        <div class="landing-hero-actions quick-filters" aria-label="Popular job searches">
+            <a class="hero-cta" href="/internships/">Internships & co-ops</a>
+            <a class="hero-cta" href="/new-grad/">New grad jobs</a>
             <a class="hero-cta" href="/locations/toronto/">Toronto</a>
             <a class="hero-cta" href="/locations/vancouver/">Vancouver</a>
             <a class="hero-cta" href="/finance/">Finance</a>
             <a class="hero-cta" href="/engineering/">Engineering</a>
         </div>
-        <div class="landing-proof-points">
-            <span>Across tech, finance, engineering, business, sciences + more</span>
-            <span>Fresh roles from company career pages</span>
-            <span>Built for Canadian university students</span>
+        <div class="landing-proof-points" aria-label="Why students use Hanzilla">
+            <span><strong>Updated daily</strong> fresh roles stay visible</span>
+            <span><strong>Direct apply</strong> links to company career pages</span>
+            <span><strong>Student-first</strong> Canada-specific filters</span>
         </div>
         
             
@@ -294,6 +315,46 @@
             
         
     </header>
+
+    
+    <section class="latest-jobs-strip" aria-labelledby="latest-jobs-title">
+        <div class="latest-jobs-header">
+            <div>
+                <p class="section-kicker">Hiring now</p>
+                <h2 id="latest-jobs-title">Fresh roles you can open today</h2>
+            </div>
+            <a href="#marketing-digital-marketing">Jump to all jobs</a>
+        </div>
+        <div class="latest-job-list">
+            
+            <a class="latest-job-row" href="/jobs/stage-automne-stagiaire-en-soutien-numerique-et-pratt-whitney-678334224/">
+                <span class="latest-job-main"><strong>Stage - Automne - Stagiaire en soutien numérique et intelligence d’affaires / Internship - Fall - Digital Support &amp; Business Intelligence Intern</strong><span>Pratt &amp; Whitney</span></span>
+                <span class="latest-job-meta">Longueuil, Quebec · May 06, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/fall-term-logistics-analyst-co-op-intern-tjx-canada-winners-marshalls-homesense-678222963/">
+                <span class="latest-job-main"><strong>Fall Term Logistics Analyst Co-Op/Intern</strong><span>TJX Canada – Winners, Marshalls, HomeSense</span></span>
+                <span class="latest-job-meta">Mississauga, Ontario · May 06, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/fall-term-workplace-services-project-coordinator-co-op-tjx-canada-winners-marshalls-homesense-678192556/">
+                <span class="latest-job-main"><strong>Fall Term Workplace Services Project Coordinator Co-op/Intern</strong><span>TJX Canada – Winners, Marshalls, HomeSense</span></span>
+                <span class="latest-job-meta">Mississauga, Ontario · May 06, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/human-resources-intern-jewish-family-and-children-s-services-678137664/">
+                <span class="latest-job-main"><strong>Human Resources Intern</strong><span>Jewish Family and Children&#39;s Services</span></span>
+                <span class="latest-job-meta">North York, ON M2R 3V3 · May 06, 2026</span>
+            </a>
+            
+            <a class="latest-job-row" href="/jobs/fall-term-workplace-services-project-coordinator-co-op-tjx-canada-678335890/">
+                <span class="latest-job-main"><strong>Fall Term Workplace Services Project Coordinator Co-op/Intern</strong><span>TJX Canada</span></span>
+                <span class="latest-job-meta">Mississauga, ON · May 05, 2026</span>
+            </a>
+            
+        </div>
+    </section>
+    
 
     
 
@@ -408,7 +469,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="content creator &amp; digital design associate"
+    data-company="ncsy"
+    data-location="toronto, on"
+    data-category="biz_marketing"
+    data-search-text="content creator &amp; digital design associate ncsy toronto, on capture footage, edit video, design social content summer · 8 weeks biz_marketing">
     <a href="/jobs/content-creator-digital-design-associate-ncsy-678042605/" class="job-link" data-job-title="Content Creator &amp; Digital Design Associate" data-job-company="NCSY">
         <div class="job-card-header">
             <div class="job-badges">
@@ -440,7 +506,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="content creator &amp; digital design associate"
+    data-company="orthodox union"
+    data-location="toronto, ontario"
+    data-category="biz_marketing"
+    data-search-text="content creator &amp; digital design associate orthodox union toronto, ontario capture moments, edit video, design digital visuals internship · 8 weeks · not disclosed · summer biz_marketing">
     <a href="/jobs/content-creator-digital-design-associate-orthodox-union-677983343/" class="job-link" data-job-title="Content Creator &amp; Digital Design Associate" data-job-company="Orthodox Union">
         <div class="job-card-header">
             <div class="job-badges">
@@ -472,7 +543,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="marketing coordinator, fall 2026 (co-op/internship) - 4 months"
+    data-company="bmo"
+    data-location="toronto, ontario"
+    data-category="biz_marketing"
+    data-search-text="marketing coordinator, fall 2026 (co-op/internship) - 4 months bmo toronto, ontario support marketing projects, events, and collateral co-op/internship · 4 months · see range · fall 2026 biz_marketing">
     <a href="/jobs/marketing-coordinator-fall-2026-co-op-internship-4-months-bmo-677925876/" class="job-link" data-job-title="Marketing Coordinator, Fall 2026 (Co-op/Internship) - 4 Months" data-job-company="BMO">
         <div class="job-card-header">
             <div class="job-badges">
@@ -504,7 +580,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="event marketing specialist - internship"
+    data-company="techtronic industries canada inc."
+    data-location="victoria, british columbia"
+    data-category="biz_marketing"
+    data-search-text="event marketing specialist - internship techtronic industries canada inc. victoria, british columbia coordinate event marketing and in-store promotions internship · 4 months · $22/hour · 4-month term biz_marketing">
     <a href="/jobs/event-marketing-specialist-internship-techtronic-industries-canada-inc-676864167/" class="job-link" data-job-title="Event Marketing Specialist - Internship" data-job-company="Techtronic Industries Canada Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -536,7 +617,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="university co-op student - marketing coordinator - 4 months - fall 2026"
+    data-company="hydro one"
+    data-location="toronto, ontario"
+    data-category="biz_marketing"
+    data-search-text="university co-op student - marketing coordinator - 4 months - fall 2026 hydro one toronto, ontario support end-to-end campaigns, create content, coordinate co-op · 4 months · $2,136.59–$3,301.53 biweekly · fall 2026 biz_marketing">
     <a href="/jobs/university-co-op-student-marketing-coordinator-4-months-hydro-one-676807727/" class="job-link" data-job-title="University Co-Op Student - Marketing Coordinator - 4 Months - Fall 2026" data-job-company="Hydro One">
         <div class="job-card-header">
             <div class="job-badges">
@@ -568,7 +654,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="social media coordinator – internship (12-week contract)"
+    data-company="canadian federation of independent business"
+    data-location="toronto, ontario"
+    data-category="biz_marketing"
+    data-search-text="social media coordinator – internship (12-week contract) canadian federation of independent business toronto, ontario execute social content, schedule posts, analyze performance internship · 12 weeks · $22/hour · contract biz_marketing">
     <a href="/jobs/social-media-coordinator-internship-12-week-contract-canadian-federation-of-independent-business-675846838/" class="job-link" data-job-title="Social Media Coordinator – Internship (12-week contract)" data-job-company="Canadian Federation of Independent Business">
         <div class="job-card-header">
             <div class="job-badges">
@@ -600,7 +691,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="digital marketing intern"
+    data-company="mimro"
+    data-location="toronto, ontario hybrid"
+    data-category="biz_marketing"
+    data-search-text="digital marketing intern mimro toronto, ontario support marketing campaigns, create content, analyze data internship · full-time biz_marketing">
     <a href="/jobs/digital-marketing-intern-mimro-675742981/" class="job-link" data-job-title="Digital Marketing Intern" data-job-company="mimro">
         <div class="job-card-header">
             <div class="job-badges">
@@ -632,7 +728,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="digital marketing coordinator - summer intern"
+    data-company="rosedale international education"
+    data-location="markham, ontario hybrid"
+    data-category="biz_marketing"
+    data-search-text="digital marketing coordinator - summer intern rosedale international education markham, ontario create content, manage social, coordinate events internship · 8 weeks · $20/hour · summer biz_marketing">
     <a href="/jobs/digital-marketing-coordinator-summer-intern-rosedale-international-education-675668099/" class="job-link" data-job-title="Digital Marketing Coordinator - Summer Intern" data-job-company="Rosedale International Education">
         <div class="job-card-header">
             <div class="job-badges">
@@ -664,7 +765,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="social media coordinator - summer student"
+    data-company="winnipeg regional health authority (wrha)"
+    data-location="winnipeg, manitoba hybrid"
+    data-category="biz_marketing"
+    data-search-text="social media coordinator - summer student winnipeg regional health authority (wrha) winnipeg, manitoba create social content, schedule posts, analyze reach csj · 2026-06-01 to 2026-07-24 · n/a · summer 2026 biz_marketing">
     <a href="/jobs/social-media-coordinator-summer-student-winnipeg-regional-health-authority-wrha-675046049/" class="job-link" data-job-title="Social Media Coordinator - Summer Student" data-job-company="Winnipeg Regional Health Authority (WRHA)">
         <div class="job-card-header">
             <div class="job-badges">
@@ -696,7 +802,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="social media coordinator - summer student"
+    data-company="women&#39;s health clinic"
+    data-location="winnipeg, mb"
+    data-category="biz_marketing"
+    data-search-text="social media coordinator - summer student women&#39;s health clinic winnipeg, mb create social content, manage calendars, analyze reach, reports internship · ~8 weeks · csj stipend · summer 2026 biz_marketing">
     <a href="/jobs/social-media-coordinator-summer-student-women-s-health-clinic-674999535/" class="job-link" data-job-title="Social Media Coordinator - Summer Student" data-job-company="Women&#39;s Health Clinic">
         <div class="job-card-header">
             <div class="job-badges">
@@ -728,7 +839,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="social media coordinator - summer student"
+    data-company="shared health-soins communs"
+    data-location="winnipeg, manitoba hybrid"
+    data-category="biz_marketing"
+    data-search-text="social media coordinator - summer student shared health-soins communs winnipeg, manitoba create social content; manage platforms internship · 06/01/2026 - 07/24/2026 · not disclosed · canada summer job program biz_marketing">
     <a href="/jobs/social-media-coordinator-summer-student-shared-health-soins-communs-674989100/" class="job-link" data-job-title="Social Media Coordinator - Summer Student" data-job-company="Shared Health-Soins Communs">
         <div class="job-card-header">
             <div class="job-badges">
@@ -760,7 +876,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="marketing coordinator intern"
+    data-company="redpoint media"
+    data-location="calgary, ab hybrid"
+    data-category="biz_marketing"
+    data-search-text="marketing coordinator intern redpoint media calgary, ab support campaigns, events, and brand communications internship · 8 weeks · $15/hour · 40 hours/week biz_marketing">
     <a href="/jobs/marketing-coordinator-intern-redpoint-media-674986226/" class="job-link" data-job-title="Marketing Coordinator Intern" data-job-company="RedPoint Media">
         <div class="job-card-header">
             <div class="job-badges">
@@ -792,7 +913,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="digital marketing intern (summer 2026)"
+    data-company="ifinance canada"
+    data-location="greater toronto area"
+    data-category="biz_marketing"
+    data-search-text="digital marketing intern (summer 2026) ifinance canada greater toronto area create content, run campaigns, analyze performance metrics daily internship · summer 2026 · pay tbd · summer biz_marketing">
     <a href="/jobs/digital-marketing-intern-summer-2026-ifinance-canada-674662454/" class="job-link" data-job-title="Digital Marketing Intern (Summer 2026)" data-job-company="iFinance Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -824,7 +950,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="content creator &amp; social media intern"
+    data-company="jitto"
+    data-location="toronto, ontario"
+    data-category="biz_marketing"
+    data-search-text="content creator &amp; social media intern jitto toronto, ontario create content across platforms; manage calendar and analytics co-op / internship · 4–8 months · $18/hour · 4–8 months biz_marketing">
     <a href="/jobs/content-creator-social-media-intern-jitto-674317555/" class="job-link" data-job-title="Content Creator &amp; Social Media Intern" data-job-company="Jitto">
         <div class="job-card-header">
             <div class="job-badges">
@@ -856,7 +987,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="marketing analyst intern"
+    data-company="intelcom | dragonfly"
+    data-location="montreal, quebec"
+    data-category="biz_marketing"
+    data-search-text="marketing analyst intern intelcom | dragonfly montreal, quebec support marketing campaigns, analyze market data, report internship · duration: unknown · pay: unknown · term: internship biz_marketing">
     <a href="/jobs/marketing-analyst-intern-intelcom-dragonfly-674285279/" class="job-link" data-job-title="Marketing Analyst Intern" data-job-company="Intelcom | Dragonfly">
         <div class="job-card-header">
             <div class="job-badges">
@@ -888,7 +1024,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer job: social media coordinator"
+    data-company="goodwork environmental jobs"
+    data-location="greater toronto area"
+    data-category="biz_marketing"
+    data-search-text="summer job: social media coordinator goodwork environmental jobs greater toronto area manage social content, engage audience, report metrics summer • may 25 - aug 31 • $27.20/hour • seasonal biz_marketing">
     <a href="/jobs/summer-job-social-media-coordinator-goodwork-environmental-jobs-673783032/" class="job-link" data-job-title="Summer job: Social Media Coordinator" data-job-company="GoodWork Environmental Jobs">
         <div class="job-card-header">
             <div class="job-badges">
@@ -920,7 +1061,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="digital marketing student"
+    data-company="cavendish farms"
+    data-location="dieppe, new brunswick"
+    data-category="biz_marketing"
+    data-search-text="digital marketing student cavendish farms dieppe, new brunswick coordinate marketing projects and platforms; support assets summer student · 4 months · tbd · seasonal biz_marketing">
     <a href="/jobs/digital-marketing-student-cavendish-farms-673224202/" class="job-link" data-job-title="Digital Marketing Student" data-job-company="Cavendish Farms">
         <div class="job-card-header">
             <div class="job-badges">
@@ -952,7 +1098,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="social media coordinator – internship (12-week contract)"
+    data-company="cfib / fcei"
+    data-location="toronto, on hybrid"
+    data-category="biz_marketing"
+    data-search-text="social media coordinator – internship (12-week contract) cfib / fcei toronto, on create social content, schedule posts, analyze performance internship · 12 weeks · $22/hour · june–august 2026 biz_marketing">
     <a href="/jobs/social-media-coordinator-internship-12-week-contract-cfib-fcei-673202036/" class="job-link" data-job-title="Social Media Coordinator – Internship (12-week contract)" data-job-company="CFIB / FCEI">
         <div class="job-card-header">
             <div class="job-badges">
@@ -984,7 +1135,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="digital marketing intern"
+    data-company="enabled talent"
+    data-location="greater sudbury, ontario hybrid"
+    data-category="biz_marketing"
+    data-search-text="digital marketing intern enabled talent greater sudbury, ontario plan and execute digital marketing campaigns internship biz_marketing">
     <a href="/jobs/digital-marketing-intern-enabled-talent-672534991/" class="job-link" data-job-title="Digital Marketing Intern" data-job-company="Enabled Talent">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1016,7 +1172,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="digital marketing intern"
+    data-company="solyntek"
+    data-location="montreal, quebec"
+    data-category="biz_marketing"
+    data-search-text="digital marketing intern solyntek montreal, quebec execute digital marketing campaigns and optimize seo type: internship biz_marketing">
     <a href="/jobs/digital-marketing-intern-solyntek-672509295/" class="job-link" data-job-title="Digital Marketing Intern" data-job-company="Solyntek">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1048,7 +1209,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior marketing coordinator (csj)"
+    data-company="national zakat foundation"
+    data-location="ontario"
+    data-category="biz_marketing"
+    data-search-text="junior marketing coordinator (csj) national zakat foundation ontario create content, manage social campaigns, analyze engagement temporary, full-time · 30 hours/week · n/a · canada summer jobs biz_marketing">
     <a href="/jobs/junior-marketing-coordinator-csj-national-zakat-foundation-671026108/" class="job-link" data-job-title="Junior Marketing Coordinator (CSJ)" data-job-company="NATIONAL ZAKAT FOUNDATION">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1080,7 +1246,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="marketing assistant (summer student)"
+    data-company="the centre for epilepsy &amp; seizure education in bc"
+    data-location="abbotsford, british columbia"
+    data-category="biz_marketing"
+    data-search-text="marketing assistant (summer student) the centre for epilepsy &amp; seizure education in bc abbotsford, british columbia support social media, campaigns, outreach initiatives term position · 9 weeks · $20/hour · may–aug 2026 biz_marketing">
     <a href="/jobs/marketing-assistant-summer-student-the-centre-for-epilepsy-seizure-education-in-bc-670922185/" class="job-link" data-job-title="Marketing Assistant (Summer Student)" data-job-company="The Centre for Epilepsy &amp; Seizure Education in BC">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1112,7 +1283,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="marketing specialist – canada summer jobs intern"
+    data-company="heritage christian online school"
+    data-location="canada"
+    data-category="biz_marketing"
+    data-search-text="marketing specialist – canada summer jobs intern heritage christian online school canada assist multi-channel marketing campaigns and analytics internship · 8 weeks · $18.25/hour · summer 2026 biz_marketing">
     <a href="/jobs/marketing-specialist-canada-summer-jobs-intern-heritage-christian-online-school-670214231/" class="job-link" data-job-title="Marketing Specialist – Canada Summer Jobs Intern" data-job-company="Heritage Christian Online School">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1144,7 +1320,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="marketing specialist - canada summer jobs intern"
+    data-company="studyforge"
+    data-location="british columbia"
+    data-category="biz_marketing"
+    data-search-text="marketing specialist - canada summer jobs intern studyforge british columbia support campaigns, analyze performance, assist marketing tasks internship · 8 weeks · $18.25/hour · summer (pacific time) biz_marketing">
     <a href="/jobs/marketing-specialist-canada-summer-jobs-intern-studyforge-670119010/" class="job-link" data-job-title="Marketing Specialist - Canada Summer Jobs Intern" data-job-company="StudyForge">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1176,7 +1357,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="marketing analyst,  supply chain (co-op)"
+    data-company="loblaw companies limited"
+    data-location="brampton, ontario"
+    data-category="biz_marketing"
+    data-search-text="marketing analyst,  supply chain (co-op) loblaw companies limited brampton, ontario support marketing campaigns, analytics, and content creation temporary · summer co-op · $52,000.00 - $71,500.00 / year · fixed term biz_marketing">
     <a href="/jobs/marketing-analyst-supply-chain-co-op-loblaw-companies-limited-669417550/" class="job-link" data-job-title="Marketing Analyst,  Supply Chain (Co-op)" data-job-company="Loblaw Companies Limited">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1208,7 +1394,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="marketing analyst, supply chain (co-op)"
+    data-company="loblaw"
+    data-location="brampton, on"
+    data-category="biz_marketing"
+    data-search-text="marketing analyst, supply chain (co-op) loblaw brampton, on execute marketing campaigns, analyze data, support branding temporary (fixed term) · summer student · $52,000 - $71,500 per year · summer term biz_marketing">
     <a href="/jobs/marketing-analyst-supply-chain-co-op-loblaw-669303577/" class="job-link" data-job-title="Marketing Analyst, Supply Chain (Co-op)" data-job-company="Loblaw">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1240,7 +1431,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="marketing assistant intern (full-time, remote)"
+    data-company="stellargrade"
+    data-location="remote"
+    data-category="biz_marketing"
+    data-search-text="marketing assistant intern (full-time, remote) stellargrade remote create content, manage social media campaigns internship · 3–6 months biz_marketing">
     <a href="/jobs/marketing-assistant-intern-full-time-remote-stellargrade-669098738/" class="job-link" data-job-title="Marketing Assistant Intern (Full-Time, Remote)" data-job-company="StellarGrade">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1272,7 +1468,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="marketing assistant, student"
+    data-company="skyline group of companies"
+    data-location="guelph, ontario"
+    data-category="biz_marketing"
+    data-search-text="marketing assistant, student skyline group of companies guelph, ontario assist marketing tasks, write blogs, update calendars full-time contract · 4 months · $21/hour · summer biz_marketing">
     <a href="/jobs/marketing-assistant-student-skyline-group-of-companies-667569904/" class="job-link" data-job-title="Marketing Assistant, Student" data-job-company="Skyline Group of Companies">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1304,7 +1505,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="marketing assistant"
+    data-company="riide saskatoon"
+    data-location="saskatoon, saskatchewan"
+    data-category="biz_marketing"
+    data-search-text="marketing assistant riide saskatoon saskatoon, saskatchewan assist campaigns, manage social content, analyze performance internship · may-sept · $15.94/hr · summer biz_marketing">
     <a href="/jobs/marketing-assistant-riide-saskatoon-667562453/" class="job-link" data-job-title="Marketing Assistant" data-job-company="Riide Saskatoon">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1336,7 +1542,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="marketing coordinator (summer intern)"
+    data-company="techalliance of southwestern ontario"
+    data-location="london, on n6b 1z3"
+    data-category="biz_marketing"
+    data-search-text="marketing coordinator (summer intern) techalliance of southwestern ontario london, on n6b 1z3 plan and execute content, social, events, campaigns internship · 8 weeks · paid (canada summer jobs) · summer biz_marketing">
     <a href="/jobs/marketing-coordinator-summer-intern-techalliance-of-southwestern-ontario-670028506/" class="job-link" data-job-title="Marketing Coordinator (Summer Intern)" data-job-company="TechAlliance of Southwestern Ontario">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1368,7 +1579,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="digital marketing intern (paid ads &amp; seo)"
+    data-company="mrktops"
+    data-location="none"
+    data-category="biz_marketing"
+    data-search-text="digital marketing intern (paid ads &amp; seo) mrktops none run paid ads, optimize campaigns, report results internship · contract basis · paid · contract biz_marketing">
     <a href="/jobs/digital-marketing-intern-paid-ads-seo-mrktops-665006690/" class="job-link" data-job-title="Digital Marketing Intern (Paid Ads &amp; SEO)" data-job-company="MRKTOPS">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1411,7 +1627,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="stage - automne - stagiaire en soutien numérique et intelligence d’affaires / internship - fall - digital support &amp; business intelligence intern"
+    data-company="pratt &amp; whitney"
+    data-location="longueuil, quebec"
+    data-category="biz_analyst"
+    data-search-text="stage - automne - stagiaire en soutien numérique et intelligence d’affaires / internship - fall - digital support &amp; business intelligence intern pratt &amp; whitney longueuil, quebec design dashboards, automate reports, analyze data internship · aug 31–dec 18, 2026 · fall biz_analyst">
     <a href="/jobs/stage-automne-stagiaire-en-soutien-numerique-et-pratt-whitney-678334224/" class="job-link" data-job-title="Stage - Automne - Stagiaire en soutien numérique et intelligence d’affaires / Internship - Fall - Digital Support &amp; Business Intelligence Intern" data-job-company="Pratt &amp; Whitney">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1443,7 +1664,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="fall term logistics analyst co-op/intern"
+    data-company="tjx canada"
+    data-location="mississauga, on hybrid"
+    data-category="biz_analyst"
+    data-search-text="fall term logistics analyst co-op/intern tjx canada mississauga, on analyze logistics data, build reports, support decisions co-op/intern · 4 months · $52,230-$73,122/year · hybrid biz_analyst">
     <a href="/jobs/fall-term-logistics-analyst-co-op-intern-tjx-canada-678335826/" class="job-link" data-job-title="Fall Term Logistics Analyst Co-Op/Intern" data-job-company="TJX Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1475,7 +1701,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="business analyst coop"
+    data-company="cgi"
+    data-location="regina, sk s4p 4k8"
+    data-category="biz_analyst"
+    data-search-text="business analyst coop cgi regina, sk s4p 4k8 liaise between it and business; document requirements clearly co-op biz_analyst">
     <a href="/jobs/business-analyst-coop-cgi-678104133/" class="job-link" data-job-title="Business Analyst Coop" data-job-company="CGI">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1507,7 +1738,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources data &amp; systems co‑op student"
+    data-company="grand river hospital"
+    data-location="kitchener, on"
+    data-category="biz_analyst"
+    data-search-text="human resources data &amp; systems co‑op student grand river hospital kitchener, on document hr data definitions, support system reporting co-op · temporary full-time until aug 21, 2026 biz_analyst">
     <a href="/jobs/human-resources-data-systems-coop-student-grand-river-hospital-677694241/" class="job-link" data-job-title="Human Resources Data &amp; Systems Co‑op Student" data-job-company="Grand River Hospital">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1539,7 +1775,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="it business analyst- 4-month internship/co-op (fall 2026)"
+    data-company="intact"
+    data-location="quebec city, qc"
+    data-category="biz_analyst"
+    data-search-text="it business analyst- 4-month internship/co-op (fall 2026) intact quebec city, qc analyze needs, define it solutions, write user stories internship/co-op · 4 months · cad 52,700–65,900 per year (pro-rated) · fall 2026 biz_analyst">
     <a href="/jobs/it-business-analyst-4-month-internship-co-op-fall-2026-intact-677089861/" class="job-link" data-job-title="IT Business Analyst- 4-month Internship/Co-op (Fall 2026)" data-job-company="Intact">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1571,7 +1812,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="it business analyst i - 4 month internship/co-op (fall/2026)"
+    data-company="intact"
+    data-location="toronto, on"
+    data-category="biz_analyst"
+    data-search-text="it business analyst i - 4 month internship/co-op (fall/2026) intact toronto, on analyze needs, write user stories, support backlog internship/co-op · 4 months · cad 52.7k-65.9k/year (pro-rated) · fall 2026 biz_analyst">
     <a href="/jobs/it-business-analyst-i-4-month-internship-co-op-fall-2026-intact-677089342/" class="job-link" data-job-title="IT Business Analyst I - 4 Month Internship/Co-op (Fall/2026)" data-job-company="Intact">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1603,7 +1849,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="business analyst i - 4 month internship/co-op (fall 2026)"
+    data-company="intact"
+    data-location="toronto, on"
+    data-category="biz_analyst"
+    data-search-text="business analyst i - 4 month internship/co-op (fall 2026) intact toronto, on assist project teams; draft brds; analyze data type: internship/co-op · duration: fall 2026 (4 months) · pay: cad 52,700–65,900/year (pro-rated) · term: fall 2026 biz_analyst">
     <a href="/jobs/business-analyst-i-4-month-internship-co-op-fall-2026-intact-677089006/" class="job-link" data-job-title="Business Analyst I - 4 Month Internship/Co-op (Fall 2026)" data-job-company="Intact">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1635,7 +1886,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="university co-op student - it operations - business analyst - 8 months - toronto - fall 2026"
+    data-company="hydro one"
+    data-location="toronto, ontario"
+    data-category="biz_analyst"
+    data-search-text="university co-op student - it operations - business analyst - 8 months - toronto - fall 2026 hydro one toronto, ontario assist pm, analyze data, create dashboards co-op · 8 months · $2,136.59-$3,301.53 bi-weekly · fall 2026 biz_analyst">
     <a href="/jobs/university-co-op-student-it-operations-business-analyst-8-hydro-one-676808240/" class="job-link" data-job-title="University Co-Op Student - IT Operations - Business Analyst - 8 Months - Toronto - Fall 2026" data-job-company="Hydro One">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1667,7 +1923,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="college co-op student - it operations - business analyst - 8 months - fall 2026"
+    data-company="hydro one"
+    data-location="toronto, ontario"
+    data-category="biz_analyst"
+    data-search-text="college co-op student - it operations - business analyst - 8 months - fall 2026 hydro one toronto, ontario assist project management, analyze data, report progress co-op · 8 months · cad $2,045.66–$2,523.60 bi-weekly · fall 2026 biz_analyst">
     <a href="/jobs/college-co-op-student-it-operations-business-analyst-8-hydro-one-676808236/" class="job-link" data-job-title="College Co-Op Student - IT Operations - Business Analyst - 8 Months - Fall 2026" data-job-company="Hydro One">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1699,7 +1960,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="university co-op student - key accounts business analyst - 12 months - fall 2026"
+    data-company="hydro one"
+    data-location="toronto, ontario"
+    data-category="biz_analyst"
+    data-search-text="university co-op student - key accounts business analyst - 12 months - fall 2026 hydro one toronto, ontario analyze contracts, build reports and dashboards temporary · 12 months · $2,136.59-$3,301.53 bi-weekly · fall 2026 biz_analyst">
     <a href="/jobs/university-co-op-student-key-accounts-business-analyst-12-hydro-one-676807783/" class="job-link" data-job-title="University Co-Op Student - Key Accounts Business Analyst - 12 months - Fall 2026" data-job-company="Hydro One">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1731,7 +1997,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="2026 fall - ecoo, business analyst intern (4 months)"
+    data-company="rbc"
+    data-location="toronto, ontario hybrid"
+    data-category="biz_analyst"
+    data-search-text="2026 fall - ecoo, business analyst intern (4 months) rbc toronto, ontario analyze engagement data, gather requirements, drive improvements student/coop · 4 months · salaried · fall 2026 biz_analyst">
     <a href="/jobs/2026-fall-ecoo-business-analyst-intern-4-months-rbc-675958420/" class="job-link" data-job-title="2026 Fall - ECOO, Business Analyst Intern (4 Months)" data-job-company="RBC">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1763,7 +2034,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="business analyst, fall 2026 (co-op/internship) - 8 months"
+    data-company="bmo"
+    data-location="toronto, ontario"
+    data-category="biz_analyst"
+    data-search-text="business analyst, fall 2026 (co-op/internship) - 8 months bmo toronto, ontario elicit requirements, analyze data, support project teams daily co-op/internship · 8 months · unspecified · fall 2026 biz_analyst">
     <a href="/jobs/business-analyst-fall-2026-co-op-internship-8-months-bmo-675854059/" class="job-link" data-job-title="Business Analyst, Fall 2026 (Co-op/Internship) - 8 Months" data-job-company="BMO">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1795,7 +2071,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="business intelligence intern / stagiaire en intelligence d&#39;affaires"
+    data-company="leviton"
+    data-location="pointe-claire, quebec"
+    data-category="biz_analyst"
+    data-search-text="business intelligence intern / stagiaire en intelligence d&#39;affaires leviton pointe-claire, quebec prepare datasets, clean data, build bi reports internship biz_analyst">
     <a href="/jobs/business-intelligence-intern-stagiaire-en-intelligence-d-leviton-673986626/" class="job-link" data-job-title="Business Intelligence Intern / Stagiaire en intelligence d&#39;affaires" data-job-company="Leviton">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1827,7 +2108,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="sophomore summer business analyst intern"
+    data-company="mckinsey &amp; company"
+    data-location="calgary, ab t2p 1c9"
+    data-category="biz_analyst"
+    data-search-text="sophomore summer business analyst intern mckinsey &amp; company calgary, ab t2p 1c9 assist client problem solving with data analysis internship · 8-10 weeks · competitive salary · summer biz_analyst">
     <a href="/jobs/sophomore-summer-business-analyst-intern-mckinsey-company-673705200/" class="job-link" data-job-title="Sophomore Summer Business Analyst Intern" data-job-company="McKinsey &amp; Company">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1859,7 +2145,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer student/business analyst (commercial support)"
+    data-company="omada rail systems"
+    data-location="toronto, on"
+    data-category="biz_analyst"
+    data-search-text="summer student/business analyst (commercial support) omada rail systems toronto, on clean crm data; support marketing and tenders internship · summer biz_analyst">
     <a href="/jobs/summer-student-business-analyst-commercial-support-omada-rail-systems-673302729/" class="job-link" data-job-title="Summer Student/Business Analyst (Commercial Support)" data-job-company="Omada Rail Systems">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1891,7 +2182,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="business analyst, fall 2026 (co-op/internship) - 4 months"
+    data-company="bmo"
+    data-location="toronto, ontario"
+    data-category="biz_analyst"
+    data-search-text="business analyst, fall 2026 (co-op/internship) - 4 months bmo toronto, ontario assist requirements gathering and analyze business processes co-op/internship · 4 months · not disclosed · fall 2026 biz_analyst">
     <a href="/jobs/business-analyst-fall-2026-co-op-internship-4-months-bmo-673193853/" class="job-link" data-job-title="Business Analyst, Fall 2026 (Co-op/Internship) - 4 Months" data-job-company="BMO">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1923,7 +2219,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer student/business analyst (commercial support)"
+    data-company="egis group"
+    data-location="toronto, on hybrid"
+    data-category="biz_analyst"
+    data-search-text="summer student/business analyst (commercial support) egis group toronto, on clean crm data, support marketing &amp; proposals co-op · tbd · competitive salary · tbd biz_analyst">
     <a href="/jobs/summer-student-business-analyst-commercial-support-egis-group-673176051/" class="job-link" data-job-title="Summer Student/Business Analyst (Commercial Support)" data-job-company="Egis Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1955,7 +2256,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer student/business analyst (commercial support)"
+    data-company="egis in canada"
+    data-location="toronto, ontario hybrid"
+    data-category="biz_analyst"
+    data-search-text="summer student/business analyst (commercial support) egis in canada toronto, ontario clean crm data, analyze, and support marketing co-op biz_analyst">
     <a href="/jobs/summer-student-business-analyst-commercial-support-egis-in-canada-673152986/" class="job-link" data-job-title="Summer Student/Business Analyst (Commercial Support)" data-job-company="Egis in Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -1987,7 +2293,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="velocity - business analyst internship/co-op - fall 2026"
+    data-company="scotiabank"
+    data-location="toronto, on"
+    data-category="biz_analyst"
+    data-search-text="velocity - business analyst internship/co-op - fall 2026 scotiabank toronto, on analyze requirements, document diagrams, deliver insights internship/co-op · fall 2026 · term: sep-dec 2026 biz_analyst">
     <a href="/jobs/velocity-business-analyst-internship-co-op-fall-2026-scotiabank-676851688/" class="job-link" data-job-title="Velocity - Business Analyst Internship/Co-Op - Fall 2026" data-job-company="Scotiabank">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2019,7 +2330,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="finance business analyst co-op student - fall 2026"
+    data-company="j.d. irving"
+    data-location="saint john, nb"
+    data-category="biz_analyst"
+    data-search-text="finance business analyst co-op student - fall 2026 j.d. irving saint john, nb assist finance analytics, build dashboards, improve processes co-op  b7 fall 2026 biz_analyst">
     <a href="/jobs/finance-business-analyst-co-op-student-fall-2026-j-d-irving-673115102/" class="job-link" data-job-title="Finance Business Analyst Co-op Student - Fall 2026" data-job-company="J.D. Irving">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2051,7 +2367,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="business intelligence analyst intern"
+    data-company="national bank of canada"
+    data-location="montréal, qc hybrid"
+    data-category="biz_analyst"
+    data-search-text="business intelligence analyst intern national bank of canada montréal, qc build dashboards, analyze data, support decisions internship biz_analyst">
     <a href="/jobs/business-intelligence-analyst-intern-national-bank-of-canada-672594456/" class="job-link" data-job-title="Business Intelligence Analyst Intern" data-job-company="National Bank of Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2083,7 +2404,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="finance business analyst co-op student - fall 2026"
+    data-company="j.d. irving, limited"
+    data-location="saint john, new brunswick"
+    data-category="biz_analyst"
+    data-search-text="finance business analyst co-op student - fall 2026 j.d. irving, limited saint john, new brunswick perform finance data analysis and process improvements co-op · fall 2026 biz_analyst">
     <a href="/jobs/finance-business-analyst-co-op-student-fall-2026-j-d-irving-limited-672515270/" class="job-link" data-job-title="Finance Business Analyst Co-op Student - Fall 2026" data-job-company="J.D. Irving, Limited">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2115,7 +2441,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sap ixp intern - cloud erp solution adoption business analyst"
+    data-company="sap"
+    data-location="toronto, ontario hybrid"
+    data-category="biz_analyst"
+    data-search-text="sap ixp intern - cloud erp solution adoption business analyst sap toronto, ontario build data dashboards; drive adoption metrics internship · 6 months · paid · 40 hours/week biz_analyst">
     <a href="/jobs/sap-ixp-intern-cloud-erp-solution-adoption-business-analyst-sap-672332603/" class="job-link" data-job-title="SAP iXp Intern - Cloud ERP Solution Adoption Business Analyst" data-job-company="SAP">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2147,7 +2478,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="co-op/intern business analyst"
+    data-company="kinaxis"
+    data-location="ottawa, ontario hybrid"
+    data-category="biz_analyst"
+    data-search-text="co-op/intern business analyst kinaxis ottawa, ontario analyze processes, gather requirements, support it projects co-op · 8-12 months · $19.46-$28.55/hr · may 2026 start biz_analyst">
     <a href="/jobs/co-op-intern-business-analyst-kinaxis-671049336/" class="job-link" data-job-title="Co-op/Intern Business Analyst" data-job-company="Kinaxis">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2179,7 +2515,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior (jr.) business analyst (canada summer jobs 2026)"
+    data-company="simplycast"
+    data-location="remote"
+    data-category="biz_analyst"
+    data-search-text="junior (jr.) business analyst (canada summer jobs 2026) simplycast remote assist in requirements gathering and documentation type: canada summer jobs 2026 · duration: jun 2–jul 28, 2026 · pay: n/a · term: summer 2026 biz_analyst">
     <a href="/jobs/junior-jr-business-analyst-canada-summer-jobs-2026-simplycast-670745673/" class="job-link" data-job-title="Junior (Jr.) Business Analyst (Canada Summer Jobs 2026)" data-job-company="SimplyCast">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2211,7 +2552,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="student, business analyst (fall 2026)"
+    data-company="sun life"
+    data-location="waterloo, ontario hybrid"
+    data-category="biz_analyst"
+    data-search-text="student, business analyst (fall 2026) sun life waterloo, ontario support it risk processes, change records, reporting temporary employee · fall 2026 ·  · internship/co-op biz_analyst">
     <a href="/jobs/student-business-analyst-fall-2026-sun-life-670163571/" class="job-link" data-job-title="Student, Business Analyst (Fall 2026)" data-job-company="Sun Life">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2243,7 +2589,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="business analyst co-op student"
+    data-company="vale base metals"
+    data-location="toronto, ontario"
+    data-category="biz_analyst"
+    data-search-text="business analyst co-op student vale base metals toronto, ontario prepare exec-ready materials; coordinate governance forums. co-op · 8-12 months · 25.25/hour · fixed-term biz_analyst">
     <a href="/jobs/business-analyst-co-op-student-vale-base-metals-670091529/" class="job-link" data-job-title="Business Analyst Co-Op Student" data-job-company="Vale Base Metals">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2275,7 +2626,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="intern, strategy analyst - fall 2026"
+    data-company="capital one"
+    data-location="toronto, ontario hybrid"
+    data-category="biz_analyst"
+    data-search-text="intern, strategy analyst - fall 2026 capital one toronto, ontario analyze data, build frameworks, present strategic recommendations internship · ~16 weeks · $23-43/hour · fall 2026 biz_analyst">
     <a href="/jobs/intern-strategy-analyst-fall-2026-capital-one-668878871/" class="job-link" data-job-title="Intern, Strategy Analyst - Fall 2026" data-job-company="Capital One">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2307,7 +2663,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="fall 2026 student – business analyst, personal banking (4 - 8 months)"
+    data-company="rbc"
+    data-location="toronto, on m9w 0a4"
+    data-category="biz_analyst"
+    data-search-text="fall 2026 student – business analyst, personal banking (4 - 8 months) rbc toronto, on m9w 0a4 translate business needs into actionable insights, support projects student/coop · 4-8 months · salaried · fixed term biz_analyst">
     <a href="/jobs/fall-2026-student-business-analyst-personal-banking-4-8-rbc-669446930/" class="job-link" data-job-title="Fall 2026 Student – Business Analyst, Personal Banking (4 - 8 months)" data-job-company="RBC">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2339,7 +2700,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="fall 2026 student – business analyst, personal banking"
+    data-company="rbc"
+    data-location="toronto, ontario"
+    data-category="biz_analyst"
+    data-search-text="fall 2026 student – business analyst, personal banking rbc toronto, ontario translate business needs; analyze data; support cross-functional projects student/coop · 4-8 months · salaried · fixed term biz_analyst">
     <a href="/jobs/fall-2026-student-business-analyst-personal-banking-rbc-667816366/" class="job-link" data-job-title="Fall 2026 Student – Business Analyst, Personal Banking" data-job-company="RBC">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2371,7 +2737,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="canada summer jobs - business analyst, productivity (intern)"
+    data-company="calgary economic development"
+    data-location="calgary, ab t2p 4k3"
+    data-category="biz_analyst"
+    data-search-text="canada summer jobs - business analyst, productivity (intern) calgary economic development calgary, ab t2p 4k3 assist process improvements; analyze data; support changes internship · 8 weeks · summer biz_analyst">
     <a href="/jobs/canada-summer-jobs-business-analyst-productivity-intern-calgary-economic-development-667806602/" class="job-link" data-job-title="Canada Summer Jobs - Business Analyst, Productivity (Intern)" data-job-company="Calgary Economic Development">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2403,7 +2774,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="business analyst co-op"
+    data-company="fire safety &amp; protection"
+    data-location="cambridge, on n1t 1z6"
+    data-category="biz_analyst"
+    data-search-text="business analyst co-op fire safety &amp; protection cambridge, on n1t 1z6 coordinate scheduling, analyze data, support cross-functional operations daily co-op biz_analyst">
     <a href="/jobs/business-analyst-co-op-fire-safety-protection-666043404/" class="job-link" data-job-title="Business Analyst Co-Op" data-job-company="Fire Safety &amp; Protection">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2435,7 +2811,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="advisory business analyst, intern"
+    data-company="avanade"
+    data-location="toronto, ontario"
+    data-category="biz_analyst"
+    data-search-text="advisory business analyst, intern avanade toronto, ontario gather requirements, document user stories, support stakeholders, collaborate internship · n/a · $25/hour · n/a biz_analyst">
     <a href="/jobs/advisory-business-analyst-intern-avanade-665997665/" class="job-link" data-job-title="Advisory Business Analyst, Intern" data-job-company="Avanade">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2467,7 +2848,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="business analyst co-op"
+    data-company="fire safety and protection"
+    data-location="cambridge, ontario"
+    data-category="biz_analyst"
+    data-search-text="business analyst co-op fire safety and protection cambridge, ontario coordinate operations, analyze data, support scheduling. co-op · duration not specified · pay not specified · term not specified biz_analyst">
     <a href="/jobs/business-analyst-co-op-fire-safety-and-protection-665829361/" class="job-link" data-job-title="Business Analyst Co-Op" data-job-company="Fire Safety and Protection">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2510,7 +2896,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="people operations intern"
+    data-company="designme hair"
+    data-location="toronto, ontario"
+    data-category="biz_hr"
+    data-search-text="people operations intern designme hair toronto, ontario coordinate hr operations: recruitment, onboarding, data internship · 4 months · minimum wage · n/a biz_hr">
     <a href="/jobs/people-operations-intern-designme-hair-678013013/" class="job-link" data-job-title="People Operations Intern" data-job-company="DESIGNME HAIR">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2542,7 +2933,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="stagiaire ressources humaines - human resources intern"
+    data-company="expresco"
+    data-location="montreal, quebec"
+    data-category="biz_hr"
+    data-search-text="stagiaire ressources humaines - human resources intern expresco montreal, quebec support hr operations: recruitment, training, onboarding type: internship · duration: summer (may–aug) · term: summer 2026 biz_hr">
     <a href="/jobs/stagiaire-ressources-humaines-human-resources-intern-expresco-677986503/" class="job-link" data-job-title="Stagiaire Ressources Humaines - Human Resources Intern" data-job-company="Expresco">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2574,7 +2970,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer student – administrative support, human resources"
+    data-company="today&#39;s family"
+    data-location="hamilton, on l9c 5z4"
+    data-category="biz_hr"
+    data-search-text="summer student – administrative support, human resources today&#39;s family hamilton, on l9c 5z4 support hr admin tasks, manage confidential records full-time · 3-month contract · $17.20-$23.45/hr · summer 2026 biz_hr">
     <a href="/jobs/summer-student-administrative-support-human-resources-today-s-family-677909050/" class="job-link" data-job-title="Summer Student – Administrative Support, Human Resources" data-job-company="Today&#39;s Family">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2606,7 +3007,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources administrative intern"
+    data-company="new castle hotels"
+    data-location="halifax, ns b3h 2p6"
+    data-category="biz_hr"
+    data-search-text="human resources administrative intern new castle hotels halifax, ns b3h 2p6 support hr programs, sops, and systems rollout internship · summer months ·  · part-time, temporary biz_hr">
     <a href="/jobs/human-resources-administrative-intern-new-castle-hotels-677894824/" class="job-link" data-job-title="Human Resources Administrative Intern" data-job-company="New Castle Hotels">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2638,7 +3044,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="stagiaire ressources humaines - human resources intern"
+    data-company="expresco foods"
+    data-location="montréal, qc"
+    data-category="biz_hr"
+    data-search-text="stagiaire ressources humaines - human resources intern expresco foods montréal, qc support hr ops, coordinate training, assist recruitment internship · may–aug 2026 · summer term biz_hr">
     <a href="/jobs/stagiaire-ressources-humaines-human-resources-intern-expresco-foods-677797343/" class="job-link" data-job-title="Stagiaire Ressources Humaines - Human Resources Intern" data-job-company="Expresco Foods">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2670,7 +3081,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources student"
+    data-company="strides toronto"
+    data-location="toronto, on m1h 3e3"
+    data-category="biz_hr"
+    data-search-text="human resources student strides toronto toronto, on m1h 3e3 assist hr operations: admin, onboarding, and records full-time contract · 8 weeks · $19.10/hour · canada summer job biz_hr">
     <a href="/jobs/human-resources-student-strides-toronto-677289472/" class="job-link" data-job-title="Human Resources Student" data-job-company="Strides Toronto">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2702,7 +3118,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sumemr student, human resources"
+    data-company="michael garron hospital"
+    data-location="toronto, on m4c 3e7"
+    data-category="biz_hr"
+    data-search-text="sumemr student, human resources michael garron hospital toronto, on m4c 3e7 assist hr admin, data analysis, and records temporary full-time · summer · paid · temporary biz_hr">
     <a href="/jobs/sumemr-student-human-resources-michael-garron-hospital-677196498/" class="job-link" data-job-title="Sumemr Student, Human Resources" data-job-company="Michael Garron Hospital">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2734,7 +3155,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="hr assistant (co-op)"
+    data-company="wdg public health"
+    data-location="guelph, on"
+    data-category="biz_hr"
+    data-search-text="hr assistant (co-op) wdg public health guelph, on support hr recruitment, admin, and training projects co-op · 4-8 months · n/a · n/a biz_hr">
     <a href="/jobs/hr-assistant-co-op-wdg-public-health-677196339/" class="job-link" data-job-title="HR Assistant (Co-op)" data-job-company="WDG Public Health">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2766,7 +3192,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources student"
+    data-company="pcl construction"
+    data-location="richmond, british columbia"
+    data-category="biz_hr"
+    data-search-text="human resources student pcl construction richmond, british columbia support hr recruitment, training, and events student · 4-12 months · $19.88-$24.38/hr · sep 2026 start biz_hr">
     <a href="/jobs/human-resources-student-pcl-construction-676884508/" class="job-link" data-job-title="Human Resources Student" data-job-company="PCL Construction">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2798,7 +3229,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="talent acquisition student (12 months)"
+    data-company="trench group"
+    data-location="pickering, ontario"
+    data-category="biz_hr"
+    data-search-text="talent acquisition student (12 months) trench group pickering, ontario support recruitment processes, coordinate interviews, sourcing on-site · full-time · cad 24-26/hour · 12 months biz_hr">
     <a href="/jobs/talent-acquisition-student-12-months-trench-group-676194771/" class="job-link" data-job-title="Talent Acquisition Student (12 Months)" data-job-company="Trench Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2830,7 +3266,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="talent acquisition practicum student"
+    data-company="waypoint"
+    data-location="vancouver, british columbia"
+    data-category="biz_hr"
+    data-search-text="talent acquisition practicum student waypoint vancouver, british columbia coordinate recruitment lifecycle; screen candidates; schedule interviews on-site · $20/hr biz_hr">
     <a href="/jobs/talent-acquisition-practicum-student-waypoint-675912738/" class="job-link" data-job-title="Talent Acquisition Practicum Student" data-job-company="Waypoint">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2862,7 +3303,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources intern"
+    data-company="hr associates"
+    data-location="etobicoke, ontario"
+    data-category="biz_hr"
+    data-search-text="human resources intern hr associates etobicoke, ontario support recruitment projects, screen candidates, coordinate interviews internship biz_hr">
     <a href="/jobs/human-resources-intern-hr-associates-675888939/" class="job-link" data-job-title="Human Resources Intern" data-job-company="HR Associates">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2894,7 +3340,12 @@
             
             <li class="job-card job-snooze"
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="intern, talent acquisition &amp; campus"
+    data-company="pomerleau"
+    data-location="montréal, qc h2y 1s1"
+    data-category="biz_hr"
+    data-search-text="intern, talent acquisition &amp; campus pomerleau montréal, qc h2y 1s1 assist campus recruiting, hr ops, and onboarding internship · n/a · n/a · n/a biz_hr">
     <a href="/jobs/intern-talent-acquisition-campus-pomerleau-675846768/" class="job-link" data-job-title="Intern, Talent acquisition &amp; Campus" data-job-company="Pomerleau">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2926,7 +3377,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer student, human resources"
+    data-company="canadian hearing services"
+    data-location="toronto, ontario hybrid"
+    data-category="biz_hr"
+    data-search-text="summer student, human resources canadian hearing services toronto, ontario assist hr operations, schedule meetings, manage data internship · 8 weeks · summer 2026 biz_hr">
     <a href="/jobs/summer-student-human-resources-canadian-hearing-services-675821785/" class="job-link" data-job-title="Summer Student, Human Resources" data-job-company="Canadian Hearing Services">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2958,7 +3414,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer student, human resources"
+    data-company="canadian hearing services"
+    data-location="toronto, on m5r 2v3"
+    data-category="biz_hr"
+    data-search-text="summer student, human resources canadian hearing services toronto, on m5r 2v3 assist hr operations: docs, scheduling, data entry internship · 8 weeks · 19 cad/hour · summer 2026 biz_hr">
     <a href="/jobs/summer-student-human-resources-canadian-hearing-services-675051213/" class="job-link" data-job-title="SUMMER STUDENT, HUMAN RESOURCES" data-job-company="Canadian Hearing Services">
         <div class="job-card-header">
             <div class="job-badges">
@@ -2990,7 +3451,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer student - hr assistant"
+    data-company="maple ridge/pitt meadows community services"
+    data-location="maple ridge, bc"
+    data-category="biz_hr"
+    data-search-text="summer student - hr assistant maple ridge/pitt meadows community services maple ridge, bc assist hr tasks: recruitment, onboarding, admin support temporary · 8 weeks · $20.25/hr · summer biz_hr">
     <a href="/jobs/summer-student-hr-assistant-maple-ridge-pitt-meadows-community-services-674099633/" class="job-link" data-job-title="Summer Student - HR Assistant" data-job-company="Maple Ridge/Pitt Meadows Community Services">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3022,7 +3488,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer student, human resources assistant"
+    data-company="camphill communities ontario"
+    data-location="barrie, on l4n 1w1"
+    data-category="biz_hr"
+    data-search-text="summer student, human resources assistant camphill communities ontario barrie, on l4n 1w1 assist hr tasks: data entry, onboarding, postings temporary full-time student · 8 weeks · $18.60/hour · summer 2026 biz_hr">
     <a href="/jobs/summer-student-human-resources-assistant-camphill-communities-ontario-674044885/" class="job-link" data-job-title="Summer Student, Human Resources Assistant" data-job-company="Camphill Communities Ontario">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3054,7 +3525,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources student assistant – talent and development"
+    data-company="lakehead university"
+    data-location="thunder bay, on p7b 5e1"
+    data-category="biz_hr"
+    data-search-text="human resources student assistant – talent and development lakehead university thunder bay, on p7b 5e1 coordinate recruitment, support training and hr operations part-time · summer · $17.60/hour · contract biz_hr">
     <a href="/jobs/human-resources-student-assistant-talent-and-development-lakehead-university-673881847/" class="job-link" data-job-title="Human Resources Student Assistant – Talent and Development" data-job-company="Lakehead University">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3086,7 +3562,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="talent acquisition coordinator - internship | coordinateur·rice acquisition de talent - stage été 2026"
+    data-company="behaviour interactive"
+    data-location="montreal, quebec hybrid"
+    data-category="biz_hr"
+    data-search-text="talent acquisition coordinator - internship | coordinateur·rice acquisition de talent - stage été 2026 behaviour interactive montreal, quebec coordinate recruitment, scheduling, onboarding, and campus events internship · 4 months · not disclosed · summer 2026 biz_hr">
     <a href="/jobs/talent-acquisition-coordinator-internship-coordinateurrice-behaviour-interactive-673079292/" class="job-link" data-job-title="Talent Acquisition Coordinator - Internship | Coordinateur·rice Acquisition de Talent - Stage Été 2026" data-job-company="Behaviour Interactive">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3118,7 +3599,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="people operations intern"
+    data-company="opentable"
+    data-location="toronto"
+    data-category="biz_hr"
+    data-search-text="people operations intern opentable toronto architect hr records in workday; optimize data workflows type: internship · duration: 12 weeks biz_hr">
     <a href="/jobs/people-operations-intern-opentable-675547880/" class="job-link" data-job-title="People Operations Intern" data-job-company="OpenTable">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3150,7 +3636,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources assistant – summer student"
+    data-company="partners community health"
+    data-location="mississauga, on"
+    data-category="biz_hr"
+    data-search-text="human resources assistant – summer student partners community health mississauga, on assist hr operations, onboarding, and records management internship · summer · $17.60/hour · seasonal biz_hr">
     <a href="/jobs/human-resources-assistant-summer-student-partners-community-health-672498459/" class="job-link" data-job-title="Human Resources Assistant – Summer Student" data-job-company="Partners Community Health">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3182,7 +3673,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="people operations intern (hybrid, toronto)"
+    data-company="opentable"
+    data-location="toronto, ontario"
+    data-category="biz_hr"
+    data-search-text="people operations intern (hybrid, toronto) opentable toronto, ontario consolidate hr records, manage digital archives internship · 12 weeks · not disclosed · hybrid biz_hr">
     <a href="/jobs/people-operations-intern-hybrid-toronto-opentable-672451300/" class="job-link" data-job-title="People Operations Intern (Hybrid, Toronto)" data-job-company="OpenTable">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3214,7 +3710,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="people operations intern (hybrid, toronto)"
+    data-company="opentable"
+    data-location="toronto, on"
+    data-category="biz_hr"
+    data-search-text="people operations intern (hybrid, toronto) opentable toronto, on consolidate hr documents; manage records lifecycle internship · 12 weeks biz_hr">
     <a href="/jobs/people-operations-intern-hybrid-toronto-opentable-672360917/" class="job-link" data-job-title="People Operations Intern (Hybrid, Toronto)" data-job-company="OpenTable">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3246,7 +3747,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="summer student position - office assistant human resources"
+    data-company="ranch ehrlo society"
+    data-location="regina, sk"
+    data-category="biz_hr"
+    data-search-text="summer student position - office assistant human resources ranch ehrlo society regina, sk assist hr admin, recruitment, onboarding, and data. full time temporary · 4 months · $21.68-$28.39/hr · summer student biz_hr">
     <a href="/jobs/summer-student-position-office-assistant-human-resources-ranch-ehrlo-society-671027439/" class="job-link" data-job-title="Summer Student Position - Office Assistant Human Resources" data-job-company="Ranch Ehrlo Society">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3278,7 +3784,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources summer student"
+    data-company="casey house"
+    data-location="toronto, on m4y 1p2"
+    data-category="biz_hr"
+    data-search-text="human resources summer student casey house toronto, on m4y 1p2 assist recruitment, onboarding, hr ops, and engagement full-time, fixed-term · 8 weeks · $17.60/hr · summer 2026 biz_hr">
     <a href="/jobs/human-resources-summer-student-casey-house-670895245/" class="job-link" data-job-title="Human Resources Summer Student" data-job-company="CASEY HOUSE">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3310,7 +3821,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources summer student"
+    data-company="casey house"
+    data-location="toronto, ontario"
+    data-category="biz_hr"
+    data-search-text="human resources summer student casey house toronto, ontario support hr processes: recruitment, onboarding, admin full-time · 8 weeks · $17.60/hour + 6% vacation + 4% benefits · summer 2026 biz_hr">
     <a href="/jobs/human-resources-summer-student-casey-house-670761993/" class="job-link" data-job-title="Human Resources Summer Student" data-job-company="Casey House">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3342,7 +3858,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources intern"
+    data-company="opta group"
+    data-location="burlington, on l7n 3g7"
+    data-category="biz_hr"
+    data-search-text="human resources intern opta group burlington, on l7n 3g7 assist recruitment, onboarding, and hr administration internship · 16 weeks · paid · may 2026 biz_hr">
     <a href="/jobs/human-resources-intern-opta-group-668490905/" class="job-link" data-job-title="Human Resources Intern" data-job-company="Opta Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3374,7 +3895,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="stage - automne 2026 - stagiaire en recrutement / internship - fall 2026 - talent acquisition intern"
+    data-company="pratt &amp; whitney"
+    data-location="longueuil, quebec"
+    data-category="biz_hr"
+    data-search-text="stage - automne 2026 - stagiaire en recrutement / internship - fall 2026 - talent acquisition intern pratt &amp; whitney longueuil, quebec assist recruiters, engage candidates, support projects internship · aug 31–dec 18, 2026 · pay not disclosed · fall 2026 biz_hr">
     <a href="/jobs/stage-automne-2026-stagiaire-en-recrutement-internship-fall-pratt-whitney-668281232/" class="job-link" data-job-title="Stage - Automne 2026 - Stagiaire en recrutement / Internship - Fall 2026 - Talent Acquisition Intern" data-job-company="Pratt &amp; Whitney">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3406,7 +3932,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources summer student co-op"
+    data-company="halton healthcare"
+    data-location="oakville, on"
+    data-category="biz_hr"
+    data-search-text="human resources summer student co-op halton healthcare oakville, on support hr operations, recruitment, and admin tasks temporary full-time · summer term · $21.81-$27.27 per hour · may–aug (summer) biz_hr">
     <a href="/jobs/human-resources-summer-student-co-op-halton-healthcare-668371779/" class="job-link" data-job-title="Human Resources Summer Student Co-op" data-job-company="Halton Healthcare">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3438,7 +3969,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="student assistant – human resources clerk"
+    data-company="hands thefamilyhelpnetwork.ca"
+    data-location="north bay, on p1b 1a3"
+    data-category="biz_hr"
+    data-search-text="student assistant – human resources clerk hands thefamilyhelpnetwork.ca north bay, on p1b 1a3 assist hr operations; data entry and document management full-time contract · 8 weeks · $17.60/hr · may 19, 2026 – august 21, 2026 biz_hr">
     <a href="/jobs/student-assistant-human-resources-clerk-hands-thefamilyhelpnetwork-ca-668370545/" class="job-link" data-job-title="Student Assistant – Human Resources Clerk" data-job-company="Hands TheFamilyHelpNetwork.ca">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3470,7 +4006,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources intern - seasonal"
+    data-company="westside regional recreation society"
+    data-location="calgary, ab t3h 4v7"
+    data-category="biz_hr"
+    data-search-text="human resources intern - seasonal westside regional recreation society calgary, ab t3h 4v7 assist recruiting, onboarding, and hr administration internship · 8 weeks · may–june 2026 biz_hr">
     <a href="/jobs/human-resources-intern-seasonal-westside-regional-recreation-society-668343716/" class="job-link" data-job-title="Human Resources Intern - Seasonal" data-job-company="Westside Regional Recreation Society">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3502,7 +4043,12 @@
             
             <li class="job-card "
     data-remote="true"
-    data-hot="false">
+    data-hot="false"
+    data-title="hr assistant (contract-summer student remote)"
+    data-company="cwb group"
+    data-location="toronto, on"
+    data-category="biz_hr"
+    data-search-text="hr assistant (contract-summer student remote) cwb group toronto, on support hr admin, recruitment, and data tasks contract · 3 months · $20.00/hour · summer biz_hr">
     <a href="/jobs/hr-assistant-contract-summer-student-remote-cwb-group-668340606/" class="job-link" data-job-title="HR Assistant (Contract-Summer Student Remote)" data-job-company="CWB Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3534,7 +4080,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="2026 fall - hr, talent acquisition programming intern (4 months)"
+    data-company="rbc"
+    data-location="toronto, ontario hybrid"
+    data-category="biz_hr"
+    data-search-text="2026 fall - hr, talent acquisition programming intern (4 months) rbc toronto, ontario plan and execute recruitment events; build pipeline co-op internship · 4 months · salaried · fall 2026 biz_hr">
     <a href="/jobs/2026-fall-hr-talent-acquisition-programming-intern-4-months-rbc-667599580/" class="job-link" data-job-title="2026 Fall - HR, Talent Acquisition Programming Intern (4 months)" data-job-company="RBC">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3566,7 +4117,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="(temporary full time) summer student - human resources &amp; occupational health"
+    data-company="ontario shores centre for mental health sciences"
+    data-location="whitby, ontario"
+    data-category="biz_hr"
+    data-search-text="(temporary full time) summer student - human resources &amp; occupational health ontario shores centre for mental health sciences whitby, ontario coordinate hr interviews and recruitment administration temporary full-time · summer · $17.60 per hour · seasonal biz_hr">
     <a href="/jobs/temporary-full-time-summer-student-human-resources-ontario-shores-centre-for-mental-health-sciences-666245883/" class="job-link" data-job-title="(TEMPORARY FULL TIME) SUMMER STUDENT - HUMAN RESOURCES &amp; OCCUPATIONAL HEALTH" data-job-company="Ontario Shores Centre for Mental Health Sciences">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3598,7 +4154,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="september 2026 human resources co-op"
+    data-company="glencore"
+    data-location="sparwood, british columbia"
+    data-category="biz_hr"
+    data-search-text="september 2026 human resources co-op glencore sparwood, british columbia assist hr programs; support onboarding and reporting co-op/internship · 8 or 12 months · salary commensurate with semesters · sept 2026 start biz_hr">
     <a href="/jobs/september-2026-human-resources-co-op-glencore-666188281/" class="job-link" data-job-title="September 2026 Human Resources Co-op" data-job-company="Glencore">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3630,7 +4191,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="september 2026 human resources co-op"
+    data-company="elk valley resources"
+    data-location="sparwood, british columbia"
+    data-category="biz_hr"
+    data-search-text="september 2026 human resources co-op elk valley resources sparwood, british columbia assist hr operations, onboarding, and programs co-op · 8 or 12 months · competitive · full-time biz_hr">
     <a href="/jobs/september-2026-human-resources-co-op-elk-valley-resources-666057130/" class="job-link" data-job-title="September 2026 Human Resources Co-op" data-job-company="Elk Valley Resources">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3662,7 +4228,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources summer intern"
+    data-company="supreme international limited"
+    data-location="wetaskiwin, alberta"
+    data-category="biz_hr"
+    data-search-text="human resources summer intern supreme international limited wetaskiwin, alberta assist hr admin, onboarding, and records management temporary summer hr intern · may/june 2026 – aug 2026 · pay not disclosed · summer 2026 biz_hr">
     <a href="/jobs/human-resources-summer-intern-supreme-international-limited-666025069/" class="job-link" data-job-title="Human Resources Summer Intern" data-job-company="Supreme International Limited">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3694,7 +4265,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources intern"
+    data-company="keystone child, youth &amp; family services"
+    data-location="owen sound, ontario hybrid"
+    data-category="biz_hr"
+    data-search-text="human resources intern keystone child, youth &amp; family services owen sound, ontario support hr operations: records, recruitment, and admin tasks internship · 8 weeks · $20/hour · may–august biz_hr">
     <a href="/jobs/human-resources-intern-keystone-child-youth-family-services-666017088/" class="job-link" data-job-title="Human Resources Intern" data-job-company="Keystone Child, Youth &amp; Family Services">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3726,7 +4302,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="(temporary full time) summer student - human resources &amp; occupational health"
+    data-company="ontario shores centre for mhs"
+    data-location="whitby, on"
+    data-category="biz_hr"
+    data-search-text="(temporary full time) summer student - human resources &amp; occupational health ontario shores centre for mhs whitby, on coordinate hr admin, recruitment scheduling, and health testing temporary · summer · $17.60/hr · seasonal biz_hr">
     <a href="/jobs/temporary-full-time-summer-student-human-resources-ontario-shores-centre-for-mhs-665859305/" class="job-link" data-job-title="(TEMPORARY FULL TIME) SUMMER STUDENT - HUMAN RESOURCES &amp; OCCUPATIONAL HEALTH" data-job-company="Ontario Shores Centre for MHS">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3758,7 +4339,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources summer intern"
+    data-company="supreme international"
+    data-location="wetaskiwin, ab t9a 2r3"
+    data-category="biz_hr"
+    data-search-text="human resources summer intern supreme international wetaskiwin, ab t9a 2r3 assist hr admin, onboarding, and data entry temporary internship · may–aug 2026 biz_hr">
     <a href="/jobs/human-resources-summer-intern-supreme-international-665787213/" class="job-link" data-job-title="Human Resources Summer Intern" data-job-company="Supreme International">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3790,7 +4376,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources summer student"
+    data-company="amnesty international canada"
+    data-location="ottawa, on"
+    data-category="biz_hr"
+    data-search-text="human resources summer student amnesty international canada ottawa, on assist hr policies and union-related research part-time · 3 months · $22.50/hour · summer term biz_hr">
     <a href="/jobs/human-resources-summer-student-amnesty-international-canada-664850776/" class="job-link" data-job-title="HUMAN RESOURCES SUMMER STUDENT" data-job-company="Amnesty International Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3833,7 +4424,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="fall term logistics analyst co-op/intern"
+    data-company="tjx canada – winners, marshalls, homesense"
+    data-location="mississauga, ontario hybrid"
+    data-category="biz_supply_chain"
+    data-search-text="fall term logistics analyst co-op/intern tjx canada – winners, marshalls, homesense mississauga, ontario analyze data, build reports for logistics operations teams co-op/intern · 4 months · $52,230-$73,122/year · 4 months biz_supply_chain">
     <a href="/jobs/fall-term-logistics-analyst-co-op-intern-tjx-canada-winners-marshalls-homesense-678222963/" class="job-link" data-job-title="Fall Term Logistics Analyst Co-Op/Intern" data-job-company="TJX Canada – Winners, Marshalls, HomeSense">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3865,7 +4461,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="procurement analyst - 4-month internship/coop (fall 2026)"
+    data-company="intact"
+    data-location="montréal, qc"
+    data-category="biz_supply_chain"
+    data-search-text="procurement analyst - 4-month internship/coop (fall 2026) intact montréal, qc analyze procurement data, document requirements, support projects type: internship/coop · duration: sep 2026–dec 2026 · pay: salary range 52,700–65,900 (annualized) · term: temporary biz_supply_chain">
     <a href="/jobs/procurement-analyst-4-month-internship-coop-fall-2026-intact-677089904/" class="job-link" data-job-title="Procurement Analyst - 4-month Internship/Coop (Fall 2026)" data-job-company="Intact">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3897,7 +4498,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="stage - automne 2026 - analyste de la chaine d’approvisionnement / internship - fall 2026 - supply chain analyst"
+    data-company="pratt &amp; whitney"
+    data-location="longueuil, quebec"
+    data-category="biz_supply_chain"
+    data-search-text="stage - automne 2026 - analyste de la chaine d’approvisionnement / internship - fall 2026 - supply chain analyst pratt &amp; whitney longueuil, quebec manage supplier declarations; map processes; support qms internship · aug 31–dec 18, 2026 · fall 2026 biz_supply_chain">
     <a href="/jobs/stage-automne-2026-analyste-de-la-chaine-dapprovisionnement-pratt-whitney-666223928/" class="job-link" data-job-title="Stage - Automne 2026 - Analyste de la chaine d’approvisionnement / Internship - Fall 2026 - Supply Chain Analyst" data-job-company="Pratt &amp; Whitney">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3940,7 +4546,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sales associate -temporary/full-time (macleod plaza) - canada summer jobs"
+    data-company="wins (women in need society)"
+    data-location="calgary, alberta"
+    data-category="biz_sales"
+    data-search-text="sales associate -temporary/full-time (macleod plaza) - canada summer jobs wins (women in need society) calgary, alberta assist customers, drive sales, restock merchandise temporary full-time · 9 weeks biz_sales">
     <a href="/jobs/sales-associate-temporary-full-time-macleod-plaza-canada-wins-women-in-need-society-677962073/" class="job-link" data-job-title="Sales Associate -Temporary/Full-time (Macleod Plaza) - Canada Summer Jobs" data-job-company="WINS (Women In Need Society)">
         <div class="job-card-header">
             <div class="job-badges">
@@ -3972,7 +4583,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="pepsico canada: fall 2026 territory sales representative co-op"
+    data-company="pepsico"
+    data-location="mississauga, ontario"
+    data-category="biz_sales"
+    data-search-text="pepsico canada: fall 2026 territory sales representative co-op pepsico mississauga, ontario support territory sales; execute in-store initiatives co-op · sep 2026–dec 2026 · $21.25-$32/hr · 4 months biz_sales">
     <a href="/jobs/pepsico-canada-fall-2026-territory-sales-representative-co-pepsico-676825337/" class="job-link" data-job-title="PepsiCo Canada: Fall 2026 Territory Sales Representative Co-op" data-job-company="PepsiCo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4004,7 +4620,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="frito-lay summer student route sales representative - brockville/hawkesbury"
+    data-company="pepsico"
+    data-location="brockville, ontario"
+    data-category="biz_sales"
+    data-search-text="frito-lay summer student route sales representative - brockville/hawkesbury pepsico brockville, ontario sell and merchandise products; drive route sales full-time · may–sept · $965/wk · summer biz_sales">
     <a href="/jobs/frito-lay-summer-student-route-sales-representative-pepsico-676588417/" class="job-link" data-job-title="Frito-Lay Summer Student Route Sales Representative - Brockville/Hawkesbury" data-job-company="PepsiCo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4036,7 +4657,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="frito-lay summer student route sales representative - st. catharine’s"
+    data-company="pepsico"
+    data-location="st. catharines, ontario"
+    data-category="biz_sales"
+    data-search-text="frito-lay summer student route sales representative - st. catharine’s pepsico st. catharines, ontario sell to retailers; merchandise; drive, deliver; promote products full-time · may–sept · $965/wk · summer biz_sales">
     <a href="/jobs/frito-lay-summer-student-route-sales-representative-st-pepsico-676261924/" class="job-link" data-job-title="Frito-Lay Summer Student Route Sales Representative - St. Catharine’s" data-job-company="PepsiCo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4068,7 +4694,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="frito-lay summer student route sales representative - kingston"
+    data-company="pepsico"
+    data-location="kingston, ontario"
+    data-category="biz_sales"
+    data-search-text="frito-lay summer student route sales representative - kingston pepsico kingston, ontario sell, merchandise, and deliver products to retailers co-op/summer internship · may-sep · $965/week · summer biz_sales">
     <a href="/jobs/frito-lay-summer-student-route-sales-representative-kingston-pepsico-676236921/" class="job-link" data-job-title="Frito-Lay Summer Student Route Sales Representative - Kingston" data-job-company="PepsiCo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4100,7 +4731,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="frito-lay summer student route sales representative - kitchener/waterloo"
+    data-company="pepsico"
+    data-location="cambridge, ontario"
+    data-category="biz_sales"
+    data-search-text="frito-lay summer student route sales representative - kitchener/waterloo pepsico cambridge, ontario sell, merchandise, and deliver products to retailers seasonal · may–sept · paid · summer biz_sales">
     <a href="/jobs/frito-lay-summer-student-route-sales-representative-pepsico-676236866/" class="job-link" data-job-title="Frito-Lay Summer Student Route Sales Representative - Kitchener/Waterloo" data-job-company="PepsiCo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4132,7 +4768,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="frito-lay summer student route sales representative - windsor"
+    data-company="pepsico"
+    data-location="windsor, ontario"
+    data-category="biz_sales"
+    data-search-text="frito-lay summer student route sales representative - windsor pepsico windsor, ontario sell products to retailers; merchandise shelves seasonal · may–sept · $965/week · summer biz_sales">
     <a href="/jobs/frito-lay-summer-student-route-sales-representative-windsor-pepsico-675560276/" class="job-link" data-job-title="Frito-Lay Summer Student Route Sales Representative - Windsor" data-job-company="PepsiCo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4164,7 +4805,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="frito-lay summer student route sales representative - sault ste. marie"
+    data-company="pepsico"
+    data-location="sault ste. marie, ontario"
+    data-category="biz_sales"
+    data-search-text="frito-lay summer student route sales representative - sault ste. marie pepsico sault ste. marie, ontario sell products, merch shelves, manage orders summer internship · may–sept · $965/wk · 4 months biz_sales">
     <a href="/jobs/frito-lay-summer-student-route-sales-representative-sault-pepsico-675556322/" class="job-link" data-job-title="Frito-Lay Summer Student Route Sales Representative - Sault Ste. Marie" data-job-company="PepsiCo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4196,7 +4842,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="frito-lay summer student route sales representative - barrie"
+    data-company="pepsico"
+    data-location="barrie, ontario"
+    data-category="biz_sales"
+    data-search-text="frito-lay summer student route sales representative - barrie pepsico barrie, ontario sell products, merchandise, and deliver to stores full-time · may to september · $965/wk · summer biz_sales">
     <a href="/jobs/frito-lay-summer-student-route-sales-representative-barrie-pepsico-675556043/" class="job-link" data-job-title="Frito-Lay Summer Student Route Sales Representative - Barrie" data-job-company="PepsiCo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4228,7 +4879,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="frito-lay summer student route sales representative -   ancaster"
+    data-company="pepsico"
+    data-location="ancaster, ontario"
+    data-category="biz_sales"
+    data-search-text="frito-lay summer student route sales representative -   ancaster pepsico ancaster, ontario sell, merchandise, and manage store orders seasonal · may–sept · competitive pay · summer biz_sales">
     <a href="/jobs/frito-lay-summer-student-route-sales-representative-ancaster-pepsico-675556042/" class="job-link" data-job-title="Frito-Lay Summer Student Route Sales Representative -   Ancaster" data-job-company="PepsiCo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4260,7 +4916,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="frito-lay summer student route sales representative - ottawa"
+    data-company="pepsico"
+    data-location="nepean, ontario"
+    data-category="biz_sales"
+    data-search-text="frito-lay summer student route sales representative - ottawa pepsico nepean, ontario sell products, merchandise shelves, manage route deliveries full-time · may-sep · $965/wk · seasonal biz_sales">
     <a href="/jobs/frito-lay-summer-student-route-sales-representative-ottawa-pepsico-674625301/" class="job-link" data-job-title="Frito-Lay Summer Student Route Sales Representative - Ottawa" data-job-company="PepsiCo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4292,7 +4953,12 @@
             
             <li class="job-card job-hot"
     data-remote="false"
-    data-hot="true">
+    data-hot="true"
+    data-title="frito-lay summer student route sales representative - stratford"
+    data-company="pepsico"
+    data-location="stratford, ontario"
+    data-category="biz_sales"
+    data-search-text="frito-lay summer student route sales representative - stratford pepsico stratford, ontario sell products, merchandise shelves, manage routes summer route sales representative · may–sept · $965/wk · seasonal biz_sales">
     <a href="/jobs/frito-lay-summer-student-route-sales-representative-pepsico-674625113/" class="job-link" data-job-title="Frito-Lay Summer Student Route Sales Representative - Stratford" data-job-company="PepsiCo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4324,7 +4990,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="frito-lay summer student route sales representative - sudbury"
+    data-company="pepsico"
+    data-location="greater sudbury, ontario"
+    data-category="biz_sales"
+    data-search-text="frito-lay summer student route sales representative - sudbury pepsico greater sudbury, ontario sell products to retailers, manage displays and orders summer student route sales representative · may–sept · $965/wk · seasonal biz_sales">
     <a href="/jobs/frito-lay-summer-student-route-sales-representative-sudbury-pepsico-674625068/" class="job-link" data-job-title="Frito-Lay Summer Student Route Sales Representative - Sudbury" data-job-company="PepsiCo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4356,7 +5027,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="frito-lay summer student route sales representative - cornwall"
+    data-company="pepsico"
+    data-location="south glengarry, ontario"
+    data-category="biz_sales"
+    data-search-text="frito-lay summer student route sales representative - cornwall pepsico south glengarry, ontario sell products, merchandise shelves, manage route accounts summer · may–sept · $965/wk · seasonal biz_sales">
     <a href="/jobs/frito-lay-summer-student-route-sales-representative-cornwall-pepsico-674624896/" class="job-link" data-job-title="Frito-Lay Summer Student Route Sales Representative - Cornwall" data-job-company="PepsiCo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4388,7 +5064,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="frito-lay summer student route sales representative - london"
+    data-company="pepsico"
+    data-location="london, ontario"
+    data-category="biz_sales"
+    data-search-text="frito-lay summer student route sales representative - london pepsico london, ontario sell products to retailers; merchandise and stock internship · may–sept · $965/wk · seasonal biz_sales">
     <a href="/jobs/frito-lay-summer-student-route-sales-representative-london-pepsico-674623043/" class="job-link" data-job-title="Frito-Lay Summer Student Route Sales Representative - London" data-job-company="PepsiCo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4420,7 +5101,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="frito-lay summer student route sales representative - brampton/ mississauga"
+    data-company="pepsico"
+    data-location="brampton, ontario"
+    data-category="biz_sales"
+    data-search-text="frito-lay summer student route sales representative - brampton/ mississauga pepsico brampton, ontario sell, merchandise, and deliver to retail stores full-time summer · may–sept · $965/wk · seasonal biz_sales">
     <a href="/jobs/frito-lay-summer-student-route-sales-representative-pepsico-674617435/" class="job-link" data-job-title="Frito-Lay Summer Student Route Sales Representative - Brampton/ Mississauga" data-job-company="PepsiCo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4452,7 +5138,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sales coordinator intern"
+    data-company="crown equipment"
+    data-location="mississauga, on l5t 2v5"
+    data-category="biz_sales"
+    data-search-text="sales coordinator intern crown equipment mississauga, on l5t 2v5 process sales orders, update schedules, prepare reports internship · summer 2026 · temporary biz_sales">
     <a href="/jobs/sales-coordinator-intern-crown-equipment-673175653/" class="job-link" data-job-title="Sales Coordinator Intern" data-job-company="Crown Equipment">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4495,7 +5186,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="fall term workplace services project coordinator co-op/intern"
+    data-company="tjx canada – winners, marshalls, homesense"
+    data-location="mississauga, ontario hybrid"
+    data-category="biz_pm"
+    data-search-text="fall term workplace services project coordinator co-op/intern tjx canada – winners, marshalls, homesense mississauga, ontario coordinate space planning projects; review autocad drawings. co-op · 4 months · cad 37,590-52,626/year · contract biz_pm">
     <a href="/jobs/fall-term-workplace-services-project-coordinator-co-op-tjx-canada-winners-marshalls-homesense-678192556/" class="job-link" data-job-title="Fall Term Workplace Services Project Coordinator Co-op/Intern" data-job-company="TJX Canada – Winners, Marshalls, HomeSense">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4527,7 +5223,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources intern"
+    data-company="jewish family and children&#39;s services"
+    data-location="north york, on m2r 3v3"
+    data-category="biz_pm"
+    data-search-text="human resources intern jewish family and children&#39;s services north york, on m2r 3v3 assist intranet content; map architecture; test usability internship biz_pm">
     <a href="/jobs/human-resources-intern-jewish-family-and-children-s-services-678137664/" class="job-link" data-job-title="Human Resources Intern" data-job-company="Jewish Family and Children&#39;s Services">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4559,7 +5260,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="fall term workplace services project coordinator co-op/intern"
+    data-company="tjx canada"
+    data-location="mississauga, on hybrid"
+    data-category="biz_pm"
+    data-search-text="fall term workplace services project coordinator co-op/intern tjx canada mississauga, on review drawings, space planning, coordinate interoffice moves co-op/intern · 4 months · $37,590-$52,626/yr · 4-month term biz_pm">
     <a href="/jobs/fall-term-workplace-services-project-coordinator-co-op-tjx-canada-678335890/" class="job-link" data-job-title="Fall Term Workplace Services Project Coordinator Co-op/Intern" data-job-company="TJX Canada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4591,7 +5297,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="strategy analyst co-op student"
+    data-company="arc&#39;teryx"
+    data-location="north vancouver, bc hybrid"
+    data-category="biz_pm"
+    data-search-text="strategy analyst co-op student arc&#39;teryx north vancouver, bc support strategy projects; coordinate cross-functional teams co-op internship · 4 months · $42,100-$55,100/year · sep 2026–dec 2026 biz_pm">
     <a href="/jobs/strategy-analyst-co-op-student-arc-teryx-677211245/" class="job-link" data-job-title="Strategy Analyst Co-Op Student" data-job-company="ARC&#39;TERYX">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4623,7 +5334,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="project coordinator, fall 2026 (co-op/internship) - 4 months"
+    data-company="bmo"
+    data-location="toronto, ontario"
+    data-category="biz_pm"
+    data-search-text="project coordinator, fall 2026 (co-op/internship) - 4 months bmo toronto, ontario coordinate project workstreams, track metrics, communicate progress co-op/internship · 4 months biz_pm">
     <a href="/jobs/project-coordinator-fall-2026-co-op-internship-4-months-bmo-675853092/" class="job-link" data-job-title="Project Coordinator, Fall 2026 (Co-op/Internship) - 4 Months" data-job-company="BMO">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4655,7 +5371,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="stagiaire chargé(e) de la coordination de projets immobiliers | real estate project coordinator intern"
+    data-company="proterial"
+    data-location="varennes, qc"
+    data-category="biz_pm"
+    data-search-text="stagiaire chargé(e) de la coordination de projets immobiliers | real estate project coordinator intern proterial varennes, qc support daily project coordination and reporting on-site internship · 4 months · paid · may–aug 2026 biz_pm">
     <a href="/jobs/stagiaire-charge-e-de-la-coordination-de-projets-proterial-675795528/" class="job-link" data-job-title="Stagiaire chargé(e) de la coordination de projets immobiliers | Real Estate Project coordinator Intern" data-job-company="Proterial">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4687,7 +5408,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="project coordinator coop - summer 2026 - 4 month term"
+    data-company="modern niagara"
+    data-location="vancouver, british columbia"
+    data-category="biz_pm"
+    data-search-text="project coordinator coop - summer 2026 - 4 month term modern niagara vancouver, british columbia coordinate project tasks, qa/qc docs, and turnover coop · 4 months · $23-25/hr · summer 2026 biz_pm">
     <a href="/jobs/project-coordinator-coop-summer-2026-4-month-term-modern-niagara-675052647/" class="job-link" data-job-title="Project Coordinator Coop - Summer 2026 - 4 Month Term" data-job-company="Modern Niagara">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4719,7 +5445,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="employment outreach program coordinator (summer student)"
+    data-company="ywca hamilton"
+    data-location="hamilton, on l8p 3c1"
+    data-category="biz_pm"
+    data-search-text="employment outreach program coordinator (summer student) ywca hamilton hamilton, on l8p 3c1 develop outreach plans; engage employers; coordinate events temporary · summer 2026 · $22.60/hour · aug 28, 2026 biz_pm">
     <a href="/jobs/employment-outreach-program-coordinator-summer-student-ywca-hamilton-674794821/" class="job-link" data-job-title="EMPLOYMENT OUTREACH PROGRAM COORDINATOR (SUMMER STUDENT)" data-job-company="YWCA Hamilton">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4751,7 +5482,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="project coordinator student intern"
+    data-company="college of pharmacists of british columbia"
+    data-location="vancouver, british columbia hybrid"
+    data-category="biz_pm"
+    data-search-text="project coordinator student intern college of pharmacists of british columbia vancouver, british columbia support project planning, track timelines, coordinate updates internship · 3 months · $22-$24/hr · 3-month term biz_pm">
     <a href="/jobs/project-coordinator-student-intern-college-of-pharmacists-of-british-columbia-674089645/" class="job-link" data-job-title="Project Coordinator Student Intern" data-job-company="College of Pharmacists of British Columbia">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4783,7 +5519,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="intern - project manager - ckx helmet development (summer 2026)"
+    data-company="kimpex"
+    data-location="drummondville, qc j2b 6v4"
+    data-category="biz_pm"
+    data-search-text="intern - project manager - ckx helmet development (summer 2026) kimpex drummondville, qc j2b 6v4 support helmet design projects, supplier collaboration, testing internship · sep 8 – dec 18, 2026 · not disclosed · fall 2026 biz_pm">
     <a href="/jobs/intern-project-manager-ckx-helmet-development-summer-2026-kimpex-673915973/" class="job-link" data-job-title="Intern - Project Manager - CKX Helmet Development (Summer 2026)" data-job-company="Kimpex">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4815,7 +5556,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="intern - project manager - ckx helmet development (summer 2026)"
+    data-company="soucy"
+    data-location="drummondville, quebec"
+    data-category="biz_pm"
+    data-search-text="intern - project manager - ckx helmet development (summer 2026) soucy drummondville, quebec participate in design, testing, and documentation internship · sep 8–dec 18, 2026 · paid · fall 2026 biz_pm">
     <a href="/jobs/intern-project-manager-ckx-helmet-development-summer-2026-soucy-673706997/" class="job-link" data-job-title="Intern - Project Manager - CKX Helmet Development (Summer 2026)" data-job-company="Soucy">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4847,7 +5593,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="student project coordinator – ala business and clinical support"
+    data-company="alberta health services"
+    data-location="greater edmonton metropolitan area"
+    data-category="biz_pm"
+    data-search-text="student project coordinator – ala business and clinical support alberta health services greater edmonton metropolitan area coordinate projects, track timelines, support communications student · summer 2026 · $16.43-$23.01 · temporary biz_pm">
     <a href="/jobs/student-project-coordinator-ala-business-and-clinical-alberta-health-services-673488068/" class="job-link" data-job-title="Student Project Coordinator – ALA Business and Clinical Support" data-job-company="Alberta Health Services">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4879,7 +5630,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="project coordinator - student"
+    data-company="graham"
+    data-location="calgary, alberta"
+    data-category="biz_pm"
+    data-search-text="project coordinator - student graham calgary, alberta coordinate project tasks, track schedules, manage docs type: co-op biz_pm">
     <a href="/jobs/project-coordinator-student-graham-673248967/" class="job-link" data-job-title="Project Coordinator - Student" data-job-company="Graham">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4911,7 +5667,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="project coordinator intern"
+    data-company="schweitzer engineering laboratories"
+    data-location="markham, on l3r 3t7"
+    data-category="biz_pm"
+    data-search-text="project coordinator intern schweitzer engineering laboratories markham, on l3r 3t7 coordinate projects, schedule meetings, prepare reports, support teams internship · not disclosed · not disclosed · not disclosed biz_pm">
     <a href="/jobs/project-coordinator-intern-schweitzer-engineering-laboratories-673237297/" class="job-link" data-job-title="Project Coordinator Intern" data-job-company="Schweitzer Engineering Laboratories">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4943,7 +5704,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="business analyst - summer student"
+    data-company="jori international"
+    data-location="calgary, ab t2e 7y4 hybrid"
+    data-category="biz_pm"
+    data-search-text="business analyst - summer student jori international calgary, ab t2e 7y4 assist pmo, track projects, document processes internship · summer biz_pm">
     <a href="/jobs/business-analyst-summer-student-jori-international-673210692/" class="job-link" data-job-title="Business Analyst - Summer Student" data-job-company="Jori International">
         <div class="job-card-header">
             <div class="job-badges">
@@ -4975,7 +5741,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sap ixp intern - technical project coordinator"
+    data-company="sap"
+    data-location="vancouver, british columbia hybrid"
+    data-category="biz_pm"
+    data-search-text="sap ixp intern - technical project coordinator sap vancouver, british columbia assist in project planning, coordination, and data reporting internship · 8 months · paid · full-time biz_pm">
     <a href="/jobs/sap-ixp-intern-technical-project-coordinator-sap-673082049/" class="job-link" data-job-title="SAP iXp Intern - Technical Project Coordinator" data-job-company="SAP">
         <div class="job-card-header">
             <div class="job-badges">
@@ -5007,7 +5778,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="project coordinator intern"
+    data-company="purefacts financial solutions"
+    data-location="toronto, ontario"
+    data-category="biz_pm"
+    data-search-text="project coordinator intern purefacts financial solutions toronto, ontario coordinate project activities and timelines internship · tbd · 20-25 cad/hr · tbd biz_pm">
     <a href="/jobs/project-coordinator-intern-purefacts-financial-solutions-672508550/" class="job-link" data-job-title="Project Coordinator Intern" data-job-company="PureFacts Financial Solutions">
         <div class="job-card-header">
             <div class="job-badges">
@@ -5039,7 +5815,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="sap ixp intern - associate project manager (apm)"
+    data-company="sap"
+    data-location="montreal, quebec hybrid"
+    data-category="biz_pm"
+    data-search-text="sap ixp intern - associate project manager (apm) sap montreal, quebec assist project coordination and documentation tasks internship · may 2026–may 2027 · cad 18-36/hour · 12 months biz_pm">
     <a href="/jobs/sap-ixp-intern-associate-project-manager-apm-sap-670951978/" class="job-link" data-job-title="SAP iXp Intern - Associate Project Manager (APM)" data-job-company="SAP">
         <div class="job-card-header">
             <div class="job-badges">
@@ -5071,7 +5852,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="project coordinator intern"
+    data-company="calgary municipal land corporation"
+    data-location="calgary, alberta hybrid"
+    data-category="biz_pm"
+    data-search-text="project coordinator intern calgary municipal land corporation calgary, alberta coordinate project meetings, prepare minutes, and manage docs internship · limited term biz_pm">
     <a href="/jobs/project-coordinator-intern-calgary-municipal-land-corporation-670845910/" class="job-link" data-job-title="Project Coordinator Intern" data-job-company="Calgary Municipal Land Corporation">
         <div class="job-card-header">
             <div class="job-badges">
@@ -5103,7 +5889,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="project coordinator co-op"
+    data-company="aecon group inc."
+    data-location="pickering, ontario"
+    data-category="biz_pm"
+    data-search-text="project coordinator co-op aecon group inc. pickering, ontario coordinate project tasks, meetings, and documentation co-op · 12 months · $22-$28/hr · 12-month term biz_pm">
     <a href="/jobs/project-coordinator-co-op-aecon-group-inc-667399698/" class="job-link" data-job-title="Project Coordinator Co-op" data-job-company="Aecon Group Inc.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -5135,7 +5926,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="pmo analyst and business intelligence intern"
+    data-company="hitachi rail"
+    data-location="toronto, ontario hybrid"
+    data-category="biz_pm"
+    data-search-text="pmo analyst and business intelligence intern hitachi rail toronto, ontario support pmo projects; build ai-driven bi internship/co-op · 8 months · cad 23-30/hour · may 2026–dec 2026 biz_pm">
     <a href="/jobs/pmo-analyst-and-business-intelligence-intern-hitachi-rail-665004016/" class="job-link" data-job-title="PMO Analyst and Business Intelligence Intern" data-job-company="Hitachi Rail">
         <div class="job-card-header">
             <div class="job-badges">
@@ -5600,6 +6396,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

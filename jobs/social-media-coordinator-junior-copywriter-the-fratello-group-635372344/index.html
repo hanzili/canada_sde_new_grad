@@ -575,7 +575,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="content creator – part-time / contract / entry level (4 hours / month)"
+    data-company="national social networking group"
+    data-location="ottawa, ontario"
+    data-category="biz_marketing"
+    data-search-text="content creator – part-time / contract / entry level (4 hours / month) national social networking group ottawa, ontario capture events, edit reels, post on socials part-time · 4-20 hours/month · not disclosed · contract biz_marketing">
     <a href="/jobs/content-creator-part-time-contract-entry-level-4-hours-month-national-social-networking-group-677985864/" class="job-link" data-job-title="Content Creator – Part-Time / Contract / Entry Level (4 Hours / Month)" data-job-company="National Social Networking Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -608,7 +613,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior content writer"
+    data-company="limelitt"
+    data-location="heart’s content, newfoundland and labrador"
+    data-category="biz_marketing"
+    data-search-text="junior content writer limelitt heart’s content, newfoundland and labrador create and optimize content across channels full-time biz_marketing">
     <a href="/jobs/junior-content-writer-limelitt-677387149/" class="job-link" data-job-title="JUNIOR CONTENT WRITER" data-job-company="LimeLitt">
         <div class="job-card-header">
             <div class="job-badges">
@@ -641,7 +651,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior in-house designer / content creator"
+    data-company="tridon communications"
+    data-location="edmonton, alberta hybrid"
+    data-category="biz_marketing"
+    data-search-text="junior in-house designer / content creator tridon communications edmonton, alberta support content creation, brand materials, digital assets full-time biz_marketing">
     <a href="/jobs/junior-in-house-designer-content-creator-tridon-communications-675777994/" class="job-link" data-job-title="Junior In-House Designer / Content Creator" data-job-company="Tridon Communications">
         <div class="job-card-header">
             <div class="job-badges">
@@ -674,7 +689,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="digital marketing associate (entry level)"
+    data-company="osim"
+    data-location="harriston, ontario"
+    data-category="biz_marketing"
+    data-search-text="digital marketing associate (entry level) osim harriston, ontario assist in seo, ads, content, analytics type: entry-level · duration: part-time to full-time potential · pay: $20-$23/hour · term: ongoing biz_marketing">
     <a href="/jobs/digital-marketing-associate-entry-level-osim-673742320/" class="job-link" data-job-title="Digital Marketing Associate (Entry Level)" data-job-company="OSiM">
         <div class="job-card-header">
             <div class="job-badges">
@@ -707,7 +727,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="marketing coordinator"
+    data-company="goodwork environmental jobs"
+    data-location="toronto, ontario"
+    data-category="biz_marketing"
+    data-search-text="marketing coordinator goodwork environmental jobs toronto, ontario support campaigns, create content, manage social channels weekly part-time/temporary · may 11, 2026 – oct 17, 2026 · $22/hour · 8 weeks (then part-time until oct 17) biz_marketing">
     <a href="/jobs/marketing-coordinator-goodwork-environmental-jobs-673367396/" class="job-link" data-job-title="Marketing Coordinator" data-job-company="GoodWork Environmental Jobs">
         <div class="job-card-header">
             <div class="job-badges">
@@ -853,6 +878,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

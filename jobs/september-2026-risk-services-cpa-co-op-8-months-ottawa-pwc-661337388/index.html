@@ -527,7 +527,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior forensic accountant"
+    data-company="robertson &amp; company ltd."
+    data-location="markham, ontario hybrid"
+    data-category="finance_audit"
+    data-search-text="junior forensic accountant robertson &amp; company ltd. markham, ontario assist forensic engagements; prepare schedules under supervision full-time · permanent · $80,000-$95,000 · hybrid finance_audit">
     <a href="/jobs/junior-forensic-accountant-robertson-company-ltd-677919974/" class="job-link" data-job-title="Junior Forensic Accountant" data-job-company="Robertson &amp; Company Ltd.">
         <div class="job-card-header">
             <div class="job-badges">
@@ -560,7 +565,12 @@
             
             <li class="job-card job-hot"
     data-remote="true"
-    data-hot="true">
+    data-hot="true"
+    data-title="junior accountant (remote)"
+    data-company="quik hire staffing"
+    data-location="none"
+    data-category="finance_audit"
+    data-search-text="junior accountant (remote) quik hire staffing none interpret us tax laws; review ai translations contract · pay: $55-75/hour finance_audit">
     <a href="/jobs/junior-accountant-remote-quik-hire-staffing-677680291/" class="job-link" data-job-title="Junior Accountant (Remote)" data-job-company="Quik Hire Staffing">
         <div class="job-card-header">
             <div class="job-badges">
@@ -593,7 +603,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior accountant"
+    data-company="finlink group"
+    data-location="toronto, on m9m 2y9"
+    data-category="finance_audit"
+    data-search-text="junior accountant finlink group toronto, on m9m 2y9 prepare working papers; support compilation and review full-time · permanent · not disclosed · canada finance_audit">
     <a href="/jobs/junior-accountant-finlink-group-675863316/" class="job-link" data-job-title="Junior Accountant" data-job-company="Finlink Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -626,7 +641,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior accountant"
+    data-company="finlink group"
+    data-location="markham, on"
+    data-category="finance_audit"
+    data-search-text="junior accountant finlink group markham, on prepare working papers, support reviews and audits full-time finance_audit">
     <a href="/jobs/junior-accountant-finlink-group-675863169/" class="job-link" data-job-title="Junior Accountant" data-job-company="Finlink Group">
         <div class="job-card-header">
             <div class="job-badges">
@@ -659,7 +679,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior internal auditor"
+    data-company="autocanada"
+    data-location="vancouver, british columbia"
+    data-category="finance_audit"
+    data-search-text="junior internal auditor autocanada vancouver, british columbia assist control testing, fieldwork, and audit reporting full-time · permanent · cad 55,000–65,000 per year · n/a finance_audit">
     <a href="/jobs/junior-internal-auditor-autocanada-671111776/" class="job-link" data-job-title="Junior Internal Auditor" data-job-company="AutoCanada">
         <div class="job-card-header">
             <div class="job-badges">
@@ -811,6 +836,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {

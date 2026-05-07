@@ -492,7 +492,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="junior geotechnical technician"
+    data-company="exp"
+    data-location="cambridge, ontario hybrid"
+    data-category="eng_civil"
+    data-search-text="junior geotechnical technician exp cambridge, ontario perform geotechnical field and lab testing full-time · permanent · $43.7k-$58k · cambridge, on eng_civil">
     <a href="/jobs/junior-geotechnical-technician-exp-677251046/" class="job-link" data-job-title="Junior Geotechnical Technician" data-job-company="EXP">
         <div class="job-card-header">
             <div class="job-badges">
@@ -535,7 +540,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="graduate environmental engineer"
+    data-company="ghd"
+    data-location="waterloo, ontario hybrid"
+    data-category="eng_environmental"
+    data-search-text="graduate environmental engineer ghd waterloo, ontario perform environmental fieldwork, sampling, and reporting full-time · permanent · $62k-$67.5k cad · ontario eng_environmental">
     <a href="/jobs/graduate-environmental-engineer-ghd-677926526/" class="job-link" data-job-title="Graduate Environmental Engineer" data-job-company="GHD">
         <div class="job-card-header">
             <div class="job-badges">
@@ -578,7 +588,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="human resources data &amp; systems co‑op student"
+    data-company="grand river hospital"
+    data-location="kitchener, on"
+    data-category="biz_analyst"
+    data-search-text="human resources data &amp; systems co‑op student grand river hospital kitchener, on document hr data definitions, support system reporting co-op · temporary full-time until aug 21, 2026 biz_analyst">
     <a href="/jobs/human-resources-data-systems-coop-student-grand-river-hospital-677694241/" class="job-link" data-job-title="Human Resources Data &amp; Systems Co‑op Student" data-job-company="Grand River Hospital">
         <div class="job-card-header">
             <div class="job-badges">
@@ -610,7 +625,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="student, business analyst (fall 2026)"
+    data-company="sun life"
+    data-location="waterloo, ontario hybrid"
+    data-category="biz_analyst"
+    data-search-text="student, business analyst (fall 2026) sun life waterloo, ontario support it risk processes, change records, reporting temporary employee · fall 2026 ·  · internship/co-op biz_analyst">
     <a href="/jobs/student-business-analyst-fall-2026-sun-life-670163571/" class="job-link" data-job-title="Student, Business Analyst (Fall 2026)" data-job-company="Sun Life">
         <div class="job-card-header">
             <div class="job-badges">
@@ -642,7 +662,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="business analyst co-op"
+    data-company="fire safety and protection"
+    data-location="cambridge, ontario"
+    data-category="biz_analyst"
+    data-search-text="business analyst co-op fire safety and protection cambridge, ontario coordinate operations, analyze data, support scheduling. co-op · duration not specified · pay not specified · term not specified biz_analyst">
     <a href="/jobs/business-analyst-co-op-fire-safety-and-protection-665829361/" class="job-link" data-job-title="Business Analyst Co-Op" data-job-company="Fire Safety and Protection">
         <div class="job-card-header">
             <div class="job-badges">
@@ -685,7 +710,12 @@
             
             <li class="job-card "
     data-remote="false"
-    data-hot="false">
+    data-hot="false"
+    data-title="frito-lay summer student route sales representative - kitchener/waterloo"
+    data-company="pepsico"
+    data-location="cambridge, ontario"
+    data-category="biz_sales"
+    data-search-text="frito-lay summer student route sales representative - kitchener/waterloo pepsico cambridge, ontario sell, merchandise, and deliver products to retailers seasonal · may–sept · paid · summer biz_sales">
     <a href="/jobs/frito-lay-summer-student-route-sales-representative-pepsico-676236866/" class="job-link" data-job-title="Frito-Lay Summer Student Route Sales Representative - Kitchener/Waterloo" data-job-company="PepsiCo">
         <div class="job-card-header">
             <div class="job-badges">
@@ -980,6 +1010,57 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        var searchForm = document.querySelector('[data-job-search-form]');
+        if (searchForm) {
+            var keywordInput = searchForm.querySelector('[data-job-search-input]');
+            var locationInput = searchForm.querySelector('[data-job-location-input]');
+            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var feedback = document.querySelector('[data-job-search-feedback]');
+            var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var normalize = function(value) {
+                return (value || '').toString().toLowerCase().trim();
+            };
+            var matchesRoleType = function(card, roleValue) {
+                if (!roleValue) return true;
+                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
+                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
+                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            };
+            var applySearch = function() {
+                var keyword = normalize(keywordInput && keywordInput.value);
+                var location = normalize(locationInput && locationInput.value);
+                var roleType = normalize(typeInput && typeInput.value);
+                var visibleCount = 0;
+                jobCards.forEach(function(card) {
+                    var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                    var cardLocation = normalize(card.getAttribute('data-location'));
+                    var visible = (!keyword || text.indexOf(keyword) !== -1) &&
+                        (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
+                        matchesRoleType(card, roleType);
+                    card.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+                categorySections.forEach(function(section) {
+                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    section.hidden = !sectionVisible;
+                });
+                if (feedback) {
+                    var hasFilter = keyword || location || roleType;
+                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                }
+            };
+            ['input', 'change'].forEach(function(eventName) {
+                searchForm.addEventListener(eventName, applySearch);
+            });
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                applySearch();
+                var firstVisible = document.querySelector('.job-card:not([hidden])');
+                if (firstVisible) firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
         document.querySelectorAll('a.btn-apply').forEach(function(link) {
             link.addEventListener('click', function() {
                 window.hanzillaTrack && window.hanzillaTrack('apply_click', {
