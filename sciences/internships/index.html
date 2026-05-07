@@ -296,9 +296,9 @@
         <p class="hero-kicker">Daily-updated Canadian student jobs</p>
         <h1>2026 Canadian Sciences Internships</h1>
         <p class="page-subtitle">Search 34 positions from company career pages across internships, co-ops, new grad, junior, and entry-level roles.</p>
-        <form class="job-search-panel" role="search" aria-label="Filter visible Hanzilla jobs" data-job-search-form>
+        <form class="job-search-panel" role="search" aria-label="Filter jobs on this page" data-job-search-form>
             <label class="search-field search-field-keyword">
-                <span>Keyword</span>
+                <span>Search this page</span>
                 <input type="search" name="keyword" placeholder="Title, company, skill…" autocomplete="off" data-job-search-input>
             </label>
             <label class="search-field">
@@ -306,39 +306,44 @@
                 <input type="search" name="location" placeholder="Toronto, Vancouver, remote…" autocomplete="off" data-job-location-input>
             </label>
             <label class="search-field search-field-select">
-                <span>Role type</span>
-                <select name="role_type" data-job-type-input>
-                    <option value="">All roles</option>
-                    <option value="intern">Internships / co-ops</option>
-                    <option value="new grad junior entry-level">New grad / junior</option>
+                <span>Work mode</span>
+                <select name="work_mode" data-job-work-mode-input>
+                    <option value="">Any mode</option>
                     <option value="remote">Remote</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="onsite">On-site</option>
                 </select>
             </label>
-            <button class="hero-cta hero-cta-primary search-submit" type="submit">Search jobs</button>
+            <button class="hero-cta hero-cta-primary search-submit" type="submit">Filter jobs</button>
         </form>
         <div class="search-feedback" data-job-search-feedback aria-live="polite"></div>
-        <div class="landing-hero-actions quick-filters" aria-label="Popular job searches">
-            <a class="hero-cta" href="/internships/">Internships & co-ops</a>
-            <a class="hero-cta" href="/new-grad/">New grad jobs</a>
+        <div class="stage-switcher" aria-label="Choose job stage">
+            <span class="stage-switcher-label">I’m looking for</span>
+            <a class="stage-tab " href="/sciences/">New grad / junior</a>
+            <a class="stage-tab active" href="/sciences/internships/">Internships / co-ops</a>
+        </div>
+        <p class="search-scope-note">Search filters the jobs loaded on this page. Use the stage links above to switch between full-time new grad roles and internships.</p>
+        <div class="landing-hero-actions quick-filters" aria-label="Popular job searches" data-search-static>
             <a class="hero-cta" href="/locations/toronto/">Toronto</a>
             <a class="hero-cta" href="/locations/vancouver/">Vancouver</a>
+            <a class="hero-cta" href="/locations/remote/">Remote Canada</a>
             <a class="hero-cta" href="/finance/">Finance</a>
             <a class="hero-cta" href="/engineering/">Engineering</a>
         </div>
-        <div class="landing-proof-points" aria-label="Why students use Hanzilla">
+        <div class="landing-proof-points" aria-label="Why students use Hanzilla" data-search-static>
             <span><strong>Updated daily</strong> fresh roles stay visible</span>
             <span><strong>Direct apply</strong> links to company career pages</span>
             <span><strong>Student-first</strong> Canada-specific filters</span>
         </div>
         
             
-            <p class="cross-link">Looking for full-time? <a href="/sciences/">Sciences Jobs</a> · Also browse <a href="/">all student jobs</a></p>
+            <p class="cross-link" data-search-static>Looking for full-time? <a href="/sciences/">Sciences Jobs</a> · Also browse <a href="/">all student jobs</a></p>
             
         
     </header>
 
     
-    <section class="latest-jobs-strip" aria-labelledby="latest-jobs-title">
+    <section class="latest-jobs-strip" aria-labelledby="latest-jobs-title" data-search-static>
         <div class="latest-jobs-header">
             <div>
                 <p class="section-kicker">Hiring now</p>
@@ -380,14 +385,14 @@
     
 
     <!-- SEO intro content -->
-    <div class="intro-content">
+    <div class="intro-content" data-search-static>
         
         <p>Welcome to Canada's daily-updated directory of <strong>internships and co-op positions</strong> for 2026. Browse student opportunities across tech, finance, engineering, business, sciences, and more from Canadian companies, banks, startups, labs, public organizations, and firms across Toronto, Vancouver, Montreal, Ottawa, Waterloo, Calgary, and remote Canada.</p>
         
     </div>
 
     
-    <section class="seo-content-block">
+    <section class="seo-content-block" data-search-static>
         <h2>How to use this sciences jobs board</h2>
         <p>This daily-updated page is built for Canadian students and recent grads searching for sciences internships and co-op roles: biology, biotech, lab, chemistry, environmental science, geoscience, clinical research, and science operations roles. Hanzilla gives science students a dedicated path for lab, research, environmental, biotech, quality, and field roles that are usually buried across university boards and employer career pages.</p>
         <ul class="seo-content-list">
@@ -413,12 +418,17 @@
     </section>
     
 
-    <div class="emoji-legend">
+    <div class="emoji-legend" data-search-static>
         <div class="legend-item"><span class="emoji">🔥</span> Strong fit - fresh, selective, or high-signal student opportunity</div>
         <div class="legend-item"><span class="emoji">💤</span> Review carefully - role may be less relevant, older, or less student-focused</div>
     </div>
 
-    <nav class="category-nav">
+    <div class="job-search-empty" data-job-search-empty hidden>
+        <strong>No matches on this page.</strong>
+        <span>Try a broader keyword, clear location, or switch between New grad and Internships above.</span>
+    </div>
+
+    <nav class="category-nav" data-search-static>
         <h2>Browse by Category</h2>
         <ul class="category-chips">
             
@@ -475,13 +485,15 @@
     <section class="category-section" id="biology-biotech">
         <h2 class="category-title">
             <a href="/sciences/categories/biology-biotech/">Biology / Biotech</a>
-            <span class="category-count">6 positions</span>
+            <span class="category-count" data-category-count data-total-label="6 positions">6 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="microbiology laboratory technician (student placement)"
     data-company="targetjobs uk"
     data-location="halifax, nova scotia"
@@ -520,6 +532,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="summer student - biochemistry"
     data-company="western university"
     data-location="london, on"
@@ -558,6 +572,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="co-op student, molecular biology"
     data-company="zymeworks inc."
     data-location="vancouver, british columbia"
@@ -596,6 +612,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="co-op student, molecular biology"
     data-company="zymeworks inc"
     data-location="vancouver, bc v5t 1g4"
@@ -634,6 +652,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="intern, life sciences business development"
     data-company="shadow lake group inc."
     data-location="ontario"
@@ -672,6 +692,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="graduate student research associate, forage quantitative genetics"
     data-company="agriculture and agri-food canada"
     data-location="lethbridge, ab"
@@ -714,13 +736,15 @@
     <section class="category-section" id="chemistry-lab-sciences">
         <h2 class="category-title">
             <a href="/sciences/categories/chemistry-lab-sciences/">Chemistry / Lab Sciences</a>
-            <span class="category-count">11 positions</span>
+            <span class="category-count" data-category-count data-total-label="11 positions">11 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="lab technician - summer student"
     data-company="finning"
     data-location="edmonton, alberta"
@@ -759,6 +783,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="summer student - quality control technician (4-month contract)"
     data-company="crh"
     data-location="etobicoke, on"
@@ -797,6 +823,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="student research assistant - department of chemistry - faculty of science"
     data-company="university of prince edward island"
     data-location="charlottetown, pe c1a 4p3"
@@ -835,6 +863,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="student research assistant (up to 2 positions) - department of chemistry - faculty of science"
     data-company="university of prince edward island"
     data-location="charlottetown, pe c1a 4p3"
@@ -873,6 +903,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="chemistry student placement"
     data-company="targetjobs uk"
     data-location="halifax, nova scotia"
@@ -911,6 +943,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="quality control technician - student"
     data-company="crh canada"
     data-location="oakville, ontario"
@@ -949,6 +983,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="quality control technician - student"
     data-company="crh canada"
     data-location="concord, ontario"
@@ -987,6 +1023,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="quality control technician - student"
     data-company="dufferin asphalt - a crh company"
     data-location="oakville, on"
@@ -1025,6 +1063,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="student construction material lab technician"
     data-company="wsp in canada"
     data-location="whitby, ontario hybrid"
@@ -1063,6 +1103,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="laboratory technician (summer student)"
     data-company="mcasphalt industries limited"
     data-location="regina, saskatchewan"
@@ -1101,6 +1143,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="laboratory technician, student"
     data-company="redpath sugar ltd"
     data-location="belleville, ontario"
@@ -1143,13 +1187,15 @@
     <section class="category-section" id="environmental-science-ecology">
         <h2 class="category-title">
             <a href="/sciences/categories/environmental-science-ecology/">Environmental Science / Ecology</a>
-            <span class="category-count">3 positions</span>
+            <span class="category-count" data-category-count data-total-label="3 positions">3 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="fall 2026 - co-op/development - environmental science, ecology &amp; wildlife programs - renfrew"
     data-company="ontario power generation"
     data-location="renfrew, ontario"
@@ -1188,6 +1234,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="laboratory technician (co-op)"
     data-company="alliance technical group north, inc"
     data-location="mississauga, on"
@@ -1226,6 +1274,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="laboratory technician (co-op)"
     data-company="alliance technical group"
     data-location="mississauga, ontario"
@@ -1268,13 +1318,15 @@
     <section class="category-section" id="actuarial-quantitative">
         <h2 class="category-title">
             <a href="/sciences/categories/actuarial-quantitative/">Actuarial / Quantitative</a>
-            <span class="category-count">9 positions</span>
+            <span class="category-count" data-category-count data-total-label="9 positions">9 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="actuarial student"
     data-company="canada life"
     data-location="london, ontario hybrid"
@@ -1313,6 +1365,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="actuarial post-graduation intern"
     data-company="canada life"
     data-location="london, ontario hybrid"
@@ -1351,6 +1405,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="actuarial intern (ech-on)"
     data-company="caa club group"
     data-location="vaughan, ontario"
@@ -1389,6 +1445,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="actuarial analyst co-op (atlantic region)"
     data-company="telus health"
     data-location="halifax, nova scotia"
@@ -1427,6 +1485,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="actuarial student co-op program fall 2026 - life &amp; health"
     data-company="partnerre"
     data-location="toronto, ontario hybrid"
@@ -1465,6 +1525,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="quantitative analyst, fall 2026 (co-op/internship) - 4 months"
     data-company="bmo"
     data-location="toronto, ontario"
@@ -1503,6 +1565,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="2026 insurance – fall, pricing, actuarial intern (4-16 months)"
     data-company="rbc"
     data-location="mississauga, on l5c 1e4"
@@ -1541,6 +1605,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="2026 insurance – fall, pricing, actuarial intern (4-16 months)"
     data-company="rbc"
     data-location="toronto, on m9w 0a4"
@@ -1579,6 +1645,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="2026 insurance – summer, pricing, actuarial intern (4-16 months)"
     data-company="rbc"
     data-location="mississauga, ontario"
@@ -1621,13 +1689,15 @@
     <section class="category-section" id="geoscience-mining">
         <h2 class="category-title">
             <a href="/sciences/categories/geoscience-mining/">Geoscience / Mining</a>
-            <span class="category-count">5 positions</span>
+            <span class="category-count" data-category-count data-total-label="5 positions">5 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="structural geology co-op"
     data-company="teck resources limited"
     data-location="vancouver, bc hybrid"
@@ -1666,6 +1736,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="geology &amp; mining engineering student - september 2026"
     data-company="suncor"
     data-location="fort mcmurray, alberta"
@@ -1704,6 +1776,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="geology &amp; mining engineering student - january 2027"
     data-company="suncor"
     data-location="fort mcmurray, alberta"
@@ -1742,6 +1816,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="geology summer student"
     data-company="kinross gold corporation"
     data-location="red lake, ontario"
@@ -1780,6 +1856,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="september 2026 geology co-op"
     data-company="elk valley resources"
     data-location="sparwood, british columbia"
@@ -2158,40 +2236,57 @@
         if (searchForm) {
             var keywordInput = searchForm.querySelector('[data-job-search-input]');
             var locationInput = searchForm.querySelector('[data-job-location-input]');
-            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var workModeInput = searchForm.querySelector('[data-job-work-mode-input]');
             var feedback = document.querySelector('[data-job-search-feedback]');
+            var emptyState = document.querySelector('[data-job-search-empty]');
             var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
             var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var staticSections = Array.prototype.slice.call(document.querySelectorAll('[data-search-static]'));
             var normalize = function(value) {
                 return (value || '').toString().toLowerCase().trim();
             };
-            var matchesRoleType = function(card, roleValue) {
-                if (!roleValue) return true;
-                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
-                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
-                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            var matchesWorkMode = function(card, modeValue) {
+                if (!modeValue) return true;
+                var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                var location = normalize(card.getAttribute('data-location'));
+                var isRemote = card.getAttribute('data-remote') === 'true' || text.indexOf('remote') !== -1 || location.indexOf('remote') !== -1;
+                var isHybrid = card.getAttribute('data-hybrid') === 'true' || text.indexOf('hybrid') !== -1 || location.indexOf('hybrid') !== -1;
+                if (modeValue === 'remote') return isRemote;
+                if (modeValue === 'hybrid') return isHybrid;
+                if (modeValue === 'onsite') return !isRemote && !isHybrid;
+                return true;
             };
             var applySearch = function() {
                 var keyword = normalize(keywordInput && keywordInput.value);
                 var location = normalize(locationInput && locationInput.value);
-                var roleType = normalize(typeInput && typeInput.value);
+                var workMode = normalize(workModeInput && workModeInput.value);
                 var visibleCount = 0;
                 jobCards.forEach(function(card) {
                     var text = normalize(card.getAttribute('data-search-text') || card.textContent);
                     var cardLocation = normalize(card.getAttribute('data-location'));
                     var visible = (!keyword || text.indexOf(keyword) !== -1) &&
                         (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
-                        matchesRoleType(card, roleType);
+                        matchesWorkMode(card, workMode);
                     card.hidden = !visible;
                     if (visible) visibleCount += 1;
                 });
+                var hasFilter = keyword || location || workMode;
                 categorySections.forEach(function(section) {
-                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    var visibleInSection = Array.prototype.slice.call(section.querySelectorAll('.job-card')).filter(function(card) { return !card.hidden; }).length;
+                    var sectionVisible = visibleInSection > 0;
                     section.hidden = !sectionVisible;
+                    var count = section.querySelector('[data-category-count]');
+                    if (count) {
+                        count.textContent = hasFilter ? (visibleInSection + ' matching') : (count.getAttribute('data-total-label') || count.textContent);
+                    }
                 });
+                staticSections.forEach(function(section) { section.hidden = !!hasFilter; });
+                document.body.classList.toggle('search-active', !!hasFilter);
                 if (feedback) {
-                    var hasFilter = keyword || location || roleType;
-                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                    feedback.textContent = hasFilter ? ('Showing ' + visibleCount + ' of ' + jobCards.length + ' jobs matching filters on this page') : '';
+                }
+                if (emptyState) {
+                    emptyState.hidden = !hasFilter || visibleCount > 0;
                 }
             };
             ['input', 'change'].forEach(function(eventName) {

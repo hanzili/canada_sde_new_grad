@@ -327,6 +327,8 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior buyer"
     data-company="cementation americas"
     data-location="north bay, ontario"
@@ -365,6 +367,8 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior buyer/purchaser"
     data-company="imp aerospace &amp; defence"
     data-location="hammonds plains, nova scotia"
@@ -403,6 +407,8 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="jr. purchasing agent"
     data-company="jatec"
     data-location="edmonton, ab t6b 2j8"
@@ -441,6 +447,8 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior buyer (1 year contract)"
     data-company="hörmann north america"
     data-location="oro-medonte, ontario"
@@ -479,6 +487,8 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior buyer"
     data-company="calian group"
     data-location="ottawa, ontario"
@@ -517,6 +527,8 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior buyer (1 year contract)"
     data-company="hörmann"
     data-location="oro-medonte, on"
@@ -555,6 +567,8 @@
         <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior buyer"
     data-company="calian"
     data-location="ottawa, on"
@@ -593,6 +607,8 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior purchasing coordinator"
     data-company="echo power equipment (canada)"
     data-location="london, ontario"
@@ -631,6 +647,8 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="project coordinator / junior quotes-en"
     data-company="guillevin"
     data-location="burnaby, british columbia"
@@ -669,6 +687,8 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="project coordinator / junior quotes-fr"
     data-company="guillevin"
     data-location="burnaby, british columbia"
@@ -707,6 +727,8 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior supply chain planner"
     data-company="microart services, inc."
     data-location="markham, on l6g 1b5"
@@ -745,6 +767,8 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="fall term logistics analyst co-op/intern"
     data-company="tjx canada – winners, marshalls, homesense"
     data-location="mississauga, ontario hybrid"
@@ -783,6 +807,8 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="procurement analyst - 4-month internship/coop (fall 2026)"
     data-company="intact"
     data-location="montréal, qc"
@@ -821,6 +847,8 @@
         <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="stage - automne 2026 - analyste de la chaine d’approvisionnement / internship - fall 2026 - supply chain analyst"
     data-company="pratt &amp; whitney"
     data-location="longueuil, quebec"
@@ -1083,40 +1111,57 @@
         if (searchForm) {
             var keywordInput = searchForm.querySelector('[data-job-search-input]');
             var locationInput = searchForm.querySelector('[data-job-location-input]');
-            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var workModeInput = searchForm.querySelector('[data-job-work-mode-input]');
             var feedback = document.querySelector('[data-job-search-feedback]');
+            var emptyState = document.querySelector('[data-job-search-empty]');
             var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
             var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var staticSections = Array.prototype.slice.call(document.querySelectorAll('[data-search-static]'));
             var normalize = function(value) {
                 return (value || '').toString().toLowerCase().trim();
             };
-            var matchesRoleType = function(card, roleValue) {
-                if (!roleValue) return true;
-                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
-                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
-                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            var matchesWorkMode = function(card, modeValue) {
+                if (!modeValue) return true;
+                var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                var location = normalize(card.getAttribute('data-location'));
+                var isRemote = card.getAttribute('data-remote') === 'true' || text.indexOf('remote') !== -1 || location.indexOf('remote') !== -1;
+                var isHybrid = card.getAttribute('data-hybrid') === 'true' || text.indexOf('hybrid') !== -1 || location.indexOf('hybrid') !== -1;
+                if (modeValue === 'remote') return isRemote;
+                if (modeValue === 'hybrid') return isHybrid;
+                if (modeValue === 'onsite') return !isRemote && !isHybrid;
+                return true;
             };
             var applySearch = function() {
                 var keyword = normalize(keywordInput && keywordInput.value);
                 var location = normalize(locationInput && locationInput.value);
-                var roleType = normalize(typeInput && typeInput.value);
+                var workMode = normalize(workModeInput && workModeInput.value);
                 var visibleCount = 0;
                 jobCards.forEach(function(card) {
                     var text = normalize(card.getAttribute('data-search-text') || card.textContent);
                     var cardLocation = normalize(card.getAttribute('data-location'));
                     var visible = (!keyword || text.indexOf(keyword) !== -1) &&
                         (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
-                        matchesRoleType(card, roleType);
+                        matchesWorkMode(card, workMode);
                     card.hidden = !visible;
                     if (visible) visibleCount += 1;
                 });
+                var hasFilter = keyword || location || workMode;
                 categorySections.forEach(function(section) {
-                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    var visibleInSection = Array.prototype.slice.call(section.querySelectorAll('.job-card')).filter(function(card) { return !card.hidden; }).length;
+                    var sectionVisible = visibleInSection > 0;
                     section.hidden = !sectionVisible;
+                    var count = section.querySelector('[data-category-count]');
+                    if (count) {
+                        count.textContent = hasFilter ? (visibleInSection + ' matching') : (count.getAttribute('data-total-label') || count.textContent);
+                    }
                 });
+                staticSections.forEach(function(section) { section.hidden = !!hasFilter; });
+                document.body.classList.toggle('search-active', !!hasFilter);
                 if (feedback) {
-                    var hasFilter = keyword || location || roleType;
-                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                    feedback.textContent = hasFilter ? ('Showing ' + visibleCount + ' of ' + jobCards.length + ' jobs matching filters on this page') : '';
+                }
+                if (emptyState) {
+                    emptyState.hidden = !hasFilter || visibleCount > 0;
                 }
             };
             ['input', 'change'].forEach(function(eventName) {

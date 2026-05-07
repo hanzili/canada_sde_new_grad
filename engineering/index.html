@@ -296,9 +296,9 @@
         <p class="hero-kicker">Daily-updated Canadian student jobs</p>
         <h1>2026 Canadian Engineering Jobs</h1>
         <p class="page-subtitle">Search 43 positions from company career pages across internships, co-ops, new grad, junior, and entry-level roles.</p>
-        <form class="job-search-panel" role="search" aria-label="Filter visible Hanzilla jobs" data-job-search-form>
+        <form class="job-search-panel" role="search" aria-label="Filter jobs on this page" data-job-search-form>
             <label class="search-field search-field-keyword">
-                <span>Keyword</span>
+                <span>Search this page</span>
                 <input type="search" name="keyword" placeholder="Title, company, skill…" autocomplete="off" data-job-search-input>
             </label>
             <label class="search-field">
@@ -306,39 +306,44 @@
                 <input type="search" name="location" placeholder="Toronto, Vancouver, remote…" autocomplete="off" data-job-location-input>
             </label>
             <label class="search-field search-field-select">
-                <span>Role type</span>
-                <select name="role_type" data-job-type-input>
-                    <option value="">All roles</option>
-                    <option value="intern">Internships / co-ops</option>
-                    <option value="new grad junior entry-level">New grad / junior</option>
+                <span>Work mode</span>
+                <select name="work_mode" data-job-work-mode-input>
+                    <option value="">Any mode</option>
                     <option value="remote">Remote</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="onsite">On-site</option>
                 </select>
             </label>
-            <button class="hero-cta hero-cta-primary search-submit" type="submit">Search jobs</button>
+            <button class="hero-cta hero-cta-primary search-submit" type="submit">Filter jobs</button>
         </form>
         <div class="search-feedback" data-job-search-feedback aria-live="polite"></div>
-        <div class="landing-hero-actions quick-filters" aria-label="Popular job searches">
-            <a class="hero-cta" href="/internships/">Internships & co-ops</a>
-            <a class="hero-cta" href="/new-grad/">New grad jobs</a>
+        <div class="stage-switcher" aria-label="Choose job stage">
+            <span class="stage-switcher-label">I’m looking for</span>
+            <a class="stage-tab active" href="/engineering/">New grad / junior</a>
+            <a class="stage-tab " href="/engineering/internships/">Internships / co-ops</a>
+        </div>
+        <p class="search-scope-note">Search filters the jobs loaded on this page. Use the stage links above to switch between full-time new grad roles and internships.</p>
+        <div class="landing-hero-actions quick-filters" aria-label="Popular job searches" data-search-static>
             <a class="hero-cta" href="/locations/toronto/">Toronto</a>
             <a class="hero-cta" href="/locations/vancouver/">Vancouver</a>
+            <a class="hero-cta" href="/locations/remote/">Remote Canada</a>
             <a class="hero-cta" href="/finance/">Finance</a>
             <a class="hero-cta" href="/engineering/">Engineering</a>
         </div>
-        <div class="landing-proof-points" aria-label="Why students use Hanzilla">
+        <div class="landing-proof-points" aria-label="Why students use Hanzilla" data-search-static>
             <span><strong>Updated daily</strong> fresh roles stay visible</span>
             <span><strong>Direct apply</strong> links to company career pages</span>
             <span><strong>Student-first</strong> Canada-specific filters</span>
         </div>
         
             
-            <p class="cross-link">Looking for internships? <a href="/engineering/internships/">Engineering Internships</a> · Also browse <a href="/">all student jobs</a></p>
+            <p class="cross-link" data-search-static>Looking for internships? <a href="/engineering/internships/">Engineering Internships</a> · Also browse <a href="/">all student jobs</a></p>
             
         
     </header>
 
     
-    <section class="latest-jobs-strip" aria-labelledby="latest-jobs-title">
+    <section class="latest-jobs-strip" aria-labelledby="latest-jobs-title" data-search-static>
         <div class="latest-jobs-header">
             <div>
                 <p class="section-kicker">Hiring now</p>
@@ -380,14 +385,14 @@
     
 
     <!-- SEO intro content -->
-    <div class="intro-content">
+    <div class="intro-content" data-search-static>
         
         <p>Discover <strong>entry-level jobs for Canadian university students and new grads</strong> across Canada. Whether you're graduating, looking for a junior role, or comparing early-career paths, Hanzilla curates student-friendly roles across tech, finance, engineering, business, sciences, and more. Updated daily with fresh positions and direct apply links.</p>
         
     </div>
 
     
-    <section class="seo-content-block">
+    <section class="seo-content-block" data-search-static>
         <h2>How to use this engineering jobs board</h2>
         <p>This daily-updated page is built for Canadian students and recent grads searching for engineering new grad, junior, and entry-level roles: mechanical, electrical, civil, industrial, manufacturing, environmental, hardware, and project engineering roles. Hanzilla groups engineering student roles across consulting firms, utilities, manufacturers, infrastructure companies, public agencies, and startups instead of only surfacing software jobs.</p>
         <ul class="seo-content-list">
@@ -413,12 +418,17 @@
     </section>
     
 
-    <div class="emoji-legend">
+    <div class="emoji-legend" data-search-static>
         <div class="legend-item"><span class="emoji">🔥</span> Strong fit - fresh, selective, or high-signal student opportunity</div>
         <div class="legend-item"><span class="emoji">💤</span> Review carefully - role may be less relevant, older, or less student-focused</div>
     </div>
 
-    <nav class="category-nav">
+    <div class="job-search-empty" data-job-search-empty hidden>
+        <strong>No matches on this page.</strong>
+        <span>Try a broader keyword, clear location, or switch between New grad and Internships above.</span>
+    </div>
+
+    <nav class="category-nav" data-search-static>
         <h2>Browse by Category</h2>
         <ul class="category-chips">
             
@@ -484,13 +494,15 @@
     <section class="category-section" id="mechanical-manufacturing">
         <h2 class="category-title">
             <a href="/engineering/categories/mechanical-manufacturing/">Mechanical / Manufacturing</a>
-            <span class="category-count">6 positions</span>
+            <span class="category-count" data-category-count data-total-label="6 positions">6 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior process engineer - operations &amp; scale up"
     data-company="carbonet"
     data-location="vancouver, british columbia"
@@ -529,6 +541,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior manufacturing engineer"
     data-company="renaissance repair and supply"
     data-location="kanata, on k2k 2w2"
@@ -567,6 +581,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior process engineer – operations &amp; scale-up"
     data-company="carbonet nanotechnologies inc"
     data-location="delta, bc v3m 6k8"
@@ -605,6 +621,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="candidat(e) à la profession d&#39;ingénieur mécanique, fiabilité et opérations / eit mechanical engineer, reliability and operations"
     data-company="ge vernova"
     data-location="brossard, quebec"
@@ -643,6 +661,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior mechanical design engineer"
     data-company="agilus work solutions"
     data-location="sarnia, ontario"
@@ -681,6 +701,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior mechanical design technologist"
     data-company="general dynamics mission systems"
     data-location="calgary, ab t2e 8s5 hybrid"
@@ -723,13 +745,15 @@
     <section class="category-section" id="electrical-electronics">
         <h2 class="category-title">
             <a href="/engineering/categories/electrical-electronics/">Electrical / Electronics</a>
-            <span class="category-count">7 positions</span>
+            <span class="category-count" data-category-count data-total-label="7 positions">7 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="3rd/4th year apprentice instrumentation technician"
     data-company="strike group"
     data-location="elkford, bc"
@@ -768,6 +792,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="instrumentation and controls engineer in training (eit)"
     data-company="wood plc"
     data-location="calgary, ab"
@@ -806,6 +832,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="instrumentation and controls engineer in training (eit)"
     data-company="wood"
     data-location="calgary, alberta"
@@ -844,6 +872,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="trainee, engineering (power systems)"
     data-company="aecon group inc."
     data-location="toronto, ontario"
@@ -882,6 +912,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior electrical engineer"
     data-company="parasol innovations"
     data-location="greater montreal metropolitan area"
@@ -920,6 +952,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior field electrical &amp; instrumentation engineer – vancouver/calgary/site"
     data-company="ausenco"
     data-location="calgary, alberta hybrid"
@@ -958,6 +992,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior electrical engineer eit - industrial and power"
     data-company="bba consultants"
     data-location="mont-st-hilaire, quebec hybrid"
@@ -1000,13 +1036,15 @@
     <section class="category-section" id="civil-structural">
         <h2 class="category-title">
             <a href="/engineering/categories/civil-structural/">Civil / Structural</a>
-            <span class="category-count">15 positions</span>
+            <span class="category-count" data-category-count data-total-label="15 positions">15 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior civil engineer (eit)"
     data-company="mcelhanney"
     data-location="courtenay, british columbia"
@@ -1045,6 +1083,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior geotechnical technician"
     data-company="exp"
     data-location="cambridge, ontario hybrid"
@@ -1083,6 +1123,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior geotechnical construction materials field technician"
     data-company="wsp"
     data-location="markham, on"
@@ -1121,6 +1163,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior geotechnical construction materials field technician"
     data-company="wsp in canada"
     data-location="markham, ontario hybrid"
@@ -1159,6 +1203,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior transportation engineer (eit)"
     data-company="mcelhanney"
     data-location="edmonton, alberta hybrid"
@@ -1197,6 +1243,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior geotechnical or geological engineer (2026050110)"
     data-company="thurber engineering ltd."
     data-location="calgary, ab t2h 2h8"
@@ -1235,6 +1283,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior geotechnical or geological engineer (2026050181)"
     data-company="thurber engineering ltd."
     data-location="victoria, bc v8z 7x8"
@@ -1273,6 +1323,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior geotechnical / mine waste engineer"
     data-company="wsp in canada"
     data-location="thunder bay, ontario hybrid"
@@ -1311,6 +1363,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="geotechnical engineer-in-training (eit)"
     data-company="tbt engineering"
     data-location="kenora, on"
@@ -1349,6 +1403,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="civil engineer-in-training (eit)"
     data-company="tbt engineering"
     data-location="fort frances, on"
@@ -1387,6 +1443,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior structural engineer / structural technologist"
     data-company="whitemud ironworks limited"
     data-location="edmonton, alberta"
@@ -1425,6 +1483,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior civil/structural engineer"
     data-company="bba consultants"
     data-location="concord, ontario hybrid"
@@ -1463,6 +1523,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior geotechnical engineer-in-training"
     data-company="wsp in canada"
     data-location="terrace, british columbia hybrid"
@@ -1501,6 +1563,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior civil engineer"
     data-company="mcelhanney"
     data-location="kamloops, british columbia"
@@ -1539,6 +1603,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="water resources engineer – entry level (hybrid)"
     data-company="barr engineering co."
     data-location="calgary, alberta hybrid"
@@ -1581,13 +1647,15 @@
     <section class="category-section" id="chemical-process-mining">
         <h2 class="category-title">
             <a href="/engineering/categories/chemical-process-mining/">Chemical / Process / Mining</a>
-            <span class="category-count">2 positions</span>
+            <span class="category-count" data-category-count data-total-label="2 positions">2 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior metallurgist"
     data-company="b2gold corp."
     data-location="nunavut"
@@ -1626,6 +1694,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="metallurgy eit"
     data-company="equinox gold"
     data-location="geraldton, on"
@@ -1668,13 +1738,15 @@
     <section class="category-section" id="industrial-quality">
         <h2 class="category-title">
             <a href="/engineering/categories/industrial-quality/">Industrial / Quality</a>
-            <span class="category-count">2 positions</span>
+            <span class="category-count" data-category-count data-total-label="2 positions">2 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior process engineer"
     data-company="fgf brands"
     data-location="greater toronto area"
@@ -1713,6 +1785,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior manufacturing engineer"
     data-company="jacobs &amp; thompson inc"
     data-location="toronto, on m9l 2r3"
@@ -1755,13 +1829,15 @@
     <section class="category-section" id="environmental-engineering">
         <h2 class="category-title">
             <a href="/engineering/categories/environmental-engineering/">Environmental Engineering</a>
-            <span class="category-count">11 positions</span>
+            <span class="category-count" data-category-count data-total-label="11 positions">11 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="graduate environmental engineer"
     data-company="ghd"
     data-location="waterloo, ontario hybrid"
@@ -1800,6 +1876,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="water treatment engineer/eit"
     data-company="aecom"
     data-location="kelowna, british columbia hybrid"
@@ -1838,6 +1916,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior environmental technician / scientist / engineer-in-training"
     data-company="arcadis"
     data-location="ottawa, ontario hybrid"
@@ -1876,6 +1956,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior air quality monitoring / instrumentation technician"
     data-company="wsp in canada"
     data-location="grande prairie, alberta hybrid"
@@ -1914,6 +1996,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="environmental engineer-in-training (eit)"
     data-company="tbt engineering"
     data-location="collingwood, on"
@@ -1952,6 +2036,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior air quality monitoring / instrumentation technician"
     data-company="wsp"
     data-location="fort saskatchewan, ab t8l 2s5"
@@ -1990,6 +2076,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior environmental scientist or eit"
     data-company="stantec"
     data-location="terrace, british columbia"
@@ -2028,6 +2116,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior environmental scientist or eit"
     data-company="stantec"
     data-location="quesnel, british columbia"
@@ -2066,6 +2156,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior environmental technician"
     data-company="vertex resource group ltd."
     data-location="sherwood park, alberta"
@@ -2104,6 +2196,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior environmental engineer / geoscientist (26038)"
     data-company="gemtec consulting engineers and scientists limited"
     data-location="bowmanville, on"
@@ -2142,6 +2236,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior environmental scientist"
     data-company="millennium ems solutions ltd."
     data-location="fort st john, british columbia"
@@ -2568,40 +2664,57 @@
         if (searchForm) {
             var keywordInput = searchForm.querySelector('[data-job-search-input]');
             var locationInput = searchForm.querySelector('[data-job-location-input]');
-            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var workModeInput = searchForm.querySelector('[data-job-work-mode-input]');
             var feedback = document.querySelector('[data-job-search-feedback]');
+            var emptyState = document.querySelector('[data-job-search-empty]');
             var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
             var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var staticSections = Array.prototype.slice.call(document.querySelectorAll('[data-search-static]'));
             var normalize = function(value) {
                 return (value || '').toString().toLowerCase().trim();
             };
-            var matchesRoleType = function(card, roleValue) {
-                if (!roleValue) return true;
-                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
-                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
-                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            var matchesWorkMode = function(card, modeValue) {
+                if (!modeValue) return true;
+                var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                var location = normalize(card.getAttribute('data-location'));
+                var isRemote = card.getAttribute('data-remote') === 'true' || text.indexOf('remote') !== -1 || location.indexOf('remote') !== -1;
+                var isHybrid = card.getAttribute('data-hybrid') === 'true' || text.indexOf('hybrid') !== -1 || location.indexOf('hybrid') !== -1;
+                if (modeValue === 'remote') return isRemote;
+                if (modeValue === 'hybrid') return isHybrid;
+                if (modeValue === 'onsite') return !isRemote && !isHybrid;
+                return true;
             };
             var applySearch = function() {
                 var keyword = normalize(keywordInput && keywordInput.value);
                 var location = normalize(locationInput && locationInput.value);
-                var roleType = normalize(typeInput && typeInput.value);
+                var workMode = normalize(workModeInput && workModeInput.value);
                 var visibleCount = 0;
                 jobCards.forEach(function(card) {
                     var text = normalize(card.getAttribute('data-search-text') || card.textContent);
                     var cardLocation = normalize(card.getAttribute('data-location'));
                     var visible = (!keyword || text.indexOf(keyword) !== -1) &&
                         (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
-                        matchesRoleType(card, roleType);
+                        matchesWorkMode(card, workMode);
                     card.hidden = !visible;
                     if (visible) visibleCount += 1;
                 });
+                var hasFilter = keyword || location || workMode;
                 categorySections.forEach(function(section) {
-                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    var visibleInSection = Array.prototype.slice.call(section.querySelectorAll('.job-card')).filter(function(card) { return !card.hidden; }).length;
+                    var sectionVisible = visibleInSection > 0;
                     section.hidden = !sectionVisible;
+                    var count = section.querySelector('[data-category-count]');
+                    if (count) {
+                        count.textContent = hasFilter ? (visibleInSection + ' matching') : (count.getAttribute('data-total-label') || count.textContent);
+                    }
                 });
+                staticSections.forEach(function(section) { section.hidden = !!hasFilter; });
+                document.body.classList.toggle('search-active', !!hasFilter);
                 if (feedback) {
-                    var hasFilter = keyword || location || roleType;
-                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                    feedback.textContent = hasFilter ? ('Showing ' + visibleCount + ' of ' + jobCards.length + ' jobs matching filters on this page') : '';
+                }
+                if (emptyState) {
+                    emptyState.hidden = !hasFilter || visibleCount > 0;
                 }
             };
             ['input', 'change'].forEach(function(eventName) {

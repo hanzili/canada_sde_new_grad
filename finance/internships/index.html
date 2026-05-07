@@ -296,9 +296,9 @@
         <p class="hero-kicker">Daily-updated Canadian student jobs</p>
         <h1>2026 Canadian Finance Internships</h1>
         <p class="page-subtitle">Search 132 positions from company career pages across internships, co-ops, new grad, junior, and entry-level roles.</p>
-        <form class="job-search-panel" role="search" aria-label="Filter visible Hanzilla jobs" data-job-search-form>
+        <form class="job-search-panel" role="search" aria-label="Filter jobs on this page" data-job-search-form>
             <label class="search-field search-field-keyword">
-                <span>Keyword</span>
+                <span>Search this page</span>
                 <input type="search" name="keyword" placeholder="Title, company, skill…" autocomplete="off" data-job-search-input>
             </label>
             <label class="search-field">
@@ -306,39 +306,44 @@
                 <input type="search" name="location" placeholder="Toronto, Vancouver, remote…" autocomplete="off" data-job-location-input>
             </label>
             <label class="search-field search-field-select">
-                <span>Role type</span>
-                <select name="role_type" data-job-type-input>
-                    <option value="">All roles</option>
-                    <option value="intern">Internships / co-ops</option>
-                    <option value="new grad junior entry-level">New grad / junior</option>
+                <span>Work mode</span>
+                <select name="work_mode" data-job-work-mode-input>
+                    <option value="">Any mode</option>
                     <option value="remote">Remote</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="onsite">On-site</option>
                 </select>
             </label>
-            <button class="hero-cta hero-cta-primary search-submit" type="submit">Search jobs</button>
+            <button class="hero-cta hero-cta-primary search-submit" type="submit">Filter jobs</button>
         </form>
         <div class="search-feedback" data-job-search-feedback aria-live="polite"></div>
-        <div class="landing-hero-actions quick-filters" aria-label="Popular job searches">
-            <a class="hero-cta" href="/internships/">Internships & co-ops</a>
-            <a class="hero-cta" href="/new-grad/">New grad jobs</a>
+        <div class="stage-switcher" aria-label="Choose job stage">
+            <span class="stage-switcher-label">I’m looking for</span>
+            <a class="stage-tab " href="/finance/">New grad / junior</a>
+            <a class="stage-tab active" href="/finance/internships/">Internships / co-ops</a>
+        </div>
+        <p class="search-scope-note">Search filters the jobs loaded on this page. Use the stage links above to switch between full-time new grad roles and internships.</p>
+        <div class="landing-hero-actions quick-filters" aria-label="Popular job searches" data-search-static>
             <a class="hero-cta" href="/locations/toronto/">Toronto</a>
             <a class="hero-cta" href="/locations/vancouver/">Vancouver</a>
+            <a class="hero-cta" href="/locations/remote/">Remote Canada</a>
             <a class="hero-cta" href="/finance/">Finance</a>
             <a class="hero-cta" href="/engineering/">Engineering</a>
         </div>
-        <div class="landing-proof-points" aria-label="Why students use Hanzilla">
+        <div class="landing-proof-points" aria-label="Why students use Hanzilla" data-search-static>
             <span><strong>Updated daily</strong> fresh roles stay visible</span>
             <span><strong>Direct apply</strong> links to company career pages</span>
             <span><strong>Student-first</strong> Canada-specific filters</span>
         </div>
         
             
-            <p class="cross-link">Looking for full-time? <a href="/finance/">Finance Jobs</a> · Also browse <a href="/">all student jobs</a></p>
+            <p class="cross-link" data-search-static>Looking for full-time? <a href="/finance/">Finance Jobs</a> · Also browse <a href="/">all student jobs</a></p>
             
         
     </header>
 
     
-    <section class="latest-jobs-strip" aria-labelledby="latest-jobs-title">
+    <section class="latest-jobs-strip" aria-labelledby="latest-jobs-title" data-search-static>
         <div class="latest-jobs-header">
             <div>
                 <p class="section-kicker">Hiring now</p>
@@ -380,14 +385,14 @@
     
 
     <!-- SEO intro content -->
-    <div class="intro-content">
+    <div class="intro-content" data-search-static>
         
         <p>Welcome to Canada's daily-updated directory of <strong>internships and co-op positions</strong> for 2026. Browse student opportunities across tech, finance, engineering, business, sciences, and more from Canadian companies, banks, startups, labs, public organizations, and firms across Toronto, Vancouver, Montreal, Ottawa, Waterloo, Calgary, and remote Canada.</p>
         
     </div>
 
     
-    <section class="seo-content-block">
+    <section class="seo-content-block" data-search-static>
         <h2>How to use this finance jobs board</h2>
         <p>This daily-updated page is built for Canadian students and recent grads searching for finance internships and co-op roles: banking, accounting, audit, insurance, actuarial, risk, wealth management, and finance rotation programs. Hanzilla separates analyst-style roles, internships, and new-grad openings so students do not have to search every bank, insurer, accounting firm, and pension fund career page manually.</p>
         <ul class="seo-content-list">
@@ -413,12 +418,17 @@
     </section>
     
 
-    <div class="emoji-legend">
+    <div class="emoji-legend" data-search-static>
         <div class="legend-item"><span class="emoji">🔥</span> Strong fit - fresh, selective, or high-signal student opportunity</div>
         <div class="legend-item"><span class="emoji">💤</span> Review carefully - role may be less relevant, older, or less student-focused</div>
     </div>
 
-    <nav class="category-nav">
+    <div class="job-search-empty" data-job-search-empty hidden>
+        <strong>No matches on this page.</strong>
+        <span>Try a broader keyword, clear location, or switch between New grad and Internships above.</span>
+    </div>
+
+    <nav class="category-nav" data-search-static>
         <h2>Browse by Category</h2>
         <ul class="category-chips">
             
@@ -475,13 +485,15 @@
     <section class="category-section" id="investment-banking-capital-markets">
         <h2 class="category-title">
             <a href="/finance/categories/investment-banking-capital-markets/">Investment Banking / Capital Markets</a>
-            <span class="category-count">17 positions</span>
+            <span class="category-count" data-category-count data-total-label="17 positions">17 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="investment banking analyst intern (diversified) - fall 2026"
     data-company="stifel"
     data-location="toronto, on m5j 2s1"
@@ -520,6 +532,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="investment banking analyst intern (diversified) - fall 2026"
     data-company="stifel financial corp."
     data-location="toronto, ontario"
@@ -558,6 +572,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="global markets equity research, fall 2026 associate"
     data-company="cibc"
     data-location="toronto, ontario"
@@ -596,6 +612,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="investment banking &amp; venture capital analyst - internship (summer 2026)"
     data-company="bayval"
     data-location="toronto, ontario hybrid"
@@ -634,6 +652,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="bmo capital markets global markets analyst, commodity derivatives, calgary – fall 2026 or winter 2027 co-op opportunities"
     data-company="bmo"
     data-location="calgary, alberta"
@@ -672,6 +692,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="intern, sagard private equity - summer 2027 / stagiaire, sagard placements privés canada été 2027"
     data-company="sagard"
     data-location="montreal, quebec"
@@ -710,6 +732,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="investment banking analyst intern (metals and mining) - fall 2026"
     data-company="stifel"
     data-location="toronto, on m5j 2s1"
@@ -748,6 +772,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="investment banking analyst intern (metals and mining) - fall 2026"
     data-company="stifel financial corp."
     data-location="toronto, ontario"
@@ -786,6 +812,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="2026-2027 private equity infrastructure &amp; real assets co-op analyst"
     data-company="stepstone group"
     data-location="toronto, ontario hybrid"
@@ -824,6 +852,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="m&amp;a research/business development co-op"
     data-company="andromeda software inc."
     data-location="toronto, ontario hybrid"
@@ -862,6 +892,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="intern, sagard private equity fall 2026 / stagiaire, sagard placements privés canada automne 2026"
     data-company="sagard"
     data-location="montreal, quebec"
@@ -900,6 +932,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="bmo capital markets investment banking analyst, calgary – fall 2026 or winter 2027 co-op opportunities"
     data-company="bmo"
     data-location="calgary, alberta"
@@ -938,6 +972,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="bmo capital markets investment banking analyst, calgary – fall 2026 or winter 2027 co-op opportunities"
     data-company="bmo financial group"
     data-location="calgary, ab"
@@ -976,6 +1012,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="intern analyst, private equity"
     data-company="connor, clark &amp; lunn financial group (cc&amp;l)"
     data-location="toronto, ontario hybrid"
@@ -1014,6 +1052,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="intern,  capital markets"
     data-company="laurentian bank"
     data-location="montreal, quebec hybrid"
@@ -1052,6 +1092,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="intern, capital markets"
     data-company="laurentian bank financial group"
     data-location="montréal, qc"
@@ -1090,6 +1132,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="investment banking intern (summer 2026)"
     data-company="comcap holdings llc"
     data-location="vancouver, bc"
@@ -1132,13 +1176,15 @@
     <section class="category-section" id="accounting-fp-a">
         <h2 class="category-title">
             <a href="/finance/categories/accounting-fp-a/">Accounting / FP&amp;A</a>
-            <span class="category-count">58 positions</span>
+            <span class="category-count" data-category-count data-total-label="58 positions">58 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="finance intern"
     data-company="finning"
     data-location="calgary, alberta hybrid"
@@ -1177,6 +1223,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="finance intern"
     data-company="finning"
     data-location="edmonton, alberta hybrid"
@@ -1215,6 +1263,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="summer student - pharmacy support assistant, accounts receivable"
     data-company="bioscript solutions"
     data-location="mississauga, on l5l 5m8"
@@ -1253,6 +1303,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="residential property accounting, fall 2026 - toronto (co-op/internship) - 4 months"
     data-company="quadreal property group"
     data-location="toronto, ontario"
@@ -1291,6 +1343,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="development accounting, fall 2026 - toronto (co-op/internship) - 4 months"
     data-company="quadreal property group"
     data-location="toronto, ontario"
@@ -1329,6 +1383,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="residential property accounting, fall 2026 - toronto (co-op/internship) - 4 months"
     data-company="quadreal"
     data-location="toronto, on"
@@ -1367,6 +1423,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="development accounting, fall 2026 - toronto (co-op/internship) - 4 months"
     data-company="quadreal"
     data-location="toronto, on"
@@ -1405,6 +1463,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="financial analyst, ecommerce &amp; loyalty co-op"
     data-company="loblaw companies limited"
     data-location="toronto, ontario hybrid"
@@ -1443,6 +1503,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="september 2026 finance and accounting co-op"
     data-company="glencore"
     data-location="sparwood, british columbia"
@@ -1481,6 +1543,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="financial analyst, ecommerce &amp; loyalty co-op"
     data-company="loblaw"
     data-location="toronto, on m5v 2v9 hybrid"
@@ -1519,6 +1583,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="september 2026 finance and accounting co-op"
     data-company="elk valley resources"
     data-location="sparwood, british columbia"
@@ -1557,6 +1623,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="intern - finance, corporate accounting (september 2026 - 8 months)"
     data-company="ontario teachers&#39; pension plan"
     data-location="toronto, ontario"
@@ -1595,6 +1663,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="accounting student"
     data-company="pcl construction"
     data-location="richmond, british columbia"
@@ -1633,6 +1703,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="velocity - finance &amp; accounting internship/co-op - fall 2026"
     data-company="scotiabank"
     data-location="toronto, ontario"
@@ -1671,6 +1743,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="accounting &amp; finance intern"
     data-company="teladoc health canada"
     data-location="greater toronto area"
@@ -1709,6 +1783,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="accounting assistant (summer student)"
     data-company="canadream career page"
     data-location="calgary, ab"
@@ -1747,6 +1823,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="accounting co-op"
     data-company="radwell international"
     data-location="stoney creek, ontario"
@@ -1785,6 +1863,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="stagiaire en comptabilité / accounting intern"
     data-company="smardt"
     data-location="dorval, qc"
@@ -1823,6 +1903,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="summer student, accounts payable"
     data-company="day &amp; ross"
     data-location="somerville, nb e7p 2s4"
@@ -1861,6 +1943,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="stagiaire en comptabilité / accounting intern"
     data-company="smardt chiller group"
     data-location="dorval, quebec"
@@ -1899,6 +1983,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="intern, corporate finance"
     data-company="international air transport association (iata)"
     data-location="montreal, quebec hybrid"
@@ -1937,6 +2023,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="finance intern (cost accounting) (fall 2026)"
     data-company="soucy"
     data-location="drummondville, quebec"
@@ -1975,6 +2063,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="finance intern (cost accounting) (fall 2026)"
     data-company="soucy group"
     data-location="drummondville, qc j2e 1a9"
@@ -2013,6 +2103,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="student, accounting (fall 2026, 4 or 8 months)"
     data-company="omers"
     data-location="toronto, on hybrid"
@@ -2051,6 +2143,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="student, investment operations - capital markets finance (fall 2026, 4 months)"
     data-company="omers"
     data-location="toronto, ontario"
@@ -2089,6 +2183,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="student, accounting (fall 2026, 4 or 8 months)"
     data-company="oxford properties group"
     data-location="toronto, ontario hybrid"
@@ -2127,6 +2223,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="financial analyst co-op / internship"
     data-company="jitto"
     data-location="toronto, ontario"
@@ -2165,6 +2263,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="finance intern"
     data-company="mcasphalt industries limited"
     data-location="calgary, alberta"
@@ -2203,6 +2303,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="m&amp;a financial analyst co-op"
     data-company="andromeda software inc."
     data-location="toronto, ontario hybrid"
@@ -2241,6 +2343,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="finance intern"
     data-company="mcasphalt industries"
     data-location="calgary, ab"
@@ -2279,6 +2383,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="accounting - summer student"
     data-company="jori international"
     data-location="calgary, ab t2e 7y4"
@@ -2317,6 +2423,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="analyst, corporate finance (co-op)"
     data-company="mnp"
     data-location="toronto, on m5c 2v9"
@@ -2355,6 +2463,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="accounts payable student"
     data-company="hammond power solutions"
     data-location="guelph, on"
@@ -2393,6 +2503,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="finance intern (12 months)"
     data-company="trench group"
     data-location="pickering, ontario"
@@ -2431,6 +2543,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="jr. financial analyst (co-op)"
     data-company="magna international"
     data-location="aurora, on"
@@ -2469,6 +2583,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="jr accounting analyst (co-op)"
     data-company="compass group"
     data-location="london, on hybrid"
@@ -2507,6 +2623,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="junior accountant (co-op)"
     data-company="compass group"
     data-location="london, on hybrid"
@@ -2545,6 +2663,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="junior accountant (co-op)"
     data-company="compass group canada"
     data-location="london, ontario hybrid"
@@ -2583,6 +2703,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="accounting co-op (hybrid) - september 2026"
     data-company="kardium inc."
     data-location="burnaby, bc hybrid"
@@ -2621,6 +2743,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="finance intern"
     data-company="surbana jurong private limited"
     data-location="vancouver, bc"
@@ -2659,6 +2783,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="finance intern (summer 2026)"
     data-company="itt inc."
     data-location="ontario"
@@ -2697,6 +2823,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="junior financial analyst"
     data-company="first nations financial management board"
     data-location="vancouver, bc hybrid"
@@ -2735,6 +2863,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="junior financial analyst"
     data-company="first nations financial management board"
     data-location="ottawa, on k1r 7y6 hybrid"
@@ -2773,6 +2903,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="intern - portfolio accounting [hybrid]"
     data-company="edf power solutions north america"
     data-location="calgary, alberta"
@@ -2811,6 +2943,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="junior cost controller – summer 2026 student"
     data-company="stantec"
     data-location="vancouver, bc v5y 2e2"
@@ -2849,6 +2983,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="finance intern,"
     data-company="w3global"
     data-location="toronto, ontario"
@@ -2887,6 +3023,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="contract financial analyst intern"
     data-company="kyndryl"
     data-location="toronto, on hybrid"
@@ -2925,6 +3063,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="summer student- junior accounting coordinator"
     data-company="calgary legal guidance"
     data-location="calgary, alberta"
@@ -2963,6 +3103,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="fall intern, financial analyst - september 2026 (4 month)"
     data-company="capital one"
     data-location="toronto, ontario hybrid"
@@ -3001,6 +3143,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="finance accounting intern"
     data-company="crown equipment"
     data-location="mississauga, on l5t 2v5"
@@ -3039,6 +3183,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="stage automne 2026 - analyste financier - trésorerie / internship fall 2026 - finance analyst - treasury"
     data-company="pratt &amp; whitney"
     data-location="longueuil, quebec"
@@ -3077,6 +3223,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="accounts receivable intern"
     data-company="harris computer"
     data-location="ottawa, ontario"
@@ -3115,6 +3263,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="co op student corporate accounting elk hosp - 16537"
     data-company="penn highlands healthcare"
     data-location="st marys, ontario"
@@ -3153,6 +3303,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="cost accounting intern"
     data-company="bnp paribas"
     data-location="montreal, quebec hybrid"
@@ -3191,6 +3343,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="student, treasury analyst - accounting controls &amp; reporting"
     data-company="sun life"
     data-location="toronto, ontario hybrid"
@@ -3229,6 +3383,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="accountant, summer student"
     data-company="red river mutual"
     data-location="winnipeg, mb r3t 6e3"
@@ -3267,6 +3423,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="finance intern - canada"
     data-company="siemens healthineers"
     data-location="ottawa, on"
@@ -3305,6 +3463,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="financial analyst intern"
     data-company="dialogue"
     data-location="montréal, qc h3a 3g3 hybrid"
@@ -3347,13 +3507,15 @@
     <section class="category-section" id="audit-tax">
         <h2 class="category-title">
             <a href="/finance/categories/audit-tax/">Audit / Tax</a>
-            <span class="category-count">12 positions</span>
+            <span class="category-count" data-category-count data-total-label="12 positions">12 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="cpa articling student (september 2026)"
     data-company="gauer olsen inc."
     data-location="victoria, bc v8t 2c1"
@@ -3392,6 +3554,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="internal auditor co-op"
     data-company="iko north america"
     data-location="mississauga, ontario"
@@ -3430,6 +3594,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="comptable, certification et comptabilité (stage)"
     data-company="mnp"
     data-location="québec, quebec"
@@ -3468,6 +3634,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="student, tax analyst (summer 2026)"
     data-company="sun life"
     data-location="toronto, ontario hybrid"
@@ -3506,6 +3674,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="co-op student, assurance and accounting"
     data-company="mnp"
     data-location="kamloops, british columbia"
@@ -3544,6 +3714,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="co-op student, assurance &amp; accounting"
     data-company="mnp"
     data-location="prince george, british columbia"
@@ -3582,6 +3754,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="victoria office – cpa opportunities in private enterprise audit – summer internship – summer 2027 start"
     data-company="kpmg canada"
     data-location="victoria, british columbia"
@@ -3620,6 +3794,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="comptable intermediare - audit - certification"
     data-company="ey"
     data-location="montréal, qc h3a 0a8"
@@ -3658,6 +3834,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="intern or co-op student, assurance and accounting (winter 2027)"
     data-company="mnp"
     data-location="victoria, british columbia"
@@ -3696,6 +3874,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="co-op student - audit &amp; accounting - september 2026 (8 months)"
     data-company="baker tilly canada"
     data-location="toronto, ontario hybrid"
@@ -3734,6 +3914,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="finance intern, control and compliance"
     data-company="deciem | the abnormal beauty company"
     data-location="toronto, ontario hybrid"
@@ -3772,6 +3954,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="finance intern, control and compliance"
     data-company="deciem"
     data-location="toronto, on hybrid"
@@ -3814,13 +3998,15 @@
     <section class="category-section" id="risk-compliance">
         <h2 class="category-title">
             <a href="/finance/categories/risk-compliance/">Risk / Compliance</a>
-            <span class="category-count">12 positions</span>
+            <span class="category-count" data-category-count data-total-label="12 positions">12 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="intern - portfolio engineering, capital markets, cmia (september 2026 - 8 months)"
     data-company="ontario teachers&#39; pension plan"
     data-location="toronto, ontario hybrid"
@@ -3859,6 +4045,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="velocity - compliance &amp; aml internship/co-op - fall 2026"
     data-company="scotiabank"
     data-location="toronto, ontario"
@@ -3897,6 +4085,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="intern – market risk analyst (summer 2026)"
     data-company="bnp paribas"
     data-location="montreal, quebec hybrid"
@@ -3935,6 +4125,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="analyst, capital markets treasury, fall 2026 (co-op/internship) - 4 months"
     data-company="bmo"
     data-location="toronto, ontario"
@@ -3973,6 +4165,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="student internship, quantitative credit risk analyst"
     data-company="versabank"
     data-location="london, on"
@@ -4011,6 +4205,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="corporate credit analyst – intern (may – august 2026)"
     data-company="bnp paribas"
     data-location="montreal, quebec hybrid"
@@ -4049,6 +4245,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="business compliance analyst co-op"
     data-company="mohegan sun"
     data-location="niagara falls, on l2g 3w6"
@@ -4087,6 +4285,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="fall 2026 - grm, environmental &amp; social risk analyst intern (8 months)"
     data-company="rbc"
     data-location="toronto, ontario hybrid"
@@ -4125,6 +4325,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="2026 fall - grm, aml high risk client management intern (4 months - bedford, ns &amp; toronto, on)"
     data-company="rbc"
     data-location="bedford, nova scotia hybrid"
@@ -4163,6 +4365,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="canadian banking - accounting automotive finance internship/co-op - fall 2026 - anjou"
     data-company="scotiabank"
     data-location="montreal, quebec"
@@ -4201,6 +4405,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="canadian banking - accounting automotive finance internship/co-op - fall 2026"
     data-company="scotiabank"
     data-location="hamilton, on"
@@ -4239,6 +4445,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="junior credit analyst, mortgage valuations (term: may 2026 to aug 2026)"
     data-company="nesto"
     data-location="vancouver, british columbia hybrid"
@@ -4281,13 +4489,15 @@
     <section class="category-section" id="banking-insurance">
         <h2 class="category-title">
             <a href="/finance/categories/banking-insurance/">Banking / Insurance</a>
-            <span class="category-count">33 positions</span>
+            <span class="category-count" data-category-count data-total-label="33 positions">33 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="p&amp;l controller – intern"
     data-company="bnp paribas"
     data-location="montreal, quebec hybrid"
@@ -4326,6 +4536,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="internship"
     data-title="summer student 2026 - business restructuring"
     data-company="bdc"
     data-location="montreal, quebec hybrid"
@@ -4364,6 +4576,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="fall 2026 student - data analyst, commercial banking (4 months)"
     data-company="rbc"
     data-location="toronto, on m9w 0a4"
@@ -4402,6 +4616,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="fall 2026 student - strategy analyst, commercial banking (4 months)"
     data-company="rbc"
     data-location="toronto, on m9w 0a4"
@@ -4440,6 +4656,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="fall 2026 student - financial analyst, commercial banking (4 months)"
     data-company="rbc"
     data-location="toronto, on m9w 0a4"
@@ -4478,6 +4696,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="fall 2026 student - client relationship, commercial banking (4 months)"
     data-company="rbc"
     data-location="toronto, on m9w 0a4"
@@ -4516,6 +4736,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="2026 fall, commercial banking - relationship manager student intern (4 months)"
     data-company="rbc"
     data-location="montréal, qc"
@@ -4554,6 +4776,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="2026 fall, commercial banking- relationship manager student intern (4 months)"
     data-company="rbc"
     data-location="surrey, british columbia"
@@ -4592,6 +4816,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="2026 fall, commercial banking -  commercial banking advisor student intern (4  months)"
     data-company="rbc"
     data-location="oshawa, ontario"
@@ -4630,6 +4856,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="2026 fall, commercial banking - relationship manager student intern (4 months)- en"
     data-company="rbc"
     data-location="montreal, quebec"
@@ -4668,6 +4896,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="2026 fall, commercial banking - commercial banking advisor student intern"
     data-company="rbc"
     data-location="oshawa, on l1g 7w1"
@@ -4706,6 +4936,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="fall 2026 student - data analyst, commercial banking"
     data-company="rbc"
     data-location="toronto, ontario"
@@ -4744,6 +4976,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="fall 2026 student - financial analyst, commercial banking"
     data-company="rbc"
     data-location="toronto, ontario"
@@ -4782,6 +5016,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="fall 2026 student - strategy analyst, commercial banking"
     data-company="rbc"
     data-location="toronto, ontario"
@@ -4820,6 +5056,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="fall 2026 student - client relationship, commercial banking"
     data-company="rbc"
     data-location="toronto, ontario"
@@ -4858,6 +5096,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="2026 fall, commercial banking - relationship manager student intern"
     data-company="rbc"
     data-location="toronto, ontario"
@@ -4896,6 +5136,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="2026 fall, commercial banking- relationship manager student intern"
     data-company="rbc"
     data-location="surrey, british columbia"
@@ -4934,6 +5176,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="2026 fall, commercial banking -  commercial banking advisor student intern"
     data-company="rbc"
     data-location="oshawa, ontario"
@@ -4972,6 +5216,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="aspire commercial banking - national accounts - fall 2026 co-op / internship gta"
     data-company="scotiabank"
     data-location="toronto, ontario"
@@ -5010,6 +5256,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="aspire commercial banking - real estate banking - fall 2026 co-op / internship vancouver"
     data-company="scotiabank"
     data-location="vancouver, british columbia"
@@ -5048,6 +5296,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="aspire commercial banking - national accounts - fall 2026 co-op / internship montreal"
     data-company="scotiabank"
     data-location="montreal, quebec"
@@ -5086,6 +5336,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="aspire commercial banking - real estate banking - fall 2026 co-op / internship montreal"
     data-company="scotiabank"
     data-location="montreal, quebec"
@@ -5124,6 +5376,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="aspire commercial banking - indigenous financial services - fall 2026 co-op / internship"
     data-company="scotiabank"
     data-location="toronto, ontario"
@@ -5162,6 +5416,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="aspire commercial banking - real estate banking - fall 2026 co-op / internship toronto"
     data-company="scotiabank"
     data-location="toronto, ontario"
@@ -5200,6 +5456,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="aspire commercial banking - global transaction banking - strategy fall 2026 co-op/internship toronto"
     data-company="scotiabank"
     data-location="toronto, ontario"
@@ -5238,6 +5496,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="aspire commercial banking - global transaction banking - sales fall 2026 co-op/internship toronto"
     data-company="scotiabank"
     data-location="toronto, ontario"
@@ -5276,6 +5536,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="aspire commercial banking - agriculture - fall 2026 co-op / internship - stratford"
     data-company="scotiabank"
     data-location="stratford, ontario"
@@ -5314,6 +5576,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="aspire commercial banking - mid-market - fall 2026 co-op / internship - quebec"
     data-company="scotiabank"
     data-location="québec, quebec"
@@ -5352,6 +5616,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="aspire commercial banking - agriculture - fall 2026 co-op / internship - prairies"
     data-company="scotiabank"
     data-location="red deer, alberta"
@@ -5390,6 +5656,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="aspire commercial banking - mid-market - fall 2026 co-op / internship - british columbia"
     data-company="scotiabank"
     data-location="vancouver, british columbia"
@@ -5428,6 +5696,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="aspire commercial banking - mid-market - fall 2026 co-op / internship - ontario"
     data-company="scotiabank"
     data-location="barrie, ontario"
@@ -5466,6 +5736,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="aspire commercial banking - mid-market - fall 2026 co-op / internship - manitoba"
     data-company="scotiabank"
     data-location="winnipeg, manitoba"
@@ -5504,6 +5776,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="internship"
     data-title="aspire commercial banking - national office - fall 2026 co-op / internship"
     data-company="scotiabank"
     data-location="toronto, ontario"
@@ -5978,40 +6252,57 @@
         if (searchForm) {
             var keywordInput = searchForm.querySelector('[data-job-search-input]');
             var locationInput = searchForm.querySelector('[data-job-location-input]');
-            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var workModeInput = searchForm.querySelector('[data-job-work-mode-input]');
             var feedback = document.querySelector('[data-job-search-feedback]');
+            var emptyState = document.querySelector('[data-job-search-empty]');
             var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
             var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var staticSections = Array.prototype.slice.call(document.querySelectorAll('[data-search-static]'));
             var normalize = function(value) {
                 return (value || '').toString().toLowerCase().trim();
             };
-            var matchesRoleType = function(card, roleValue) {
-                if (!roleValue) return true;
-                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
-                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
-                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            var matchesWorkMode = function(card, modeValue) {
+                if (!modeValue) return true;
+                var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                var location = normalize(card.getAttribute('data-location'));
+                var isRemote = card.getAttribute('data-remote') === 'true' || text.indexOf('remote') !== -1 || location.indexOf('remote') !== -1;
+                var isHybrid = card.getAttribute('data-hybrid') === 'true' || text.indexOf('hybrid') !== -1 || location.indexOf('hybrid') !== -1;
+                if (modeValue === 'remote') return isRemote;
+                if (modeValue === 'hybrid') return isHybrid;
+                if (modeValue === 'onsite') return !isRemote && !isHybrid;
+                return true;
             };
             var applySearch = function() {
                 var keyword = normalize(keywordInput && keywordInput.value);
                 var location = normalize(locationInput && locationInput.value);
-                var roleType = normalize(typeInput && typeInput.value);
+                var workMode = normalize(workModeInput && workModeInput.value);
                 var visibleCount = 0;
                 jobCards.forEach(function(card) {
                     var text = normalize(card.getAttribute('data-search-text') || card.textContent);
                     var cardLocation = normalize(card.getAttribute('data-location'));
                     var visible = (!keyword || text.indexOf(keyword) !== -1) &&
                         (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
-                        matchesRoleType(card, roleType);
+                        matchesWorkMode(card, workMode);
                     card.hidden = !visible;
                     if (visible) visibleCount += 1;
                 });
+                var hasFilter = keyword || location || workMode;
                 categorySections.forEach(function(section) {
-                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    var visibleInSection = Array.prototype.slice.call(section.querySelectorAll('.job-card')).filter(function(card) { return !card.hidden; }).length;
+                    var sectionVisible = visibleInSection > 0;
                     section.hidden = !sectionVisible;
+                    var count = section.querySelector('[data-category-count]');
+                    if (count) {
+                        count.textContent = hasFilter ? (visibleInSection + ' matching') : (count.getAttribute('data-total-label') || count.textContent);
+                    }
                 });
+                staticSections.forEach(function(section) { section.hidden = !!hasFilter; });
+                document.body.classList.toggle('search-active', !!hasFilter);
                 if (feedback) {
-                    var hasFilter = keyword || location || roleType;
-                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                    feedback.textContent = hasFilter ? ('Showing ' + visibleCount + ' of ' + jobCards.length + ' jobs matching filters on this page') : '';
+                }
+                if (emptyState) {
+                    emptyState.hidden = !hasFilter || visibleCount > 0;
                 }
             };
             ['input', 'change'].forEach(function(eventName) {

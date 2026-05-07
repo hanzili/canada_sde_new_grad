@@ -296,9 +296,9 @@
         <p class="hero-kicker">Daily-updated Canadian student jobs</p>
         <h1>2026 Canadian Business Jobs</h1>
         <p class="page-subtitle">Search 89 positions from company career pages across internships, co-ops, new grad, junior, and entry-level roles.</p>
-        <form class="job-search-panel" role="search" aria-label="Filter visible Hanzilla jobs" data-job-search-form>
+        <form class="job-search-panel" role="search" aria-label="Filter jobs on this page" data-job-search-form>
             <label class="search-field search-field-keyword">
-                <span>Keyword</span>
+                <span>Search this page</span>
                 <input type="search" name="keyword" placeholder="Title, company, skill…" autocomplete="off" data-job-search-input>
             </label>
             <label class="search-field">
@@ -306,39 +306,44 @@
                 <input type="search" name="location" placeholder="Toronto, Vancouver, remote…" autocomplete="off" data-job-location-input>
             </label>
             <label class="search-field search-field-select">
-                <span>Role type</span>
-                <select name="role_type" data-job-type-input>
-                    <option value="">All roles</option>
-                    <option value="intern">Internships / co-ops</option>
-                    <option value="new grad junior entry-level">New grad / junior</option>
+                <span>Work mode</span>
+                <select name="work_mode" data-job-work-mode-input>
+                    <option value="">Any mode</option>
                     <option value="remote">Remote</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="onsite">On-site</option>
                 </select>
             </label>
-            <button class="hero-cta hero-cta-primary search-submit" type="submit">Search jobs</button>
+            <button class="hero-cta hero-cta-primary search-submit" type="submit">Filter jobs</button>
         </form>
         <div class="search-feedback" data-job-search-feedback aria-live="polite"></div>
-        <div class="landing-hero-actions quick-filters" aria-label="Popular job searches">
-            <a class="hero-cta" href="/internships/">Internships & co-ops</a>
-            <a class="hero-cta" href="/new-grad/">New grad jobs</a>
+        <div class="stage-switcher" aria-label="Choose job stage">
+            <span class="stage-switcher-label">I’m looking for</span>
+            <a class="stage-tab active" href="/business/">New grad / junior</a>
+            <a class="stage-tab " href="/business/internships/">Internships / co-ops</a>
+        </div>
+        <p class="search-scope-note">Search filters the jobs loaded on this page. Use the stage links above to switch between full-time new grad roles and internships.</p>
+        <div class="landing-hero-actions quick-filters" aria-label="Popular job searches" data-search-static>
             <a class="hero-cta" href="/locations/toronto/">Toronto</a>
             <a class="hero-cta" href="/locations/vancouver/">Vancouver</a>
+            <a class="hero-cta" href="/locations/remote/">Remote Canada</a>
             <a class="hero-cta" href="/finance/">Finance</a>
             <a class="hero-cta" href="/engineering/">Engineering</a>
         </div>
-        <div class="landing-proof-points" aria-label="Why students use Hanzilla">
+        <div class="landing-proof-points" aria-label="Why students use Hanzilla" data-search-static>
             <span><strong>Updated daily</strong> fresh roles stay visible</span>
             <span><strong>Direct apply</strong> links to company career pages</span>
             <span><strong>Student-first</strong> Canada-specific filters</span>
         </div>
         
             
-            <p class="cross-link">Looking for internships? <a href="/business/internships/">Business Internships</a> · Also browse <a href="/">all student jobs</a></p>
+            <p class="cross-link" data-search-static>Looking for internships? <a href="/business/internships/">Business Internships</a> · Also browse <a href="/">all student jobs</a></p>
             
         
     </header>
 
     
-    <section class="latest-jobs-strip" aria-labelledby="latest-jobs-title">
+    <section class="latest-jobs-strip" aria-labelledby="latest-jobs-title" data-search-static>
         <div class="latest-jobs-header">
             <div>
                 <p class="section-kicker">Hiring now</p>
@@ -380,14 +385,14 @@
     
 
     <!-- SEO intro content -->
-    <div class="intro-content">
+    <div class="intro-content" data-search-static>
         
         <p>Discover <strong>entry-level jobs for Canadian university students and new grads</strong> across Canada. Whether you're graduating, looking for a junior role, or comparing early-career paths, Hanzilla curates student-friendly roles across tech, finance, engineering, business, sciences, and more. Updated daily with fresh positions and direct apply links.</p>
         
     </div>
 
     
-    <section class="seo-content-block">
+    <section class="seo-content-block" data-search-static>
         <h2>How to use this business jobs board</h2>
         <p>This daily-updated page is built for Canadian students and recent grads searching for business new grad, junior, and entry-level roles: marketing, sales, operations, HR, consulting, supply chain, project coordination, customer success, and business analyst roles. Hanzilla turns scattered early-career business roles into a student-first list, including coordinator, analyst, associate, trainee, and rotational openings that generic boards often bury.</p>
         <ul class="seo-content-list">
@@ -413,12 +418,17 @@
     </section>
     
 
-    <div class="emoji-legend">
+    <div class="emoji-legend" data-search-static>
         <div class="legend-item"><span class="emoji">🔥</span> Strong fit - fresh, selective, or high-signal student opportunity</div>
         <div class="legend-item"><span class="emoji">💤</span> Review carefully - role may be less relevant, older, or less student-focused</div>
     </div>
 
-    <nav class="category-nav">
+    <div class="job-search-empty" data-job-search-empty hidden>
+        <strong>No matches on this page.</strong>
+        <span>Try a broader keyword, clear location, or switch between New grad and Internships above.</span>
+    </div>
+
+    <nav class="category-nav" data-search-static>
         <h2>Browse by Category</h2>
         <ul class="category-chips">
             
@@ -484,13 +494,15 @@
     <section class="category-section" id="marketing-digital-marketing">
         <h2 class="category-title">
             <a href="/business/categories/marketing-digital-marketing/">Marketing / Digital Marketing</a>
-            <span class="category-count">9 positions</span>
+            <span class="category-count" data-category-count data-total-label="9 positions">9 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="content creator – part-time / contract / entry level (4 hours / month)"
     data-company="national social networking group"
     data-location="ottawa, ontario"
@@ -529,6 +541,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior content writer"
     data-company="limelitt"
     data-location="heart’s content, newfoundland and labrador"
@@ -567,6 +581,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior in-house designer / content creator"
     data-company="tridon communications"
     data-location="edmonton, alberta hybrid"
@@ -605,6 +621,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="digital marketing associate (entry level)"
     data-company="osim"
     data-location="harriston, ontario"
@@ -643,6 +661,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="marketing coordinator"
     data-company="goodwork environmental jobs"
     data-location="toronto, ontario"
@@ -681,6 +701,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior ppc &amp; social media manager"
     data-company="zoomd"
     data-location="ontario"
@@ -719,6 +741,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior social content creator (tiktok &amp; instagram) – part-time"
     data-company="bprotect inc."
     data-location="none"
@@ -757,6 +781,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior content creator"
     data-company="foreshew design associates inc."
     data-location="port carling, ontario"
@@ -795,6 +821,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior marketing content creator"
     data-company="rb digital"
     data-location="richmond hill, ontario"
@@ -837,13 +865,15 @@
     <section class="category-section" id="business-analysis-consulting">
         <h2 class="category-title">
             <a href="/business/categories/business-analysis-consulting/">Business Analysis / Consulting</a>
-            <span class="category-count">7 positions</span>
+            <span class="category-count" data-category-count data-total-label="7 positions">7 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior business analyst - weins corporate (co)"
     data-company="weins auto group"
     data-location="markham, on l3r 2m5"
@@ -882,6 +912,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior business analyst and workflow analyst"
     data-company="zenatech inc."
     data-location="toronto, ontario"
@@ -920,6 +952,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="rq10875 - business analyst - junior"
     data-company="s m software solutions inc"
     data-location="toronto, ontario"
@@ -958,6 +992,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="associate business analyst - entry level"
     data-company="ibm"
     data-location="bedford, nova scotia hybrid"
@@ -996,6 +1032,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="business analyst - junior"
     data-company="the code crackers inc."
     data-location="toronto, on"
@@ -1034,6 +1072,8 @@
             <li class="job-card job-snooze"
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior business analyst (north york, on) - hybrid"
     data-company="enbridge"
     data-location="north york, on m2j 1p8 hybrid"
@@ -1072,6 +1112,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="jr. business analyst (bilingual)"
     data-company="orion innovation"
     data-location="montreal, quebec hybrid"
@@ -1114,13 +1156,15 @@
     <section class="category-section" id="hr-people-recruiting">
         <h2 class="category-title">
             <a href="/business/categories/hr-people-recruiting/">HR / People / Recruiting</a>
-            <span class="category-count">8 positions</span>
+            <span class="category-count" data-category-count data-total-label="8 positions">8 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="human resources associate"
     data-company="alberta igaming corporation (aigc)"
     data-location="greater edmonton metropolitan area"
@@ -1159,6 +1203,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="craft recruiter - entry level"
     data-company="golderado contracting corp"
     data-location="fort saskatchewan, ab"
@@ -1197,6 +1243,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior it recruiter"
     data-company="ydc pro"
     data-location="toronto, ontario hybrid"
@@ -1235,6 +1283,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="student hr coordinator - kamloops, bc"
     data-company="arrow transportation systems inc."
     data-location="kamloops, british columbia"
@@ -1273,6 +1323,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior recruiter"
     data-company="r.w. tomlinson"
     data-location="ottawa, on"
@@ -1311,6 +1363,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior payroll &amp; human resources administrator"
     data-company="magnus hrs"
     data-location="toronto, on"
@@ -1349,6 +1403,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="human resources global trainee"
     data-company="gabriella &amp; co"
     data-location="sault ste. marie, ontario"
@@ -1387,6 +1443,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="human resources rotational analyst – graduate"
     data-company="bnp paribas"
     data-location="montreal, quebec hybrid"
@@ -1429,13 +1487,15 @@
     <section class="category-section" id="supply-chain-logistics">
         <h2 class="category-title">
             <a href="/business/categories/supply-chain-logistics/">Supply Chain / Logistics</a>
-            <span class="category-count">11 positions</span>
+            <span class="category-count" data-category-count data-total-label="11 positions">11 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior buyer"
     data-company="cementation americas"
     data-location="north bay, ontario"
@@ -1474,6 +1534,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior buyer/purchaser"
     data-company="imp aerospace &amp; defence"
     data-location="hammonds plains, nova scotia"
@@ -1512,6 +1574,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="jr. purchasing agent"
     data-company="jatec"
     data-location="edmonton, ab t6b 2j8"
@@ -1550,6 +1614,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior buyer (1 year contract)"
     data-company="hörmann north america"
     data-location="oro-medonte, ontario"
@@ -1588,6 +1654,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior buyer"
     data-company="calian group"
     data-location="ottawa, ontario"
@@ -1626,6 +1694,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior buyer (1 year contract)"
     data-company="hörmann"
     data-location="oro-medonte, on"
@@ -1664,6 +1734,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior buyer"
     data-company="calian"
     data-location="ottawa, on"
@@ -1702,6 +1774,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior purchasing coordinator"
     data-company="echo power equipment (canada)"
     data-location="london, ontario"
@@ -1740,6 +1814,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="project coordinator / junior quotes-en"
     data-company="guillevin"
     data-location="burnaby, british columbia"
@@ -1778,6 +1854,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="project coordinator / junior quotes-fr"
     data-company="guillevin"
     data-location="burnaby, british columbia"
@@ -1816,6 +1894,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior supply chain planner"
     data-company="microart services, inc."
     data-location="markham, on l6g 1b5"
@@ -1858,13 +1938,15 @@
     <section class="category-section" id="sales-business-development">
         <h2 class="category-title">
             <a href="/business/categories/sales-business-development/">Sales / Business Development</a>
-            <span class="category-count">37 positions</span>
+            <span class="category-count" data-category-count data-total-label="37 positions">37 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="inside sales associate- sally beauty- 05537"
     data-company="sally beauty"
     data-location="abbotsford, british columbia"
@@ -1903,6 +1985,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="sales associate"
     data-company="autocanada"
     data-location="spruce grove, alberta"
@@ -1941,6 +2025,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="sales associate"
     data-company="mercedes-benz thornhill"
     data-location="vaughan, ontario"
@@ -1979,6 +2065,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="lumber &amp; building supply sales associate"
     data-company="united lumber home hardware building ctr"
     data-location="georgetown, on l7g 4b3"
@@ -2017,6 +2105,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="sales associate (english &amp; russian speaking preferred)"
     data-company="wirelesswave"
     data-location="vaughan, on"
@@ -2055,6 +2145,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="sales associate (english &amp; spanish/ portuguese speaking preferred)"
     data-company="tbooth wireless"
     data-location="toronto, on"
@@ -2093,6 +2185,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="sales associate"
     data-company="ardene"
     data-location="surrey, british columbia"
@@ -2131,6 +2225,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="sales associate (english &amp; russian speaking preferred)"
     data-company="wirelesswave / wave sans fil"
     data-location="vaughan, ontario"
@@ -2169,6 +2265,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="retail sales associate, aberdeen mall"
     data-company="bell"
     data-location="kamloops, british columbia"
@@ -2207,6 +2305,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="full or part-time sales associate - fran 2381"
     data-company="pet valu"
     data-location="brampton, ontario"
@@ -2245,6 +2345,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="full time - sales associate - fran 2399"
     data-company="pet valu"
     data-location="kanata, ontario"
@@ -2283,6 +2385,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="full time sales associate - fran 2411"
     data-company="pet valu"
     data-location="toronto, ontario"
@@ -2321,6 +2425,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="hardware sales associate: full time - abbotsford"
     data-company="the home depot canada"
     data-location="abbotsford, british columbia"
@@ -2359,6 +2465,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior buyer"
     data-company="secure"
     data-location="saskatoon, saskatchewan"
@@ -2397,6 +2505,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior sales representative"
     data-company="pcl graphics"
     data-location="markham, on l6g 1b9"
@@ -2435,6 +2545,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="sales representative - jr &amp; trauma - winnipeg"
     data-company="stryker"
     data-location="vancouver, british columbia hybrid"
@@ -2473,6 +2585,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="territory sales associate - annapolis valley/yarmouth area, nova scotia"
     data-company="pretzels, inc"
     data-location="halifax, nova scotia"
@@ -2511,6 +2625,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior account manager"
     data-company="crystal int&#39;l (group) inc. &amp; crystal claire cosmetics inc."
     data-location="scarborough, ontario"
@@ -2549,6 +2665,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="sales representative trainee"
     data-company="herc rentals"
     data-location="north york, ontario"
@@ -2587,6 +2705,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="retail sales associate, devonshire mall"
     data-company="virgin plus"
     data-location="windsor, ontario"
@@ -2625,6 +2745,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="trailer sales representative (entry level)"
     data-company="flaman group of companies"
     data-location="saskatoon, sk s7k 3j7"
@@ -2663,6 +2785,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="retail sales associate, richmond centre"
     data-company="virgin plus"
     data-location="richmond, british columbia"
@@ -2701,6 +2825,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="leaffilter - entry level sales representative - canada (winnipeg)"
     data-company="leaf home"
     data-location="winnipeg, manitoba"
@@ -2739,6 +2865,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior inside sales person"
     data-company="electro-federation canada"
     data-location="richmond hill, on l4b 1g5"
@@ -2777,6 +2905,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="leaffilter - entry level sales representative - canada (vancouver-abbotsford)"
     data-company="leaf home"
     data-location="port coquitlam, british columbia"
@@ -2815,6 +2945,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior account executive"
     data-company="incture"
     data-location="calgary, alberta"
@@ -2853,6 +2985,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="kobo sales representative – mother’s day event"
     data-company="acosta group"
     data-location="east york, ontario"
@@ -2891,6 +3025,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior inside sales representative"
     data-company="arxium"
     data-location="winnipeg, manitoba"
@@ -2929,6 +3065,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="gestionnaire de comptes junior / junior account manager"
     data-company="rocket de laval"
     data-location="montreal, quebec"
@@ -2967,6 +3105,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="field sales representative – rogers (entry level)"
     data-company="rogers communications"
     data-location="fredericton, new brunswick"
@@ -3005,6 +3145,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="entry level sales representative"
     data-company="the acquisition group"
     data-location="abbotsford, british columbia"
@@ -3043,6 +3185,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="sdr/junior account manager"
     data-company="high tech genesis"
     data-location="ottawa, ontario hybrid"
@@ -3081,6 +3225,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="sales representative trainee"
     data-company="herc rentals"
     data-location="north york, on m3j 1y9"
@@ -3119,6 +3265,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="sales representative (entry level)"
     data-company="avantier inc."
     data-location="vancouver, british columbia hybrid"
@@ -3157,6 +3305,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior sales representative"
     data-company="walker lovell"
     data-location="quebec"
@@ -3195,6 +3345,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="sales representative (entry level)"
     data-company="avantier"
     data-location="vancouver, bc v6b 1n2 hybrid"
@@ -3233,6 +3385,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="sales representative (entry level)"
     data-company="avantier"
     data-location="toronto, on m2n 5p6 hybrid"
@@ -3275,13 +3429,15 @@
     <section class="category-section" id="project-program-management">
         <h2 class="category-title">
             <a href="/business/categories/project-program-management/">Project / Program Management</a>
-            <span class="category-count">17 positions</span>
+            <span class="category-count" data-category-count data-total-label="17 positions">17 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior program coordinator"
     data-company="collabera"
     data-location="mississauga, ontario hybrid"
@@ -3320,6 +3476,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="chargé(e) de projets - formation accélérée / trainee project coordinator"
     data-company="guillevin"
     data-location="gatineau, qc"
@@ -3358,6 +3516,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior estimator / project manager assistant"
     data-company="paul davis restoration of the national capital region, va"
     data-location="sudbury, ontario"
@@ -3396,6 +3556,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior engineering project coordinator"
     data-company="hydra dyne technology inc"
     data-location="ingersoll, on"
@@ -3434,6 +3596,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="project coordinator / junior quotes"
     data-company="guillevin"
     data-location="burnaby, bc v5c 5v1"
@@ -3472,6 +3636,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="jr. project coordinator"
     data-company="aecon group inc."
     data-location="bowmanville, ontario"
@@ -3510,6 +3676,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior estimator/project manager"
     data-company="bruno&#39;s contracting"
     data-location="thunder bay, on p7b 5v5"
@@ -3548,6 +3716,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior quality program manager"
     data-company="ciena"
     data-location="greater ottawa metropolitan area"
@@ -3586,6 +3756,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior estimator / project manager assistant"
     data-company="paul davis sudbury manitoulin"
     data-location="greater sudbury, on"
@@ -3624,6 +3796,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior project coordinator"
     data-company="casman group of companies"
     data-location="edmonton, alberta"
@@ -3662,6 +3836,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior project coordinator"
     data-company="casman inc"
     data-location="edmonton, ab t6e 5a6"
@@ -3700,6 +3876,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="project coordinator / junior project support"
     data-company="raise"
     data-location="ontario"
@@ -3738,6 +3916,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior construction after-disaster project manager"
     data-company="paul davis restoration of the national capital region, va"
     data-location="saint-rémi-d’amherst, quebec"
@@ -3776,6 +3956,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior project manager"
     data-company="trench group"
     data-location="scarborough, ontario"
@@ -3814,6 +3996,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior project coordinator"
     data-company="fortran steel contracting ltd"
     data-location="ottawa, ontario"
@@ -3852,6 +4036,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior scrum master"
     data-company="bison transport"
     data-location="winnipeg, mb r3h 0t8"
@@ -3890,6 +4076,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior scrum master"
     data-company="bison transport inc."
     data-location="winnipeg, manitoba"
@@ -4358,40 +4546,57 @@
         if (searchForm) {
             var keywordInput = searchForm.querySelector('[data-job-search-input]');
             var locationInput = searchForm.querySelector('[data-job-location-input]');
-            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var workModeInput = searchForm.querySelector('[data-job-work-mode-input]');
             var feedback = document.querySelector('[data-job-search-feedback]');
+            var emptyState = document.querySelector('[data-job-search-empty]');
             var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
             var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var staticSections = Array.prototype.slice.call(document.querySelectorAll('[data-search-static]'));
             var normalize = function(value) {
                 return (value || '').toString().toLowerCase().trim();
             };
-            var matchesRoleType = function(card, roleValue) {
-                if (!roleValue) return true;
-                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
-                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
-                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            var matchesWorkMode = function(card, modeValue) {
+                if (!modeValue) return true;
+                var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                var location = normalize(card.getAttribute('data-location'));
+                var isRemote = card.getAttribute('data-remote') === 'true' || text.indexOf('remote') !== -1 || location.indexOf('remote') !== -1;
+                var isHybrid = card.getAttribute('data-hybrid') === 'true' || text.indexOf('hybrid') !== -1 || location.indexOf('hybrid') !== -1;
+                if (modeValue === 'remote') return isRemote;
+                if (modeValue === 'hybrid') return isHybrid;
+                if (modeValue === 'onsite') return !isRemote && !isHybrid;
+                return true;
             };
             var applySearch = function() {
                 var keyword = normalize(keywordInput && keywordInput.value);
                 var location = normalize(locationInput && locationInput.value);
-                var roleType = normalize(typeInput && typeInput.value);
+                var workMode = normalize(workModeInput && workModeInput.value);
                 var visibleCount = 0;
                 jobCards.forEach(function(card) {
                     var text = normalize(card.getAttribute('data-search-text') || card.textContent);
                     var cardLocation = normalize(card.getAttribute('data-location'));
                     var visible = (!keyword || text.indexOf(keyword) !== -1) &&
                         (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
-                        matchesRoleType(card, roleType);
+                        matchesWorkMode(card, workMode);
                     card.hidden = !visible;
                     if (visible) visibleCount += 1;
                 });
+                var hasFilter = keyword || location || workMode;
                 categorySections.forEach(function(section) {
-                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    var visibleInSection = Array.prototype.slice.call(section.querySelectorAll('.job-card')).filter(function(card) { return !card.hidden; }).length;
+                    var sectionVisible = visibleInSection > 0;
                     section.hidden = !sectionVisible;
+                    var count = section.querySelector('[data-category-count]');
+                    if (count) {
+                        count.textContent = hasFilter ? (visibleInSection + ' matching') : (count.getAttribute('data-total-label') || count.textContent);
+                    }
                 });
+                staticSections.forEach(function(section) { section.hidden = !!hasFilter; });
+                document.body.classList.toggle('search-active', !!hasFilter);
                 if (feedback) {
-                    var hasFilter = keyword || location || roleType;
-                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                    feedback.textContent = hasFilter ? ('Showing ' + visibleCount + ' of ' + jobCards.length + ' jobs matching filters on this page') : '';
+                }
+                if (emptyState) {
+                    emptyState.hidden = !hasFilter || visibleCount > 0;
                 }
             };
             ['input', 'change'].forEach(function(eventName) {

@@ -296,9 +296,9 @@
         <p class="hero-kicker">Daily-updated Canadian student jobs</p>
         <h1>2026 Canadian Finance Jobs</h1>
         <p class="page-subtitle">Search 110 positions from company career pages across internships, co-ops, new grad, junior, and entry-level roles.</p>
-        <form class="job-search-panel" role="search" aria-label="Filter visible Hanzilla jobs" data-job-search-form>
+        <form class="job-search-panel" role="search" aria-label="Filter jobs on this page" data-job-search-form>
             <label class="search-field search-field-keyword">
-                <span>Keyword</span>
+                <span>Search this page</span>
                 <input type="search" name="keyword" placeholder="Title, company, skill…" autocomplete="off" data-job-search-input>
             </label>
             <label class="search-field">
@@ -306,39 +306,44 @@
                 <input type="search" name="location" placeholder="Toronto, Vancouver, remote…" autocomplete="off" data-job-location-input>
             </label>
             <label class="search-field search-field-select">
-                <span>Role type</span>
-                <select name="role_type" data-job-type-input>
-                    <option value="">All roles</option>
-                    <option value="intern">Internships / co-ops</option>
-                    <option value="new grad junior entry-level">New grad / junior</option>
+                <span>Work mode</span>
+                <select name="work_mode" data-job-work-mode-input>
+                    <option value="">Any mode</option>
                     <option value="remote">Remote</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="onsite">On-site</option>
                 </select>
             </label>
-            <button class="hero-cta hero-cta-primary search-submit" type="submit">Search jobs</button>
+            <button class="hero-cta hero-cta-primary search-submit" type="submit">Filter jobs</button>
         </form>
         <div class="search-feedback" data-job-search-feedback aria-live="polite"></div>
-        <div class="landing-hero-actions quick-filters" aria-label="Popular job searches">
-            <a class="hero-cta" href="/internships/">Internships & co-ops</a>
-            <a class="hero-cta" href="/new-grad/">New grad jobs</a>
+        <div class="stage-switcher" aria-label="Choose job stage">
+            <span class="stage-switcher-label">I’m looking for</span>
+            <a class="stage-tab active" href="/finance/">New grad / junior</a>
+            <a class="stage-tab " href="/finance/internships/">Internships / co-ops</a>
+        </div>
+        <p class="search-scope-note">Search filters the jobs loaded on this page. Use the stage links above to switch between full-time new grad roles and internships.</p>
+        <div class="landing-hero-actions quick-filters" aria-label="Popular job searches" data-search-static>
             <a class="hero-cta" href="/locations/toronto/">Toronto</a>
             <a class="hero-cta" href="/locations/vancouver/">Vancouver</a>
+            <a class="hero-cta" href="/locations/remote/">Remote Canada</a>
             <a class="hero-cta" href="/finance/">Finance</a>
             <a class="hero-cta" href="/engineering/">Engineering</a>
         </div>
-        <div class="landing-proof-points" aria-label="Why students use Hanzilla">
+        <div class="landing-proof-points" aria-label="Why students use Hanzilla" data-search-static>
             <span><strong>Updated daily</strong> fresh roles stay visible</span>
             <span><strong>Direct apply</strong> links to company career pages</span>
             <span><strong>Student-first</strong> Canada-specific filters</span>
         </div>
         
             
-            <p class="cross-link">Looking for internships? <a href="/finance/internships/">Finance Internships</a> · Also browse <a href="/">all student jobs</a></p>
+            <p class="cross-link" data-search-static>Looking for internships? <a href="/finance/internships/">Finance Internships</a> · Also browse <a href="/">all student jobs</a></p>
             
         
     </header>
 
     
-    <section class="latest-jobs-strip" aria-labelledby="latest-jobs-title">
+    <section class="latest-jobs-strip" aria-labelledby="latest-jobs-title" data-search-static>
         <div class="latest-jobs-header">
             <div>
                 <p class="section-kicker">Hiring now</p>
@@ -380,14 +385,14 @@
     
 
     <!-- SEO intro content -->
-    <div class="intro-content">
+    <div class="intro-content" data-search-static>
         
         <p>Discover <strong>entry-level jobs for Canadian university students and new grads</strong> across Canada. Whether you're graduating, looking for a junior role, or comparing early-career paths, Hanzilla curates student-friendly roles across tech, finance, engineering, business, sciences, and more. Updated daily with fresh positions and direct apply links.</p>
         
     </div>
 
     
-    <section class="seo-content-block">
+    <section class="seo-content-block" data-search-static>
         <h2>How to use this finance jobs board</h2>
         <p>This daily-updated page is built for Canadian students and recent grads searching for finance new grad, junior, and entry-level roles: banking, accounting, audit, insurance, actuarial, risk, wealth management, and finance rotation programs. Hanzilla separates analyst-style roles, internships, and new-grad openings so students do not have to search every bank, insurer, accounting firm, and pension fund career page manually.</p>
         <ul class="seo-content-list">
@@ -413,12 +418,17 @@
     </section>
     
 
-    <div class="emoji-legend">
+    <div class="emoji-legend" data-search-static>
         <div class="legend-item"><span class="emoji">🔥</span> Strong fit - fresh, selective, or high-signal student opportunity</div>
         <div class="legend-item"><span class="emoji">💤</span> Review carefully - role may be less relevant, older, or less student-focused</div>
     </div>
 
-    <nav class="category-nav">
+    <div class="job-search-empty" data-job-search-empty hidden>
+        <strong>No matches on this page.</strong>
+        <span>Try a broader keyword, clear location, or switch between New grad and Internships above.</span>
+    </div>
+
+    <nav class="category-nav" data-search-static>
         <h2>Browse by Category</h2>
         <ul class="category-chips">
             
@@ -475,13 +485,15 @@
     <section class="category-section" id="investment-banking-capital-markets">
         <h2 class="category-title">
             <a href="/finance/categories/investment-banking-capital-markets/">Investment Banking / Capital Markets</a>
-            <span class="category-count">3 positions</span>
+            <span class="category-count" data-category-count data-total-label="3 positions">3 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card job-hot"
     data-remote="true"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior financial analyst"
     data-company="mercor"
     data-location="toronto, ontario"
@@ -520,6 +532,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior securities lending trader, north american equities"
     data-company="bny"
     data-location="toronto, ontario"
@@ -558,6 +572,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="investment banking program junior associate"
     data-company="wells fargo"
     data-location="toronto, ontario"
@@ -600,13 +616,15 @@
     <section class="category-section" id="accounting-fp-a">
         <h2 class="category-title">
             <a href="/finance/categories/accounting-fp-a/">Accounting / FP&amp;A</a>
-            <span class="category-count">77 positions</span>
+            <span class="category-count" data-category-count data-total-label="77 positions">77 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="private equity fund administration - associate"
     data-company="jpmorganchase"
     data-location="toronto, on m2j 1r4"
@@ -645,6 +663,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="accounting associate"
     data-company="ghy international"
     data-location="winnipeg, mb r3b 3h8"
@@ -683,6 +703,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="jr. accountant - 028-2026"
     data-company="fort mckay first nation"
     data-location="fort mackay, ab"
@@ -721,6 +743,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="accounting associate - accounts payable"
     data-company="imperial dade"
     data-location="saint-laurent, qc hybrid"
@@ -759,6 +783,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior accountant"
     data-company="marathon mortgage corp."
     data-location="greater toronto area hybrid"
@@ -797,6 +823,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior accountant"
     data-company="compass group"
     data-location="london, on hybrid"
@@ -835,6 +863,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="accountant"
     data-company="enterprise mobility"
     data-location="halifax, nova scotia"
@@ -873,6 +903,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant"
     data-company="yabu pushelberg"
     data-location="toronto, on m4m 3m3"
@@ -911,6 +943,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior financial analyst"
     data-company="ratehub"
     data-location="remote hybrid"
@@ -949,6 +983,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior financial analyst"
     data-company="ratehub.ca"
     data-location="toronto, ontario"
@@ -987,6 +1023,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant, project bookkeeping"
     data-company="tridel"
     data-location="north york, ontario"
@@ -1025,6 +1063,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="accountant"
     data-company="enterprise mobility"
     data-location="halifax, nova scotia"
@@ -1063,6 +1103,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="financial analyst, junior"
     data-company="skyjack inc."
     data-location="guelph, ontario"
@@ -1101,6 +1143,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="financial analyst, junior"
     data-company="linamar"
     data-location="guelph, on"
@@ -1139,6 +1183,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant, financial services"
     data-company="alberta securities commission"
     data-location="calgary, ab"
@@ -1177,6 +1223,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior accountant, financial services"
     data-company="alberta securities commission"
     data-location="calgary, alberta hybrid"
@@ -1213,6 +1261,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior project cost controller (2026050178)"
     data-company="thurber engineering ltd."
     data-location="calgary, ab t2h 2h8"
@@ -1251,6 +1301,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant"
     data-company="clarity recruitment"
     data-location="toronto, ontario"
@@ -1289,6 +1341,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="bookkeeper/junior accountant"
     data-company="powergroup resources"
     data-location="hamilton, on"
@@ -1327,6 +1381,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior project accountant"
     data-company="millennium ems solutions ltd."
     data-location="sherwood park, ab hybrid"
@@ -1365,6 +1421,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant"
     data-company="bmw toronto"
     data-location="toronto, ontario"
@@ -1403,6 +1461,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="certified professional accountant (cpa) trainee"
     data-company="ontario power generation"
     data-location="oshawa, ontario hybrid"
@@ -1441,6 +1501,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="accounting &amp; payroll officer"
     data-company="goodwork environmental jobs"
     data-location="greater toronto area hybrid"
@@ -1479,6 +1541,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior accountant"
     data-company="vaco by highspring"
     data-location="calgary, alberta hybrid"
@@ -1517,6 +1581,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant (real estate &amp; construction development)"
     data-company="95 developments"
     data-location="scarborough, ontario"
@@ -1555,6 +1621,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior financial analyst"
     data-company="sp apparel"
     data-location="saint-hyacinthe, qc"
@@ -1593,6 +1661,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="jr. accountant"
     data-company="oliver &amp; bonacini hospitality"
     data-location="toronto, ontario"
@@ -1631,6 +1701,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior financial analyst"
     data-company="lockheed martin"
     data-location="halifax, ns"
@@ -1669,6 +1741,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior project accountant"
     data-company="ocean park mechanical"
     data-location="surrey, british columbia"
@@ -1707,6 +1781,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior accountant"
     data-company="kassen recruitment"
     data-location="north york, ontario hybrid"
@@ -1745,6 +1821,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior financial analyst"
     data-company="osf digital"
     data-location="none"
@@ -1783,6 +1861,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant | full-time | td coliseum"
     data-company="oak view group"
     data-location="hamilton, ontario"
@@ -1821,6 +1901,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior cost controller"
     data-company="atkinsréalis"
     data-location="calgary, alberta hybrid"
@@ -1859,6 +1941,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior project controller"
     data-company="turner &amp; townsend"
     data-location="calgary, alberta hybrid"
@@ -1897,6 +1981,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior project controller"
     data-company="turner &amp; townsend pty limited"
     data-location="calgary, ab hybrid"
@@ -1935,6 +2021,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior financial analyst  (new grad)- 1 year contract"
     data-company="siemens electronic systems design &amp; manufacturing"
     data-location="oakville, ontario hybrid"
@@ -1973,6 +2061,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant - bc - temp - (remote)"
     data-company="exp realty"
     data-location="british columbia"
@@ -2011,6 +2101,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="jr. fp&amp;a analyst, reporting &amp; forecasting"
     data-company="brookfield residential"
     data-location="calgary, alberta"
@@ -2049,6 +2141,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior controller"
     data-company="carepros"
     data-location="edmonton, ab t6h 4a6"
@@ -2087,6 +2181,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="jr. fp&amp;a analyst, reporting &amp; forecasting"
     data-company="brookfield properties"
     data-location="calgary, ab"
@@ -2125,6 +2221,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior accountant"
     data-company="aspect structural engineers"
     data-location="toronto, ontario hybrid"
@@ -2163,6 +2261,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant"
     data-company="accencis group"
     data-location="richmond hill, ontario"
@@ -2201,6 +2301,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="entry level bookkeeper - non profit - embro, on"
     data-company="stem camp"
     data-location="embro, on"
@@ -2239,6 +2341,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant"
     data-company="atira women&#39;s resource society"
     data-location="vancouver, british columbia"
@@ -2277,6 +2381,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="interim junior staff accountant"
     data-company="incubeta"
     data-location="none"
@@ -2315,6 +2421,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior accountant"
     data-company="swim recruiting"
     data-location="vancouver, british columbia hybrid"
@@ -2353,6 +2461,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior staff accountant (2026-9484)"
     data-company="johnston equipment"
     data-location="mississauga, ontario"
@@ -2391,6 +2501,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant (contract)"
     data-company="aspect structural engineers"
     data-location="vancouver, bc v5y 1e9"
@@ -2429,6 +2541,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant - winnipeg"
     data-company="aboriginal people&#39;s television network incorporated"
     data-location="winnipeg, mb r3b 2c3"
@@ -2467,6 +2581,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="amdsb - osstf-essp -accounts payable associate (temporary)"
     data-company="avon maitland district school board"
     data-location="seaforth, ontario"
@@ -2505,6 +2621,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="accountant"
     data-company="enterprise"
     data-location="london, ontario"
@@ -2543,6 +2661,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior bookkeeper"
     data-company="the law office management association (tloma)"
     data-location="toronto, ontario"
@@ -2581,6 +2701,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior bookkeeper"
     data-company="richmond country farms"
     data-location="richmond, bc v6w 1a3"
@@ -2619,6 +2741,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="jr. accountant"
     data-company="aylo"
     data-location="montréal, qc hybrid"
@@ -2657,6 +2781,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant"
     data-company="insphired talent solutions"
     data-location="toronto, ontario"
@@ -2695,6 +2821,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior staff accountant"
     data-company="exicure"
     data-location="vancouver, british columbia hybrid"
@@ -2733,6 +2861,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior financial analyst  (new grad)- 1 year contract"
     data-company="siemens"
     data-location="oakville, ontario hybrid"
@@ -2771,6 +2901,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="jr accountant"
     data-company="wesgroup equipment"
     data-location="surrey, bc v3v 3v6"
@@ -2809,6 +2941,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="ex-25-26-07-jracct full time junior accountant"
     data-company="wild rose school division"
     data-location="rocky mountain house, ab"
@@ -2847,6 +2981,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior financial analyst (new grad)- 1 year contract"
     data-company="siemens"
     data-location="oakville, on l6h 0h6 hybrid"
@@ -2885,6 +3021,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant"
     data-company="fraser valley building supplies"
     data-location="mission, bc v2v 2v9"
@@ -2923,6 +3061,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior financial analyst - financial reporting"
     data-company="holman"
     data-location="mississauga, on l5c 4p4"
@@ -2961,6 +3101,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="comptable junior"
     data-company="équipements art"
     data-location="chicoutimi, quebec"
@@ -2999,6 +3141,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="jr. accounts receivable coordinator"
     data-company="evertz microsystems limited"
     data-location="burlington, on l7l 5z9"
@@ -3037,6 +3181,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="jr. accounts receivable coordinator"
     data-company="evertz"
     data-location="burlington, ontario"
@@ -3075,6 +3221,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior bookkeeper"
     data-company="just quality international inc."
     data-location="north york, ontario"
@@ -3113,6 +3261,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="jr accountant"
     data-company="jetson"
     data-location="north vancouver, british columbia"
@@ -3151,6 +3301,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="jr accountant"
     data-company="jetson home inc."
     data-location="north vancouver, bc"
@@ -3189,6 +3341,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="part-time junior accounts payable"
     data-company="parkscape ltd."
     data-location="north york, ontario"
@@ -3227,6 +3381,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accounting associate"
     data-company="probity medical research inc."
     data-location="waterloo, on n2j 1c4"
@@ -3265,6 +3421,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="jr. accountant"
     data-company="aecon group inc."
     data-location="toronto, ontario"
@@ -3303,6 +3461,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="cpa trainee"
     data-company="ontario power generation"
     data-location="oshawa, ontario hybrid"
@@ -3341,6 +3501,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior accountant, commercial"
     data-company="cmls financial"
     data-location="vancouver, british columbia hybrid"
@@ -3379,6 +3541,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant / bookkeeper"
     data-company="busy bee machine tools"
     data-location="concord, on l4k 5w1"
@@ -3417,6 +3581,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant"
     data-company="wefx"
     data-location="ontario"
@@ -3455,6 +3621,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior accountant, commercial"
     data-company="nesto group"
     data-location="vancouver, bc hybrid"
@@ -3493,6 +3661,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="accounting technician, baker tilly advantage"
     data-company="baker tilly canada"
     data-location="niagara falls, ontario"
@@ -3535,13 +3705,15 @@
     <section class="category-section" id="audit-tax">
         <h2 class="category-title">
             <a href="/finance/categories/audit-tax/">Audit / Tax</a>
-            <span class="category-count">6 positions</span>
+            <span class="category-count" data-category-count data-total-label="6 positions">6 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior forensic accountant"
     data-company="robertson &amp; company ltd."
     data-location="markham, ontario hybrid"
@@ -3580,6 +3752,8 @@
             <li class="job-card job-hot"
     data-remote="true"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant (remote)"
     data-company="quik hire staffing"
     data-location="none"
@@ -3618,6 +3792,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant"
     data-company="finlink group"
     data-location="toronto, on m9m 2y9"
@@ -3656,6 +3832,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior accountant"
     data-company="finlink group"
     data-location="markham, on"
@@ -3694,6 +3872,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior internal auditor"
     data-company="autocanada"
     data-location="vancouver, british columbia"
@@ -3732,6 +3912,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior accountant, assurance (october 2026 or january 2027 or october 2027)"
     data-company="bdo canada"
     data-location="montreal, quebec hybrid"
@@ -3774,13 +3956,15 @@
     <section class="category-section" id="risk-compliance">
         <h2 class="category-title">
             <a href="/finance/categories/risk-compliance/">Risk / Compliance</a>
-            <span class="category-count">10 positions</span>
+            <span class="category-count" data-category-count data-total-label="10 positions">10 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="credit solutions associate, canadian commercial banking (various locations in ontario)"
     data-company="scotiabank"
     data-location="mississauga, ontario"
@@ -3817,6 +4001,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior underwriter - insurance"
     data-company="lions gate underwriting agency"
     data-location="ottawa, on k1s 5k5"
@@ -3855,6 +4041,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior bilingual aml analyst (english/french) – contract"
     data-company="toronto test consultants"
     data-location="vaughan, ontario hybrid"
@@ -3893,6 +4081,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior underwriter"
     data-company="msh international canada"
     data-location="calgary, ab t2p 3h5 hybrid"
@@ -3931,6 +4121,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="junior risk &amp; compliance officer"
     data-company="cuso international"
     data-location="ottawa, ontario hybrid"
@@ -3969,6 +4161,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="bilingual underwriting trainee"
     data-company="empire life"
     data-location="montreal, quebec hybrid"
@@ -4007,6 +4201,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="junior underwriter"
     data-company="msh americas -  diot-siaci group"
     data-location="none"
@@ -4045,6 +4241,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="bilingual underwriter trainee"
     data-company="empire life insurance"
     data-location="montréal, qc hybrid"
@@ -4083,6 +4281,8 @@
             <li class="job-card "
     data-remote="true"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="bilingual underwriting trainee"
     data-company="empire life"
     data-location="none"
@@ -4121,6 +4321,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="commercial lines junior underwriter, transportation"
     data-company="cansure"
     data-location="vancouver, bc v7y 1k8 hybrid"
@@ -4163,13 +4365,15 @@
     <section class="category-section" id="banking-insurance">
         <h2 class="category-title">
             <a href="/finance/categories/banking-insurance/">Banking / Insurance</a>
-            <span class="category-count">14 positions</span>
+            <span class="category-count" data-category-count data-total-label="14 positions">14 positions</span>
         </h2>
         <ul class="job-list">
             
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="associate, commercial banking"
     data-company="td"
     data-location="brossard, quebec"
@@ -4208,6 +4412,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="associate, securities services"
     data-company="canaccord genuity group inc."
     data-location="vancouver, british columbia"
@@ -4246,6 +4452,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="personal banking associate trainee - boucherville"
     data-company="td"
     data-location="boucherville, quebec"
@@ -4284,6 +4492,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="true"
+    data-stage="new-grad"
     data-title="personal banking associate (hybrid)"
     data-company="alterna savings"
     data-location="fort frances, ontario hybrid"
@@ -4322,6 +4532,8 @@
             <li class="job-card "
     data-remote="false"
     data-hot="false"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="personal banking associate (hybrid)"
     data-company="alterna"
     data-location="fort frances, on p9a 1z2"
@@ -4360,6 +4572,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="personal banking associate trainee ( east york and downtown - current and future opportunities)"
     data-company="td"
     data-location="toronto, ontario"
@@ -4398,6 +4612,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="personal banking associate trainee - future opportunities (greater vancouver area)"
     data-company="td"
     data-location="burnaby, british columbia"
@@ -4436,6 +4652,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="personal banking associate trainee - quebec city - full time"
     data-company="td"
     data-location="québec, quebec"
@@ -4474,6 +4692,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="personal banking associate trainee - future opportunities within the escarpment district"
     data-company="td"
     data-location="st. catharines, ontario"
@@ -4512,6 +4732,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="personal banking associate trainee future opportunities (all gta)"
     data-company="td"
     data-location="newmarket, ontario"
@@ -4550,6 +4772,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="personal banking associate trainee (full time)- hull-plateau"
     data-company="td"
     data-location="gatineau, quebec"
@@ -4588,6 +4812,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="personal banking associate trainee (future opportunities) - quebec, ca"
     data-company="td"
     data-location="montreal, quebec"
@@ -4626,6 +4852,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="personal banking associate trainee, full time(future opportunities)- quebec city"
     data-company="td"
     data-location="québec, quebec"
@@ -4664,6 +4892,8 @@
             <li class="job-card job-hot"
     data-remote="false"
     data-hot="true"
+    data-hybrid="false"
+    data-stage="new-grad"
     data-title="personal banking associate trainee"
     data-company="td securities"
     data-location="calgary, alberta"
@@ -5132,40 +5362,57 @@
         if (searchForm) {
             var keywordInput = searchForm.querySelector('[data-job-search-input]');
             var locationInput = searchForm.querySelector('[data-job-location-input]');
-            var typeInput = searchForm.querySelector('[data-job-type-input]');
+            var workModeInput = searchForm.querySelector('[data-job-work-mode-input]');
             var feedback = document.querySelector('[data-job-search-feedback]');
+            var emptyState = document.querySelector('[data-job-search-empty]');
             var jobCards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
             var categorySections = Array.prototype.slice.call(document.querySelectorAll('.category-section'));
+            var staticSections = Array.prototype.slice.call(document.querySelectorAll('[data-search-static]'));
             var normalize = function(value) {
                 return (value || '').toString().toLowerCase().trim();
             };
-            var matchesRoleType = function(card, roleValue) {
-                if (!roleValue) return true;
-                var haystack = normalize(card.getAttribute('data-search-text') || card.textContent);
-                if (roleValue === 'remote') return card.getAttribute('data-remote') === 'true' || haystack.indexOf('remote') !== -1;
-                return roleValue.split(' ').some(function(term) { return haystack.indexOf(term) !== -1; });
+            var matchesWorkMode = function(card, modeValue) {
+                if (!modeValue) return true;
+                var text = normalize(card.getAttribute('data-search-text') || card.textContent);
+                var location = normalize(card.getAttribute('data-location'));
+                var isRemote = card.getAttribute('data-remote') === 'true' || text.indexOf('remote') !== -1 || location.indexOf('remote') !== -1;
+                var isHybrid = card.getAttribute('data-hybrid') === 'true' || text.indexOf('hybrid') !== -1 || location.indexOf('hybrid') !== -1;
+                if (modeValue === 'remote') return isRemote;
+                if (modeValue === 'hybrid') return isHybrid;
+                if (modeValue === 'onsite') return !isRemote && !isHybrid;
+                return true;
             };
             var applySearch = function() {
                 var keyword = normalize(keywordInput && keywordInput.value);
                 var location = normalize(locationInput && locationInput.value);
-                var roleType = normalize(typeInput && typeInput.value);
+                var workMode = normalize(workModeInput && workModeInput.value);
                 var visibleCount = 0;
                 jobCards.forEach(function(card) {
                     var text = normalize(card.getAttribute('data-search-text') || card.textContent);
                     var cardLocation = normalize(card.getAttribute('data-location'));
                     var visible = (!keyword || text.indexOf(keyword) !== -1) &&
                         (!location || cardLocation.indexOf(location) !== -1 || text.indexOf(location) !== -1) &&
-                        matchesRoleType(card, roleType);
+                        matchesWorkMode(card, workMode);
                     card.hidden = !visible;
                     if (visible) visibleCount += 1;
                 });
+                var hasFilter = keyword || location || workMode;
                 categorySections.forEach(function(section) {
-                    var sectionVisible = !!section.querySelector('.job-card:not([hidden])');
+                    var visibleInSection = Array.prototype.slice.call(section.querySelectorAll('.job-card')).filter(function(card) { return !card.hidden; }).length;
+                    var sectionVisible = visibleInSection > 0;
                     section.hidden = !sectionVisible;
+                    var count = section.querySelector('[data-category-count]');
+                    if (count) {
+                        count.textContent = hasFilter ? (visibleInSection + ' matching') : (count.getAttribute('data-total-label') || count.textContent);
+                    }
                 });
+                staticSections.forEach(function(section) { section.hidden = !!hasFilter; });
+                document.body.classList.toggle('search-active', !!hasFilter);
                 if (feedback) {
-                    var hasFilter = keyword || location || roleType;
-                    feedback.textContent = hasFilter ? (visibleCount + ' matching jobs visible on this page') : '';
+                    feedback.textContent = hasFilter ? ('Showing ' + visibleCount + ' of ' + jobCards.length + ' jobs matching filters on this page') : '';
+                }
+                if (emptyState) {
+                    emptyState.hidden = !hasFilter || visibleCount > 0;
                 }
             };
             ['input', 'change'].forEach(function(eventName) {
