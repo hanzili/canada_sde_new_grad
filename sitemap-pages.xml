@@ -211,6 +211,51 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://jobs.hanzilla.co/arts/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/arts/internships/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/arts/categories/communications-pr/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/arts/categories/policy-government/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/arts/categories/research-analysis/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/arts/categories/nonprofit-community/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/arts/categories/education-student-affairs/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/arts/categories/museums-archives-culture/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/arts/categories/writing-editorial-publishing/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jobs.hanzilla.co/locations/toronto/</loc>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>

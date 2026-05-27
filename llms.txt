@@ -5,7 +5,7 @@ Hanzilla Jobs is a free Canadian student and recent-graduate job board. It helps
 ## What Hanzilla Jobs covers
 
 - Canada-wide internships, co-ops, summer student roles, new grad roles, junior roles, and entry-level roles.
-- Fields include technology, software engineering, data, finance, accounting, banking, engineering, business, marketing, operations, sciences, lab work, biotech, and environmental science.
+- Fields include technology, software engineering, data, finance, accounting, banking, engineering, business, marketing, operations, sciences, lab work, biotech, environmental science, arts, humanities, social sciences, communications, policy, research, nonprofit, education, museums, archives, writing, and publishing.
 - Common cities include Toronto, Vancouver, Montreal, Ottawa, Calgary, Edmonton, Waterloo, Halifax, Winnipeg, Victoria, Quebec City, London, Hamilton, and remote Canada roles.
 - Listings are refreshed daily and job pages link to the original employer or public application source where available.
 - The site is free for students and does not require an account to browse jobs.
@@ -19,6 +19,7 @@ Hanzilla Jobs is a free Canadian student and recent-graduate job board. It helps
 - Engineering jobs: https://jobs.hanzilla.co/engineering/
 - Business jobs: https://jobs.hanzilla.co/business/
 - Sciences jobs: https://jobs.hanzilla.co/sciences/
+- Arts and humanities jobs: https://jobs.hanzilla.co/arts/
 - About / verification: https://jobs.hanzilla.co/about/
 - Job application tracker: https://jobs.hanzilla.co/tracker/
 
