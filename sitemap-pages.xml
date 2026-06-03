@@ -321,11 +321,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://jobs.hanzilla.co/locations/remote/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://jobs.hanzilla.co/tracker/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -338,6 +333,12 @@
   <url>
     <loc>https://jobs.hanzilla.co/blog/</loc>
     <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/blog/canadian-student-job-title-glossary/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
