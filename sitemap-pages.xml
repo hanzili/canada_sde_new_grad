@@ -306,6 +306,11 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://jobs.hanzilla.co/locations/quebec-city/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://jobs.hanzilla.co/locations/victoria/</loc>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
@@ -317,6 +322,11 @@
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/locations/hamilton/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/locations/remote/</loc>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
