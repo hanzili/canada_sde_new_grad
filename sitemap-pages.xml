@@ -306,6 +306,11 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://jobs.hanzilla.co/locations/london/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://jobs.hanzilla.co/locations/hamilton/</loc>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
