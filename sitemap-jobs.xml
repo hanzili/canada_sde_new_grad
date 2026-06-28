@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jobs.hanzilla.co/jobs/software-developer-new-graduate-12-month-contract-siemens-743152483/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/junior-software-developer-helic-co-743106405/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/junior-data-engineer-helic-co-743092977/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/associate-software-engineer-helic-co-743092919/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jobs.hanzilla.co/jobs/can-distribution-centre-team-associate-quality-assurance-walmart-canada-742889618/</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -15,6 +39,12 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/junior-automation-qa-engineer-vertex-tech-742875871/</loc>
     <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/quality-assurance-associate-morganstanley-743028250/</loc>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -843,36 +873,6 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/associate-data-engineer-confluence-technologies-717430658/</loc>
     <lastmod>2026-06-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/jobs/associate-software-engineer-java-the-bank-of-nova-scotia-p-731196295/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/jobs/programmeur-euse-junior-frontend-angular-groupe-tehora-715782750/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/jobs/programmeur-euse-junior-frontend-angular-groupe-tehora-715782749/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/jobs/programmeur-euse-junior-frontend-angular-groupe-tehora-715782745/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/jobs/programmeur-euse-junior-frontend-angular-tehora-inc-715760428/</loc>
-    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2473,12 +2473,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jobs.hanzilla.co/jobs/jr-billing-accounting-administrator-ecora-consultants-ltd-714309539/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://jobs.hanzilla.co/jobs/junior-eit-mechanical-engineer-relocation-to-sept-iles-bba-consultants-742365953/</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -3679,12 +3673,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jobs.hanzilla.co/jobs/seo-specialist-junior-senior-opportunities-organic-checkout-715399645/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://jobs.hanzilla.co/jobs/junior-wildlife-biologist-onterris-741261276/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -4071,6 +4059,18 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/26-061-program-coordinator-sources-719522755/</loc>
     <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/software-engineer-intern-fall-2026-12-16-months-masiv-mercedes-and-singh-innovative-ventures-743390148/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/google-analytics-manager-intern-backlinkgen-743077786/</loc>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -5421,12 +5421,6 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/intern-quality-assurance-4-months-seaspan-716534934/</loc>
     <lastmod>2026-06-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/jobs/support-software-developer-co-op-intern-nokia-715196964/</loc>
-    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
