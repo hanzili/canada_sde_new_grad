@@ -301,6 +301,11 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://jobs.hanzilla.co/locations/winnipeg/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://jobs.hanzilla.co/locations/london/</loc>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
