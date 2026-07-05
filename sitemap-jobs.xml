@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jobs.hanzilla.co/jobs/junior-data-engineer-helic-co-750712016/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/junior-software-developer-helic-co-750711923/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/associate-software-engineer-helic-co-750711795/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/associate-software-engineer-new-grad-card-expansion-capital-one-750545797/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/associate-software-engineer-java-scotiabank-750532594/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jobs.hanzilla.co/jobs/software-developer-junior-forsite-consultants-ltd-749923038/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -3625,36 +3655,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jobs.hanzilla.co/jobs/associate-account-executive-dsp-eclipsys-727772849/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/jobs/sales-associate-depuy-synthes-727637996/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/jobs/leaffilter-entry-level-sales-representative-canada-calgary-leaf-home-727637707/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/jobs/talent-acquisition-associate-pier-4-ltd-727571972/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/jobs/sales-associate-halifax-shopping-centre-swatch-727317997/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://jobs.hanzilla.co/jobs/full-time-junior-molecular-biology-research-assistant-lady-davis-institute-jewish-general-hospital-748516551/</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -4011,6 +4011,12 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/academic-and-student-affairs-advisor-simon-fraser-university-729667286/</loc>
     <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobs.hanzilla.co/jobs/power-platform-developer-intern-upzoids-750995746/</loc>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -4957,24 +4963,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jobs.hanzilla.co/jobs/software-engineer-intern-fall-winter-2026-cohere-727832643/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/jobs/agile-test-engineer-co-op-quality-assurance-tribalscale-726846567/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/jobs/agile-software-engineer-co-op-tribalscale-726846566/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://jobs.hanzilla.co/jobs/co-op-accountant-january-2027-mnp-749609113/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -5335,12 +5323,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jobs.hanzilla.co/jobs/comptable-certification-et-comptabilite-stage-mnp-727963441/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://jobs.hanzilla.co/jobs/mechanical-design-intern-coolit-systems-749682477/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -5487,12 +5469,6 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/process-engineer-co-op-iko-736288047/</loc>
     <lastmod>2026-06-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/jobs/internship-fall-2026-continuous-improvement-pratt-whitney-727635149/</loc>
-    <lastmod>2026-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -5955,12 +5931,6 @@
   <url>
     <loc>https://jobs.hanzilla.co/jobs/conservation-intern-nature-conservancy-of-canada-conservation-de-la-nature-733420069/</loc>
     <lastmod>2026-06-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/jobs/actuarial-intern-ech-on-caa-club-group-727573307/</loc>
-    <lastmod>2026-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
