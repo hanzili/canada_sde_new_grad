@@ -311,11 +311,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://jobs.hanzilla.co/locations/remote/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://jobs.hanzilla.co/tracker/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
