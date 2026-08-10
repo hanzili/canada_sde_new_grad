@@ -271,11 +271,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://jobs.hanzilla.co/locations/waterloo/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://jobs.hanzilla.co/locations/edmonton/</loc>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
