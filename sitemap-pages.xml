@@ -266,21 +266,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://jobs.hanzilla.co/locations/edmonton/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/locations/winnipeg/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/locations/hamilton/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://jobs.hanzilla.co/tracker/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
