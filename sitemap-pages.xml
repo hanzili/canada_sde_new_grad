@@ -31,21 +31,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jobs.hanzilla.co/categories/qa-test-automation/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/categories/hardware-firmware/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/categories/it-support-systems/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://jobs.hanzilla.co/finance/</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
@@ -247,11 +232,6 @@
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/locations/vancouver/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/locations/montreal/</loc>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
