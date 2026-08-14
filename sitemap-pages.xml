@@ -16,21 +16,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jobs.hanzilla.co/categories/software-engineering/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/categories/data-ml/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/categories/security/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://jobs.hanzilla.co/finance/</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
@@ -224,26 +209,6 @@
     <loc>https://jobs.hanzilla.co/arts/categories/writing-editorial-publishing/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/locations/toronto/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/locations/vancouver/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/locations/ottawa/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/locations/calgary/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/tracker/</loc>
