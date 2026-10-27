@@ -31,22 +31,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jobs.hanzilla.co/categories/security/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://jobs.hanzilla.co/categories/qa-test-automation/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/categories/hardware-firmware/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/categories/solutions-customer-engineering/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -262,16 +252,6 @@
   </url>
   <url>
     <loc>https://jobs.hanzilla.co/locations/ottawa/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/locations/calgary/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://jobs.hanzilla.co/locations/edmonton/</loc>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
